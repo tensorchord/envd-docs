@@ -64,7 +64,7 @@ You can reproduce the same dev environment, on your laptop, public cloud VMs, or
 
 Jupyter and VSCode remote extension are first-class support. You benefit without sacrificing any developer experience.
 
-### How to build a machine learning development environment, without envd?
+## How to build a machine learning development environment, without envd?
 
 We have to play with Docker, conda, CUDA, GPU Drivers, and even Kubernetes if the training jobs are running in the cloud, to make things happen.
 
@@ -111,7 +111,7 @@ wait -n`' >> /init.bash
 ENTRYPOINT ["tini", "--", "bash", "init.bash"]
 ```
 
-### How to do with envd?
+## How to do with envd?
 
 envd provides build language similar to Python and has first-class support for jupyter, vscode, and python dependencies in container technologies.
 
