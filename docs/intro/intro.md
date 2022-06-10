@@ -4,19 +4,17 @@ sidebar_position: 1
 
 # Tutorial
 
-envd is a container-based development environment management tool for data scientists.
+envd is a **machine learning development environment** for data scientists, AI/ML engineers, or teams.
 
 🐍 **No docker, only python** - Write python code to build the development environment, we help you take care of Docker.
 
-🖨️ **Built-in jupyter/vscode** - Jupyter and VSCode remote extension are the first-class support.
+🖨️ **Built-in jupyter/vscode** - Jupyter and VSCode remote extension are first-class support.
 
-⏱️ **Save time** - Better cache management to save your time, keep the focus on the model, instead of dependencies
+⏱️ **Save time** - Better cache management to save your time, keep the focus on the model, instead of dependencies.
 
-☁️ **Local & cloud** - Run the environment locally or in the cloud, without any code change
+☁️ **Local & cloud** - envd integrates with Docker seamlessly, you can share, version, and publish envd environments with Docker Hub or any other OCI image registries.
 
-🐳 **Container native** - Leverage container technologies but no need to learn how to use them, we optimize it for you
-
-🤟 **Infrastructure as code** - Describe your project in a declarative way, 100% reproducible
+🔁 **Repeatable builds, reproducible results** - You can reproduce the same dev environment, on your laptop, public cloud VMs, or Docker containers, without any setup or change.
 
 Let's discover **envd in less than 5 minutes**.
 
@@ -129,3 +127,11 @@ $ envd get env
 NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 envd-quick-start        http://localhost:8888   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
 ```
+
+## Community
+
+We welcome all kinds of contributions from the open-source community, individuals, and partners.
+
+**Questions:** Join our [discord community](https://discord.gg/KqswhpVgdU) or [file an issue](https://github.com/tensorchord/envd/issues)!
+
+**Contribute:** Check out our [guides](https://github.com/tensorchord/envd/blob/main/CONTRIBUTING.md) to contribute to envd’s source code.
