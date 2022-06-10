@@ -34,9 +34,15 @@ BUILD_DIR := ./build
 # All targets.
 .PHONY: generate-cli-ref build dev
 
+init:
+	@yarn install
+
 generate-cli-ref:
 	@go mod tidy
-	@go run hack/generate-cli-ref.go
+	@go run hack/cli/generate-cli-ref.go
+
+generate-api-ref:
+	@cd hack/api && pydoc-markdown
 
 build: 
 	@yarn build
