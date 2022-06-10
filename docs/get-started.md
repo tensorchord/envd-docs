@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Tutorial
+# Getting Started
 
 envd is a **machine learning development environment** for data scientists, AI/ML engineers, or teams.
 
@@ -16,17 +16,13 @@ envd is a **machine learning development environment** for data scientists, AI/M
 
 🔁 **Repeatable builds, reproducible results** - You can reproduce the same dev environment, on your laptop, public cloud VMs, or Docker containers, without any setup or change.
 
-Let's discover **envd in less than 5 minutes**.
+Let's **creating a new envd environment in less than 5 minutes**.
 
-## Getting Started
-
-Get started by **creating a new envd environment**.
-
-### What you'll need
+## What you'll need
 
 - Docker (20.10.0 or above)
 
-### Install envd
+## Install envd
 
 You can download the binary from the [latest release page](https://github.com/tensorchord/envd/releases/latest), and add it in `$PATH`.
 
@@ -42,7 +38,7 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 
 :::
 
-### Create an envd environment
+## Create an envd environment
 
 Please clone the [`envd-quick-start`](https://github.com/tensorchord/envd-quick-start):
 
@@ -94,7 +90,7 @@ $ cd envd-quick-start && envd up
 (envd) ➜  demo git:(master) ✗ # You are in the container-based environment!
 ```
 
-### Play with the environment
+## Play with the environment
 
 You can run `ssh envd-quick-start.envd` to reconnect if you exit from the environment. Or you can execute `git` or `python` commands inside.
 
@@ -105,7 +101,7 @@ $ git fetch
 $
 ```
 
-### Setup jupyter notebook
+## Setup jupyter notebook
 
 Please edit the `build.envd` to enable jupyter notebook:
 

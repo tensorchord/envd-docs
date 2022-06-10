@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Why use envd?
+# Why Use envd?
 
 It is still too difficult to configure development environments and reproduce results in AI/ML scenarios.
 
