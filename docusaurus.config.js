@@ -37,10 +37,10 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/tensorchord/envd-docs/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/tensorchord/envd-docs/tree/main/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   editUrl: 'https://github.com/tensorchord/envd-docs/tree/main/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -68,7 +68,7 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/tensorchord/envd',
             label: 'GitHub',
@@ -108,10 +108,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/tensorchord/envd',
