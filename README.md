@@ -1,4 +1,12 @@
-# Envd
+<div align="center">
+<h1>envd</h1>
+<p>Development Environment for Data Scientists</p>
+</div>
+
+<p align=center>
+<a href="https://discord.gg/KqswhpVgdU"><img alt="discord invitation link" src="https://img.shields.io/discord/974584200327991326?label=discord&style=social"></a>
+<a href="https://trackgit.com"><img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/l3ldvdaswvnjpty9u7l3" alt="trackgit-views" /></a>
+</p>
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
