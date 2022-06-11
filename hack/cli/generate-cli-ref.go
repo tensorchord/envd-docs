@@ -28,7 +28,7 @@ sidebar_position: 2
 		panic(err)
 	}
 	if err := os.WriteFile(
-		filepath.Join(dir, "docs/reference/cli.md"), []byte(header+content), 0644); err != nil {
+		filepath.Join(dir, "docs/cli.md"), []byte(header+content), 0644); err != nil {
 		panic(err)
 	}
 	logrus.Info("cli reference generated")
