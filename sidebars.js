@@ -27,7 +27,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'API Reference',
-      items: ['api/config', 'api/install'],
+      items: ['api/config', 'api/install', 'api/universe'],
     },
     'cli',
     {

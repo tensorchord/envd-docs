@@ -97,7 +97,7 @@ Let's have a look at `build.envd`. `build` is the default function name in `buil
 
 ### Install python packages
 
-The [envd API](../category/api-documentation) function `install.python_packages` installs python packages in the environment:
+The [envd install API](../api/install) function `install.python_packages` installs python packages in the environment:
 
 ```python title=build.envd
 def build():
@@ -133,7 +133,7 @@ array([2, 3, 4])
 
 ### Use zsh instead of bash
 
-The [envd API](../category/api-documentation) function `shell` configures shell program in the environment:
+The [envd API](../api/universe) function `shell` configures shell program in the environment:
 
 ```python title=build.envd
 def build():
@@ -153,7 +153,7 @@ $ envd up
 
 ### Use jupyter
 
-[Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [envd API](../category/api-documentation) function `config.jupyter` helps you set up jupyter notebooks in the environment:
+[Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [envd config API](../api/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
 
 ```python title=build.envd
 def build():
@@ -228,5 +228,4 @@ Here are some quick links:
 
 - [envd GitHub Repository](https://github.com/tensorchord/envd)
 - [Why Use envd?](../why)
-- [envd API Refenrence](../category/api-documentation)
-- [envd CLI Reference](../reference/cli)
+- [envd CLI Reference](../cli)
