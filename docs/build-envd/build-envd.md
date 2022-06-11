@@ -186,11 +186,43 @@ def build():
 
 Then the packages will be downloaded from the mirror instead of [pypi.org](https://pypi.org/).
 
+### Complex build.envd example
+
+```python
+def build():
+    config.apt_source(source="""
+deb https://mirror.sjtu.edu.cn/ubuntu focal main restricted
+deb https://mirror.sjtu.edu.cn/ubuntu focal-updates main restricted
+deb https://mirror.sjtu.edu.cn/ubuntu focal universe
+deb https://mirror.sjtu.edu.cn/ubuntu focal-updates universe
+deb https://mirror.sjtu.edu.cn/ubuntu focal multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu focal-updates multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu focal-backports main restricted universe multiverse
+deb http://archive.canonical.com/ubuntu focal partner
+deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe multiverse
+""")
+    config.pip_index(url = "https://mirror.sjtu.edu.cn/pypi/web/simple")
+    install.vscode_extensions([
+        "ms-python.python",
+    ])
+    base(os="ubuntu20.04", language="python3")
+    install.python_packages(name = [
+        "numpy",
+    ])
+    install.cuda(version="11.6", cudnn="8")
+    shell("zsh")
+    install.system_packages(name = [
+        "htop"
+    ])
+    git_config(name="Ce Gao", email="cegao@tensorchord.ai", editor="vim")
+    run(["ls -la"])
+```
+
 ## Next Steps
 
 Congrats! envd is now setup for your project. Explore envd further!
 
-Please ask us in [Discord](https://discord.gg/KqswhpVgdU) if you had any trouble using this guide.
+Please ask us on [Discord](https://discord.gg/KqswhpVgdU) if you had any trouble using this guide.
 
 Here are some quick links:
 

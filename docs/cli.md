@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 ---
 
-# envd CLI Reference
+# CLI Reference
 
 # NAME
 
