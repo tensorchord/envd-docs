@@ -31,8 +31,14 @@ const sidebars = {
     },
     'cli',
     {
+      type: 'category',
+      label: 'Community',
+      items: ['community/contributing', 'community/development'],
+      collapsed: false,
+    },
+    {
       type: 'link',
-      label: 'Chat with us on Discord',
+      label: '💬 Chat with us on Discord',
       href: 'https://discord.gg/KqswhpVgdU',
     },
   ],
