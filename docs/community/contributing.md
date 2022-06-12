@@ -24,7 +24,7 @@ Our community is always looking for enthusiasts to help in all different ways.
 
 ### ⚽ Simply start using envd
 
-Go through the [Getting Started](./get-started) guide. Does everything work as expected? If not, we're always looking for improvements. Chat with us on [💬 Discord](https://discord.gg/KqswhpVgdU) or [file an issue](https://github.com/tensorchord/envd/issues/new/choose) on GitHub.
+Go through the [Getting Started](../get-started) guide. Does everything work as expected? If not, we're always looking for improvements. Chat with us on [💬 Discord](https://discord.gg/KqswhpVgdU) or [file an issue](https://github.com/tensorchord/envd/issues/new/choose) on GitHub.
 
 ### 🙋 Triaging Issues and Pull Requests
 
