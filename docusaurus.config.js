@@ -55,6 +55,19 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '<b>If you like envd, please <a target="_blank" rel="noopener noreferrer" href="https://github.com/tensorchord/envd">give it a star ⭐️ on GitHub</a></b>',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       navbar: {
         title: 'envd',
         // logo: {
