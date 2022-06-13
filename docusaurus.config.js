@@ -69,6 +69,7 @@ const config = {
         isCloseable: true,
       },
       navbar: {
+        hideOnScroll: false,
         title: 'envd',
         // logo: {
         //   alt: 'My Site Logo',
@@ -84,8 +85,9 @@ const config = {
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/tensorchord/envd',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
@@ -128,6 +130,10 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/tensorchord/envd',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/TensorChord',
               },
             ],
           },
