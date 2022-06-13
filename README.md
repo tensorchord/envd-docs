@@ -1,6 +1,5 @@
 <div align="center">
-<h1>envd</h1>
-<p>Development Environment for Data Scientists</p>
+<h1>envd-docs</h1>
 </div>
 
 <p align=center>
