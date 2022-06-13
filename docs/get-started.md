@@ -24,9 +24,14 @@ Let's **creating a new envd environment in less than 5 minutes**.
 
 ## Install envd
 
-You can download the binary from the [latest release page](https://github.com/tensorchord/envd/releases/latest), and add it in `$PATH`.
 
-After the download, please run `envd bootstrap` to bootstrap.
+
+envd can be installed with `pip`. After the installation, please run `envd bootstrap` to bootstrap.
+
+```bash
+pip install --pre envd
+envd bootstrap
+```
 
 :::tip Tip
 
