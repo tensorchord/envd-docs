@@ -1,6 +1,7 @@
 name: sync doc file with envd
 
-on: repository_dispatch
+on: [repository_dispatch, workflow_dispatch]
+
 
 jobs:
   sync_file:
