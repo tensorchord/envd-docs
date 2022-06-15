@@ -29,4 +29,5 @@ jobs:
         with:
           path: envd-docs
           add-paths: envd-docs/hack/api
+          branch: sync_envd
         
