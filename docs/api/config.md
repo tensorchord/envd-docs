@@ -9,7 +9,7 @@ title: config module
 def jupyter(password: str, port: int)
 ```
 
-Config jupyter notebook configuration
+Configure jupyter notebook configuration
 
 **Arguments**:
 
@@ -22,9 +22,32 @@ Config jupyter notebook configuration
 def pip_index(url)
 ```
 
-Config pypi index mirror
+Configure pypi index mirror
 
 **Arguments**:
 
 - `url` _str_ - Pypi index url (i.e. https://mirror.sjtu.edu.cn/pypi/web/simple)
 
+#### conda\_channel
+
+```python
+def conda_channel(channel:str)
+```
+
+Configure conda channel mirror
+
+**Arguments**:
+
+- `channel` _str_ - File content of an usual .condarc, like:
+
+```
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+```

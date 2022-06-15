@@ -19,6 +19,18 @@ def python_packages(name: List[str])
 
 Install python package by pip
 
+#### conda\_packages
+
+```python
+def conda_packages(name: List[str])
+```
+
+Install python package by Conda
+
+**Arguments**:
+
+- `name` _list of str_ - package names, such as [&#x27;pytorch&#x27;]
+
 #### r\_packages
 
 ```python
