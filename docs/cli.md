@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # envd CLI Reference
@@ -129,4 +129,4 @@ Print envd version information
 
 **--short, -s**: Only print the version number
 
-The reference is auto-generated from [api package](https://github.com/tensorchord/envd/tree/main/envd/api).
+The documentation is auto-generated from [api package](https://github.com/tensorchord/envd/tree/main/envd/api), please do not edit it manually.
