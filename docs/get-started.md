@@ -4,17 +4,17 @@ sidebar_position: 1
 
 # Getting Started
 
-envd is a **machine learning development environment** for data scientists, AI/ML engineers, or teams.
+envd is a **machine learning development environment** for data science and AI/ML engineering teams.
 
-🐍 **No docker, only python** - Write python code to build the development environment, we help you take care of Docker.
+🐍 **No Docker, only Python** - Focus on writing Python code, we will take care of Docker and development environment setup.
 
-🖨️ **Built-in jupyter/vscode** - Jupyter and VSCode remote extension are first-class support.
+🖨️ **Built-in Jupyter/VSCode** - First-class support for Jupyter and VSCode remote extension.
 
 ⏱️ **Save time** - Better cache management to save your time, keep the focus on the model, instead of dependencies.
 
-☁️ **Local & cloud** - envd integrates with Docker seamlessly, you can share, version, and publish envd environments with Docker Hub or any other OCI image registries.
+☁️ **Local & cloud** - `envd` integrates seamlessly with Docker so that you can easily share, version, and publish `envd` environments with Docker Hub or any other OCI image registries.
 
-🔁 **Repeatable builds, reproducible results** - You can reproduce the same dev environment, on your laptop, public cloud VMs, or Docker containers, without any setup or change.
+🔁 **Repeatable builds & reproducible results** - You can reproduce the same dev environment on your laptop, public cloud VMs, or Docker containers, without any change in setup.
 
 Let's **creating a new envd environment in less than 5 minutes**.
 
@@ -22,11 +22,9 @@ Let's **creating a new envd environment in less than 5 minutes**.
 
 - Docker (20.10.0 or above)
 
-## Install envd
+## Install `envd`
 
-
-
-envd can be installed with `pip`. After the installation, please run `envd bootstrap` to bootstrap.
+`envd` can be installed with `pip`. After the installation, please run `envd bootstrap` to bootstrap.
 
 ```bash
 pip install --pre envd
@@ -43,7 +41,7 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 
 :::
 
-## Create an envd environment
+## Create an `envd` environment
 
 Please clone the [`envd-quick-start`](https://github.com/tensorchord/envd-quick-start):
 
@@ -62,7 +60,7 @@ def build():
     shell("zsh")
 ```
 
-Then please run the command below to setup a new environment:
+Then please run the command below to set up a new environment:
 
 ```
 cd envd-quick-start && envd up
@@ -106,7 +104,7 @@ $ git fetch
 $
 ```
 
-## Setup jupyter notebook
+## Set up Jupyter notebook
 
 Please edit the `build.envd` to enable jupyter notebook:
 
@@ -120,7 +118,7 @@ def build():
     config.jupyter(password="", port=8888)
 ```
 
-You can get the endpoint of jupyter notebook via `envd get envs`.
+You can get the endpoint of the running Jupyter notebook via `envd get envs`.
 
 ```bash
 $ envd up --detach
