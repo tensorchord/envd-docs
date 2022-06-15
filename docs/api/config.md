@@ -1,6 +1,6 @@
 ---
 sidebar_label: config
-title: config module
+title: config
 ---
 
 #### jupyter

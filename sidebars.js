@@ -9,7 +9,7 @@
  Create as many sidebars as you want.
  */
 
-// @ts-check
+const apiSidebar = require("./docs/api/sidebar.json")
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
@@ -24,11 +24,7 @@ const sidebars = {
       items: ['get-started', 'why/why', 'build-envd/build-envd'],
       collapsed: false,
     },
-    {
-      type: 'category',
-      label: 'API Reference',
-      items: ['api/config', 'api/install', 'api/universe'],
-    },
+    require("./docs/api/sidebar.json"),
     'cli',
     {
       type: 'category',

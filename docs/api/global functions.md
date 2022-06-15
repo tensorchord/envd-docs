@@ -1,9 +1,9 @@
 ---
-sidebar_label: universe
+sidebar_label: global functions
 title: global functions
 ---
 
-Global functions
+Global function
 
 #### base
 
