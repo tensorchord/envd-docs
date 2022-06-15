@@ -1,8 +1,8 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 ---
 
-# CLI Reference
+# envd CLI Reference
 
 # NAME
 
@@ -61,7 +61,9 @@ build envd environment
 
 destroys the envd environment
 
-**--path, -p**="": Path to the directory containing the build.envd (default: .)
+**--name, -n**="": Name of the environment
+
+**--path, -p**="": Path to the directory containing the build.envd
 
 ## get, g
 
@@ -76,8 +78,6 @@ List envd environments
 List all dependencies
 
 **--env, -e**="": Specify the envd environment to use
-
-**--full, -f**: Show full dependency information
 
 **--private-key, -k**="": Path to the private key (default: /home/gaocegege/.config/envd/id_rsa_envd)
 
@@ -126,3 +126,7 @@ build and run the envd environment
 ## version, v
 
 Print envd version information
+
+**--short, -s**: Only print the version number
+
+The reference is auto-generated from [api package](https://github.com/tensorchord/envd/tree/main/envd/api).

@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/sirupsen/logrus v1.8.1
-	github.com/tensorchord/envd v0.0.0
+	github.com/tensorchord/envd v0.1.0-alpha.6
 )
 
 require (
@@ -24,7 +24,7 @@ require (
 	github.com/containerd/typeurl v1.0.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
 	github.com/docker/cli v20.10.13+incompatible // indirect
-	github.com/docker/distribution v2.8.0+incompatible // indirect
+	github.com/docker/distribution v2.8.1+incompatible // indirect
 	github.com/docker/docker v20.10.7+incompatible // indirect
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
@@ -53,7 +53,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
-	github.com/moby/buildkit v0.10.1 // indirect
+	github.com/moby/buildkit v0.10.3 // indirect
 	github.com/moby/sys/signal v0.6.0 // indirect
 	github.com/moby/term v0.0.0-20210619224110-3f7ff695adc6 // indirect
 	github.com/morikuni/aec v1.0.0 // indirect
@@ -61,6 +61,7 @@ require (
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.0.3-0.20211202183452-c5a74bcca799 // indirect
 	github.com/pelletier/go-toml v1.9.4 // indirect
+	github.com/phayes/freeport v0.0.0-20220201140144-74d24b5ae9f5 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rogpeppe/go-internal v1.8.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
@@ -73,8 +74,9 @@ require (
 	github.com/tonistiigi/fsutil v0.0.0-20220115021204-b19f7f9cb274 // indirect
 	github.com/tonistiigi/units v0.0.0-20180711220420-6950e57a87ea // indirect
 	github.com/tonistiigi/vt100 v0.0.0-20210615222946-8066bb97264f // indirect
-	github.com/urfave/cli/v2 v2.4.0 // indirect
+	github.com/urfave/cli/v2 v2.8.1 // indirect
 	github.com/xanzy/ssh-agent v0.3.0 // indirect
+	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.29.0 // indirect
 	go.opentelemetry.io/otel v1.4.1 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.4.1 // indirect
@@ -82,7 +84,7 @@ require (
 	go.opentelemetry.io/otel/trace v1.4.1 // indirect
 	go.opentelemetry.io/proto/otlp v0.12.0 // indirect
 	go.starlark.net v0.0.0-20220328144851-d1966c6b9fcd // indirect
-	golang.org/x/crypto v0.0.0-20211202192323-5770296d904e // indirect
+	golang.org/x/crypto v0.0.0-20211215153901-e495a2d5b3d3 // indirect
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/sys v0.0.0-20220422013727-9388b58f7150 // indirect
@@ -95,8 +97,6 @@ require (
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
-
-replace github.com/tensorchord/envd v0.0.0 => /home/gaocegege/code/go/src/github.com/tensorchord/envd
 
 // Copied from buildkit to make github.com/tonistiigi/fsutil happy.
 replace github.com/docker/docker => github.com/docker/docker v20.10.3-0.20220224222438-c78f6963a1c0+incompatible
