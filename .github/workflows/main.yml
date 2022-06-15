@@ -24,8 +24,9 @@ jobs:
       - run: |
           mkdir -p envd-docs/hack/api/api/
           cp envd/envd/api/* envd-docs/hack/api/api/
-          cd envd-docs/
-          git add hack/api/api
-          git commit -m "sync with main repo"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
+        with:
+          path: envd-docs
+          add-paths: envd-docs/hack/api
+        
