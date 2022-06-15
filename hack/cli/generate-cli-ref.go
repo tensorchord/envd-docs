@@ -16,11 +16,14 @@ func main() {
 		panic(err)
 	}
 	header := `---
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # envd CLI Reference
 
+`
+	footer := `
+The documentation is auto-generated from [api package](https://github.com/tensorchord/envd/tree/main/envd/api), please do not edit it manually.
 `
 
 	dir, err := os.Getwd()
@@ -28,7 +31,7 @@ sidebar_position: 2
 		panic(err)
 	}
 	if err := os.WriteFile(
-		filepath.Join(dir, "docs/cli.md"), []byte(header+content), 0644); err != nil {
+		filepath.Join(dir, "docs/cli.md"), []byte(header+content+footer), 0644); err != nil {
 		panic(err)
 	}
 	logrus.Info("cli reference generated")
