@@ -22,6 +22,7 @@ jobs:
           ls .
           ls ..
       - run: |
+          mkdir -p envd-docs/hack/api/api/
           cp envd/envd/api/* envd-docs/hack/api/api/
           cd envd-docs/
           git add hack/api/api
