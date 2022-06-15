@@ -21,11 +21,9 @@ jobs:
       - run: |
           ls .
           ls ..
-          ls $GITHUB_WORKSPACE/envd
-          ls $GITHUB_WORKSPACE/envd-docs
       - run: |
-          cp $GITHUB_WORKSPACE/envd/envd/api/* $GITHUB_WORKSPACE/envd-docs/hack/api/api/
-          cd $GITHUB_WORKSPACE/envd-docs/
+          cp envd/envd/api/* envd-docs/hack/api/api/
+          cd envd-docs/
           git add hack/api/api
           git commit -m "sync with main repo"
       - name: Create Pull Request
