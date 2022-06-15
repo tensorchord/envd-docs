@@ -28,6 +28,6 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           path: envd-docs
-          add-paths: envd-docs/hack/api
+          add-paths: .
           branch: sync_envd
         
