@@ -1,6 +1,6 @@
 ---
 sidebar_label: install
-title: install module
+title: install
 ---
 
 #### system\_packages

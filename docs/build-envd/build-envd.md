@@ -133,7 +133,7 @@ array([2, 3, 4])
 
 ### Use zsh instead of bash
 
-The [envd API](../api/universe) function `shell` configures shell program in the environment:
+The [envd API](../api/global%20functions) function `shell` configures shell program in the environment:
 
 ```python title=build.envd
 def build():

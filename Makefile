@@ -42,7 +42,7 @@ generate-cli-ref:
 	@go run hack/cli/generate-cli-ref.go
 
 generate-api-ref:
-	@cd hack/api && pydoc-markdown
+	@cd hack/api && python render.py
 
 build: 
 	@yarn build
