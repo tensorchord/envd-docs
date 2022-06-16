@@ -25,8 +25,10 @@ jobs:
           cp envd/envd/api/* envd-docs/hack/api/api/      
       - name: Generate markdown docs
         run: |
+          pushd envd-docs
           python -m pip install -r hack/api/requirement.txt
           make generate-api-ref
+          popd
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
