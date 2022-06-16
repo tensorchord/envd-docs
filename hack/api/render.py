@@ -37,9 +37,10 @@ def main():
     # Rank global functions as the first
     f = docs_path / "api" / "sidebar.json"
     sidebar = json.load(f.open("r"))
-    gidx = sidebar["items"].index("api/global functions")
-    sidebar["items"].pop(gidx)
-    sidebar["items"].insert(0, "api/global functions")
-    f.write_text(json.dumps(sidebar))
+    if "api/global functions" in sidebar["items"]:
+        gidx = sidebar["items"].index("api/global functions")
+        sidebar["items"].pop(gidx)
+        sidebar["items"].insert(0, "api/global functions")
+        f.write_text(json.dumps(sidebar))
 
 main()
