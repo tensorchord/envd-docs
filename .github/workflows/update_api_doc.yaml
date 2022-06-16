@@ -33,7 +33,9 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           path: envd-docs
-          add-paths: hack/api
+          add-paths: |
+            hack/api
+            docs/*
           branch: sync_envd
           title: Auto sync doc with envd repo
-        
+          signoff: true
