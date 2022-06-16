@@ -4,13 +4,13 @@ sidebar_position: 2
 
 # Why Use envd?
 
-It is still too difficult to configure development environments and reproduce results in AI/ML scenarios.
+It is still too difficult to configure development environments and reproduce results in AI/ML applications.
 
-envd is a **machine learning development environment** for data scientists, AI/ML engineers, or teams. Environments built with envd enjoy the following features out-of-the-box:
+`envd` is a **machine learning development environment** for data science and AI/ML engineering teams. Environments built with `envd` provide the following features out-of-the-box:
 
-🐍 **Life is short, we use Python[^1]**
+🐍 **Life is short, use Python[^1]**
 
-Development environments are full of Dockerfiles, bash scripts, Kubernetes YAML manifests, and many other clunky files. And they are always breaking. envd builds are isolated and clean. You can write simple instructions in Python, instead of Bash / Makefile / Dockerfile / ...
+Development environments are full of Dockerfiles, bash scripts, Kubernetes YAML manifests, and many other clunky files that are always breaking. `envd` builds are isolated and clean. You can write simple instructions in Python, instead of Bash / Makefile / Dockerfile / ...
 
 ![envd](./assets/envd.png)
 
@@ -18,7 +18,7 @@ Development environments are full of Dockerfiles, bash scripts, Kubernetes YAML 
 
 ⏱️ **Save you plenty of time**
 
-envd adopts a multi-level cache mechanism to accelerate the building process. For example, the PyPI cache is shared between different builds. Thus the package will be cached if it is downloaded before. It saves plenty of time, especially when you update the environment by trial and error.
+`envd` adopts a multi-level cache mechanism to accelerate the building process. For example, the PyPI cache is shared across builds and thus the package will be cached if it has been downloaded before. It saves plenty of time, especially when you update the environment by trial and error.
 
 <table>
 <tr>
@@ -54,15 +54,15 @@ $ docker build
 
 ☁️ **Local & cloud native**
 
-envd integrates with Docker seamlessly, you can share, version, and publish envd environments with Docker Hub or any other OCI image registries. And the envd environments can be run on Docker, or Kubernetes.
+`envd` integrates seamlessly with Docker, you can share, version, and publish `envd` environments with Docker Hub or any other OCI image registries. The `envd` environments can be run on Docker or Kubernetes.
 
-🔁 **Repeatable builds, reproducible results**
+🔁 **Repeatable builds & reproducible results**
 
-You can reproduce the same dev environment, on your laptop, public cloud VMs, or Docker containers, without any setup or change. And you can also collaborate with your colleagues without "let me configure the environment in your machine".
+You can reproduce the same dev environment, on your laptop, public cloud VMs, or Docker containers, without any change in setup. You can also collaborate with your colleagues without "let me configure the environment in your machine".
 
-🖨️ **Seamless experience of jupyter/vsocde** 
+🖨️ **Seamless experience of Jupyter/VSCode** 
 
-Jupyter and VSCode remote extension are first-class support. You benefit without sacrificing any developer experience.
+`envd` provides first-class support for Jupyter and VSCode remote extension. You benefit without sacrificing any developer experience.
 
 ## How to build a machine learning development environment, without envd?
 
