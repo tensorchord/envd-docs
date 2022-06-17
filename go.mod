@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/sirupsen/logrus v1.8.1
-	github.com/tensorchord/envd v0.1.0-alpha.6
+	github.com/tensorchord/envd v0.1.0-alpha.12
 )
 
 require (
@@ -61,7 +61,6 @@ require (
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.0.3-0.20211202183452-c5a74bcca799 // indirect
 	github.com/pelletier/go-toml v1.9.4 // indirect
-	github.com/phayes/freeport v0.0.0-20220201140144-74d24b5ae9f5 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rogpeppe/go-internal v1.8.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
