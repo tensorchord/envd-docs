@@ -6,7 +6,7 @@ sidebar_position: 5
 
 # NAME
 
-envd - Build tools for data scientists
+envd - Development environment for data science and AI/ML teams
 
 # SYNOPSIS
 
@@ -50,6 +50,8 @@ Bootstraps envd installation including shell autocompletion and buildkit image d
 build envd environment
 
 **--file, -f**="": Name of the build.envd (default: build.envd)
+
+**--output, -o**="": Output destination (format: type=tar,dest=path)
 
 **--path, -p**="": Path to the directory containing the build.envd (default: .)
 
