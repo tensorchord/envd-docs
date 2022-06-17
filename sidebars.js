@@ -29,7 +29,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Community',
-      items: ['community/contributing', 'community/development'],
+      items: ['community/contributing', 'community/development', 'community/roadmap'],
       collapsed: false,
     },
     {
