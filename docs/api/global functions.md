@@ -3,7 +3,7 @@ sidebar_label: global functions
 title: global functions
 ---
 
-Global function
+Global functions
 
 #### base
 
