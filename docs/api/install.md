@@ -37,8 +37,8 @@ Install CUDA dependency
 
 **Arguments**:
 
-- `version` _str_ - CUDA version, such as &#x27;11.6&#x27;
-- `cudnn` _optional, str_ - CUDNN version, such as &#x27;6&#x27;
+- `version` _str_ - CUDA version, such as '11.6'
+- `cudnn` _optional, str_ - CUDNN version, such as '6'
 
 #### vscode\_extensions
 
@@ -50,5 +50,5 @@ Install VS Code extensions
 
 **Arguments**:
 
-- `name` _list of str_ - extension names, such as [&#x27;ms-python.python&#x27;]
+- `name` _list of str_ - extension names, such as ['ms-python.python']
 
