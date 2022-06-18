@@ -5,15 +5,13 @@ sidebar_position: 6
 
 # Development Tutorial
 
-Thanks for your interest in contributing to envd 🌟! 
+Thanks for your interest in contributing to `envd` 🌟! 
 
 Our community values contributions of all forms and seeks to expand the meaning of the word "contributor" as far and wide as possible. Our [contributing](./contributing) page gives an overview of some different ways to get involved and contribute. For technical contributions, read on to get started.
 
-## Where the code lives
+## Repository file structure
 
-The envd source code lives in [github.com/tensorchord/envd](https://github.com/tensorchord/envd).
-
-### Repository File Structure
+The `envd` source code lives in [github.com/tensorchord/envd](https://github.com/tensorchord/envd). Besides this, the documentation source code lives in [github.com/tensorchord/envd-docs](https://github.com/tensorchord/envd-docs).
 
 There are a lot of files here! Here's a brief overview. It can be confusing, but you don't need to understand every file in the repository to get started. We recommend beginning in one area (for example, adding a new function in envd), and working your way outwards to exploring more.
 
@@ -42,15 +40,6 @@ There are a lot of files here! Here's a brief overview. It can be confusing, but
     - [📁 ssh/](https://github.com/tensorchord/envd/tree/main/pkg/ssh) contains a ssh client which is used to attach to the container when running `envd up`.
     - [📁 types/](https://github.com/tensorchord/envd/tree/main/pkg/types) defines some types used in [📁 pkg/envd](https://github.com/tensorchord/envd/tree/main/pkg/envd).
 
-## Documentation
-
-Besides this, the documentation source code lives in [github.com/tensorchord/envd-docs](https://github.com/tensorchord/envd-docs). 
-
-## GitHub Issue Flow
-
-- Issues tagged as [`good first issue 💖`](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) are a good place to get started. 
-- If you'd like to start working on an existing issue, comment on the issue that you plan to work on it so other contributors know it's being handled and can offer help.
-
 ## Development Process
 
 The steps below walk you through the setup process. If you have questions, you can ask on [discord](https://discord.gg/KqswhpVgdU) or post an issue that describes the place you are stuck, and we'll do our best to help.
@@ -78,7 +67,7 @@ The steps below walk you through the setup process. If you have questions, you c
     $ git push
     ```
 
-## Lint
+### Lint
 
 You could run the command below
 
@@ -95,10 +84,21 @@ cmd/envd/main.go:36:67: Revision not declared by package version (typecheck)
 make: *** [Makefile:102: lint] Error 1
 ```
 
-## Running tests
+### Running tests
 
 To run tests you can issue
 
 ```
 make test
 ```
+
+## `envd up` from a developer's perspective
+
+`envd` interprets all statements in `build.envd` and executes `build()`. The function calls such as [`install.python_packages`](../api/install#python_packages) and [`config.jupyter`](../api/config#jupyter) register information to envd's in-memory static graph. Then `envd` constructs the [buildkit LLB DAG graph](https://github.com/moby/buildkit#exploring-llb) according to the information and uses it to build resulting image.
+
+![](./assets/envd-arch.svg)
+
+## GitHub Issue Flow
+
+- Issues tagged as [`good first issue 💖`](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) are a good place to get started. 
+- If you'd like to start working on an existing issue, comment on the issue that you plan to work on it so other contributors know it's being handled and can offer help.
