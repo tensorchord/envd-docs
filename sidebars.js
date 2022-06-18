@@ -21,7 +21,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Getting Started',
-      items: ['get-started', 'why/why', 'build-envd/build-envd'],
+      items: ['get-started', 'why/why', 'build-envd/build-envd', 'concepts'],
       collapsed: false,
     },
     {
