@@ -24,6 +24,12 @@ const sidebars = {
       items: ['get-started', 'why/why', 'build-envd/build-envd'],
       collapsed: false,
     },
+    {
+      type: 'category',
+      label: 'Tips and Tricks',
+      items: ['tips/mirror'],
+      collapsed: false,
+    },
     require("./docs/api/sidebar.json"),
     'cli',
     {
