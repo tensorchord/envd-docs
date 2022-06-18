@@ -171,7 +171,7 @@ You can visit [`http://localhost:8888`](http://localhost:8888) after the `envd u
 
 ### Set a PyPI index mirror (optional)
 
-You can use the envd API function `config.pip_index` to set the PyPI index mirror if it is too slow to install the python packages via `install.python_packages`.
+You can use the `envd` API function `config.pip_index` to set the PyPI index mirror if it is too slow to install the python packages via `install.python_packages`.
 
 ```python title=build.envd
 def build():
@@ -220,7 +220,7 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
 
 ## Next Steps
 
-Congrats! envd is now setup for your project. Explore envd further!
+Congrats! `envd` is now setup for your project. Explore `envd` further!
 
 Please ask us on [Discord](https://discord.gg/KqswhpVgdU) if you had any trouble using this guide.
 
