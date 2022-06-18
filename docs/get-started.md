@@ -103,7 +103,7 @@ Before envd             |  After envd
 `envd` can be installed with `pip`. After the installation, please run `envd bootstrap` to bootstrap.
 
 ```bash
-pip install --pre envd
+pip install envd
 envd bootstrap
 ```
 
