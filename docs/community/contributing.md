@@ -16,7 +16,7 @@ A code of conduct is a document that establishes expectations for behavior for t
 
 If you do not know what code of conduct is, please have a look at [Your Code of Conduct | Open Source Guides](https://opensource.guide/code-of-conduct/).
 
-We has adopted [CNCF Community Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md) that we expect project participants to adhere to. Please read the short text so that you can understand what actions will and will not be tolerated.
+Please read [our code of conduct](https://github.com/tensorchord/envd/blob/main/CODE_OF_CONDUCT.md) that we expect project participants to adhere to and understand what actions will and will not be tolerated.
 
 ## Get Involved
 
