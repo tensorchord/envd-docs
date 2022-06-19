@@ -194,6 +194,13 @@ def build():
     config.jupyter(password="", port=8888)
 ```
 
+Do not forget to destroy the envd container which has lunched before if you edited the `build.envd`.
+
+```bash
+$ envd destroy
+INFO[2022-06-19T23:12:03+08:00] envd-quick-start is destroyed
+```
+
 You can get the endpoint of the running Jupyter notebook via `envd get envs`.
 
 ```bash
