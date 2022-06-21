@@ -1,4 +1,7 @@
 {
+  "Getting Started - 5min ⏱️": {
+    "message": "Getting Started - 5min ⏱️"
+  },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
     "description": "The title of the fallback page when the page crashed"
@@ -229,8 +232,5 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "envd Tutorial - 5min ⏱️": {
-    "message": "envd Tutorial - 5min ⏱️"
   }
 }

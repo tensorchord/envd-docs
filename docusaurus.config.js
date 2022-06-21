@@ -25,6 +25,20 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+      },
+      fa: {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+        calendar: 'chinese',
+      },
+    },
   },
 
   presets: [
@@ -83,6 +97,10 @@ const config = {
             label: 'Documentation',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
           {
             href: 'https://github.com/tensorchord/envd',
             position: 'right',
