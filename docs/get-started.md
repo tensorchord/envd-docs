@@ -16,7 +16,7 @@ envd is a **machine learning development environment** for data science and AI/M
 
 🔁 **Repeatable builds & reproducible results** - You can reproduce the same dev environment on your laptop, public cloud VMs, or Docker containers, without any change in setup.
 
-Let's **creating a new envd environment in less than 5 minutes**.
+Let's **create a new envd environment in less than 5 minutes**.
 
 ## Why Use envd?
 
@@ -70,7 +70,7 @@ $ docker build
 
 ☁️ **Local & cloud native**
 
-`envd` integrates seamlessly with Docker, you can share, version, and publish `envd` environments with Docker Hub or any other OCI image registries. The `envd` environments can be run on Docker or Kubernetes.
+`envd` integrates seamlessly with Docker. You can share, version, and publish `envd` environments with Docker Hub or any other OCI image registries. The `envd` environments can be run on Docker or Kubernetes.
 
 🔁 **Repeatable builds & reproducible results**
 
@@ -84,13 +84,13 @@ You can reproduce the same dev environment, on your laptop, public cloud VMs, or
 
 We’re focused on helping data scientists and teams that develop AI/ML models. And they may suffer from:
 
-- building the development environments with Python, CUDA, Docker, SSH, and so on. Do you have a complicated Dockerfile or build script that sets up all your dev environments, but is always breaking?
+- Building the development environments with Python, CUDA, Docker, SSH, and so on. Do you have a complicated Dockerfile or build script that sets up all your dev environments, but is always breaking?
 - Updating the environment. Do you always need to ask infrastructure engineers how to add a new python package in the Dockerfile?
 - Managing environments and machines. Do you always forget which machines are used for the specific project, because you handle multiple projects concurrently?
 
-Before envd             |  After envd
-:-------------------------:|:-------------------------:
-![](./assets/before.svg)  |  ![](./assets/after.svg)
+|       Before envd        |       After envd        |
+| :----------------------: | :---------------------: |
+| ![](./assets/before.svg) | ![](./assets/after.svg) |
 
 ## Installation
 

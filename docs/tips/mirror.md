@@ -1,6 +1,6 @@
 # Faster Build with Software Mirrors
 
-There are several ways to accelarate the building process. We will introduce how to use software mirrors (docker hub mirror, pip index mirror, conda channel mirror and so on) in envd.
+There are several ways to accelerate the building process. We will introduce how to use software mirrors (docker hub mirror, pip index mirror, conda channel mirror and so on) in envd.
 
 ## Setting up docker hub pull through mirror
 
