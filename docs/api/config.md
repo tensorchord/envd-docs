@@ -13,7 +13,7 @@ Configure jupyter notebook configuration
 
 **Arguments**:
 
-- `password` _str_ - Password for access authenticatioin
+- `password` _str_ - Password for access authentication
 - `port` _int_ - Port to serve jupyter notebook
 
 #### pip\_index
@@ -55,4 +55,3 @@ conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 **Arguments**:
 
 - `channel` _str_ - Basically the same with file content of an usual .condarc
-
