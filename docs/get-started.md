@@ -216,4 +216,4 @@ We welcome all kinds of contributions from the open-source community, individual
 
 **Questions:** Join our [discord community](https://discord.gg/KqswhpVgdU) or [file an issue](https://github.com/tensorchord/envd/issues)!
 
-**Contribute:** Check out our [guides](https://github.com/tensorchord/envd/blob/main/CONTRIBUTING.md) to contribute to envd’s source code.
+**Contribute:** Check out our [guides](https://envd.tensorchord.ai/docs/community/contributing) to contribute to envd’s source code.
