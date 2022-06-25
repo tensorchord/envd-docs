@@ -26,6 +26,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Language-specific Guides',
+      items: [{
+        type: 'doc',
+        id: 'lang/python',
+        label: 'Python',
+      }],
+      collapsed: false,
+    },
+    {
+      type: 'category',
       label: 'Tips and Tricks',
       items: ['tips/mirror'],
       collapsed: false,
