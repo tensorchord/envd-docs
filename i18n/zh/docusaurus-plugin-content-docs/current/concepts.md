@@ -1,43 +1,43 @@
-# envd Concepts
+# envd 的设计与实现
 
-This doc describes concepts in the `envd`. The name `envd` is inpired by systemd. [^1]
+此章节描述了`envd`的设计思路，`envd`的名字灵感来自于 systemd。 [^1]
 
-[^1]: [Thread about the name on GitHub](https://github.com/tensorchord/envd/issues/2#issuecomment-1119175904).
+[^1]: [Github 上我们关于该名字的讨论](https://github.com/tensorchord/envd/issues/2#issuecomment-1119175904).
 
-## Concepts
+## 核心设计
 
-The core abstractions in `envd` are **environments** and **images**. Images are built from the given `build.envd`s and follow [docker image spec v1.2](https://github.com/moby/moby/blob/master/image/spec/v1.2.md). Thus you can use the images built by `envd` with Docker directly.
+`envd` 的核心抽象是 **环境** 和 **镜像**。镜像由 `build.envd` 构建，并且遵循 [docker 镜像规范 v1.2](https://github.com/moby/moby/blob/master/image/spec/v1.2.md)。因此，您可以将 `envd` 构建的镜像使用 Docker 来运行。
 
-Environments are containers run by docker, Kubernetes, or some other OCI runtime spec-compatible runtimes (e.g. runc, crun, containerd).
+环境是由 docker、Kubernetes 或其他一些与 OCI([Open Container Initiative](https://github.com/opencontainers/runtime-spec)) 规范兼容的运行时（如 runc、crun、containerd）运行的容器。
 
-### Execution Model
+### 实现模型
 
-`build.envd` is written in [Starlark](https://github.com/bazelbuild/starlark), a simplified dialect of Python 3. The default function `build()` will be invoked on startup.
+`build.envd` 是用 [Starlark](https://github.com/bazelbuild/starlark), 编写的，这是 Python 3 的一种简化方言。build() 函数将在启动时调用。
 
 ```python title=build.envd
-# The function `build` will be evaluated by default.
+# 默认调用 `build` 函数。
 def build():
-    # envd instructions here.
+    # 在这里编写 envd 命令。
 ```
 
-Functions like [`install.python_packages`](api/install#python_packages) and [`config.jupyter`](api/config#jupyter) can be used to register information. The information will be kept in a static graph in the memory. envd uses the static graph to build the environment at the envd of execution.
+`install.python_packages` 和 `config.jupyter` 等函数用于注册信息。这些信息将被保存在内存的静态图中。envd 使用静态图在执行的 envd 建立环境。
 
-envd evaluates the `build` function with the starlark intepreter, thus you can use loops, if/else conditional execution or other statements in `build.envd`.
+`envd` 使用 starlark 解释器加载 `build()` 函数，因此您可以在 `build.envd` 中使用 loops、if/else 或其他语句。
 
 ```python title=build.envd
-# The function `build` will be evaluated by default.
+# 默认调用 `build` 函数。
 def build():
     version = "2.9.1"
     dev_env(version, "zsh")
 
-# Here is a new function and it is used in `build()`
+# 创建新的函数，并在 `build.envd` 中调用。
 def dev_env(version, custom_shell):
     install.python_packages(name=[
         "tensorflow=="+version,
         "tensorboard"
     ])
     config.jupyter(password="", port=8888)
-    # Configure zsh if it is specified.
+    # 指定 zsh shell 并配置它
     if custom_shell == "zsh":
       shell("zsh")
 ```
