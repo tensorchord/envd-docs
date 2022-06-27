@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'envd',
   tagline: 'Development Environment for Machine Learning Engineers',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://envd.tensorchord.ai/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -31,12 +31,6 @@ const config = {
         direction: 'ltr',
         htmlLang: 'en-US',
         calendar: 'gregory',
-      },
-      fa: {
-        label: '简体中文',
-        direction: 'ltr',
-        htmlLang: 'zh-CN',
-        calendar: 'chinese',
       },
     },
   },
