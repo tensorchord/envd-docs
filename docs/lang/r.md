@@ -25,7 +25,7 @@ def build():
         ])
 ```
 
-## CRAN Mirror packages
+## Configuring CRAN Mirror
 
 By default, the RStudio CRAN mirror `"https://cran.rstudio.com"` is used when downloading and installing R packages. However, you can specify any other mirrors via `config.cran_mirror()` like the following:
 
