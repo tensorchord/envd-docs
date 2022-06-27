@@ -1,45 +1,50 @@
-# envd Roadmap
+# envd 路线图
 
-Want to jump in? Welcome discussions and contributions! 
+欢迎加入我们的讨论，一起构建社区。
 
-- Chat with us on [💬 Discord](https://discord.gg/KqswhpVgdU)
-- Have a look at [`good first issue 💖`](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) issues!
-- More on [contributing page](./contributing.md)
+- 加入我们的 Discord 社区 [💬 Discord](https://discord.gg/KqswhpVgdU)
+- 查看 [good first issue 💖](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) 问题！
+- 社区贡献指南 [contributing page](./contributing.md)
 
-## Short term - what we're working on now 🎉
+## 短期目标 - 我们正在做什么 🎉
 
-We are working on building the MVP!
+我们正在努力打造 MVP(最简可行产品)！
 
-- **Build language**
-    - Support more languages. See [feat: Support environments with multiple languages](https://github.com/tensorchord/envd/issues/407), [feat: Support Julia language](https://github.com/tensorchord/envd/issues/408)
-    - [Support multi-target builds](https://github.com/tensorchord/envd/issues/403)
-    - [Implement our own language server](https://github.com/tensorchord/envd/issues/358)
-    - [Support oh-my-zsh plugins configuration](https://github.com/tensorchord/envd/issues/106)
-    - [Customize the base images](https://github.com/tensorchord/envd/issues/261)
-- **Runtime**
-    - [Add agent to collect metrics in the container (or in the host)](https://github.com/tensorchord/envd/issues/218). We need to collect and show the metrics of GPUs/CPUs to users, maybe via a web-based UI.
-    - [Support buildkitd moby worker in dockerd 22.06-beta](https://github.com/tensorchord/envd/issues/51). It is a huge enhancement which accelarates the build process. We use moby worker in docker 22.06, and fallback to docker worker in docker 20.10.
-- **Ecosystem**
-    - [Contribute the vscode-envd extension](https://github.com/tensorchord/vscode-envd)
-    - Provide web-based UI
+- **构建语言**
+    - 支持更多语言。参见 [feat: Support environments with multiple languages](https://github.com/tensorchord/envd/issues/407), [feat: Support Julia language](https://github.com/tensorchord/envd/issues/408)
+    - [支持多目标构建](https://github.com/tensorchord/envd/issues/403)
+    - [实现 envd 的语言服务器](https://github.com/tensorchord/envd/issues/358)
+    - [支持 oh-my-zsh 插件配置](https://github.com/tensorchord/envd/issues/106)
+    - [支持自定义基础镜像](https://github.com/tensorchord/envd/issues/261)
 
-## Medium term - what we're working on next! 🏃
+- **运行时**
+    - 收集GPU/CPU 的指标，通过 Web UI 展示： [Add agent to collect metrics in the container (or in the host)](https://github.com/tensorchord/envd/issues/218)
+    - 在 dockerd 22.06-beta 中支持 buildkitd moby worker: [Support buildkitd moby worker in dockerd 22.06-beta](https://github.com/tensorchord/envd/issues/51)。这是一项重大的改进，可以加速构建过程。我们在 docker 22.06 中使用 moby worker，并在 docker 20.10 中回退到 docker worker。
 
-- **Language**
-    - [Support data management in the environment](https://github.com/tensorchord/envd/issues/5)
-- **Runtime**
-    - [Support both Kubernetes and Docker runtimes](https://github.com/tensorchord/envd/issues/179). Data science or AI/ML teams usually do not only develop on their laptops. They need GPU clusters to run the large scale training jobs. envd supports both Kubernetes and Docker runtimes. Thus users can move to cloud without any code change.
-- **Ecosystem**
-    - [Design the extension mechanism to reuse user-defined build funcs](https://github.com/tensorchord/envd/issues/91). Users can run `load(<custom-package>)` to load and use their own build functions.
+- **生态系统**
+    - envd 的 vscode 扩展：[Contribute the vscode-envd extension](https://github.com/tensorchord/vscode-envd)
+    - 提供 Web 界面
 
-## Longer term items - working on this soon! ⏩
+## 中期目标 - 我们接下来要做什么！🏃
 
-These items are not essiential for an MVP, but are a part of our longer term plans. Feel free to jump in on these if you're interested!
+- **构建语言**
+    - 支持数据集管理：[Support data management in the environment](https://github.com/tensorchord/envd/issues/5)
 
-- **Runtime**
-    - Continuous profiler that continuously collects line-level profiling performance data from envd environments, helps engineers find bottlenecks in the training code.
-    - [Support the OCI runtime spec-compatible runtime](https://github.com/tensorchord/envd/issues/282)
-- **Ecosystem**
-    - Integrate with other open source development tools e.g. [aim](https://github.com/aimhubio/aim).
+- **运行时**
+    - 支持 Kubernetes、Docker 运行时：[Support both Kubernetes and Docker runtimes](https://github.com/tensorchord/envd/issues/179)。数据科学家或 AI/ML 团队不仅在他们的主机上进行开发，也需要 GPU 集群来运行大规模的训练作业。envd 支持 Kubernetes 和 Docker 运行时。用户无需更改任何代码即可迁移到云端。
 
-To be added in the future.
+- **生态系统**
+    - 设计拓展机制加载用户自定义函数：[Design the extension mechanism to reuse user-defined build funcs](https://github.com/tensorchord/envd/issues/91)。用户可以运行 `load(<custom-package>)` 来加载自定义函数。
+
+## 长期目标 - 正在规划中！⏩
+
+下列工作对于 MVP 来说不是必需的，但它们是我们长期计划的一部分。如果您有兴趣，请随意查看！
+
+- **运行时**
+    - 性能分析器：从 envd 环境中持续收集行级分析性能数据，帮助工程师找到训练代码中的瓶颈。
+    - 支持与 OCI 规范兼容的运行时：[Support the OCI runtime spec-compatible runtime](https://github.com/tensorchord/envd/issues/282)。
+
+ - **生态系统**
+    - 集成其他开源工具。例如：[aim](https://github.com/aimhubio/aim)
+
+持续更新中。
