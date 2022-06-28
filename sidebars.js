@@ -31,6 +31,10 @@ const sidebars = {
         type: 'doc',
         id: 'lang/python',
         label: 'Python',
+      }, {
+        type: 'doc',
+        id: 'lang/r',
+        label: 'R',
       }],
       collapsed: false,
     },
