@@ -2,22 +2,25 @@
 sidebar_position: 3
 ---
 
-# Building Your First Environment
+# 构建您的 envd 环境
 
-envd can build images automatically by reading the instructions from a `build.envd`. A `build.envd` is a text document that contains all the commands a user could call on the command line to assemble an image.
+envd 通过读取 `build.envd` 文件中的配置来自动构建镜像。`build.envd` 是一个包含所有命令的配置文件。
 
-## Usage
+## 基础命令
 
-The `envd build` command builds an image from a `build.envd`. `envd up` command builds an image and runs immediately. Traditionally, the `build.envd` and located in the root of the context.  You use the `--path` or `-p` flag with `envd build`/`envd up` to point to a directory anywhere in your file system which contains a `build.envd`.
+- `envd build`：从 build.envd 构建镜像。
+- `envd up`：从 build.envd 构建镜像并立即运行。
+- `envd build/envd up --path/-p` : 指定镜像的构建目录（指定目录下必须包含 build.envd 文件）。
 
 ```bash
+# 在当前目录下构建镜像
 $ ls
 build.envd ...
 $ envd build
 ```
 
 ```bash
-# Or you can specify the path.
+# 在自定义目录下构建镜像
 $ tree .
 ./examples
 └── mnist
@@ -28,11 +31,11 @@ $ tree .
 $ envd build --path examples/mnist
 ```
 
-## build.envd Example
+## build.envd 示例
 
-The syntax of `build.envd` is [starlark](https://docs.bazel.build/versions/main/skylark/language.html), a simplified dialect of Python3. If you know Python, then you can write `build.envd` without an issue.
+`build.envd` 使用 [starlark](https://docs.bazel.build/versions/main/skylark/language.html)（Python3 的一种简化方言）语法编写，如果您了解 Python，那么您也可以毫无障碍编写 build.envd。
 
-Here is an example of `build.envd`:
+以下是 `build.envd` 的示例代码：
 
 ```python title=build.envd
 def build():
@@ -44,22 +47,22 @@ def build():
     config.jupyter(password="", port=8888)
 ```
 
-You don't need to worry about it yet. Let's explore how it works in the following sections.
+别担心，我们将在以下部分探讨它是如何工作的。
 
 ### Hello World
 
-You can create a file `build.envd` in your project directory with these lines:
+1. 新建配置，创建 `build.envd` 文件，输入以下代码：
 
 ```python title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
 ```
 
-You can save the file and run `envd up`. Congrats! You get your first envd environment.
+2. 运行环境，在控制台使用 `envd up` 命令运行它。恭喜！您成功构建了第一个 envd 环境。
 
 ```text title="envd up"
 $ envd up
-[+] ⌚ parse build.envd and download/cache dependencies 0.0s ✅ (finished) 
+[+] ⌚ parse build.envd and download/cache dependencies 0.0s ✅ (finished)
 [+] 🐋 build envd environment 7.9s (16/16) ✅ (finished)
  ...
  => exporting to oci image format                                      0.4s
@@ -67,37 +70,48 @@ $ envd up
  => => exporting manifest sha256:7ef2e8571485ce51d966b4cf5fe83232520f  0.0s
  => => exporting config sha256:abec960de30fce69dc19126577c7aaae3f9b62  0.0s
  => => sending tarball                                                 0.4s
-envd@588f26349c61 $ 
+envd@588f26349c61 $
 ```
 
-You can use `ssh <project-directory-name>.envd` to attach to the environment if you exit from the shell.
+3. 重新进入您的环境，如果您退出了当前 `shell`，使用 `ssh <project-directory-name>.envd` 命令将重新进入环境。
 
-```bash title="connect the environment via ssh"
+```bash title="通过 ssh 重新进入环境"
 envd@588f26349c61 $ exit
 $ ssh demo.envd
-envd@588f26349c61 $ # You are in the environment again!
+envd@588f26349c61 $ # 欢迎回来！
 ```
 
-Do not forget to remove the environment if you do not use it.
+4. 删除环境，如果您不再使用它，请不要忘记使用 `envd destroy` 命令来删除环境。
 
-```text title="destroy the environment"
+```text title="删除环境"
 $ envd destroy
 INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 ```
 
-Let's have a look at `build.envd`. `build` is the default function name in `build.envd`. envd invokes the function if you run `envd build` or `envd up`.
+### build.envd
 
-:::caution
+让我们来看一下 `build.envd` 文件。
 
-**A `build.envd` must have a `build` function**.
+```python title=build.envd
+def build():
+    base(os="ubuntu20.04", language="python3")
+```
+
+`build()` 是 `build.envd` 中的主函数。当您运行 `envd build` 或 `envd up`命令时，envd 程序会调用该函数。
+
+:::caution 注意
+
+**`build.envd` 文件中必须包含 `build()` 函数**。
 
 :::
 
-`base` declares the expected operating system and language that you will use in the environment.
+`base` 将声明您在该环境中使用的操作系统和语言。
 
-### Install python packages
 
-The [envd install API](../api/install) function `install.python_packages` installs python packages in the environment:
+
+### 安装 Python 包
+
+通过 [envd install API](../api/install) 中的 `install.python_packages` 函数在环境中安装 Python 包：
 
 ```python title=build.envd
 def build():
@@ -107,7 +121,7 @@ def build():
     ])
 ```
 
-The function supports general pip syntaxs:
+该函数支持通用 pip 语法：
 
 ```python
     install.python_packages(name = [
@@ -117,12 +131,12 @@ The function supports general pip syntaxs:
     ])
 ```
 
-Feel free to ask us in [Discord](https://discord.gg/KqswhpVgdU) if you get problems about packages installation. You can verify if it works:
+如果您遇到有关软件包安装的问题，请随时在 [Discord](https://discord.gg/KqswhpVgdU) 中询问我们。您可以验证它是否有效：
 
 ```
 $ envd up
 envd@2c14bff847f8:$ python3
-Python 3.8.10 (default, Mar 15 2022, 12:22:08) 
+Python 3.8.10 (default, Mar 15 2022, 12:22:08)
 [GCC 9.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import numpy as np
@@ -131,9 +145,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 array([2, 3, 4])
 ```
 
-### Use zsh instead of bash
+### 配置 ZSH Shell
 
-The [envd API](../api/global%20functions) function `shell` configures shell program in the environment:
+通过 [envd API](../api/global%20functions) 中的 `Shell` 函数配置环境中的 `Shell` 程序：
 
 ```python title=build.envd
 def build():
@@ -144,16 +158,16 @@ def build():
     shell("zsh")
 ```
 
-You do not need to configure zsh and [oh-my-zsh](https://ohmyz.sh/) manually, envd does it.
+ `envd` 自动配置 `ZSH Shell` 和 [oh-my-zsh](https://ohmyz.sh/)，无需您手动操作。
 
 ```bash
 $ envd up
-(envd) ➜  docs # zsh in the environment
+(envd) ➜  docs # 环境中的 ZSH shell
 ```
 
-### Use jupyter
+### 使用 Jupyter Notebooks
 
-[Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [envd config API](../api/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
+Jupyter Notebooks 是使用 Python 进行数据分析的互动计算环境。`envd` 通过 `config.jupyter` [API 函数](../api/config) 帮助您在环境中配置 Jupyter Notebooks。
 
 ```python title=build.envd
 def build():
@@ -165,13 +179,14 @@ def build():
     config.jupyter(password="", port=8888)
 ```
 
-You can visit [`http://localhost:8888`](http://localhost:8888) after the `envd up`.
+`envd up` 命令执行成功后，通过 [http://localhost:8888](http://localhost:8888) 查看。
+
 
 ![jupyter](./assets/jupyter.png)
 
-### Set a PyPI index mirror (optional)
+### 配置 PyPI 源（可选）
 
-You can use the `envd` API function `config.pip_index` to set the PyPI index mirror if it is too slow to install the python packages via `install.python_packages`.
+如果通过默认源安装 Python 包太过缓慢，请使用 `envd` API 函数 `config.pip_index` 配置新的 PyPI 源。
 
 ```python title=build.envd
 def build():
@@ -184,9 +199,10 @@ def build():
     config.jupyter(password="", port=8888)
 ```
 
-Then the packages will be downloaded from the mirror instead of [pypi.org](https://pypi.org/).
+配置成功后，Python 包将从新的源下载，而不是 [pypi.org](https://pypi.org/)
 
-### Complex build.envd example
+
+### 更多 build.envd 示例
 
 ```python
 def build():
@@ -218,14 +234,14 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
     run(["ls -la"])
 ```
 
-## Next Steps
+## 下一步
 
-Congrats! `envd` is now setup for your project. Explore `envd` further!
+恭喜您已经成功配置好了 `envd` 环境。
 
-Please ask us on [Discord](https://discord.gg/KqswhpVgdU) if you had any trouble using this guide.
+如果您在使用本指南时遇到任何问题，请随时在 [Discord](https://discord.gg/KqswhpVgdU) 与我们交流。
 
-Here are some quick links:
+如果您想进一步探索 `envd` ，以下是一些快速链接：
 
-- [envd GitHub Repository](https://github.com/tensorchord/envd)
-- [Why Use envd?](../why)
-- [envd CLI Reference](../cli)
+- [envd GitHub 仓库](https://github.com/tensorchord/envd)
+- [为什么使用 envd？](../why)
+- [envd CLI 命令](../cli)
