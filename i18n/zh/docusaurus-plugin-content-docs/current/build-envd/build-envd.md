@@ -131,7 +131,7 @@ def build():
     ])
 ```
 
-如果您遇到有关软件包安装的问题，请随时在 [Discord](https://discord.gg/KqswhpVgdU) 中询问我们。您可以验证它是否有效：
+如果您遇到有关软件包安装的问题，请随时在 [Discord](https://discord.gg/KqswhpVgdU) 中与我们交流。您可以验证它是否工作：
 
 ```
 $ envd up
