@@ -49,6 +49,18 @@ def build():
     shell("zsh")
 ```
 
+## Specifying VSCode extensions
+
+You can specify VSCode extensions with `install.vscode_extensions` function. The following example installs [`REditorSupport.r-lsp`](https://open-vsx.org/extension/REditorSupport/r-lsp)[^1]:
+
+```python title=build.envd
+def build():
+    base(os="ubuntu20.04", language="julia")
+    install.vscode_extensions(["REditorSupport.r-lsp"])
+```
+
+[^1]: [open-vsx](https://open-vsx.org/) is used instead of Microsoft VSCode Marketplace due to [licensing issues](https://github.com/tensorchord/envd/issues/160).
+
 ## Setting up RStudio server
 
 Coming soon. Please stay tuned.
