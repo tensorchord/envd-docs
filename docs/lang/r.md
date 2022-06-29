@@ -55,7 +55,7 @@ You can specify VSCode extensions with `install.vscode_extensions` function. The
 
 ```python title=build.envd
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(os="ubuntu20.04", language="r")
     install.vscode_extensions(["REditorSupport.r-lsp"])
 ```
 
