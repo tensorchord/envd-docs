@@ -1,4 +1,4 @@
-# Connect to envd environment
+# Connect to envd Environment
 
 Here we use the example at [envd/examples/mnist](https://github.com/tensorchord/envd/tree/main/examples/mnist).
 
