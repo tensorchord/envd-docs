@@ -4,7 +4,7 @@ Here we use the example at [envd/examples/mnist](https://github.com/tensorchord/
 
 ## Build and check your environment
 
-Following [previous tutorial](../build-envd/build-envd.md), you'll be able to setup the project environment by envd. In this tutorial, we used `mnist` project.
+Following [previous tutorial](../build-envd), you'll be able to setup the project environment by envd. In this tutorial, we used `mnist` project.
 After setting up the project, you can check the environment status by `envd get envs`.
 
 ```
