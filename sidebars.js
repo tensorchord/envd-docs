@@ -35,6 +35,10 @@ const sidebars = {
         type: 'doc',
         id: 'lang/r',
         label: 'R',
+      }, {
+        type: 'doc',
+        id: 'lang/julia',
+        label: 'Julia',
       }],
       collapsed: false,
     },
