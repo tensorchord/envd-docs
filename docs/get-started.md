@@ -177,6 +177,12 @@ $ cd envd-quick-start && envd up
 (envd) ➜  demo git:(master) ✗ # You are in the container-based environment!
 ```
 
+:::caution
+
+If you are using `root` to run the command `envd up`, the user in the enviroment would be `root` rather than `envd`. It may cause some problems because of the `root`'s special features for some softwares. Feel free to submit new issues [here](https://github.com/tensorchord/envd/issues)!
+
+:::
+
 ## Play with the environment
 
 You can run `ssh envd-quick-start.envd` to reconnect if you exit from the environment. Or you can execute `git` or `python` commands inside.
