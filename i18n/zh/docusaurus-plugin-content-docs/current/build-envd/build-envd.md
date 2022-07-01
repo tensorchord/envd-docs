@@ -44,7 +44,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
 别担心，我们将在以下部分探讨它是如何工作的。
@@ -176,11 +176,17 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
-`envd up` 命令执行成功后，通过 [http://localhost:8888](http://localhost:8888) 查看。
+`envd up` 命令执行成功后，通过 `envd get envs` 查看 Jupyter 的地址。
 
+```bash
+$ envd up --detach
+$ envd get env
+NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
+envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
+```
 
 ![jupyter](./assets/jupyter.png)
 
@@ -196,7 +202,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
 配置成功后，Python 包将从新的源下载，而不是 [pypi.org](https://pypi.org/)

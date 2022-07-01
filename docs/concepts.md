@@ -36,7 +36,7 @@ def dev_env(version, custom_shell):
         "tensorflow=="+version,
         "tensorboard"
     ])
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
     # Configure zsh if it is specified.
     if custom_shell == "zsh":
       shell("zsh")

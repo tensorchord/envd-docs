@@ -175,17 +175,6 @@ $ cd envd-quick-start && envd up
 (envd) ➜  demo git:(master) ✗ # You are in the container-based environment!
 ```
 
-## 在环境内探索
-
-如果你退出了开发环境，可以通过 `ssh envd-quick-start.envd` 重新链接，`envd` 已经自动配置好了 SSH key 和访问方式。在环境中你也可以使用 `python` 和 `git` 等命令。
-
-```bash
-$ python demo.py
-[2 3 4]
-$ git fetch
-$
-```
-
 ## 设置 Jupyter notebooks
 
 请在 `build.envd` 中添加 `config.jupyter` 来启用 Jupyter notebooks。
@@ -197,7 +186,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
 当你修改了 `build.envd` 后，不要忘记重建 `envd` 环境。
@@ -213,7 +202,7 @@ INFO[2022-06-19T23:12:03+08:00] envd-quick-start is destroyed
 $ envd up --detach
 $ envd get env
 NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
-envd-quick-start        http://localhost:8888   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
+envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
 ```
 
 ## 社区

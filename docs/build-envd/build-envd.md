@@ -41,7 +41,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
 You don't need to worry about it yet. Let's explore how it works in the following sections.
@@ -162,10 +162,8 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
-
-You can visit [`http://localhost:8888`](http://localhost:8888) after the `envd up`.
 
 ![jupyter](./assets/jupyter.png)
 
@@ -181,7 +179,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
 Then the packages will be downloaded from the mirror instead of [pypi.org](https://pypi.org/).
