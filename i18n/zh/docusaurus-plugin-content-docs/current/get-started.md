@@ -175,17 +175,6 @@ $ cd envd-quick-start && envd up
 (envd) ➜  demo git:(master) ✗ # You are in the container-based environment!
 ```
 
-## 在环境内探索
-
-如果你退出了开发环境，可以通过 `ssh envd-quick-start.envd` 重新链接，`envd` 已经自动配置好了 SSH key 和访问方式。在环境中你也可以使用 `python` 和 `git` 等命令。
-
-```bash
-$ python demo.py
-[2 3 4]
-$ git fetch
-$
-```
-
 ## 设置 Jupyter notebooks
 
 请在 `build.envd` 中添加 `config.jupyter` 来启用 Jupyter notebooks。

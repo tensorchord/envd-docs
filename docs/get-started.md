@@ -183,17 +183,6 @@ If you are using `root` to run the command `envd up`, the user in the enviroment
 
 :::
 
-## Play with the environment
-
-You can run `ssh envd-quick-start.envd` to reconnect if you exit from the environment. Or you can execute `git` or `python` commands inside.
-
-```bash
-$ python demo.py
-[2 3 4]
-$ git fetch
-$
-```
-
 ## Set up Jupyter notebook
 
 Please edit the `build.envd` to enable jupyter notebook:
