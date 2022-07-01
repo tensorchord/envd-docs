@@ -205,7 +205,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
 Do not forget to destroy the envd container which was lunched before if you edited the `build.envd`.
@@ -221,7 +221,7 @@ You can get the endpoint of the running Jupyter notebook via `envd get envs`.
 $ envd up --detach
 $ envd get env
 NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
-envd-quick-start        http://localhost:8888   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
+envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
 ```
 
 ## Community

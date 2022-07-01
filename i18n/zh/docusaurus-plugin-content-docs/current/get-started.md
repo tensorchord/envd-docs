@@ -197,7 +197,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
 当你修改了 `build.envd` 后，不要忘记重建 `envd` 环境。
@@ -213,7 +213,7 @@ INFO[2022-06-19T23:12:03+08:00] envd-quick-start is destroyed
 $ envd up --detach
 $ envd get env
 NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
-envd-quick-start        http://localhost:8888   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
+envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
 ```
 
 ## 社区

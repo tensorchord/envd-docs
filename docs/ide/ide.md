@@ -8,7 +8,7 @@ Following [previous tutorial](../build-envd), you'll be able to setup the projec
 After setting up the project, you can check the environment status by `envd get envs`.
 
 ```
-➜  envd get envs
+$ envd get envs
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 mnist   http://localhost:8888   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
 ```
@@ -41,21 +41,21 @@ Then everything is done!
 
 ## Connect to the environment with Jupyter Notebook
 
-In `build.envd` file, we've declared the jupyter environment, with no password and serving at port 8888.
+In `build.envd` file, we've declared the jupyter environment, with no password.
 
 ```python title=build.envd
 def build():
     ...
-    config.jupyter(password="", port=8888)
+    config.jupyter(password="")
 ```
 
 You can also get the jupyter port through `envd get envs` command.
 
 ```
-➜  envd get envs
+$ envd get envs
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
-mnist   http://localhost:8888   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
+mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
 ```
 
-Then you can directly get your jupyter notebook by using `http://localhost:8888` in your browser
+Then you can directly get your jupyter notebook by using `http://localhost:48737` in your browser
 ![](https://i.imgur.com/weg3v9p.png)

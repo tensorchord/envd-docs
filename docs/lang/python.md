@@ -82,14 +82,14 @@ def build():
 
 ## Setting up the Jupyter notebook
 
-You can set up the Jupyter notebook with `config.jupyter` function. The following example sets up a Jupyter notebook listening on port 8888:
+You can set up the Jupyter notebook with `config.jupyter` function. The following example sets up a Jupyter notebook:
 
 ```python title=build.envd
 def build():
     base(os="ubuntu20.04", language="python")
-    # Use `config.jupyter(password="", port=8888)` 
+    # Use `config.jupyter(password="")` 
     # if you do not need to set up password.
-    config.jupyter(password="password", port=8888)
+    config.jupyter(password="password")
 ```
 
 ![jupyter](../build-envd/assets/jupyter.png)
