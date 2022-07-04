@@ -72,7 +72,7 @@ $ docker build
 
 完全复现相同的环境，无论是在你的笔记本电脑上，还是在数据中心，亦或是在公有云服务上。更好地复现训练结果。因此你可以安全且放心地跟你的同事分享开发环境，而不再需要担心 `为什么你的代码到我这里跑不出结果？`
 
-🖨️ **内置的 Jupyter/VSCode 支持** 
+🖨️ **内置的 Jupyter/VSCode 支持**
 
 `envd` 提供原生的 Jupyter notebooks 和 VSCode remote extension 支持，你无需牺牲任何的日常开发习惯和使用体验，就可以享受到 `envd` 带来的优势。
 
@@ -92,9 +92,9 @@ $ docker build
 
 :::
 
-Before envd             |  After envd
-:-------------------------:|:-------------------------:
-![](./assets/before.svg)  |  ![](./assets/after.svg)
+|       Before envd        |       After envd        |
+| :----------------------: | :---------------------: |
+| ![](./assets/before.svg) | ![](./assets/after.svg) |
 
 如果你有这些问题，接下来，让我们在 5 分钟的时间里来创建一个环境试试看！
 
@@ -150,25 +150,25 @@ cd envd-quick-start && envd up
 
 ```
 $ cd envd-quick-start && envd up
-[+] ⌚ parse build.envd and download/cache dependencies 2.8s ✅ (finished)     
- => download oh-my-zsh                                                    2.8s 
-[+] 🐋 build envd environment 18.3s (25/25) ✅ (finished)                      
- => create apt source dir                                                 0.0s 
- => local://cache-dir                                                     0.1s 
- => => transferring cache-dir: 5.12MB                                     0.1s 
+[+] ⌚ parse build.envd and download/cache dependencies 2.8s ✅ (finished)
+ => download oh-my-zsh                                                    2.8s
+[+] 🐋 build envd environment 18.3s (25/25) ✅ (finished)
+ => create apt source dir                                                 0.0s
+ => local://cache-dir                                                     0.1s
+ => => transferring cache-dir: 5.12MB                                     0.1s
 ...
- => pip install numpy                                                    13.0s 
- => copy /oh-my-zsh /home/envd/.oh-my-zsh                                 0.1s 
- => mkfile /home/envd/install.sh                                          0.0s 
- => install oh-my-zsh                                                     0.1s 
- => mkfile /home/envd/.zshrc                                              0.0s 
+ => pip install numpy                                                    13.0s
+ => copy /oh-my-zsh /home/envd/.oh-my-zsh                                 0.1s
+ => mkfile /home/envd/install.sh                                          0.0s
+ => install oh-my-zsh                                                     0.1s
+ => mkfile /home/envd/.zshrc                                              0.0s
  => install shell                                                         0.0s
  => install PyPI packages                                                 0.0s
  => merging all components into one                                       0.3s
  => => merging                                                            0.3s
- => mkfile /home/envd/.gitconfig                                          0.0s 
- => exporting to oci image format                                         2.4s 
- => => exporting layers                                                   2.0s 
+ => mkfile /home/envd/.gitconfig                                          0.0s
+ => exporting to oci image format                                         2.4s
+ => => exporting layers                                                   2.0s
  => => exporting manifest sha256:7dbe9494d2a7a39af16d514b997a5a8f08b637f  0.0s
  => => exporting config sha256:1da06b907d53cf8a7312c138c3221e590dedc2717  0.0s
  => => sending tarball                                                    0.4s
@@ -201,7 +201,7 @@ INFO[2022-06-19T23:12:03+08:00] envd-quick-start is destroyed
 ```bash
 $ envd up --detach
 $ envd get env
-NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
+NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID
 envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
 ```
 
