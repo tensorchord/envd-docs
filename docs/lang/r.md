@@ -79,7 +79,7 @@ NAME    ENDPOINT                        SSH TARGET      IMAGE           GPU     
 r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   <none>  <none>  Up 6 hours      1eb7d40e5a8a
 ```
 
-Then you can connect to the RStudio server by using `http://localhost:34621` in your browser. Please use `envd` as the username, and the password can be anything.
+Then you can connect to the RStudio server by using `http://localhost:34621` in your browser. Please use `envd` as the username, and the password can be any string.
 
 ![](../ide/assets/rstudio.png)
 
