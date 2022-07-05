@@ -45,7 +45,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Tips and Tricks',
-      items: ['tips/mirror', 'tips/config'],
+      items: ['tips/mirror', 'tips/config', 'tips/ci'],
       collapsed: false,
     },
     require("./docs/api/sidebar.json"),
