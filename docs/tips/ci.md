@@ -1,6 +1,6 @@
 # CI/CD Integration 
 
-envd only has one software dependency: [Buildkitd](https://github.com/moby/buildkit#containerizing-buildkit). Thus envd is compatible with most Continuous Integration systems.
+envd only has one software dependency: [Buildkitd](https://github.com/moby/buildkit#containerizing-buildkit), thus envd is compatible with most Continuous Integration systems. Please contact us on [💬 Discord](https://discord.gg/KqswhpVgdU) if you have problems about integrating envd with your CI/CD system!
 
 ## GitHub Actions
 
