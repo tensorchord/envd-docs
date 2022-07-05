@@ -78,7 +78,7 @@ before_script:
     - envd bootstrap
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
-earthly:
+envd:
   stage: Build and push
   script:
     - envd build --output type=image,name=$CI_REGISTRY/$CI_REGISTRY_USER/envd-quick-start,push=true
@@ -98,7 +98,7 @@ before_script:
     # Connect envd to a existing buildkitd instance.
     - envd context create --name buildkitk8s --builder-name buildkitd --use --builder kube-pod
 
-earthly:
+envd:
   stage: Build and push
   script:
     - envd build --output type=image,name=$CI_REGISTRY/$CI_REGISTRY_USER/envd-quick-start,push=true
