@@ -63,4 +63,24 @@ def build():
 
 ## Setting up RStudio server
 
-Coming soon. Please stay tuned.
+You can set up [RStudio server](https://www.rstudio.com/products/rstudio/download-server/) with `config.rstudio_server`.
+
+```python title=build.envd
+def build():
+    ...
+    config.rstudio_server()
+```
+
+Endpoint can be got through `envd get envs` command.
+
+```
+$ envd get envs
+NAME    ENDPOINT                        SSH TARGET      IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
+r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   <none>  <none>  Up 6 hours      1eb7d40e5a8a
+```
+
+Then you can connect to the RStudio server by using `http://localhost:34621` in your browser. Please use `envd` as the username, and the password can be anything.
+
+![](../ide/assets/rstudio.png)
+
+![](../ide/assets/rstudio-main.png)
