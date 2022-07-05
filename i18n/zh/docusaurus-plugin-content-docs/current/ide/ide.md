@@ -60,3 +60,27 @@ mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/exa
 在浏览器中输入 `http://localhost:48737` 访问您的 Jupyter Notebook。
 
 ![](https://i.imgur.com/weg3v9p.png)
+
+## 使用 RStudio 连接到环境
+
+你可以通过 `config.rstudio_server` 启用 [RStudio server](https://www.rstudio.com/products/rstudio/download-server/)。
+
+```python title=build.envd
+def build():
+    ...
+    config.rstudio_server()
+```
+
+RStudio 的地址可以通过 `envd get envs` 命令得到。
+
+```
+$ envd get envs
+NAME    ENDPOINT                        SSH TARGET      IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
+r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   <none>  <none>  Up 6 hours      1eb7d40e5a8a
+```
+
+接下来你可以通过 `http://localhost:34621` 在浏览器中使用 RStudio！请使用 `envd` 作为用户名，密码可以为任意字符串。
+
+![](./assets/rstudio.png)
+
+![](./assets/rstudio-main.png)

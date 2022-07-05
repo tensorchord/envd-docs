@@ -57,5 +57,30 @@ NAME    JUPYTER                 SSH TARGET      CONTEXT                         
 mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
 ```
 
-Then you can directly get your jupyter notebook by using `http://localhost:48737` in your browser
+Then you can directly get your jupyter notebook by using `http://localhost:48737` in your browser.
+
 ![](https://i.imgur.com/weg3v9p.png)
+
+## Connect to the environment with RStudio server
+
+You can set up [RStudio server](https://www.rstudio.com/products/rstudio/download-server/) with `config.rstudio_server`.
+
+```python title=build.envd
+def build():
+    ...
+    config.rstudio_server()
+```
+
+Endpoint can be got through `envd get envs` command.
+
+```
+$ envd get envs
+NAME    ENDPOINT                        SSH TARGET      IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
+r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   <none>  <none>  Up 6 hours      1eb7d40e5a8a
+```
+
+Then you can connect to the RStudio server by using `http://localhost:34621` in your browser. Please use `envd` as the username, and the password can be any string.
+
+![](./assets/rstudio.png)
+
+![](./assets/rstudio-main.png)
