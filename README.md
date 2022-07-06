@@ -7,18 +7,18 @@
 <a href="https://app.netlify.com/sites/envd/deploys"><img alt="netlify status" src="https://api.netlify.com/api/v1/badges/535ba0bd-b9fa-43b4-a8b2-ce2fbfa3a424/deploy-status"></a>
 </p>
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using [VitePress](https://vitepress.vuejs.org/), Vite & Vue Powered Static Site Generator.
 
 ### Installation
 
 ```
-$ yarn
+$ pnpm i
 ```
 
 ### Local Development
 
 ```
-$ yarn start
+$ pnpm docs:dev
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -26,7 +26,7 @@ This command starts a local development server and opens up a browser window. Mo
 ### Build
 
 ```
-$ yarn build
+$ pnpm docs:build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.

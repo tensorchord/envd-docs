@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Getting Started
 
 envd is a **machine learning development environment** for data science and AI/ML engineering teams.
@@ -82,7 +78,7 @@ You can reproduce the same dev environment, on your laptop, public cloud VMs, or
 
 ## Who should use envd?
 
-We’re focused on helping data scientists and teams that develop AI/ML models. And they may suffer from:
+We’re focused on helping data scientists and teams that develop AI/ML models. And they may suffer from
 
 - Building the development environments with Python, CUDA, Docker, SSH, and so on. Do you have a complicated Dockerfile or build script that sets up all your dev environments, but is always breaking?
 - Updating the environment. Do you always need to ask infrastructure engineers how to add a new python package in the Dockerfile?
@@ -98,7 +94,7 @@ We’re focused on helping data scientists and teams that develop AI/ML models. 
 
 |       Before envd        |       After envd        |
 | :----------------------: | :---------------------: |
-| ![](./assets/before.svg) | ![](./assets/after.svg) |
+| ![](/before.svg) | ![](/after.svg) |
 
 ## Installation
 
@@ -119,7 +115,8 @@ envd bootstrap
 
 You can add `--dockerhub-mirror` or `-m` flag when running `envd boostrap`, to configure the mirror for docker.io registry:
 
-```bash title="Set docker mirror"
+```bash 
+title="Set docker mirror"
 envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 ```
 
@@ -177,7 +174,7 @@ $ cd envd-quick-start && envd up
 (envd) ➜  demo git:(master) ✗ # You are in the container-based environment!
 ```
 
-:::caution
+:::warning
 
 If you are using `root` to run the command `envd up`, the user in the enviroment would be `root` rather than `envd`. It may cause some problems because of the `root`'s special features for some softwares. Feel free to submit new issues [here](https://github.com/tensorchord/envd/issues)!
 
