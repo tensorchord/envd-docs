@@ -15,6 +15,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Guide',
+        collapsible: true,
         items:[
           { text: 'Why envd', link: '/why/why' },
           { text: 'Getting Started', link: '/guide/getting-started' },
@@ -22,6 +23,7 @@ export default defineConfig({
       },
       {
         text: 'Languages',
+        collapsible: true,
         items:[
           { text: 'Python', link: '/lang/python' },
           { text: 'Julia', link: '/lang/julia' },
@@ -30,6 +32,7 @@ export default defineConfig({
       },
       {
         text: 'Tips and Tricks',
+        collapsible: true,
         items:[
           { text: 'Faster Build with Software Mirrors',link:'/tips/mirror' },
           { text: 'Per-user Config', link:'/tips/config'},
@@ -38,6 +41,7 @@ export default defineConfig({
       },
       {
         text: 'API Reference',
+        collapsible: true,
         items:[
           {text: 'Global Functions', link:'/api/global functions'},
           {text: 'Config', link:'/api/config'},
@@ -46,12 +50,14 @@ export default defineConfig({
       },
       {
         text: 'envd CLI Reference',
+        collapsible: true,
         items:[
           {text:'envd CLI Reference', link:'/cli'},
         ]
       },
       {
         text: 'Community',
+        collapsible: true,
         items:[
           {text:'Contributing to envd', link:'/community/contributing'},
           {text:'Development Tutorial', link:'/community/development'},
@@ -60,6 +66,7 @@ export default defineConfig({
       },
       {
         text: 'Build envd',
+        collapsible: true,
         items:[
           {text:'Build envd', link:'/build-envd/build-envd'},
         ]
