@@ -34,7 +34,8 @@ The syntax of `build.envd` is [starlark](https://docs.bazel.build/versions/main/
 
 Here is an example of `build.envd`:
 
-```python title=build.envd
+```python 
+title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -50,14 +51,16 @@ You don't need to worry about it yet. Let's explore how it works in the followin
 
 You can create a file `build.envd` in your project directory with these lines:
 
-```python title=build.envd
+```python 
+=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
 ```
 
 You can save the file and run `envd up`. Congrats! You get your first envd environment.
 
-```text title="envd up"
+```text 
+title="envd up"
 $ envd up
 [+] ⌚ parse build.envd and download/cache dependencies 0.0s ✅ (finished) 
 [+] 🐋 build envd environment 7.9s (16/16) ✅ (finished)
@@ -72,7 +75,8 @@ envd@588f26349c61 $
 
 You can use `ssh <project-directory-name>.envd` to attach to the environment if you exit from the shell.
 
-```bash title="connect the environment via ssh"
+```bash 
+title="connect the environment via ssh"
 envd@588f26349c61 $ exit
 $ ssh demo.envd
 envd@588f26349c61 $ # You are in the environment again!
@@ -80,7 +84,8 @@ envd@588f26349c61 $ # You are in the environment again!
 
 Do not forget to remove the environment if you do not use it.
 
-```text title="destroy the environment"
+```text 
+title="destroy the environment"
 $ envd destroy
 INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 ```
@@ -99,7 +104,8 @@ Let's have a look at `build.envd`. `build` is the default function name in `buil
 
 The [envd install API](../api/install) function `install.python_packages` installs python packages in the environment:
 
-```python title=build.envd
+```python 
+title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -135,7 +141,8 @@ array([2, 3, 4])
 
 The [envd API](../api/global%20functions) function `shell` configures shell program in the environment:
 
-```python title=build.envd
+```python 
+title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -155,7 +162,8 @@ $ envd up
 
 [Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [envd config API](../api/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
 
-```python title=build.envd
+```python 
+title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -171,7 +179,8 @@ def build():
 
 You can use the `envd` API function `config.pip_index` to set the PyPI index mirror if it is too slow to install the python packages via `install.python_packages`.
 
-```python title=build.envd
+```python 
+title=build.envd
 def build():
     config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
     base(os="ubuntu20.04", language="python3")

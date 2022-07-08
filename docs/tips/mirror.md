@@ -8,7 +8,8 @@ If docker image pulls are too slow, you can add a [pull through registry mirror]
 
 You can set the mirror when `envd bootstrap`:
 
-```bash title="Set docker mirror"
+```bash 
+title="Set docker mirror"
 envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 ```
 
@@ -23,7 +24,8 @@ Mirroring or caching of PyPI can be used to speed up local package installation,
 
 PyPI index mirror can be set with `config.pip_index(url="<index>", extra_url=<extra>)`:
 
-```python title="pip index mirror"
+```python 
+title="pip index mirror"
 config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 ```
 
@@ -38,7 +40,8 @@ Apt downloads packages from one or more software repositories (sources) and inst
 
 Official ubuntu apt source is used in envd by default, but you can change to a mirror which is close to you:
 
-```python title="apt source mirror"
+```python 
+title="apt source mirror"
 config.apt_source(source="""
 # See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
 # newer versions of the distribution.
@@ -69,7 +72,8 @@ Mirroring or caching of conda can be used to speed up local package installation
 
 You can set up the conda channel mirror via:
 
-```python title="conda channel mirror"
+```python 
+title="conda channel mirror"
 config.conda_channel(channel="""
 channels:
   - defaults

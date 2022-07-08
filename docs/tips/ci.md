@@ -6,18 +6,16 @@ envd only has one software dependency: [Buildkitd](https://github.com/moby/build
 
 Here is an [example](https://github.com/tensorchord/envd-quick-start/blob/master/.github/workflows/release.yml) of a GitHub Action build.
 
-```yaml title="Build and push envd image to ghcr.io"
+```yaml 
+title="Build and push envd image to ghcr.io"
 name: CI
-
 on:
   push:
     branches: [ master ]
   pull_request:
-
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,18 +37,16 @@ jobs:
 
 If you just want to verify if `envd build` works, things are easier:
 
-```yaml title="Build envd image"
+```yaml 
+title="Build envd image"
 name: CI
-
 on:
   push:
     branches: [ master ]
   pull_request:
-
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -68,16 +64,15 @@ jobs:
 
 The example below uses [docker.io/docker:dind](https://hub.docker.com/layers/docker/library/docker/dind/images/sha256-95d63c46fdbeca706f6cb736ebcfbbf81e845c3f5a64ab5133cb0fe15ecbbfc4?context=explore) to build the envd image.
 
-```yaml title=".gitlab-ci.yml"
+```yaml 
+title=".gitlab-ci.yml"
 image: docker
 services:
   - docker:dind
-
 before_script:
     - pip install --pre envd
     - envd bootstrap
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-
 envd:
   stage: Build and push
   script:
@@ -86,9 +81,9 @@ envd:
 
 If you do not want to enable docker in the CI environment, you can create a remote buildkitd instance on remote docker daemon or Kubernetes cluster.
 
-```yaml title=".gitlab-ci.yml"
+```yaml 
+title=".gitlab-ci.yml"
 image: envd-quick-start
-
 before_script:
     - pip install --pre envd
     # Create the buildkitd or connect to a existing instance.
@@ -97,7 +92,6 @@ before_script:
     - echo "{\"auths\":{\"$CI_REGISTRY\":{\"auth\":\"$(echo -n $CI_REGISTRY_USER:$CI_REGISTRY_PASSWORD | base64)\"}}}" > ~/.docker/config.json
     # Connect envd to a existing buildkitd instance.
     - envd context create --name buildkitk8s --builder-name buildkitd --use --builder kube-pod
-
 envd:
   stage: Build and push
   script:

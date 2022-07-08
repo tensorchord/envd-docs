@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Why Use envd?
 
 It is still too difficult to configure development environments and reproduce results in AI/ML applications.
@@ -72,7 +68,7 @@ AI/ML models are optimized by trials and errors. And the environment will be upd
 
 Thus, we have to maintain such a complicated `Dockerfile`.
 
-```dockerfile
+```docker
 FROM nvidia:cuda:11.6.2-devel-ubuntu20.04
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
