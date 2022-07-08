@@ -3,8 +3,19 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'en-US',
   title: 'envd',
+  
+  head:[
+    ['link', { rel: 'icon', href: '/logo.svg'}],
+  ],
+
   themeConfig: {
     logo: '/logo.svg',
+    // TODO: need appId and apiKey
+      // algolia: {
+      //   appId: '',
+      //   apiKey: '',
+      //   indexName: '',
+      // },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/tensorchord/envd' },
