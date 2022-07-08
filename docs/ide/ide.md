@@ -4,7 +4,7 @@ Here we use the example at [envd/examples/mnist](https://github.com/tensorchord/
 
 ## Build and check your environment
 
-Following [previous tutorial](../build-envd), you'll be able to setup the project environment by envd. In this tutorial, we used `mnist` project.
+Following [previous tutorial](/build-envd/build-envd), you'll be able to setup the project environment by envd. In this tutorial, we used `mnist` project.
 After setting up the project, you can check the environment status by `envd get envs`.
 
 ```
@@ -23,7 +23,7 @@ Envd will add a new ssh entry to your ssh config to help you connect to your env
 
 ## Connect to the environment with VSCode
 
-First, you need to install the remote development kit in VSCode. You can click [here](vscode:extension/ms-vscode-remote.remote-ssh) to install the extension. After the extension is installed, you'll be able to see the UI below by clicking the downside left icon.
+First, you need to install the remote development kit in VSCode. You can find here `vscode:extension/ms-vscode-remote.remote-ssh` to install the extension. After the extension is installed, you'll be able to see the UI below by clicking the downside left icon.
 
 ![](./assets/vscodessh.png)
 

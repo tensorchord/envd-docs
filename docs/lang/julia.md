@@ -1,6 +1,6 @@
 # Building a Julia Environment
 
-This guide covers configuring Julia environments in envd. If you’re new to envd please read our [Tutorial](../get-started) and [build configuration guides](../build-envd) first.
+This guide covers configuring Julia environments in envd. If you’re new to envd please read our [Tutorial](/guide/getting-started) and [build configuration guides](/build-envd/build-envd) first.
 
 ## Specifying Julia
 

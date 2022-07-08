@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Building Your First Environment
 
 envd can build images automatically by reading the instructions from a `build.envd`. A `build.envd` is a text document that contains all the commands a user could call on the command line to assemble an image.
@@ -234,5 +230,5 @@ Please ask us on [Discord](https://discord.gg/KqswhpVgdU) if you had any trouble
 Here are some quick links:
 
 - [envd GitHub Repository](https://github.com/tensorchord/envd)
-- [Why Use envd?](../why)
-- [envd CLI Reference](../cli)
+- [Why Use envd?](/why/why)
+- [envd CLI Reference](/cli)
