@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Multi-target build
 
 envd supports building different container images from one single file, for different purpose. Typical scenario includes:
