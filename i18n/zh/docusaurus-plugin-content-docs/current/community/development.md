@@ -7,7 +7,7 @@ sidebar_position: 6
 
 首先感谢你愿意为`envd`添砖加瓦 🌟! 
 
-我们的社区欢迎各种形式的贡献并且希望能尽我们所能地去拓展“贡献者”这个词的含义。我们的[贡献指南](./contributing)包含一些可以参与到项目其中的其他方式。如果你想向项目贡献代码，下面包含一些基础的步骤。
+我们的社区欢迎各种形式的贡献并且希望能尽我们所能地去拓展“贡献者”这个词的含义。我们的[贡献指南](./contributing)包含一些可以参与到项目其中的其他方式。如果你想向项目贡献代码，那么下面包含一些基础的步骤。
 
 ## 代码库结构
 
@@ -18,7 +18,7 @@ sidebar_position: 6
 - [📁 base-images/](https://github.com/tensorchord/envd/tree/main/base-images) 包含 Dockerfiles和envd基础镜像的建造脚本。
 - [📁 cmd/](https://github.com/tensorchord/envd/tree/main/cmd) 包含 `envd` 和 `envd-ssh` 的命令行界面代码
     - [📁 envd/](https://github.com/tensorchord/envd/tree/main/cmd/envd) `envd` 的命令行界面
-    - [📁 envd-ssh/](https://github.com/tensorchord/envd/tree/main/cmd/envd-ssh) `envd-ssh` 的命令行界面，envd用户不会直接使用它。它会注入到运行环境来射者sshd
+    - [📁 envd-ssh/](https://github.com/tensorchord/envd/tree/main/cmd/envd-ssh) `envd-ssh` 的命令行界面，envd用户不会直接使用它。它会注入到运行环境来设置sshd
 - [📁 docs/](https://github.com/tensorchord/envd/tree/main/docs) 并不包含文档！它包含 `README.md` 中的提议和静态资源。项目文档托管在[github.com/tensorchord/envd-docs](https://github.com/tensorchord/envd-docs)。
 - [📁 envd/](https://github.com/tensorchord/envd/tree/main/envd) 包含一个用来生成API引用的假python包。你只需要在对envd API做出修改时才需要对这个部分做出改动。
 - [📁 examples/](https://github.com/tensorchord/envd/tree/main/examples) 包含envd的一些示例代码。
@@ -32,7 +32,7 @@ sidebar_position: 6
     - [📁 editor/](https://github.com/tensorchord/envd/tree/main/pkg/editor) 包含vscode和jupyter相关的代码实现。
     - [📁 envd/](https://github.com/tensorchord/envd/tree/main/pkg/envd) 包含envd引擎代码，它是一个用来管理envd环境的抽象层。
     - [📁 flag/](https://github.com/tensorchord/envd/tree/main/pkg/flag) 包含[viper](https://github.com/spf13/viper)的flags信息。
-    - [📁 home/](https://github.com/tensorchord/envd/tree/main/pkg/home) 包含用来管理[XDG directories](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)的代码 (比如 `$HOME/.config/envd` 和 `$HOME/.cache/envd`).
+    - [📁 home/](https://github.com/tensorchord/envd/tree/main/pkg/home) 包含用来管理[XDG directories](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)的代码 (比如 `$HOME/.config/envd` 和 `$HOME/.cache/envd`)。
     - [📁 lang/](https://github.com/tensorchord/envd/tree/main/pkg/lang) 包含建造语言代码。如果你想往envd加入新函数，那么你需要更新该部分。
     - [📁 progress/](https://github.com/tensorchord/envd/tree/main/pkg/progress) 包含建造进展的输出代码。大部分情况你都不需要修改它。
     - [📁 remote/](https://github.com/tensorchord/envd/tree/main/pkg/remote) 包含sshd的代码实现。大部分情况你都不需要修改它。
@@ -94,7 +94,7 @@ make test
 
 ## 从开发者的角度理解 `envd up`
 
-`envd`会解析 `build.envd` 中的所有语句并执行 `build()`函数。像[`install.python_packages`](../api/install#python_packages) 和 [`config.jupyter`](../api/config#jupyter) 的函数调用会在envd储存在内存的静态图中注册自己的信息。随后，`envd` 会根据这些信息来构建[buildkit LLB 流程图](https://github.com/moby/buildkit#exploring-llb) 并用它来构建产出镜像。
+`envd`会解析 `build.envd` 中的所有语句并执行 `build()` 函数。像 [`install.python_packages`](../api/install#python_packages) 和 [`config.jupyter`](../api/config#jupyter) 的函数调用会在envd储存在内存的静态图中注册自己的信息。随后，`envd` 会根据这些信息来构建 [buildkit LLB 流程图](https://github.com/moby/buildkit#exploring-llb) 并用它来构建产出镜像。
 
 ![](./assets/envd-arch.svg)
 
