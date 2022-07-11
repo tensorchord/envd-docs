@@ -44,38 +44,38 @@ sidebar_position: 6
 
 下面的这些步骤会带你熟悉如何初始的设置步骤和开发流程。如果你有任何疑问，你可以在[discord](https://discord.gg/KqswhpVgdU)上问，或者在issues板块中描述你有疑问的步骤，我们会尽力帮助你解决问题。
 
-1. Install [Docker](https://www.docker.com/products/docker-desktop/) (20.10.0 or above) and [Golang](https://go.dev/dl/) (1.18 or above).
-1. [Fork](https://help.github.com/articles/fork-a-repo) the [envd repository](https://github.com/tensorchord/envd) into your own GitHub account.
-1. Clone your new fork of the repository from GitHub onto your local computer.
+1. 安装 [Docker](https://www.docker.com/products/docker-desktop/) (20.10.0或更新版本) 以及 [Golang](https://go.dev/dl/) (1.18或更新版本).
+1. 在你自己的Github账号中[Fork](https://help.github.com/articles/fork-a-repo) [envd 代码库](https://github.com/tensorchord/envd)。
+1. 将你账号中刚Fork的代码库Clone到你电脑的本地磁盘上。
     ```
     $ git clone https://github.com/YOUR_USERNAME/envd.git
     ```
-1. Install the dependencies and compile envd.
+1. 安装相关的依赖库并编译envd。
     ```
     $ go mod tidy
     $ make
     $ ./bin/envd bootstrap
     $ ./bin/envd --version
     ```
-1. Make some changes locally to the codebase and commit them with Git.
+1. 在本地的代码库中进行修改并且用Git将这些改动Commit。
     ```
     $ git add -u
     $ git commit -m "YOUR COMMIT MESSAGE"
     ```
-1. [Push](https://help.github.com/articles/github-glossary/#push) your new changes to your fork on GitHub.
+1. 将你本地的改动[Push](https://help.github.com/articles/github-glossary/#push) 到你Github上的远程仓库中。
     ```
     $ git push
     ```
 
-### Lint
+### Lint （用于检查代码格式/错误的工具）
 
-You could run the command below
+你可以跑下面的代码来检查你的代码
 
 ```
 make lint
 ```
 
-You should see output similar to the following if there is any linting issue:
+如果你的代码有格式或语法错误，你会看到和下面相似的输出：
 
 ```
 cmd/envd/main.go:36:67: Revision not declared by package version (typecheck)
@@ -84,21 +84,21 @@ cmd/envd/main.go:36:67: Revision not declared by package version (typecheck)
 make: *** [Makefile:102: lint] Error 1
 ```
 
-### Running tests
+### 运行测试
 
-To run tests you can issue
+你可以运行下面的指令来测试你的代码
 
 ```
 make test
 ```
 
-## `envd up` from a developer's perspective
+## 从开发者的角度理解 `envd up`
 
-`envd` interprets all statements in `build.envd` and executes `build()`. The function calls such as [`install.python_packages`](../api/install#python_packages) and [`config.jupyter`](../api/config#jupyter) register information to envd's in-memory static graph. Then `envd` constructs the [buildkit LLB DAG graph](https://github.com/moby/buildkit#exploring-llb) according to the information and uses it to build resulting image.
+`envd`会解析 `build.envd` 中的所有语句并执行 `build()`函数。像[`install.python_packages`](../api/install#python_packages) 和 [`config.jupyter`](../api/config#jupyter) 的函数调用会在envd储存在内存的静态图中注册自己的信息。随后，`envd` 会根据这些信息来构建[buildkit LLB 流程图](https://github.com/moby/buildkit#exploring-llb) 并用它来构建产出镜像。
 
 ![](./assets/envd-arch.svg)
 
-## GitHub Issue Flow
+## GitHub Issue流程
 
-- Issues tagged as [`good first issue 💖`](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) are a good place to get started. 
-- If you'd like to start working on an existing issue, comment on the issue that you plan to work on it so other contributors know it's being handled and can offer help.
+- 被标记为[`good first issue 💖`](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) 的issues适合用来在一开始熟悉项目代码。
+- 如果你希望解决一个现有的issue，你可以在issue页面上评论说你希望负责解决这个问题，这样的话其他贡献者就知道这个问题有人认领了，并且可以提供帮助。
