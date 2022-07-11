@@ -1,7 +1,21 @@
 import { defineConfig } from 'vitepress'
+import { sidebar } from './config/sidebar'
 
 export default defineConfig({
   lang: 'en-US',
+  lastUpdated: true,
+  locales: {
+    '/': {
+      lang: 'en-US',
+      title: 'envd',
+      description: 'AI/ML Development Environment'
+    },
+    '/zh/': {
+      lang: 'zh-CN',
+      title: 'envd',
+      description: 'AI/ML 开发环境'
+    },
+  },
   title: 'envd',
   
   head:[
@@ -16,6 +30,13 @@ export default defineConfig({
       //   apiKey: '',
       //   indexName: '',
       // },
+    localeLinks: {
+      text: '',
+      items: [
+        { text: 'English', link: '/guide/getting-started' },
+        { text: '简体中文', link: '/zh/guide/getting-started' },
+      ],
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/tensorchord/envd' },
@@ -23,66 +44,7 @@ export default defineConfig({
       { icon: 'discord', link: 'https://discord.gg/KqswhpVgdU' }
     ],
 
-    sidebar: [
-      {
-        text: 'Guide',
-        collapsible: true,
-        items:[
-          { text: 'Why envd', link: '/why/why' },
-          { text: 'Getting Started', link: '/guide/getting-started' },
-        ],
-      },
-      {
-        text: 'Languages',
-        collapsible: true,
-        items:[
-          { text: 'Python', link: '/lang/python' },
-          { text: 'Julia', link: '/lang/julia' },
-          { text: 'R', link: '/lang/r' },
-        ]
-      },
-      {
-        text: 'Tips and Tricks',
-        collapsible: true,
-        items:[
-          { text: 'Faster Build with Software Mirrors',link:'/tips/mirror' },
-          { text: 'Per-user Config', link:'/tips/config'},
-          { text: 'CI/CD Integration', link:'/tips/ci'}
-        ]
-      },
-      {
-        text: 'API Reference',
-        collapsible: true,
-        items:[
-          {text: 'Global Functions', link:'/api/global functions'},
-          {text: 'Config', link:'/api/config'},
-          {text: 'Install', link:'/api/install'},
-        ]
-      },
-      {
-        text: 'envd CLI Reference',
-        collapsible: true,
-        items:[
-          {text:'envd CLI Reference', link:'/cli'},
-        ]
-      },
-      {
-        text: 'Community',
-        collapsible: true,
-        items:[
-          {text:'Contributing to envd', link:'/community/contributing'},
-          {text:'Development Tutorial', link:'/community/development'},
-          {text:'roadmap', link:'/community/roadmap'},
-        ]
-      },
-      {
-        text: 'Build envd',
-        collapsible: true,
-        items:[
-          {text:'Build envd', link:'/build-envd/build-envd'},
-        ]
-      }
-    ],
+    sidebar,
 
     editLink: {
       pattern: 'https://github.com/tensorchord/envd-docs/tree/main/docs/:path',

@@ -24,7 +24,7 @@ It is still too difficult to configure development environments and reproduce re
 
 Development environments are full of Dockerfiles, bash scripts, Kubernetes YAML manifests, and many other clunky files that are always breaking. `envd` builds are isolated and clean. You can write simple instructions in Python, instead of Bash / Makefile / Dockerfile / ...
 
-![envd](/why/assets/envd.png)
+![envd](./assets/envd.png)
 
 [^1]: The build language is [starlark](https://docs.bazel.build/versions/main/skylark/language.html), which is a dialect of Python.
 
