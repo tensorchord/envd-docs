@@ -11,38 +11,31 @@ This website is built using [VitePress](https://vitepress.vuejs.org/), Vite & Vu
 
 ### Installation
 
-```
-$ pnpm i
+```shell
+npm i -g pnpm
+pnpm i
 ```
 
 ### Local Development
 
-```
-$ pnpm docs:dev
+```shell
+pnpm docs:dev
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ### Build
 
-```
-$ pnpm docs:build
+```shell
+pnpm docs:build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
+### Tips
 
-Using SSH:
+Recommended to read the following part before you start to contribute the docs.
 
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- Chinese docs is under `/docs/zh`
+- VitePress markdown features [VitePress markdown](https://vitepress.vuejs.org/guide/markdown.html)
+- When you add new file to the docs, please add config of sidebar menu in `/docs/vitepress/config/sidebar.ts`
