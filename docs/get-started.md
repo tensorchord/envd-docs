@@ -197,7 +197,7 @@ def build():
     config.jupyter(password="")
 ```
 
-Do not forget to destroy the envd container which was lunched before if you edited the `build.envd`.
+Do not forget to destroy the envd container which was launched before if you edited the `build.envd`.
 
 ```bash
 $ envd destroy
