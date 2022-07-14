@@ -12,7 +12,15 @@ The default language in envd is Python, thus there is no need to specify languag
 def build():
     base(os="ubuntu20.04", language="python")
 ```
+The default version of python in envd is 3.9 (the latest patch version can be refered [here](https://anaconda.org/anaconda/python/files)). If you need to specify a particular version, just assign `language` to a string like `pythonX.Y.Z`:
 
+```python title=build.envd
+def build():
+    base(os="ubuntu20.04", language="python3.11")
+```
+:::caution
+Python2 is not supported in envd.
+:::
 ## Conda packages
 
 You can install conda packages with `install.conda_packages` function. The following example installs `numpy` and `scipy`:
