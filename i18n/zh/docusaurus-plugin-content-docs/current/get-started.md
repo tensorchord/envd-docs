@@ -109,7 +109,7 @@ $ docker build
 `envd` 可以使用 `pip` 来安装。在安装完成后，请运行 `envd bootstrap` 来完成安装后的配置。
 
 ```bash
-pip install envd
+pip install --pre envd
 envd bootstrap
 ```
 

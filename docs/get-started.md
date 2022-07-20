@@ -111,7 +111,7 @@ We’re focused on helping data scientists and teams that develop AI/ML models. 
 `envd` can be installed with `pip`. After the installation, please run `envd bootstrap` to bootstrap.
 
 ```bash
-pip install envd
+pip install --pre envd
 envd bootstrap
 ```
 
