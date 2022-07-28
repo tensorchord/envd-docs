@@ -34,8 +34,9 @@ $ envd build --path examples/mnist
 
 以下是 `build.envd` 的示例代码：
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -45,24 +46,30 @@ def build():
     config.jupyter(password="")
 ```
 
+</custom-title>
+
 别担心，我们将在以下部分探讨它是如何工作的。
 
 ### Hello World
 
 1. 新建配置，创建 `build.envd` 文件，输入以下代码：
 
-```python 
-title=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
 ```
 
+</custom-title>
+
 2. 运行环境，在控制台使用 `envd up` 命令运行它。恭喜！您成功构建了第一个 envd 环境。
 
-```text 
-title="envd up"
+<custom-title title="envd up shell">
+
+```bash
 $ envd up
-[+] ⌚ parse build.envd and download/cache dependencies 0.0s ✅ (finished)
+[+] ⌚ parse build.envd and download/cache dependencies 0.0s ✅ (finished) 
 [+] 🐋 build envd environment 7.9s (16/16) ✅ (finished)
  ...
  => exporting to oci image format                                      0.4s
@@ -70,13 +77,15 @@ $ envd up
  => => exporting manifest sha256:7ef2e8571485ce51d966b4cf5fe83232520f  0.0s
  => => exporting config sha256:abec960de30fce69dc19126577c7aaae3f9b62  0.0s
  => => sending tarball                                                 0.4s
-envd@588f26349c61 $
+envd@588f26349c61 $ 
 ```
+
+</custom-title>
 
 3. 重新进入您的环境，如果您退出了当前 `shell`，使用 `ssh <project-directory-name>.envd` 命令将重新进入环境。
 
+
 ```bash 
-title="通过 ssh 重新进入环境"
 envd@588f26349c61 $ exit
 $ ssh demo.envd
 envd@588f26349c61 $ # 欢迎回来！
@@ -84,25 +93,31 @@ envd@588f26349c61 $ # 欢迎回来！
 
 4. 删除环境，如果您不再使用它，请不要忘记使用 `envd destroy` 命令来删除环境。
 
-```text 
-title="删除环境"
+<custom-title title="删除环境">
+
+```bash
 $ envd destroy
 INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 ```
+
+</custom-title>
 
 ### build.envd
 
 让我们来看一下 `build.envd` 文件。
 
-```python 
-title=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
 ```
 
+</custom-title>
+
 `build()` 是 `build.envd` 中的主函数。当您运行 `envd build` 或 `envd up`命令时，envd 程序会调用该函数。
 
-:::caution 注意
+:::warning 注意
 
 **`build.envd` 文件中必须包含 `build()` 函数**。
 
@@ -116,14 +131,17 @@ def build():
 
 通过 [envd install API](../api/install) 中的 `install.python_packages` 函数在环境中安装 Python 包：
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
         "numpy",
     ])
 ```
+
+</custom-title>
 
 该函数支持通用 pip 语法：
 
@@ -153,8 +171,9 @@ array([2, 3, 4])
 
 通过 [envd API](../api/global%20functions) 中的 `Shell` 函数配置环境中的 `Shell` 程序：
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -162,6 +181,8 @@ def build():
     ])
     shell("zsh")
 ```
+
+</custom-title>
 
  `envd` 自动配置 `ZSH Shell` 和 [oh-my-zsh](https://ohmyz.sh/)，无需您手动操作。
 
@@ -174,8 +195,9 @@ $ envd up
 
 Jupyter Notebooks 是使用 Python 进行数据分析的互动计算环境。`envd` 通过 `config.jupyter` [API 函数](../api/config) 帮助您在环境中配置 Jupyter Notebooks。
 
-```python 
-title=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -184,6 +206,8 @@ def build():
     shell("zsh")
     config.jupyter(password="")
 ```
+
+</custom-title>
 
 `envd up` 命令执行成功后，通过 `envd get envs` 查看 Jupyter 的地址。
 
@@ -200,8 +224,9 @@ envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/g
 
 如果通过默认源安装 Python 包太过缓慢，请使用 `envd` API 函数 `config.pip_index` 配置新的 PyPI 源。
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
     base(os="ubuntu20.04", language="python3")
@@ -212,6 +237,7 @@ def build():
     config.jupyter(password="")
 ```
 
+</custom-title>
 配置成功后，Python 包将从新的源下载，而不是 [pypi.org](https://pypi.org/)
 
 

@@ -4,11 +4,14 @@ There are some configurations that you want to adopt for every project. For exam
 
 You can create a `config.envd` file to achieve this:
 
+<custom-title title="config.envd">
+
+
 ```python 
-title=config.envd
 config.pip_index(url = "https://pypi.tuna.tsinghua.edu.cn/simple")
 git_config(name="My Name", email="my@email.com", editor="vim")
 ```
+</custom-title>
 
 The file should be placed in the  [XDG](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) config directory of the project:
 

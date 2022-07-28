@@ -7,18 +7,22 @@ This guide covers configuring R environments in `envd`. If you’re new to `envd
 
 First, you can specify to use the R language in the `base` function.
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="r")
 ```
+
+</custom-title>
 
 ## R packages
 
 You can install R packages with `install.r_packages` function. The following example installs `remotes` and `rlang` packages:
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="r")
     install.r_packages([
@@ -27,12 +31,15 @@ def build():
         ])
 ```
 
+</custom-title>
+
 ## Configuring CRAN Mirror
 
 By default, the RStudio CRAN mirror `"https://cran.rstudio.com"` is used when downloading and installing R packages. However, you can specify any other mirrors via `config.cran_mirror()` like the following:
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="r")
     config.cran_mirror(url="https://cloud.r-project.org/")
@@ -42,27 +49,36 @@ def build():
         ])
 ```
 
+</custom-title>
+
 ## Specifying shell program
 
 You can specify shell program used in the environment with `shell` function. The following example uses `zsh`:
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="r")
     shell("zsh")
 ```
 
+</custom-title>
+
 ## Specifying VSCode extensions
 
 You can specify VSCode extensions with `install.vscode_extensions` function. The following example installs [`REditorSupport.r-lsp`](https://open-vsx.org/extension/REditorSupport/r-lsp)[^1]:
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="r")
     install.vscode_extensions(["REditorSupport.r-lsp"])
 ```
+
+</custom-title>
+
 
 [^1]: [open-vsx](https://open-vsx.org/) is used instead of Microsoft VSCode Marketplace due to [licensing issues](https://github.com/tensorchord/envd/issues/160).
 

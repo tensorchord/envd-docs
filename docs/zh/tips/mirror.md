@@ -8,10 +8,14 @@ If docker image pulls are too slow, you can add a [pull through registry mirror]
 
 You can set the mirror when `envd bootstrap`:
 
+<custom-title title="Set docker mirror">
+
+
 ```bash 
-title="Set docker mirror"
 envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 ```
+
+</custom-title>
 
 Here are some registry mirrors:
 
@@ -24,10 +28,13 @@ Mirroring or caching of PyPI can be used to speed up local package installation,
 
 PyPI index mirror can be set with `config.pip_index(url="<index>", extra_url=<extra>)`:
 
+<custom-title title="Set pip index mirror">
+
 ```python 
-title="pip index mirror"
 config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 ```
+
+</custom-title>
 
 envd will use the index to pull python packages. Here are some pip indexes:
 
@@ -39,6 +46,8 @@ envd will use the index to pull python packages. Here are some pip indexes:
 Apt downloads packages from one or more software repositories (sources) and installs them onto your computer.
 
 Official ubuntu apt source is used in envd by default, but you can change to a mirror which is close to you:
+
+<custom-title title="Set apt source mirror">
 
 ```python 
 title="apt source mirror"
@@ -66,11 +75,15 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
 """)
 ```
 
+</custom-title>
+
 ## Setting up conda channel mirror
 
 Mirroring or caching of conda can be used to speed up local package installation, allow offline work, handle corporate firewalls or just plain Internet flakiness.
 
 You can set up the conda channel mirror via:
+
+<custom-title title="Set conda channel mirror">
 
 ```python 
 title="conda channel mirror"
@@ -93,6 +106,7 @@ custom_channels:
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 """)
 ```
+</custom-title>
 
 ## Setting up R mirror
 

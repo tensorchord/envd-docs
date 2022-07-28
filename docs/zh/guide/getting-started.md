@@ -114,10 +114,13 @@ envd bootstrap
 
 你可以通过 `--dockerhub-mirror` 或者 `-m` 这一 flag 来配置 `envd` 使用的 Docker Hub 镜像：
 
+<custom-title title="设置 Docker Hub 镜像">
+
 ```bash 
-title="设置 Docker Hub 镜像"
 envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 ```
+
+</custom-title>
 
 :::
 
@@ -125,14 +128,15 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 
 请 clone 这个仓库 [`envd-quick-start`](https://github.com/tensorchord/envd-quick-start):
 
-```
+```bash
 git clone https://github.com/tensorchord/envd-quick-start.git
 ```
 
 `envd` 的构建文件 `build.envd` 内容如下：
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -141,13 +145,15 @@ def build():
     shell("zsh")
 ```
 
+</custom-title>
+
 接下来，请运行下面的命令来启动开发环境：
 
-```
+```bash
 cd envd-quick-start && envd up
 ```
 
-```
+```bash
 $ cd envd-quick-start && envd up
 [+] ⌚ parse build.envd and download/cache dependencies 2.8s ✅ (finished)
  => download oh-my-zsh                                                    2.8s
@@ -178,8 +184,9 @@ $ cd envd-quick-start && envd up
 
 请在 `build.envd` 中添加 `config.jupyter` 来启用 Jupyter notebooks。
 
+<custom-title>
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -188,6 +195,8 @@ def build():
     shell("zsh")
     config.jupyter(password="")
 ```
+
+</custom-title>
 
 当你修改了 `build.envd` 后，不要忘记重建 `envd` 环境。
 

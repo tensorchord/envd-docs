@@ -14,19 +14,23 @@
 
 `build.envd` 是用 [Starlark](https://github.com/bazelbuild/starlark), 编写的，这是 Python 3 的一种简化方言。build() 函数将在启动时调用。
 
-```python 
-title=build.envd
+<custom-title title="build.envd">
+
+```python
 # 默认调用 `build` 函数。
 def build():
     # 在这里编写 envd 命令。
 ```
 
+</custom-title>
+
 `install.python_packages` 和 `config.jupyter` 等函数用于注册信息。这些信息将被保存在内存的静态图中。envd 使用静态图在执行的 envd 建立环境。
 
 `envd` 使用 starlark 解释器加载 `build()` 函数，因此您可以在 `build.envd` 中使用 loops、if/else 或其他语句。
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 # 默认调用 `build` 函数。
 def build():
     version = "2.9.1"
@@ -43,3 +47,5 @@ def dev_env(version, custom_shell):
     if custom_shell == "zsh":
       shell("zsh")
 ```
+
+</custom-title>

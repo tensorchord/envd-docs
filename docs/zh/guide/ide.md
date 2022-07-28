@@ -43,16 +43,19 @@ Envd 将在您的 ssh config 文件中添加新的 ssh 配置，以帮助您连�
 
 在 `build.envd` 配置文件中，我们已经声明了 Jupyter 环境，并且密码为空。
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     ...
     config.jupyter(password="")
 ```
 
+</custom-title>
+
 您也可以使用 `envd get envs` 命令获得 Jupyter 的端口信息。
 
-```
+```bash
 $ envd get envs
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID
 mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
