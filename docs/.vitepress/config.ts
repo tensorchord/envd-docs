@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import footnote from 'markdown-it-footnote'
 import { sidebar } from './config/sidebar'
 
 export default defineConfig({
@@ -55,6 +56,10 @@ export default defineConfig({
       message: 'Released under the Apache-2.0 License. Built with VitePress.',
       copyright: 'Copyright © 2022 TensorChord, Inc.'
     }
-  }
- 
+  },
+  markdown: {
+    config: (md) => {
+      md.use(footnote)
+    }
+  },
 })

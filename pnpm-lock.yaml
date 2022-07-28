@@ -1,8 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  markdown-it-footnote: ^3.0.3
   vitepress: 1.0.0-alpha.4
   vue: ^3.2.37
+
+dependencies:
+  markdown-it-footnote: 3.0.3
 
 devDependencies:
   vitepress: 1.0.0-alpha.4
@@ -591,6 +595,10 @@ packages:
     dependencies:
       sourcemap-codec: 1.4.8
     dev: true
+
+  /markdown-it-footnote/3.0.3:
+    resolution: {integrity: sha512-YZMSuCGVZAjzKMn+xqIco9d1cLGxbELHZ9do/TSYVzraooV8ypsppKNmUJ0fVH5ljkCInQAtFpm8Rb3eXSrt5w==}
+    dev: false
 
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
