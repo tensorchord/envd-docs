@@ -1,5 +1,9 @@
-import Theme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme'
+import CustomTitle from '../components/CustomTitle.vue'
 
 export default {
-  ...Theme
+  ...DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('CustomTitle', CustomTitle);
+  },
 }
