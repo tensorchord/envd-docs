@@ -14,7 +14,7 @@ Environments are containers run by docker, Kubernetes, or some other OCI runtime
 
 `build.envd` is written in [Starlark](https://github.com/bazelbuild/starlark), a simplified dialect of Python 3. The default function `build()` will be invoked on startup.
 
-```python 
+```python
 # build.envd
 # The function `build` will be evaluated by default.
 def build():

@@ -132,7 +132,9 @@ git clone https://github.com/tensorchord/envd-quick-start.git
 
 The build manifest `build.envd` looks like:
 
-```python title=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -141,13 +143,14 @@ def build():
     shell("zsh")
 ```
 
+</custom-title>
 Then please run the command below to set up a new environment:
 
-```
+```bash
 cd envd-quick-start && envd up
 ```
 
-```
+```bash
 $ cd envd-quick-start && envd up
 [+] ⌚ parse build.envd and download/cache dependencies 2.8s ✅ (finished)     
  => download oh-my-zsh                                                    2.8s 
@@ -184,7 +187,9 @@ If you are using `root` to run the command `envd up`, the user in the enviroment
 
 Please edit the `build.envd` to enable jupyter notebook:
 
-```python title=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -194,7 +199,9 @@ def build():
     config.jupyter(password="")
 ```
 
-Do not forget to destroy the envd container which was launched before if you edited the `build.envd`.
+</custom-title>
+
+Do not forget to destroy the envd container which was lunched before if you edited the `build.envd`.
 
 ```bash
 $ envd destroy

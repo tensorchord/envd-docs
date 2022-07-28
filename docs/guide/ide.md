@@ -13,17 +13,15 @@ NAME    JUPYTER                 SSH TARGET      CONTEXT                         
 mnist   http://localhost:48484   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
 ```
 
-
 :::tip
 
 Envd will add a new ssh entry to your ssh config to help you connect to your environment, named `<project_name>.envd`.
 ![](./assets/sshentry.jpg)
 
 :::
-
 ## Connect to the environment with VSCode
 
-First, you need to install the remote development kit in VSCode. You can find here `vscode:extension/ms-vscode-remote.remote-ssh` to install the extension. After the extension is installed, you'll be able to see the UI below by clicking the downside left icon.
+First, you need to install the remote development kit in VSCode. You can find here [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) to install the extension. After the extension is installed, you'll be able to see the UI below by clicking the downside left icon.
 
 ![](./assets/vscodessh.png)
 
@@ -38,12 +36,11 @@ After selecting the target, open the folder with your project name (here we use 
 Then everything is done!
 
 ![](./assets/done.jpg)
-
 ## Connect to the environment with Jupyter Notebook
 
 In `build.envd` file, we've declared the jupyter environment, with no password.
 
-```python title=build.envd
+```python
 def build():
     ...
     config.jupyter(password="")
@@ -51,7 +48,7 @@ def build():
 
 You can also get the jupyter port through `envd get envs` command.
 
-```
+```bash
 $ envd get envs
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20

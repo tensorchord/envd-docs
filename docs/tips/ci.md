@@ -6,8 +6,10 @@ envd only has one software dependency: [Buildkitd](https://github.com/moby/build
 
 Here is an [example](https://github.com/tensorchord/envd-quick-start/blob/master/.github/workflows/release.yml) of a GitHub Action build.
 
+<custom-title title="Build and push envd image to ghcr.io">
+
+
 ```yaml 
-title="Build and push envd image to ghcr.io"
 name: CI
 on:
   push:
@@ -35,10 +37,13 @@ jobs:
       run: envd build --output type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push=true
 ```
 
+</custom-title>
+
 If you just want to verify if `envd build` works, things are easier:
 
+<custom-title title="Build envd image">
+
 ```yaml 
-title="Build envd image"
 name: CI
 on:
   push:
@@ -60,12 +65,15 @@ jobs:
       run: envd build
 ```
 
+</custom-title>
+
 ## GitLab CI
 
 The example below uses [docker.io/docker:dind](https://hub.docker.com/layers/docker/library/docker/dind/images/sha256-95d63c46fdbeca706f6cb736ebcfbbf81e845c3f5a64ab5133cb0fe15ecbbfc4?context=explore) to build the envd image.
 
+<custom-title title=".gitlab-ci.yml">
+
 ```yaml 
-title=".gitlab-ci.yml"
 image: docker
 services:
   - docker:dind
@@ -79,10 +87,14 @@ envd:
     - envd build --output type=image,name=$CI_REGISTRY/$CI_REGISTRY_USER/envd-quick-start,push=true
 ```
 
+</custom-title>
+
 If you do not want to enable docker in the CI environment, you can create a remote buildkitd instance on remote docker daemon or Kubernetes cluster.
 
+
+<custom-title title=".gitlab-ci.yml">
+
 ```yaml 
-title=".gitlab-ci.yml"
 image: envd-quick-start
 before_script:
     - pip install --pre envd
@@ -97,3 +109,5 @@ envd:
   script:
     - envd build --output type=image,name=$CI_REGISTRY/$CI_REGISTRY_USER/envd-quick-start,push=true
 ```
+
+</custom-title>

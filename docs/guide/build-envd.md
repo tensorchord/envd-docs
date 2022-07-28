@@ -30,8 +30,9 @@ The syntax of `build.envd` is [starlark](https://docs.bazel.build/versions/main/
 
 Here is an example of `build.envd`:
 
-```python 
-title=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -41,22 +42,28 @@ def build():
     config.jupyter(password="")
 ```
 
+</custom-title>
+
+
 You don't need to worry about it yet. Let's explore how it works in the following sections.
 
 ### Hello World
 
 You can create a file `build.envd` in your project directory with these lines:
 
-```python 
-=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
 ```
 
+</custom-title>
 You can save the file and run `envd up`. Congrats! You get your first envd environment.
 
-```text 
-title="envd up"
+<custom-title title="envd up shell">
+
+```bash
 $ envd up
 [+] ⌚ parse build.envd and download/cache dependencies 0.0s ✅ (finished) 
 [+] 🐋 build envd environment 7.9s (16/16) ✅ (finished)
@@ -69,26 +76,34 @@ $ envd up
 envd@588f26349c61 $ 
 ```
 
+</custom-title>
+
 You can use `ssh <project-directory-name>.envd` to attach to the environment if you exit from the shell.
 
+<custom-title title="connect the environment via ssh">
+
 ```bash 
-title="connect the environment via ssh"
 envd@588f26349c61 $ exit
 $ ssh demo.envd
 envd@588f26349c61 $ # You are in the environment again!
 ```
 
+</custom-title>
+
 Do not forget to remove the environment if you do not use it.
 
+<custom-title title="destroy the environment">
+
 ```text 
-title="destroy the environment"
 $ envd destroy
 INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 ```
 
+</custom-title>
+
 Let's have a look at `build.envd`. `build` is the default function name in `build.envd`. envd invokes the function if you run `envd build` or `envd up`.
 
-:::caution
+:::warning
 
 **A `build.envd` must have a `build` function**.
 
@@ -100,8 +115,9 @@ Let's have a look at `build.envd`. `build` is the default function name in `buil
 
 The [envd install API](../api/install) function `install.python_packages` installs python packages in the environment:
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -109,14 +125,16 @@ def build():
     ])
 ```
 
+</custom-title>
+
 The function supports general pip syntaxs:
 
 ```python
-    install.python_packages(name = [
-        "numpy==1.4.1",
-        "numpy>=1,<2",
-        "numpy~=1.4",
-    ])
+install.python_packages(name = [
+    "numpy==1.4.1",
+    "numpy>=1,<2",
+    "numpy~=1.4",
+])
 ```
 
 Feel free to ask us in [Discord](https://discord.gg/KqswhpVgdU) if you get problems about packages installation. You can verify if it works:
@@ -137,8 +155,9 @@ array([2, 3, 4])
 
 The [envd API](../api/global%20functions) function `shell` configures shell program in the environment:
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -146,6 +165,7 @@ def build():
     ])
     shell("zsh")
 ```
+</custom-title>
 
 You do not need to configure zsh and [oh-my-zsh](https://ohmyz.sh/) manually, envd does it.
 
@@ -158,8 +178,9 @@ $ envd up
 
 [Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [envd config API](../api/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
 
+<custom-title title="build.envd">
+
 ```python 
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -169,14 +190,19 @@ def build():
     config.jupyter(password="")
 ```
 
+</custom-title>
+
 ![jupyter](./assets/jupyter.png)
 
 ### Set a PyPI index mirror (optional)
 
 You can use the `envd` API function `config.pip_index` to set the PyPI index mirror if it is too slow to install the python packages via `install.python_packages`.
 
+<custom-title title="build.envd">
+
+```python
+
 ```python 
-title=build.envd
 def build():
     config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
     base(os="ubuntu20.04", language="python3")
@@ -186,6 +212,8 @@ def build():
     shell("zsh")
     config.jupyter(password="")
 ```
+
+</custom-title>
 
 Then the packages will be downloaded from the mirror instead of [pypi.org](https://pypi.org/).
 
