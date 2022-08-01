@@ -91,9 +91,9 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: 'API Reference',
       collapsible: true,
       items:[
-        {text: 'Global Functions', link:'/api/global functions'},
-        {text: 'Config', link:'/api/config'},
-        {text: 'Install', link:'/api/install'},
+        {text: 'global', link:'/api/global functions'},
+        {text: 'config package', link:'/api/config'},
+        {text: 'install package', link:'/api/install'},
       ]
     },
     {
@@ -109,7 +109,7 @@ export const sidebar: DefaultTheme.Sidebar = {
       items:[
         {text:'Contributing to envd', link:'/community/contributing'},
         {text:'Development Tutorial', link:'/community/development'},
-        {text:'roadmap', link:'/community/roadmap'},
+        {text:'Roadmap', link:'/community/roadmap'},
       ]
     },
   ],
