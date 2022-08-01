@@ -29,9 +29,6 @@ features:
   - icon: ☁️
     title: Local & cloud
     details: envd integrates seamlessly with Docker so that you can easily share, version, and publish `envd` environments with Docker Hub or any other OCI image registries.
-  - icon: 🔁 
-    title: Repeatable builds & reproducible results
-    details: You can reproduce the same dev environment on your laptop, public cloud VMs, or Docker containers, without any change in setup.
 ---
 
 <VPTeamPage>
@@ -48,28 +45,35 @@ features:
 
 <script setup>
 import {
-  VPTeamPage,
-  VPTeamPageTitle,
-  VPTeamMembers
+  // VPTeamPage,
+  // VPTeamPageTitle,
+  // VPTeamMembers
 } from 'vitepress/theme'
 
 const members = [
   {
-    avatar: 'https://www.github.com/gaocegege.png',
-    name: 'Ce Gao',
-    title: 'Co-founder',
-    links: [
-      { icon: 'github', link: 'https://github.com/gaocegege' },
-      { icon: 'twitter', link: 'https://twitter.com/gaocegege' }
-    ]
-  },
-  {
-    avatar: 'https://www.github.com/terrytangyuan.png',
-    name: 'Yuan Tang',
+    avatar: 'https://www.github.com/VoVAllen.png',
+    name: 'Allen Zhou',
     title: 'Maintainer',
     links: [
-      { icon: 'github', link: 'https://github.com/terrytangyuan' },
-      { icon: 'twitter', link: 'https://twitter.com/TerryTangYuan' }
+      { icon: 'github', link: 'https://github.com/VoVAllen' },
+      { icon: 'twitter', link: 'https://twitter.com/zhoujinjing09' }
+    ],
+  },
+  {
+    avatar: 'https://www.github.com/gaocegege.png',
+    name: 'Ce Gao',
+    title: 'Maintainer',
+    links: [
+      { icon: 'github', link: 'https://github.com/gaocegege' },
+    ]
+  },
+    {
+    avatar: 'https://www.github.com/kemingy.png',
+    name: 'Keming Yang',
+    title: 'Maintainer',
+    links: [
+      { icon: 'github', link: 'https://github.com/kemingy' },
     ]
   },
 ]
