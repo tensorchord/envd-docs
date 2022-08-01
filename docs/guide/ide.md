@@ -62,11 +62,15 @@ Then you can directly get your jupyter notebook by using `http://localhost:48737
 
 You can set up [RStudio server](https://www.rstudio.com/products/rstudio/download-server/) with `config.rstudio_server`.
 
-```python title=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     ...
     config.rstudio_server()
 ```
+
+</custom-title>
 
 Endpoint can be got through `envd get envs` command.
 

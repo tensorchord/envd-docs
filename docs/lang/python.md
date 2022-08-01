@@ -11,7 +11,6 @@ The default language in envd is Python, thus there is no need to specify languag
 <custom-title title="build.envd">
 
 ```python
-title=build.envd
 def build():
     base(os="ubuntu20.04", language="python")
 ```

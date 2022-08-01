@@ -6,15 +6,15 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: '开始了解',
       collapsible: true,
       items:[
-          { text: '为何选择 envd', link: '/zh/guide/why' },
           { text: '快速开始', link: '/zh/guide/getting-started' },
           { text: '构建你的开发环境', link:'/zh/guide/build-envd'},
           { text: '连接你的开发环境', link:'/zh/guide/ide'},
+          { text: '为何选择 envd', link: '/zh/guide/why' },
           { text: 'envd 核心概念', link:'/zh/guide/concepts'},
       ],
     },
     {
-      text: 'Languages',
+      text: '编程语言',
       collapsible: true,
       items:[
         { text: 'Python', link: '/zh/lang/python' },
@@ -26,9 +26,9 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: '技巧和提示',
       collapsible: true,
       items:[
-        { text: 'Faster Build with Software Mirrors',link:'/zh/tips/mirror' },
-        { text: 'Per-user Config', link:'/zh/tips/config'},
-        { text: 'CI/CD Integration', link:'/zh/tips/ci'}
+        { text: '利用软件镜像源更快地构建环境',link:'/zh/tips/mirror' },
+        { text: '用户相关配置', link:'/zh/tips/config'},
+        { text: 'CI/CD 集成', link:'/zh/tips/ci'}
       ]
     },
     {
@@ -41,7 +41,7 @@ export const sidebar: DefaultTheme.Sidebar = {
       ]
     },
     {
-      text: 'envd CLI Reference',
+      text: 'envd CLI 文档',
       collapsible: true,
       items:[
         {text:'envd CLI Reference', link:'/zh/cli'},
@@ -51,8 +51,8 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: '社区',
       collapsible: true,
       items:[
-        {text:'Contributing to envd', link:'/zh/community/contributing'},
-        {text:'Development Tutorial', link:'/zh/community/development'},
+        {text:'贡献 envd', link:'/zh/community/contributing'},
+        {text:'开发教程', link:'/zh/community/development'},
         {text:'路线图', link:'/zh/community/roadmap'},
       ]
     },
@@ -62,10 +62,10 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: 'Guide',
       collapsible: true,
       items:[
-        { text: 'Why envd', link: '/guide/why' },
         { text: 'Getting Started', link: '/guide/getting-started' },
         { text: 'Building Your First Environment', link:'/guide/build-envd'},
         { text: 'Connect to envd Environment', link:'/guide/ide'},
+        { text: 'Why envd', link: '/guide/why' },
         { text: 'envd Concepts', link:'/guide/concepts'},
       ],
     },

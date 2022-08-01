@@ -50,7 +50,6 @@ Official ubuntu apt source is used in envd by default, but you can change to a m
 <custom-title title="Set apt source mirror">
 
 ```python 
-title="apt source mirror"
 config.apt_source(source="""
 # See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
 # newer versions of the distribution.
@@ -86,7 +85,6 @@ You can set up the conda channel mirror via:
 <custom-title title="Set conda channel mirror">
 
 ```python 
-title="conda channel mirror"
 config.conda_channel(channel="""
 channels:
   - defaults

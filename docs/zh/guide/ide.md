@@ -69,11 +69,15 @@ mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/exa
 
 你可以通过 `config.rstudio_server` 启用 [RStudio server](https://www.rstudio.com/products/rstudio/download-server/)。
 
-```python title=build.envd
+<custom-title title="build.envd">
+
+```python
 def build():
     ...
     config.rstudio_server()
 ```
+
+</custom-title>
 
 RStudio 的地址可以通过 `envd get envs` 命令得到。
 

@@ -6,8 +6,7 @@ You can create a `config.envd` file to achieve this:
 
 <custom-title title="config.envd">
 
-
-```python title=config.envd
+```python
 config.pip_index(url = "https://pypi.tuna.tsinghua.edu.cn/simple")
 git_config(name="My Name", email="my@email.com", editor="vim")
 ```
