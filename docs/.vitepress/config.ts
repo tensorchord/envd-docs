@@ -25,12 +25,11 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.svg',
-    // TODO: need appId and apiKey
-      // algolia: {
-      //   appId: '',
-      //   apiKey: '',
-      //   indexName: '',
-      // },
+    algolia: {
+      appId: 'KGSWV0XY1D',
+      apiKey: 'a3c4e766b63fac5bee147fb9fc269cb0',
+      indexName: 'tensorchord',
+    },
     localeLinks: {
       text: '',
       items: [
