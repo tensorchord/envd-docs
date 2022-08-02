@@ -42,7 +42,7 @@
 下面的这些步骤会带你熟悉如何初始的设置步骤和开发流程。如果你有任何疑问，你可以在 [discord](https://discord.gg/KqswhpVgdU) 上问，或者在 issues 板块中描述你有疑问的步骤，我们会尽力帮助你解决问题。
 
 1. 安装 [Docker](https://www.docker.com/products/docker-desktop/) (20.10.0或更新版本) 以及 [Golang](https://go.dev/dl/) (1.18或更新版本).
-1. 在你自己的Github账号中 [Fork](https://help.github.com/articles/fork-a-repo) [`envd` 代码库](https://github.com/tensorchord/envd)。
+1. 在你自己的GitHub账号中 [Fork](https://help.github.com/articles/fork-a-repo) [`envd` 代码库](https://github.com/tensorchord/envd)。
 1. 将你账号中刚Fork的代码库Clone到你电脑的本地磁盘上。
     ```
     $ git clone https://github.com/YOUR_USERNAME/envd.git
@@ -59,7 +59,7 @@
     $ git add -u
     $ git commit -m "YOUR COMMIT MESSAGE"
     ```
-1. 将你本地的改动[Push](https://help.github.com/articles/github-glossary/#push) 到你Github上的远程仓库中。
+1. 将你本地的改动[Push](https://help.github.com/articles/github-glossary/#push) 到你GitHub上的远程仓库中。
     ```
     $ git push
     ```
