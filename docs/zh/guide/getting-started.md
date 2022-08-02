@@ -110,7 +110,7 @@ pip install --pre envd
 envd bootstrap
 ```
 
-:::tip Tip
+:::tip
 
 你可以通过 `--dockerhub-mirror` 或者 `-m` 这一 flag 来配置 `envd` 使用的 Docker Hub 镜像：
 

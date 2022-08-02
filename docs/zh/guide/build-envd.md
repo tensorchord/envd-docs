@@ -1,7 +1,7 @@
 
 # 构建您的 envd 环境
 
-envd 通过读取 `build.envd` 文件中的配置来自动构建镜像。`build.envd` 是一个包含所有命令的配置文件。
+`envd` 通过读取 `build.envd` 文件中的配置来自动构建镜像。`build.envd` 是一个包含所有命令的配置文件。
 
 ## 基础命令
 
@@ -115,7 +115,7 @@ def build():
 
 </custom-title>
 
-`build()` 是 `build.envd` 中的主函数。当您运行 `envd build` 或 `envd up`命令时，envd 程序会调用该函数。
+`build()` 是 `build.envd` 中的主函数。当您运行 `envd build` 或 `envd up`命令时，`envd` 程序会调用该函数。
 
 :::warning 注意
 
@@ -129,7 +129,7 @@ def build():
 
 ### 安装 Python 包
 
-通过 [envd install API](../api/install) 中的 `install.python_packages` 函数在环境中安装 Python 包：
+通过 [`envd` install API](../api/install) 中的 `install.python_packages` 函数在环境中安装 Python 包：
 
 <custom-title title="build.envd">
 
@@ -169,7 +169,7 @@ array([2, 3, 4])
 
 ### 配置 ZSH Shell
 
-通过 [envd API](../api/global%20functions) 中的 `Shell` 函数配置环境中的 `Shell` 程序：
+通过 [`envd` API](../api/global%20functions) 中的 `Shell` 函数配置环境中的 `Shell` 程序：
 
 <custom-title title="build.envd">
 
@@ -184,7 +184,7 @@ def build():
 
 </custom-title>
 
- `envd` 自动配置 `ZSH Shell` 和 [oh-my-zsh](https://ohmyz.sh/)，无需您手动操作。
+`envd` 自动配置 `ZSH Shell` 和 [oh-my-zsh](https://ohmyz.sh/)，无需您手动操作。
 
 ```bash
 $ envd up
@@ -281,6 +281,6 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
 
 如果您想进一步探索 `envd` ，以下是一些快速链接：
 
-- [envd GitHub 仓库](https://github.com/tensorchord/envd)
+- [`envd` GitHub 仓库](https://github.com/tensorchord/envd)
 - [为什么使用 envd？](./why)
-- [envd CLI 命令](../cli)
+- [`envd` CLI 命令](../cli)

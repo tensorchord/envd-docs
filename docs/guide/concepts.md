@@ -1,4 +1,4 @@
-# envd Concepts
+# `envd` Concepts
 
 This doc describes concepts in the `envd`. The name `envd` is inspired by systemd. [^1]
 
@@ -21,9 +21,9 @@ def build():
     # envd instructions here.
 ```
 
-Functions like [`install.python_packages`](/api/install#python_packages) and [`config.jupyter`](/api/config#jupyter) can be used to register information. The information will be kept in a static graph in the memory. envd uses the static graph to build the environment at the envd of execution.
+Functions like [`install.python_packages`](/api/install#python_packages) and [`config.jupyter`](/api/config#jupyter) can be used to register information. The information will be kept in a static graph in the memory. `envd` uses the static graph to build the environment at the `envd` of execution.
 
-envd evaluates the `build` function with the starlark interpreter, thus you can use loops, if/else conditional execution or other statements in `build.envd`.
+`envd` evaluates the `build` function with the starlark interpreter, thus you can use loops, if/else conditional execution or other statements in `build.envd`.
 
 ```python
 # build.envd

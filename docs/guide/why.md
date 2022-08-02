@@ -109,9 +109,9 @@ ENTRYPOINT ["tini", "--", "bash", "init.bash"]
 
 ## How to do with envd?
 
-envd provides build language similar to Python and has first-class support for jupyter, vscode, and python dependencies in container technologies.
+`envd` provides build language similar to Python and has first-class support for jupyter, vscode, and python dependencies in container technologies.
 
-The same logic in envd looks like this:
+The same logic in `envd` looks like this:
 
 ```python
 def build():

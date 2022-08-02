@@ -1,10 +1,10 @@
-# 连接 envd 环境
+# 连接 `envd` 环境
 
 演示项目地址：[envd/examples/mnist](https://github.com/tensorchord/envd/tree/main/examples/mnist)
 
 ## 构建并检查你的环境
 
-通过 [构建 envd 环境](./build-envd) 的教程，您已经能够成功构建项目环境。在本章节中，我们将使用 `mnist` 项目来演示后续操作。构建成功后，您可以使用 `envd get envs` 命令来检查环境状态。
+通过 [构建 `envd` 环境](./build-envd) 的教程，您已经能够成功构建项目环境。在本章节中，我们将使用 `mnist` 项目来演示后续操作。构建成功后，您可以使用 `envd get envs` 命令来检查环境状态。
 
 ```
 $ envd get envs
@@ -14,7 +14,7 @@ mnist   http://localhost:48484   mnist.envd      /home/ubuntu/workspace/envd/exa
 
 :::tip 小提示
 
-Envd 将在您的 ssh config 文件中添加新的 ssh 配置，以帮助您连接到 envd 环境。配置名称为：<project_name>.envd。
+`envd` 将在您的 ssh config 文件中添加新的 ssh 配置，以帮助您连接到 `envd` 环境。配置名称为：`<project_name>.envd`。
 
 ![](./assets/sshentry.jpg)
 

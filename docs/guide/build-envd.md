@@ -1,6 +1,6 @@
 # Building Your First Environment
 
-envd can build images automatically by reading the instructions from a `build.envd`. A `build.envd` is a text document that contains all the commands a user could call on the command line to assemble an image.
+`envd` can build images automatically by reading the instructions from a `build.envd`. A `build.envd` is a text document that contains all the commands a user could call on the command line to assemble an image.
 
 ## Usage
 
@@ -59,7 +59,7 @@ def build():
 ```
 
 </custom-title>
-You can save the file and run `envd up`. Congrats! You get your first envd environment.
+You can save the file and run `envd up`. Congrats! You get your first `envd` environment.
 
 <custom-title title="envd up shell">
 
@@ -101,7 +101,7 @@ INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 
 </custom-title>
 
-Let's have a look at `build.envd`. `build` is the default function name in `build.envd`. envd invokes the function if you run `envd build` or `envd up`.
+Let's have a look at `build.envd`. `build` is the default function name in `build.envd`. `envd` invokes the function if you run `envd build` or `envd up`.
 
 :::warning
 
@@ -113,7 +113,7 @@ Let's have a look at `build.envd`. `build` is the default function name in `buil
 
 ### Install python packages
 
-The [envd install API](../api/install) function `install.python_packages` installs python packages in the environment:
+The [`envd` install API](../api/install) function `install.python_packages` installs python packages in the environment:
 
 <custom-title title="build.envd">
 
@@ -153,7 +153,7 @@ array([2, 3, 4])
 
 ### Use zsh instead of bash
 
-The [envd API](../api/global%20functions) function `shell` configures shell program in the environment:
+The [`envd` API](../api/global%20functions) function `shell` configures shell program in the environment:
 
 <custom-title title="build.envd">
 
@@ -167,7 +167,7 @@ def build():
 ```
 </custom-title>
 
-You do not need to configure zsh and [oh-my-zsh](https://ohmyz.sh/) manually, envd does it.
+You do not need to configure zsh and [oh-my-zsh](https://ohmyz.sh/) manually, `envd` does it.
 
 ```bash
 $ envd up
@@ -176,7 +176,7 @@ $ envd up
 
 ### Use jupyter
 
-[Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [envd config API](../api/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
+[Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [`envd` config API](../api/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
 
 <custom-title title="build.envd">
 
@@ -257,6 +257,6 @@ Please ask us on [Discord](https://discord.gg/KqswhpVgdU) if you had any trouble
 
 Here are some quick links:
 
-- [envd GitHub Repository](https://github.com/tensorchord/envd)
-- [Why Use envd?](/guide/why)
-- [envd CLI Reference](/cli)
+- [`envd` GitHub Repository](https://github.com/tensorchord/envd)
+- [Why Use `envd`?](/guide/why)
+- [`envd` CLI Reference](/cli)

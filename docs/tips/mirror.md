@@ -34,7 +34,7 @@ config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 ```
 </custom-title>
 
-envd will use the index to pull python packages. Here are some pip indexes:
+`envd` will use the index to pull python packages. Here are some pip indexes:
 
 - `https://pypi.tuna.tsinghua.edu.cn/simple` in China.
 - `https://mirror.sjtu.edu.cn/pypi/web/simple` in China.
@@ -43,7 +43,7 @@ envd will use the index to pull python packages. Here are some pip indexes:
 
 Apt downloads packages from one or more software repositories (sources) and installs them onto your computer.
 
-Official ubuntu apt source is used in envd by default, but you can change to a mirror which is close to you:
+Official ubuntu apt source is used in `envd` by default, but you can change to a mirror which is close to you:
 
 <custom-title title="Set apt source mirror">
 

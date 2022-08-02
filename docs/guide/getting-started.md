@@ -1,6 +1,6 @@
 # Getting Started
 
-envd is a **machine learning development environment** for data science and AI/ML engineering teams.
+`envd` is a **machine learning development environment** for data science and AI/ML engineering teams.
 
 🐍 **No Docker, only Python** - Focus on writing Python code, we will take care of Docker and development environment setup.
 
@@ -12,7 +12,7 @@ envd is a **machine learning development environment** for data science and AI/M
 
 🔁 **Repeatable builds & reproducible results** - You can reproduce the same dev environment on your laptop, public cloud VMs, or Docker containers, without any change in setup.
 
-Let's **create a new envd environment in less than 5 minutes**.
+Let's **create a new `envd` environment in less than 5 minutes**.
 
 ## Why Use envd?
 
@@ -111,7 +111,7 @@ pip install --pre envd
 envd bootstrap
 ```
 
-:::tip Tip
+:::tip TIP
 
 You can add `--dockerhub-mirror` or `-m` flag when running `envd boostrap`, to configure the mirror for docker.io registry:
 

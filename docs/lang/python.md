@@ -1,12 +1,12 @@
 # Building a Python Environment
 
-This guide covers configuring Python environments in envd. If you’re new to envd please read our [Tutorial](/guide/getting-started) and [build configuration guides](/guide/build-envd) first.
+This guide covers configuring Python environments in envd. If you’re new to `envd` please read our [Tutorial](/guide/getting-started) and [build configuration guides](/guide/build-envd) first.
 
 Let's begin 🐍!
 
 ## Specifying Python
 
-The default language in envd is Python, thus there is no need to specify language. Or you can use `base` function to specify.
+The default language in `envd` is Python, thus there is no need to specify language. Or you can use `base` function to specify.
 
 <custom-title title="build.envd">
 
@@ -17,7 +17,7 @@ def build():
 
 </custom-title>
 
-The default version of python in envd is 3.9 (the latest patch version can be refered [here](https://anaconda.org/anaconda/python/files)). If you need to specify a particular version, just assign `language` to a string like `pythonX.Y.Z`:
+The default version of python in `envd` is 3.9 (the latest patch version can be refered [here](https://anaconda.org/anaconda/python/files)). If you need to specify a particular version, just assign `language` to a string like `pythonX.Y.Z`:
 
 <custom-title title="build.envd">
 
@@ -28,8 +28,8 @@ def build():
 
 </custom-title>
 
-:::caution
-Python2 is not supported in envd.
+:::warning
+Python2 is not supported in `envd`.
 :::
 
 ## Conda packages
@@ -65,7 +65,7 @@ def build():
 
 </custom-title>
 
-envd uses system-wide [pip](https://pip.pypa.io/) to install Python packages in the previous example.
+`envd` uses system-wide [pip](https://pip.pypa.io/) to install Python packages in the previous example.
 
 If conda is enabled, you can also install Python packages from PyPI with `install.python_packags` function. The following example installs `numpy` and `scipy` with conda, and installs `scikit-learn` and `matplotlib` with pip:
 
@@ -86,7 +86,7 @@ def build():
 
 </custom-title>
 
-envd uses pip in the current conda environment to install the packages in this example.
+`envd` uses pip in the current conda environment to install the packages in this example.
 
 ## Specifying shell program
 

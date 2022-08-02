@@ -1,10 +1,10 @@
-# Connecting to envd Environment
+# Connecting to `envd` Environment
 
 Here we use the example at [envd/examples/mnist](https://github.com/tensorchord/envd/tree/main/examples/mnist).
 
 ## Build and check your environment
 
-Following [previous tutorial](/guide/build-envd), you'll be able to setup the project environment by envd. In this tutorial, we used `mnist` project.
+Following [previous tutorial](/guide/build-envd), you'll be able to setup the project environment by `envd`. In this tutorial, we used `mnist` project.
 After setting up the project, you can check the environment status by `envd get envs`.
 
 ```
@@ -15,7 +15,7 @@ mnist   http://localhost:48484   mnist.envd      /home/ubuntu/workspace/envd/exa
 
 :::tip
 
-Envd will add a new ssh entry to your ssh config to help you connect to your environment, named `<project_name>.envd`.
+`envd` will add a new ssh entry to your ssh config to help you connect to your environment, named `<project_name>.envd`.
 ![](./assets/sshentry.jpg)
 
 :::

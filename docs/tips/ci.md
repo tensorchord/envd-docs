@@ -1,6 +1,6 @@
 # CI/CD Integration 
 
-envd only has one software dependency: [Buildkitd](https://github.com/moby/buildkit#containerizing-buildkit), thus envd is compatible with most Continuous Integration systems. Please contact us on [💬 Discord](https://discord.gg/KqswhpVgdU) if you have problems about integrating envd with your CI/CD system, we are glad to help!
+`envd` only has one software dependency: [Buildkitd](https://github.com/moby/buildkit#containerizing-buildkit), thus `envd` is compatible with most Continuous Integration systems. Please contact us on [💬 Discord](https://discord.gg/KqswhpVgdU) if you have problems about integrating `envd` with your CI/CD system, we are glad to help!
 
 ## GitHub Actions
 
@@ -69,7 +69,7 @@ jobs:
 
 ## GitLab CI
 
-The example below uses [docker.io/docker:dind](https://hub.docker.com/layers/docker/library/docker/dind/images/sha256-95d63c46fdbeca706f6cb736ebcfbbf81e845c3f5a64ab5133cb0fe15ecbbfc4?context=explore) to build the envd image.
+The example below uses [docker.io/docker:dind](https://hub.docker.com/layers/docker/library/docker/dind/images/sha256-95d63c46fdbeca706f6cb736ebcfbbf81e845c3f5a64ab5133cb0fe15ecbbfc4?context=explore) to build the `envd` image.
 
 <custom-title title=".gitlab-ci.yml">
 
