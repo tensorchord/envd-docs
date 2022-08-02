@@ -1,0 +1,11 @@
+{
+  "include": [
+    ".",
+    "./docs/**/*.ts",
+    "./docs/**/*.vue",
+    "./docs/.vitepress/**/*"
+  ],
+  "exclude": [
+    "**/build/**"
+  ]
+}
