@@ -1,6 +1,6 @@
 # Building a Julia Environment
 
-This guide covers configuring Julia environments in envd. If you’re new to `envd` please read our [Tutorial](/guide/getting-started) and [build configuration guides](/guide/build-envd) first.
+This guide covers configuring Julia environments in envd. If you’re new to envd please read our [Tutorial](/guide/getting-started) and [build configuration guides](/guide/build-envd) first.
 
 ## Specifying Julia
 
@@ -12,6 +12,7 @@ First, you can specify to use the Julia language in the `base` function.
 def build():
     base(os="ubuntu20.04", language="julia")
 ```
+
 </custom-title>
 
 ## Julia packages
@@ -27,7 +28,6 @@ def build():
         "Example",
     ])
 ```
-
 </custom-title>
 
 ## Configure Julia package server
@@ -44,6 +44,7 @@ def build():
         "Example",
     ])
 ```
+
 </custom-title>
 
 ## Specifying shell program
@@ -66,12 +67,12 @@ You can specify VSCode extensions with `install.vscode_extensions` function. The
 
 <custom-title title="build.envd">
 
-```python
+```python 
 def build():
     base(os="ubuntu20.04", language="julia")
     install.vscode_extensions(["julialang.language-julia"])
 ```
-</custom-title>
 
+</custom-title>
 
 [^1]: [open-vsx](https://open-vsx.org/) is used instead of Microsoft VSCode Marketplace due to [licensing issues](https://github.com/tensorchord/envd/issues/160).

@@ -1,6 +1,6 @@
 # Faster Build with Software Mirrors
 
-There are several ways to accelerate the building process. We will introduce how to use software mirrors (docker hub mirror, pip index mirror, conda channel mirror and so on) in envd.
+There are several ways to accelarate the building process. We will introduce how to use software mirrors (docker hub mirror, pip index mirror, conda channel mirror and so on) in envd.
 
 ## Setting up docker hub pull through mirror
 
@@ -9,6 +9,7 @@ If docker image pulls are too slow, you can add a [pull through registry mirror]
 You can set the mirror when `envd bootstrap`:
 
 <custom-title title="Set docker mirror">
+
 
 ```bash 
 envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
@@ -32,9 +33,10 @@ PyPI index mirror can be set with `config.pip_index(url="<index>", extra_url=<ex
 ```python 
 config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 ```
+
 </custom-title>
 
-`envd` will use the index to pull python packages. Here are some pip indexes:
+envd will use the index to pull python packages. Here are some pip indexes:
 
 - `https://pypi.tuna.tsinghua.edu.cn/simple` in China.
 - `https://mirror.sjtu.edu.cn/pypi/web/simple` in China.
@@ -43,11 +45,11 @@ config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 
 Apt downloads packages from one or more software repositories (sources) and installs them onto your computer.
 
-Official ubuntu apt source is used in `envd` by default, but you can change to a mirror which is close to you:
+Official ubuntu apt source is used in envd by default, but you can change to a mirror which is close to you:
 
 <custom-title title="Set apt source mirror">
 
-```python
+```python 
 config.apt_source(source="""
 # See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
 # newer versions of the distribution.
@@ -71,6 +73,7 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
 # deb-src https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe multiverse
 """)
 ```
+
 </custom-title>
 
 ## Setting up conda channel mirror
@@ -80,7 +83,6 @@ Mirroring or caching of conda can be used to speed up local package installation
 You can set up the conda channel mirror via:
 
 <custom-title title="Set conda channel mirror">
-
 
 ```python 
 config.conda_channel(channel="""

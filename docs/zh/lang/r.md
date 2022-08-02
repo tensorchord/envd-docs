@@ -30,6 +30,7 @@ def build():
             "rlang",
         ])
 ```
+
 </custom-title>
 
 ## Configuring CRAN Mirror
@@ -47,6 +48,7 @@ def build():
             "rlang",
         ])
 ```
+
 </custom-title>
 
 ## Specifying shell program
@@ -74,7 +76,9 @@ def build():
     base(os="ubuntu20.04", language="r")
     install.vscode_extensions(["REditorSupport.r-lsp"])
 ```
+
 </custom-title>
+
 
 [^1]: [open-vsx](https://open-vsx.org/) is used instead of Microsoft VSCode Marketplace due to [licensing issues](https://github.com/tensorchord/envd/issues/160).
 

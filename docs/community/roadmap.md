@@ -1,4 +1,4 @@
-# envd Roadmap
+# `envd` Roadmap
 
 Want to jump in? Welcome discussions and contributions! 
 
@@ -28,7 +28,7 @@ We are working on building the MVP!
 - **Language**
     - [Support data management in the environment](https://github.com/tensorchord/envd/issues/5)
 - **Runtime**
-    - [Support both Kubernetes and Docker runtimes](https://github.com/tensorchord/envd/issues/179). Data science or AI/ML teams usually do not only develop on their laptops. They need GPU clusters to run the large scale training jobs. envd supports both Kubernetes and Docker runtimes. Thus users can move to cloud without any code change.
+    - [Support both Kubernetes and Docker runtimes](https://github.com/tensorchord/envd/issues/179). Data science or AI/ML teams usually do not only develop on their laptops. They need GPU clusters to run the large scale training jobs. `envd` supports both Kubernetes and Docker runtimes. Thus users can move to cloud without any code change.
 - **Ecosystem**
     - [Design the extension mechanism to reuse user-defined build funcs](https://github.com/tensorchord/envd/issues/91). Users can run `load(<custom-package>)` to load and use their own build functions.
 
@@ -37,7 +37,7 @@ We are working on building the MVP!
 These items are not essential for an MVP, but are a part of our longer term plans. Feel free to jump in on these if you're interested!
 
 - **Runtime**
-    - Continuous profiler that continuously collects line-level profiling performance data from envd environments, helps engineers find bottlenecks in the training code.
+    - Continuous profiler that continuously collects line-level profiling performance data from `envd` environments, helps engineers find bottlenecks in the training code.
     - [Support the OCI runtime spec-compatible runtime](https://github.com/tensorchord/envd/issues/282)
 - **Ecosystem**
     - Integrate with other open source development tools e.g. [aim](https://github.com/aimhubio/aim).
