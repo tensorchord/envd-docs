@@ -10,24 +10,24 @@
 
 `envd` 的源代码托管在 [github.com/tensorchord/envd](https://github.com/tensorchord/envd)。除此之外，项目文档的源代码托管在 [github.com/tensorchord/envd-docs](https://github.com/tensorchord/envd-docs)。
 
-项目的代码库中有很多文件，下面是一个简短的概括。这些文件（夹）看起来很难懂，但你不需要了解代码库每一个文件的作用。我们推荐先从一个模块开始学习（比如，在 envd 中添加一个新的函数），然后慢慢地去了解其他部分。
+项目的代码库中有很多文件，下面是一个简短的概括。这些文件（夹）看起来很难懂，但你不需要了解代码库每一个文件的作用。我们推荐先从一个模块开始学习（比如，在 `envd` 中添加一个新的函数），然后慢慢地去了解其他部分。
 
-- [📁 base-images/](https://github.com/tensorchord/envd/tree/main/base-images) 包含 Dockerfiles 和 envd 基础镜像的建造脚本。
+- [📁 base-images/](https://github.com/tensorchord/envd/tree/main/base-images) 包含 Dockerfiles 和 `envd` 基础镜像的建造脚本。
 - [📁 cmd/](https://github.com/tensorchord/envd/tree/main/cmd) 包含 `envd` 和 `envd-ssh` 的命令行界面代码
     - [📁 envd/](https://github.com/tensorchord/envd/tree/main/cmd/envd) `envd` 的命令行界面
     - [📁 envd-ssh/](https://github.com/tensorchord/envd/tree/main/cmd/envd-ssh) `envd-ssh` 的命令行界面，`envd` 用户不会直接使用它。它会注入到运行环境来设置 sshd
 - [📁 docs/](https://github.com/tensorchord/envd/tree/main/docs) 并不包含文档！它包含 `README.md` 中的提议和静态资源。项目文档托管在 [github.com/tensorchord/envd-docs](https://github.com/tensorchord/envd-docs)。
 - [📁 envd/](https://github.com/tensorchord/envd/tree/main/envd) 包含一个用来生成 API 引用的假 python 包。你只需要在对 `envd` API 做出修改时才需要对这个部分做出改动。
-- [📁 examples/](https://github.com/tensorchord/envd/tree/main/examples) 包含 envd 的一些示例代码。
-- [📁 pkg/](https://github.com/tensorchord/envd/tree/main/pkg) 包含 envd 命令行界面的代码实现。
+- [📁 examples/](https://github.com/tensorchord/envd/tree/main/examples) 包含 `envd` 的一些示例代码。
+- [📁 pkg/](https://github.com/tensorchord/envd/tree/main/pkg) 包含 `envd` 命令行界面的代码实现。
     - [📁 app/](https://github.com/tensorchord/envd/tree/main/pkg/app) 包含命令行界面的配置。
     - [📁 autocomplete/](https://github.com/tensorchord/envd/tree/main/pkg/autocomplete) 包含 bash 和 zsh 的自动补全代码。
     - [📁 builder/](https://github.com/tensorchord/envd/tree/main/pkg/builder) 包含 buildkit 的建造器，它是项目中非常重要的一个部分。建造器会将 starlark 编译成 [buildkit LLB](https://github.com/moby/buildkit#exploring-llb)，然后再构造镜像。
     - [📁 buildkitd/](https://github.com/tensorchord/envd/tree/main/pkg/buildkitd) 包含连接 buildkitd 容器的客户端代码。
-    - [📁 config/](https://github.com/tensorchord/envd/tree/main/pkg/config) 包含 envd 的配置文件。
+    - [📁 config/](https://github.com/tensorchord/envd/tree/main/pkg/config) 包含 `envd` 的配置文件。
     - [📁 docker/](https://github.com/tensorchord/envd/tree/main/pkg/docker) 包含使用 docker 进程的客户端代码。
     - [📁 editor/](https://github.com/tensorchord/envd/tree/main/pkg/editor) 包含 vscode 和 jupyter 相关的代码实现。
-    - [📁 envd/](https://github.com/tensorchord/envd/tree/main/pkg/envd) 包含 envd 引擎代码，它是一个用来管理 `envd` 环境的抽象层。
+    - [📁 envd/](https://github.com/tensorchord/envd/tree/main/pkg/envd) 包含 `envd` 引擎代码，它是一个用来管理 `envd` 环境的抽象层。
     - [📁 flag/](https://github.com/tensorchord/envd/tree/main/pkg/flag) 包含[viper](https://github.com/spf13/viper)的 `flags` 信息。
     - [📁 home/](https://github.com/tensorchord/envd/tree/main/pkg/home) 包含用来管理 [XDG directories](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) 的代码 (比如 `$HOME/.config/envd` 和 `$HOME/.cache/envd`)。
     - [📁 lang/](https://github.com/tensorchord/envd/tree/main/pkg/lang) 包含建造语言代码。如果你想往 `envd` 加入新函数，那么你需要更新该部分。
@@ -47,7 +47,7 @@
     ```
     $ git clone https://github.com/YOUR_USERNAME/envd.git
     ```
-1. 安装相关的依赖库并编译 envd。
+1. 安装相关的依赖库并编译 `envd`。
     ```
     $ go mod tidy
     $ make
