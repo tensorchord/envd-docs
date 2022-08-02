@@ -2,7 +2,7 @@
 
 此章节描述了 `envd` 的设计思路，`envd` 的名字灵感来自于 systemd。 [^1]
 
-[^1]: [Github 上我们关于该名字的讨论](https://github.com/tensorchord/envd/issues/2#issuecomment-1119175904).
+[^1]: [GitHub 上我们关于该名字的讨论](https://github.com/tensorchord/envd/issues/2#issuecomment-1119175904).
 
 ## 核心设计
 
