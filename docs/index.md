@@ -6,8 +6,8 @@ titleTemplate: Development Environment for Machine Learning Engineers
 
 hero:
   name: envd
-  text: AI/ML Development Environment.
-  tagline: envd is a machine learning development environment for data science and AI/ML engineering teams.
+  text: AI/ML Development Environment
+  tagline: A machine learning development environment for data science and AI/ML engineering teams.
   actions:
     - theme: brand
       text: Get Started
@@ -28,7 +28,7 @@ features:
     details: Better cache management to save your time, keep the focus on the model, instead of dependencies.
   - icon: ☁️
     title: Local & cloud
-    details: envd integrates seamlessly with Docker so that you can easily share, version, and publish `envd` environments with Docker Hub or any other OCI image registries.
+    details: Seamlessly integrate with Docker and easily share, version, and publish environments with Docker Hub or any other OCI image registries.
 ---
 
 <!-- <VPTeamPage>
