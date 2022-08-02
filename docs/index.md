@@ -28,7 +28,7 @@ features:
     details: Better cache management to save your time, keep the focus on the model, instead of dependencies.
   - icon: ☁️
     title: Local & cloud
-    details: Seamlessly integrate with Docker and easily share, version, and publish `envd` environments with Docker Hub or any other OCI image registries.
+    details: Seamlessly integrate with Docker and easily share, version, and publish environments with Docker Hub or any other OCI image registries.
 ---
 
 <!-- <VPTeamPage>
