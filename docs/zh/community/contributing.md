@@ -1,7 +1,7 @@
 
-# envd 开源贡献指南
+# `envd` 开源贡献指南
 
-我们欢迎来自开源社区，个人和合作者的各种形式的贡献。如果你对为 envd 提供开源贡献感兴趣，这篇文档会让你更清晰的了解贡献的流程。
+我们欢迎来自开源社区，个人和合作者的各种形式的贡献。如果你对为 `envd` 提供开源贡献感兴趣，这篇文档会让你更清晰的了解贡献的流程。
 
 贡献者和刚接触开源的开源萌新可以阅读如下指南：
 
@@ -17,7 +17,7 @@
 
 我们社区一直在寻找爱好者来用不同的方式帮助社区发展。
 
-### ⚽ envd 的简易开始
+### ⚽ `envd` 的简易开始
 
 遵照 [开始](/guide/getting-started) 文档。一切是否如预期般顺利？如果不是，我们一直在寻求改进。在 [💬 Discord](https://discord.gg/KqswhpVgdU) 上联系我们，或者在 GitHub 上提出 [issue](https://github.com/tensorchord/envd/issues/new/choose)。
 
@@ -32,7 +32,7 @@
 
 <!-- TODO: bot usage -->
 
-### 👨‍💻 向 envd 贡献
+### 👨‍💻 向 `envd` 贡献
 
 如果你想要修复一个 issue，那么请开启一个 pull request。请阅读 [开发指南](./development) 来作为贡献的起点。
 
