@@ -31,7 +31,7 @@ features:
     details: envd integrates seamlessly with Docker so that you can easily share, version, and publish `envd` environments with Docker Hub or any other OCI image registries.
 ---
 
-<VPTeamPage>
+<!-- <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
       Meet Our Team
@@ -45,9 +45,9 @@ features:
 
 <script setup>
 import {
-  // VPTeamPage,
-  // VPTeamPageTitle,
-  // VPTeamMembers
+  VPTeamPage,
+  VPTeamPageTitle,
+  VPTeamMembers
 } from 'vitepress/theme'
 
 const members = [
@@ -77,4 +77,4 @@ const members = [
     ]
   },
 ]
-</script>
+</script> -->
