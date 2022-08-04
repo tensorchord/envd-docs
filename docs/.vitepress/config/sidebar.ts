@@ -89,7 +89,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: 'Per-user Config', link:'/tips/config'},
         { text: 'Remote Cache', link: '/tips/cache'},
         { text: 'CI/CD Integration', link:'/tips/ci'},
-        { text: 'Multi-target Build', link:'/tips/multi-target'}
+        { text: 'Multi-target Build', link:'/tips/multitarget'}
       ]
     },
     {
