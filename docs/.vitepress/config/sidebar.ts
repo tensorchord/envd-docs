@@ -27,8 +27,11 @@ export const sidebar: DefaultTheme.Sidebar = {
       collapsible: true,
       items:[
         { text: '利用软件镜像源更快地构建环境',link:'/zh/tips/mirror' },
+        
         { text: '用户相关配置', link:'/zh/tips/config'},
-        { text: 'CI/CD 集成', link:'/zh/tips/ci'}
+        { text: 'Remote Cache', link: '/tips/cache'},
+        { text: 'CI/CD 集成', link:'/zh/tips/ci'},
+        { text: '多目标构建', link:'/tips/multi-target'}
       ]
     },
     {
@@ -84,7 +87,9 @@ export const sidebar: DefaultTheme.Sidebar = {
       items:[
         { text: 'Faster Build with Software Mirrors',link:'/tips/mirror' },
         { text: 'Per-user Config', link:'/tips/config'},
-        { text: 'CI/CD Integration', link:'/tips/ci'}
+        { text: 'Remote Cache', link: '/tips/cache'},
+        { text: 'CI/CD Integration', link:'/tips/ci'},
+        { text: 'Multi-target Build', link:'/tips/multi-target'}
       ]
     },
     {
