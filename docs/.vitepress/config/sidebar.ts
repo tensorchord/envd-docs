@@ -31,7 +31,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '用户相关配置', link:'/zh/tips/config'},
         { text: 'Remote Cache', link: '/tips/cache'},
         { text: 'CI/CD 集成', link:'/zh/tips/ci'},
-        { text: '多目标构建', link:'/tips/multi-target'}
+        { text: '多目标构建', link:'/tips/multitarget'}
       ]
     },
     {
