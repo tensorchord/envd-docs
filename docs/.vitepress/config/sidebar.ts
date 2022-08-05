@@ -1,6 +1,16 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Sidebar = {
+  '/blog/':[
+    {
+      text: 'Blog',
+      items: [
+        // if you add a new blog post, add it to the sidebar here
+        // eg: { text: 'Blog', link: '/blog/post1' },
+        { text: 'Welcome', link: '/blog/welcome' },
+      ]
+    }
+  ],
   '/zh/':[
     {
       text: '开始了解',
@@ -60,6 +70,7 @@ export const sidebar: DefaultTheme.Sidebar = {
       ]
     },
   ],
+
   '/':[
     {
       text: 'Guide',
@@ -118,5 +129,6 @@ export const sidebar: DefaultTheme.Sidebar = {
       ]
     },
   ],
+  
   
 }

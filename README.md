@@ -53,3 +53,9 @@ Your codeblock
 </custom-title>
 
 ```
+
+### Blog
+
+if you want to write a blog, the following things you need to do
+- add new post under `docs/blog` them just wirte the markdown file.
+- add new item to `/docs/.vitepress/config/sidebar.ts` `/blog/`.
