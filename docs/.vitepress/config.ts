@@ -47,7 +47,7 @@ export default defineConfig({
     sidebar,
     nav:[
       // add the default post link here
-      { text: 'Blog', link: '',activeMatch: '/blog/' },
+      { text: 'Blog', link: '/blog/welcome',activeMatch: '/blog/' },
     ],
     editLink: {
       pattern: 'https://github.com/tensorchord/envd-docs/tree/main/docs/:path',
