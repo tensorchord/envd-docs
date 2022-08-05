@@ -90,7 +90,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: 'Remote Cache', link: '/tips/cache'},
         { text: 'CI/CD Integration', link:'/tips/ci'},
         { text: 'Multi-target Build', link:'/tips/multitarget'},
-        { text: 'Envd vs. other software', link:'/tips/comparison' }
+        { text: 'envd vs. other software', link:'/tips/comparison' }
       ]
     },
     {
