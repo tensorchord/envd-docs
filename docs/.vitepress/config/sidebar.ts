@@ -85,6 +85,7 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: 'Tips and Tricks',
       collapsible: true,
       items:[
+        { text: 'Envd vs. other software', link:'/tips/comparison' },
         { text: 'Faster Build with Software Mirrors',link:'/tips/mirror' },
         { text: 'Per-user Config', link:'/tips/config'},
         { text: 'Remote Cache', link: '/tips/cache'},
