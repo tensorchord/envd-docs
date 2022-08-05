@@ -85,12 +85,12 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: 'Tips and Tricks',
       collapsible: true,
       items:[
-        { text: 'Envd vs. other software', link:'/tips/comparison' },
         { text: 'Faster Build with Software Mirrors',link:'/tips/mirror' },
         { text: 'Per-user Config', link:'/tips/config'},
         { text: 'Remote Cache', link: '/tips/cache'},
         { text: 'CI/CD Integration', link:'/tips/ci'},
-        { text: 'Multi-target Build', link:'/tips/multitarget'}
+        { text: 'Multi-target Build', link:'/tips/multitarget'},
+        { text: 'Envd vs. other software', link:'/tips/comparison' }
       ]
     },
     {
