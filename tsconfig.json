@@ -9,7 +9,11 @@
     "noUnusedLocals": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
-    "lib": ["ESNext", "DOM"]
+    "lib": ["ESNext", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "vitepress/client/*": ["node_modules/vitepress/dist/client/*"]
+    }
   },
   "exclude": ["**/node_modules/**", "**/dist/**", "**/build/**"],
   "include": [
