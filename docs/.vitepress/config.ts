@@ -20,7 +20,15 @@ export default defineConfig({
   title: 'envd',
   
   head:[
-    ['link', { rel: 'icon', href: '/logo.svg'}],
+    ['link', { rel: 'icon', href: '/logo.svg', alt:'envd'}],
+    ['meta', { name: 'keywords', content: 'envd, AI, ML, development environment, data science, engineering teams,  No Docker, only Python, Jupyter, VSCode, save time, Local & cloud, Repeatable builds, reproducible results'}],
+    ['meta', { property: 'og:title', content: 'envd' }],
+    ['meta', { property: 'og:description', content: 'A machine learning development environment for data science and AI/ML engineering teams.' }],
+    ['meta', { property: 'og:url', content: 'https://envd.tensorchord.ai/' }],
+    ['meta', { name: 'twitter:title', content: 'envd' }],
+    ['meta', { name: 'twitter:description', content: 'AI/ML Development Environment' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:site', content: '@TensorChord' }]
   ],
 
   themeConfig: {
