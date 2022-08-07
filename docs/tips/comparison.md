@@ -14,7 +14,7 @@ Benefits of using `envd` include:
 
 ## How does it work?
 - Parallize the image build process. Powered by buildkit, `envd` can parallize different tools installation to minimize the build time.
-- Cache support for common installation tools, such as pip, conda, apt, and so on. In normal dockerfile build, each layer depends on the previous layer. Andy change happens before will trigger the re-build for all the later stages, which increase the build time a lot. `envd` had builtin cache support for most common-used tools and reduce the dependency between them, which minimize the time to wait when you make modifications to your environment. 
+- Cache support for common installation tools, such as pip, conda, apt, and so on. In normal dockerfile build, each layer depends on the previous layer. Any change happens before will trigger the re-build for all the later stages, which increases the build time a lot. `envd` had builtin cache support for most common-used tools and reduce the dependency between them, which minimize the time to wait when you make modifications to your environment. 
 - Python-like language syntax. `envd` use a python dialects called starlark as the language, and provide a set of builtin functions to simplify your burden. Declare what you want, and `envd` will take care of the rest, including user permission, ssh server, entrypoint setup, and etc..
 
 
