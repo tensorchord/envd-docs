@@ -36,12 +36,12 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: '技巧和提示',
       collapsible: true,
       items:[
-        { text: '利用软件镜像源更快地构建环境',link:'/zh/tips/mirror' },
-        
+        { text: '利用软件镜像源更快地构建环境',link:'/zh/tips/mirror' },        
         { text: '用户相关配置', link:'/zh/tips/config'},
         { text: 'Remote Cache', link: '/zh/tips/cache'},
         { text: 'CI/CD 集成', link:'/zh/tips/ci'},
-        { text: '多目标构建', link:'/zh/tips/multitarget'}
+        { text: '多目标构建', link:'/zh/tips/multitarget'},
+        { text: 'envd和其他工具的比较', link:'/zh/tips/comparison' }
       ]
     },
     {
