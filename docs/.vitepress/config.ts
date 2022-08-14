@@ -70,6 +70,7 @@ export default defineConfig({
     nav:[
       // add the default post link here
       { text: 'Blog', link: '/blog/welcome',activeMatch: '/blog/' },
+      { text: 'Releases', link: 'https://github.com/tensorchord/envd/releases'}
     ],
     editLink: {
       pattern: 'https://github.com/tensorchord/envd-docs/tree/main/docs/:path',
