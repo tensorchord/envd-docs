@@ -39,9 +39,10 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '利用软件镜像源更快地构建环境',link:'/zh/tips/mirror' },        
         { text: '用户相关配置', link:'/zh/tips/config'},
         { text: 'Remote Cache', link: '/zh/tips/cache'},
+        { text: 'envd Contexts', link: '/zh/tips/context'},
         { text: 'CI/CD 集成', link:'/zh/tips/ci'},
         { text: '多目标构建', link:'/zh/tips/multitarget'},
-        { text: 'envd和其他工具的比较', link:'/zh/tips/comparison' }
+        { text: 'envd 和其他工具的比较', link:'/zh/tips/comparison' }
       ]
     },
     {
@@ -99,6 +100,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: 'Faster Build with Software Mirrors',link:'/tips/mirror' },
         { text: 'Per-user Config', link:'/tips/config'},
         { text: 'Remote Cache', link: '/tips/cache'},
+        { text: 'envd Contexts', link: '/tips/context'},
         { text: 'CI/CD Integration', link:'/tips/ci'},
         { text: 'Multi-target Build', link:'/tips/multitarget'},
         { text: 'envd vs. other software', link:'/tips/comparison' }
