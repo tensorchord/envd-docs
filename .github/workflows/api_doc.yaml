@@ -1,6 +1,11 @@
 name: sync doc file with envd
 
-on: [repository_dispatch, workflow_dispatch]
+on: 
+  repository_dispatch:
+    types: [on-demand-test]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *'
 
 jobs:
   sync_file:
@@ -9,6 +14,9 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.18'
       - name: Checkout Envd-docs
         uses: actions/checkout@v3
         with:
@@ -23,11 +31,16 @@ jobs:
       - run: |
           mkdir -p envd-docs/hack/api/api/
           cp envd/envd/api/* envd-docs/hack/api/api/      
-      - name: Generate markdown docs
+      - name: Generate API docs
         run: |
           pushd envd-docs
           python -m pip install -r hack/api/requirement.txt
           make generate-api-ref
+          popd
+      - name: Generate CLI docs
+        run: |
+          pushd envd-docs
+          make generate-cli-ref
           popd
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
