@@ -1,4 +1,4 @@
-# api.config
+# config
 
 Config functions
 

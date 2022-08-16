@@ -1,4 +1,4 @@
-# api.io
+# io
 
 IO functions
 

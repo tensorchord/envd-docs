@@ -1,4 +1,4 @@
-# api.install
+# install
 
 Install functions
 

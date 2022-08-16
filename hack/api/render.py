@@ -27,11 +27,10 @@ def main():
         processors=[FilterProcessor(skip_empty_modules=False), CrossrefProcessor(
         ), GoogleProcessor(), SmartProcessor()],
         renderer=DocusaurusRenderer(
-            # docs_base_path=str(docs_path.resolve()),
-            # sidebar_top_level_label="Reference",
-            # relative_output_path=".",
             markdown=CustomizedMarkdownRenderer(
-                escape_html_in_docstring=False, render_module_header_template="")
+                escape_html_in_docstring=False,
+                render_module_header_template="",
+                add_module_prefix=False)
         ),
     )
     modules = config.load_modules()
