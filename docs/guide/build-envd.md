@@ -113,7 +113,7 @@ Let's have a look at `build.envd`. `build` is the default function name in `buil
 
 ### Install python packages
 
-The [`envd` install API](../api/install) function `install.python_packages` installs python packages in the environment:
+The [`envd` install API](../api/starlark/install) function `install.python_packages` installs python packages in the environment:
 
 <custom-title title="build.envd">
 
@@ -153,7 +153,7 @@ array([2, 3, 4])
 
 ### Use zsh instead of bash
 
-The [`envd` API](../api/global%20functions) function `shell` configures shell program in the environment:
+The [`envd` API](../api/starlark/global_functions) function `shell` configures shell program in the environment:
 
 <custom-title title="build.envd">
 
@@ -259,4 +259,4 @@ Here are some quick links:
 
 - [`envd` GitHub Repository](https://github.com/tensorchord/envd)
 - [Why Use `envd`?](/guide/why)
-- [`envd` CLI Reference](/cli)
+- [`envd` CLI Reference](/api/cli/cli)

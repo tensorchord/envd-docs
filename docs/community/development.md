@@ -94,7 +94,7 @@ make test
 
 ## `envd up` from a developer's perspective
 
-`envd` interprets all statements in `build.envd` and executes `build()`. The function calls such as [`install.python_packages`](../api/install#python_packages) and [`config.jupyter`](../api/config#jupyter) register information to envd's in-memory static graph. Then `envd` constructs the [buildkit LLB DAG graph](https://github.com/moby/buildkit#exploring-llb) according to the information and uses it to build resulting image.
+`envd` interprets all statements in `build.envd` and executes `build()`. The function calls such as [`install.python_packages`](../api/starlark/install#python_packages) and [`config.jupyter`](../api/starlark/config#jupyter) register information to envd's in-memory static graph. Then `envd` constructs the [buildkit LLB DAG graph](https://github.com/moby/buildkit#exploring-llb) according to the information and uses it to build resulting image.
 
 ![](./assets/envd-arch.svg)
 
