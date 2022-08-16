@@ -176,7 +176,7 @@ $ envd up
 
 ### Use jupyter
 
-[Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [`envd` config API](../api/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
+[Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [`envd` config API](../api/starlark/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
 
 <custom-title title="build.envd">
 
