@@ -47,7 +47,7 @@ def main():
     for f in generated_doc_dir.rglob("*.md"):
         if f.name == "__init__.md":
             parent_name = f.parent.name
-            if parent_name == "__init__":
+            if parent_name == "api":
                 # Means global functions
                 filename = "global_functions.md"
                 title = "global functions"
