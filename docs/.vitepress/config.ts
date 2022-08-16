@@ -70,7 +70,7 @@ export default defineConfig({
     nav:[
       // add the default post link here
       { text: 'Get Started', link: '/guide/getting-started'},
-      { text: 'API Reference', link: '/api/cli/cli',activeMatch: '/api/' },
+      { text: 'Reference', link: '/api/cli/cli',activeMatch: '/api/' },
       { text: 'Blog', link: '/blog/welcome',activeMatch: '/blog/' },
       { text: 'Releases', link: 'https://github.com/tensorchord/envd/releases'}
     ],

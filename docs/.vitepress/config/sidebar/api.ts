@@ -1,4 +1,5 @@
 import type { DefaultTheme } from 'vitepress'
+import apiJsonSidebar from "./apiSidebar.json"
 
 export const apiSidebar: DefaultTheme.Sidebar = {
   '/api/': [
@@ -9,13 +10,6 @@ export const apiSidebar: DefaultTheme.Sidebar = {
         { text: 'CLI references', link: '/api/cli/cli' },
       ]
     },
-    {
-      text: 'API Reference',
-      items: [
-        { text: 'Global functions', link: '/api/starlark/global_functions' },
-        { text: 'Config functions', link: '/api/starlark/config' },
-        { text: 'Install functions', link: '/api/starlark/install' },
-      ]
-    }
+    apiJsonSidebar
   ],
 }

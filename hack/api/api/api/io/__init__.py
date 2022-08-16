@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Global functions
+"""IO functions
 
 ::: tip
 Note that the documentation is automatically generated from [envd/api](https://github.com/tensorchord/envd/tree/main/envd/api) folder
@@ -21,40 +21,19 @@ Please update the python file there instead of directly editing file inside envd
 :::
 """
 
-from typing import Optional
+def copy(src: str, dest: str):
+    """Copy from host `src` to container `dest` (build time)
 
-
-def base(os: str, language: str):
-    """Set base image
     Args:
-        os (str): The operating system(i.e. `ubuntu20.04`)
-        language (str): The programing language dependency(i.e. `python3.8`)
+        src (str): source path
+        dest (str): destination path
     """
-    pass
 
 
-def shell(name: str):
-    """Interactive shell
+def mount(src: str, dest: str):
+    """Mount from host `src` to container `dest` (runtime)
+
     Args:
-        name (str): shell name(i.e. `zsh`)
+        src (str): source path
+        dest (str): destination path
     """
-    pass
-
-
-def run(commands: str):
-    """Execute command
-    Args:
-        commands (str): command to run
-    """
-    pass
-
-
-def git_config(name: Optional[str] = None,
-               email: Optional[str] = None, editor: Optional[str] = None):
-    """Setup git config
-    Args:
-        name (optional, str): User name
-        email (optional, str): User email
-        editor (optional, str): Editor for git operations
-    """
-    pass
