@@ -30,6 +30,16 @@ def main():
             markdown=CustomizedMarkdownRenderer(
                 escape_html_in_docstring=False,
                 render_module_header_template="",
+                header_level_by_type = {
+                    'Module': 1,
+                    'Class': 2,
+                    'Method': 3,
+                    'Function': 2,
+                    'Variable': 3,
+                },
+                # render_page_title=True,
+                # render_toc=True,
+                # data_code_block=True,
                 add_module_prefix=False)
         ),
     )
