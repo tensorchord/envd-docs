@@ -22,7 +22,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: 'envd For Your Teams',
+      text: 'envd for Your Teams',
       collapsible: true,
       items:[
         { text: 'Overview', link: '/teams/overview'},
