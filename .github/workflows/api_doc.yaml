@@ -30,7 +30,7 @@ jobs:
           path: envd
       - run: |
           mkdir -p envd-docs/hack/api/api/
-          cp envd/envd/api/* envd-docs/hack/api/api/      
+          cp -r envd/envd/api/* envd-docs/hack/api/api/      
       - name: Generate API docs
         run: |
           pushd envd-docs
