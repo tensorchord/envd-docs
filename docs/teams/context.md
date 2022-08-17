@@ -46,3 +46,44 @@ A context can be removed with the `envd context rm` command.
 ```bash
 $ envd context rm --name demo
 ```
+
+## Remote build (Advanced)
+
+The builder instance `buildktid` can be run on a remote machine. There are some benefits:
+
+- **No need to install Docker**: You don't need to install Docker on CI/CD machines or the remote builder machines.
+- **Faster build**: The cache can be shared in different builds, Thus it will be faster to get the envd images.
+- **Safer deployment**: The secret keys and tokens are stored in the builder machine. Programs in CI/CD builds cannot access them.
+
+![](./assets/remote-build.png)
+
+### Start remote buildkitd on builder machine
+
+Before you run `envd` remote build, please start the buildkitd and expose it as a TCP service on the remote machine. You can have a look at the [buildkitd docs](https://github.com/moby/buildkit/blob/master/README.md#expose-buildkit-as-a-tcp-service) for more details.
+
+```bash
+$ buildkitd \
+  --addr tcp://0.0.0.0:8888
+  ...
+```
+
+The process should be long-running on the machine. All builds use this service.
+
+### Create `envd` context in build job
+
+Then, let's create the corresponding `envd` context in the build job.
+
+```bash
+$ envd context create --name remote-context \
+  --builder tcp \
+  --builder-socket <remote-machine-ip>:8888 \
+  --use
+```
+
+### Build and push the image in build job
+
+Then you can build and push the image in the build job.
+
+```bash
+$ envd build --output type=image,name=docker.io/<username>/<image>,push=true
+```

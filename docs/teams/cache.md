@@ -1,6 +1,6 @@
 # Remote Cache
 
-The cache[^1] can be exported to the image registry, local directories or other places. There are five types supported:
+You can use remote cache to accelerate the build process. `envd` build cache[^1] can be uploaded to the image registry, local directories or other places. There are five types supported:
 
 - `registry`: push the image and the cache separately to a image registry.
 - `inline`: embed the cache into the image, and push them to the registry together
@@ -8,11 +8,28 @@ The cache[^1] can be exported to the image registry, local directories or other 
 - `gha` (experimental 🧪): export/import cache from GitHub Actions cache
 - `s3` (experimental 🧪): export/import cache from s3
 
-`registry` is recommended in most cases. 
+`registry` is recommended in most cases.
 
 [^1]: remote cache feature is built on top of [buildkit](https://github.com/moby/buildkit#export-cache)
 
-## Registry (push image and cache separately)
+## How to use?
+
+The arguments `--export-cache` and `--import-cache` are used to export and import the cache. 
+
+The build cache will be exported to the given location if `--export-cache` is specified. And the build cache will be imported from the given location if `--import-cache` is specified.
+
+```bash
+envd build ... \
+  --output type=image,name=docker.io/username/image,push=true \
+  --export-cache type=registry,ref=docker.io/username/cache-name \
+  --import-cache type=registry,ref=docker.io/username/cache-name
+```
+
+You can use the mechanism to accelerate the build process dramatically.
+
+## Reference
+
+### Registry (push image and cache separately)
 
 ```
 envd build ... \
@@ -38,7 +55,7 @@ envd build ... \
 - `type=registry`
 - `ref=<ref>`: specify repository reference to retrieve cache from, e.g. `docker.io/user/image:tag`
 
-## Inline (push image and cache together)
+### Inline (push image and cache together)
 
 ```bash
 envd build ... \
@@ -51,7 +68,7 @@ Note that the inline cache is not imported unless `--import-cache type=registry,
 
 Inline cache embeds cache metadata into the image config. The layers in the image will be left untouched compared to the image with no cache information.
 
-## Local directory
+### Local directory
 
 ```bash
 envd build ... --export-cache type=local,dest=path/to/output-dir
@@ -79,7 +96,7 @@ The directory layout conforms to OCI Image Spec v1.0.
 - `digest=sha256:<sha256digest>`: specify explicit digest of the manifest list to import
 - `tag=<tag>`: determine custom tag of image. Defaults "latest" tag digest in `index.json` is for digest, not for tag
 
-## GitHub Actions cache (experimental)
+### GitHub Actions cache (experimental)
 
 ```bash
 envd build ... \
@@ -109,7 +126,7 @@ Following attributes are required to authenticate against the [GitHub Actions Ca
 - `type=gha`
 - `scope=<scope>`: which scope cache object belongs to (default `buildkit`)
 
-## S3 cache (experimental)
+### S3 cache (experimental)
 
 ```bash
 envd build ... \
