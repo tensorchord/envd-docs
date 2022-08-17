@@ -1,8 +1,8 @@
-# Connecting to `envd` Environment
+# Using `envd` Environment
 
 Here we use the example at [envd/examples/mnist](https://github.com/tensorchord/envd/tree/main/examples/mnist).
 
-## Build and check your environment
+## Build your environment
 
 Following [previous tutorial](/guide/build-envd), you'll be able to setup the project environment by `envd`. In this tutorial, we used `mnist` project.
 After setting up the project, you can check the environment status by `envd get envs`.
