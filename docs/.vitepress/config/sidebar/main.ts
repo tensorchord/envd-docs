@@ -49,24 +49,6 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       ]
     },
     {
-      text: 'API Reference',
-      collapsible: true,
-      collapsed: true,
-      items:[
-        {text: 'global', link:'/api/global functions'},
-        {text: 'config package', link:'/api/config'},
-        {text: 'install package', link:'/api/install'},
-      ]
-    },
-    {
-      text: 'envd CLI Reference',
-      collapsible: true,
-      collapsed: true,
-      items:[
-        {text:'envd CLI Reference', link:'/cli'},
-      ]
-    },
-    {
       text: 'Community',
       collapsible: true,
       items:[
