@@ -23,10 +23,11 @@ def main():
     docs_path = repo_root / "docs/api/starlark"
     
     config = PydocMarkdown(
-        loaders=[PythonLoader(search_path=[base_path/"api"])],
+        loaders=[PythonLoader(search_path=[base_path], packages=['api'])],
         processors=[FilterProcessor(skip_empty_modules=False), CrossrefProcessor(
         ), GoogleProcessor(), SmartProcessor()],
         renderer=DocusaurusRenderer(
+            docs_base_path=base_path / "docs",
             markdown=CustomizedMarkdownRenderer(
                 escape_html_in_docstring=False,
                 render_module_header_template="",
@@ -43,6 +44,7 @@ def main():
         "text": 'API Reference',
         "items": []
     }
+    docs_path.mkdir(exist_ok=True, parents=True)
 
     for f in generated_doc_dir.rglob("*.md"):
         if f.name == "__init__.md":
