@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "items": [
+        "reference/__init__/__init__"
+      ],
+      "label": "__init__",
+      "type": "category"
+    },
+    {
+      "items": [
+        "reference/config/__init__"
+      ],
+      "label": "config",
+      "type": "category"
+    },
+    {
+      "items": [
+        "reference/install/__init__"
+      ],
+      "label": "install",
+      "type": "category"
+    },
+    {
+      "items": [
+        "reference/io/__init__"
+      ],
+      "label": "io",
+      "type": "category"
+    },
+    {
+      "items": [
+        "reference/runtime/__init__"
+      ],
+      "label": "runtime",
+      "type": "category"
+    }
+  ],
+  "label": "Reference",
+  "type": "category"
+}
