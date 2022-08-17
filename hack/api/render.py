@@ -37,9 +37,6 @@ def main():
                     'Function': 2,
                     'Variable': 3,
                 },
-                # render_page_title=True,
-                # render_toc=True,
-                # data_code_block=True,
                 add_module_prefix=False)
         ),
     )
