@@ -9,6 +9,4 @@ export const sidebar: DefaultTheme.Sidebar = {
   ...apiSidebar,
   ...zhSidebar,
   ...mainSidebar,
-  
-  
 }
