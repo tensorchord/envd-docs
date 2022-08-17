@@ -8,7 +8,7 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
-#### apt\_source
+## apt\_source
 
 ```python
 def apt_source(mode: Optional[str], source: Optional[str])
@@ -37,7 +37,7 @@ apt_source(source='''
 - `mode` _str, optional_ - This argument is not supported currently
 - `source` _str, optional_ - The apt source configuration
 
-#### jupyter
+## jupyter
 
 ```python
 def jupyter(token: str, port: int)
@@ -50,7 +50,7 @@ Configure jupyter notebook configuration
 - `token` _str_ - Token for access authentication
 - `port` _int_ - Port to serve jupyter notebook
 
-#### pip\_index
+## pip\_index
 
 ```python
 def pip_index(mode: str, url: str, extra_url: str)
@@ -65,7 +65,7 @@ Configure pypi index mirror
 - `extra_url` _str_ - PyPI extra index URL. `url` and `extra_url` will be
   treated equally, see https://github.com/pypa/pip/issues/8606
 
-#### conda\_channel
+## conda\_channel
 
 ```python
 def conda_channel(channel: str)
@@ -93,7 +93,7 @@ custom_channels:
 
 - `channel` _str_ - Basically the same with file content of an usual .condarc
 
-#### entrypoint
+## entrypoint
 
 ```python
 def entrypoint(args: List[str])
@@ -111,7 +111,7 @@ config.entrypoint(["date", "-u"])
 
 - `args` _List[str]_ - list of arguments to run
 
-#### gpu
+## gpu
 
 ```python
 def gpu(count: int)
@@ -129,7 +129,7 @@ config.gpu(count=2)
 
 - `count` _int_ - number of GPUs
 
-#### cran\_mirror
+## cran\_mirror
 
 ```python
 def cran_mirror(url: str)
@@ -141,7 +141,7 @@ Configure the mirror URL, default is https://cran.rstudio.com
 
 - `url` _str_ - mirror URL
 
-#### julia\_pkg\_server
+## julia\_pkg\_server
 
 ```python
 def julia_pkg_server(url: str)
@@ -154,7 +154,7 @@ Since Julia 1.5, https://pkg.julialang.org is the default pkg server.
 
 - `url` _str_ - Julia pkg server URL
 
-#### rstudio\_server
+## rstudio\_server
 
 ```python
 def rstudio_server()

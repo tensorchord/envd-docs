@@ -8,7 +8,7 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
-#### base
+## base
 
 ```python
 def base(os: str, language: str)
@@ -21,7 +21,7 @@ Set base image
 - `os` _str_ - The operating system(i.e. `ubuntu20.04`)
 - `language` _str_ - The programing language dependency(i.e. `python3.8`)
 
-#### shell
+## shell
 
 ```python
 def shell(name: str)
@@ -33,7 +33,7 @@ Interactive shell
 
 - `name` _str_ - shell name(i.e. `zsh`)
 
-#### run
+## run
 
 ```python
 def run(commands: str)
@@ -45,7 +45,7 @@ Execute command
 
 - `commands` _str_ - command to run
 
-#### git\_config
+## git\_config
 
 ```python
 def git_config(name: Optional[str] = None,

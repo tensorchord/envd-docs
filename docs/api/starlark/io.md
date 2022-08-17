@@ -8,7 +8,7 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
-#### copy
+## copy
 
 ```python
 def copy(src: str, dest: str)
@@ -21,7 +21,7 @@ Copy from host `src` to container `dest` (build time)
 - `src` _str_ - source path
 - `dest` _str_ - destination path
 
-#### mount
+## mount
 
 ```python
 def mount(src: str, dest: str)

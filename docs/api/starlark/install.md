@@ -8,7 +8,7 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
-#### system\_packages
+## system\_packages
 
 ```python
 def system_packages(name: List[str])
@@ -20,7 +20,7 @@ Install package by system-level package manager(apt on Ubuntu)
 
 - `name` _str_ - apt package name list
 
-#### python\_packages
+## python\_packages
 
 ```python
 def python_packages(name: List[str], requirements: str)
@@ -33,7 +33,7 @@ Install python package by pip
 - `name` _List[str]_ - package name list
 - `requirements` - (str): requirements file path
 
-#### conda\_packages
+## conda\_packages
 
 ```python
 def conda_packages(name: List[str], channel: List[str], env_file: str)
@@ -48,7 +48,7 @@ Install python package by Conda
 - `channel` _List[str]_ - additional channels
 - `env_file` _str_ - conda env file path
 
-#### r\_packages
+## r\_packages
 
 ```python
 def r_packages(name: List[str])
@@ -60,7 +60,7 @@ Install R packages by R package manager
 
 - `name` _List[str]_ - package name list
 
-#### cuda
+## cuda
 
 ```python
 def cuda(version: str, cudnn: Optional[str] = None)
@@ -73,7 +73,7 @@ Install CUDA dependency
 - `version` _str_ - CUDA version, such as '11.6'
 - `cudnn` _optional, str_ - CUDNN version, such as '6'
 
-#### vscode\_extensions
+## vscode\_extensions
 
 ```python
 def vscode_extensions(name: List[str])
@@ -85,7 +85,7 @@ Install VS Code extensions
 
 - `name` _List[str]_ - extension names, such as ['ms-python.python']
 
-#### julia\_packages
+## julia\_packages
 
 ```python
 def julia_packages(name: List[str])

@@ -8,7 +8,7 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
-#### command
+## command
 
 ```python
 def command(commands: Dict[str, str])
@@ -20,7 +20,7 @@ Execute commands
 
 - `commands` _Dict[str, str]_ - map name to command, similar to Makefile
 
-#### expose
+## expose
 
 ```python
 def expose(envd_port: str, host_port: Optional[str], service: Optional[str])
@@ -36,7 +36,7 @@ Proposal: https://github.com/tensorchord/envd/pull/780
   randomly choose a free port
 - `service` _Optional[str]_ - service name
 
-#### daemon
+## daemon
 
 ```python
 def daemon(commands: List[List[str]])
