@@ -22,7 +22,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: 'envd For Your Teams',
+      text: 'envd for Your Teams',
       collapsible: true,
       items:[
         { text: 'Overview', link: '/teams/overview'},
@@ -46,24 +46,6 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       items:[
         { text: 'Why Use envd?', link: '/guide/why' },
         { text: 'envd vs. Others', link:'/tips/comparison' }
-      ]
-    },
-    {
-      text: 'API Reference',
-      collapsible: true,
-      collapsed: true,
-      items:[
-        {text: 'global', link:'/api/global functions'},
-        {text: 'config package', link:'/api/config'},
-        {text: 'install package', link:'/api/install'},
-      ]
-    },
-    {
-      text: 'envd CLI Reference',
-      collapsible: true,
-      collapsed: true,
-      items:[
-        {text:'envd CLI Reference', link:'/cli'},
       ]
     },
     {
