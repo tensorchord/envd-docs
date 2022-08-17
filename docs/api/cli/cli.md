@@ -54,7 +54,7 @@ build envd environment
 
 **--path, -p**="": Path to the directory containing the build.envd (default: .)
 
-**--public-key, --pubk**="": Path to the public key (default: /home/ubuntu/.config/envd/id_rsa_envd.pub)
+**--public-key, --pubk**="": Path to the public key (default: /home/runner/.config/envd/id_rsa_envd.pub)
 
 **--tag, -t**="": Name and optionally a tag in the 'name:tag' format (default: PROJECT:dev)
 
@@ -80,7 +80,7 @@ List all dependencies
 
 **--env, -e**="": Specify the envd environment to use
 
-**--private-key, -k**="": Path to the private key (default: /home/ubuntu/.config/envd/id_rsa_envd)
+**--private-key, -k**="": Path to the private key (default: /home/runner/.config/envd/id_rsa_envd)
 
 ### images, image, i
 
@@ -114,9 +114,9 @@ build and run the envd environment
 
 **--path, -p**="": Path to the directory containing the build.envd (default: .)
 
-**--private-key, -k**="": Path to the private key (default: /home/ubuntu/.config/envd/id_rsa_envd)
+**--private-key, -k**="": Path to the private key (default: /home/runner/.config/envd/id_rsa_envd)
 
-**--public-key, --pubk**="": Path to the public key (default: /home/ubuntu/.config/envd/id_rsa_envd.pub)
+**--public-key, --pubk**="": Path to the public key (default: /home/runner/.config/envd/id_rsa_envd.pub)
 
 **--tag, -t**="": Name and optionally a tag in the 'name:tag' format (default: PROJECT:dev)
 

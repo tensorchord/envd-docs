@@ -148,7 +148,7 @@ def julia_pkg_server(url: str)
 ```
 
 Configure the package server for Julia.
-Since Julia 1.5, https://pkg.julialang.org` is the default pkg server.
+Since Julia 1.5, https://pkg.julialang.org is the default pkg server.
 
 **Arguments**:
 
