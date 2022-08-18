@@ -59,3 +59,20 @@ runtime.daemon([
 ])
 ```
 
+## environ
+
+```python
+def environ(env: Dict[str, str])
+```
+
+Add runtime environments
+
+**Arguments**:
+
+- `env` _Dict[str, str]_ - environment name to value
+  
+  Example usage:
+```
+runtime.environ(env={"ENVD_MODE": "DEV"})
+```
+
