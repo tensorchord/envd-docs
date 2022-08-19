@@ -19,7 +19,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
         { text: 'Faster Build with Software Mirrors',link:'/tips/mirror' },
         { text: 'Per-user Config', link:'/tips/config'},
         { text: 'Multi-target Build', link:'/tips/multitarget'},
-        { text: 'Set Up Experiment Tracking', link:'/tips/monitoring'},
+        { text: 'Setting Up Experiment Tracking', link:'/tips/monitoring'},
       ],
     },
     {
