@@ -32,6 +32,7 @@ export const zhSidebar: DefaultTheme.Sidebar = {
         { text: 'envd Contexts', link: '/zh/tips/context' },
         { text: 'CI/CD 集成', link: '/zh/tips/ci' },
         { text: '多目标构建', link: '/zh/tips/multitarget' },
+        { text: '设置实验监控', link: '/zh/tips/monitoring' },
         { text: 'envd 和其他工具的比较', link: '/zh/tips/comparison' }
       ]
     },
