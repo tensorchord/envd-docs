@@ -16,10 +16,10 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       text: 'Managing Environments',
       collapsible: true,
       items: [
-        { text: 'Faster Build with Software Mirrors',link:'/tips/mirror' },
-        { text: 'Per-user Config', link:'/tips/config'},
-        { text: 'Multi-target Build', link:'/tips/multitarget'},
-        { text: 'Setting Up Experiment Tracking', link:'/tips/monitoring'},
+        { text: 'Faster Build with Software Mirrors',link:'/envs/mirror' },
+        { text: 'Per-user Config', link:'/envs/config'},
+        { text: 'Multi-target Build', link:'/envs/multitarget'},
+        { text: 'Setting Up Experiment Tracking', link:'/envs/monitoring'},
       ],
     },
     {
@@ -45,8 +45,8 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       text: 'FAQs',
       collapsible: true,
       items:[
-        { text: 'Why Use envd?', link: '/guide/why' },
-        { text: 'envd vs. Others', link:'/tips/comparison' }
+        { text: 'Why Use envd?', link: '/faq/why' },
+        { text: 'envd vs. Others', link:'/faq/comparison' }
       ]
     },
     {
