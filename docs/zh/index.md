@@ -33,7 +33,7 @@ features:
     title: 可复现的构建和结果
     details: 完全复现相同的环境，无论是在你的笔记本电脑上，还是在数据中心，亦或是在公有云服务上。更好地复现训练结果。
 ---
-
+<!-- 
 <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
@@ -73,4 +73,4 @@ const members = [
     ]
   },
 ]
-</script>
+</script> -->
