@@ -282,5 +282,5 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
 如果您想进一步探索 `envd` ，以下是一些快速链接：
 
 - [`envd` GitHub 仓库](https://github.com/tensorchord/envd)
-- [为什么使用 envd？](/teams/why)
+- [为什么使用 envd？](/zh/faq/why)
 - [`envd` CLI 命令](../cli)

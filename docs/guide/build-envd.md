@@ -258,5 +258,5 @@ Please ask us on [Discord](https://discord.gg/KqswhpVgdU) if you had any trouble
 Here are some quick links:
 
 - [`envd` GitHub Repository](https://github.com/tensorchord/envd)
-- [Why Use `envd`?](/guide/why)
+- [Why Use `envd`?](/faq/why)
 - [`envd` CLI Reference](/api/cli/cli)
