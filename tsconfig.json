@@ -10,10 +10,7 @@
     "resolveJsonModule": true,
     "jsx": "preserve",
     "lib": ["ESNext", "DOM"],
-    "baseUrl": ".",
-    "paths": {
-      "vitepress/client/*": ["node_modules/vitepress/dist/client/*"]
-    }
+    "baseUrl": "."
   },
   "exclude": ["**/node_modules/**", "**/dist/**", "**/build/**"],
   "include": [

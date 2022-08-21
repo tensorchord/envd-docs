@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useData,DefaultTheme } from 'vitepress'
-import VPSocialLinks from 'vitepress/client/theme-default/components/VPSocialLinks.vue'
+import { useData, DefaultTheme } from 'vitepress'
+import VPSocialLinks from 'vitepress/dist/client/theme-default/components/VPSocialLinks.vue'
 
 const { frontmatter } = useData()
 const socialLinks:DefaultTheme.SocialLink[] = []
