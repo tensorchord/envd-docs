@@ -67,11 +67,11 @@ def configure_mnist():
 
 This demo contains two parts: training a simple digit recognition model using mnist dataset and a webapp to live demo that model.
 
-<center>
+<p align="center">
 
-![](./assets/demo.gif)
+![](./assets/demo.gif){ style="display: block; margin: 0 auto" }
 
-</center>
+</p>
 
 Steps to run the example are shown here.
 
