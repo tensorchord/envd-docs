@@ -39,7 +39,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 </custom-title>
@@ -187,7 +187,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 </custom-title>
@@ -210,7 +210,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 </custom-title>

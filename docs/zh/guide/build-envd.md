@@ -43,7 +43,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 </custom-title>
@@ -204,12 +204,12 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 </custom-title>
 
-`envd up` 命令执行成功后，通过 `envd get envs` 查看 Jupyter 的地址。
+`envd up` 命令执行成功后，通过 `envd envs list` 查看 Jupyter 的地址。
 
 ```bash
 $ envd up --detach
@@ -234,7 +234,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 </custom-title>

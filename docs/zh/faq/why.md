@@ -126,7 +126,7 @@ def build():
     ])
     install.cuda(version="11.6", cudnn="8")
     shell("zsh")
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 ## Who should use envd?

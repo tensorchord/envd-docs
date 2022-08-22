@@ -197,7 +197,7 @@ def build():
         "numpy",
     ])
     shell("zsh")
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 </custom-title>
@@ -209,7 +209,7 @@ $ envd destroy
 INFO[2022-06-19T23:12:03+08:00] envd-quick-start is destroyed
 ```
 
-你可以通过 `envd get envs` 来得到环境中的 Jupyter notebook 的访问地址。
+你可以通过 `envd envs list` 来得到环境中的 Jupyter notebook 的访问地址。
 
 ```bash
 $ envd up --detach
