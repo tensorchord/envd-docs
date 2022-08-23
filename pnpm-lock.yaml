@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   '@algolia/client-search': ^4.9.1
@@ -11,7 +11,7 @@ dependencies:
   markdown-it-footnote: 3.0.3
 
 devDependencies:
-  vitepress: 1.0.0-alpha.9_ygzyjl425qrcgm3zeayiliwge4
+  vitepress: 1.0.0-alpha.9_@algolia+client-search@4.13.1
   vue: 3.2.37
 
 packages:
@@ -22,7 +22,7 @@ packages:
       '@algolia/autocomplete-shared': 1.7.1
     dev: true
 
-  /@algolia/autocomplete-preset-algolia/1.7.1_jr4xm7x4v4vd7iifhnoo3rb33u:
+  /@algolia/autocomplete-preset-algolia/1.7.1_4c79767efcaf2a3fa1053b5cedc43bdd:
     resolution: {integrity: sha512-pJwmIxeJCymU1M6cGujnaIYcY3QPOVYZOXhFkWVM7IxKzy272BwCvMFMyc5NpG/QmiObBxjo7myd060OeTNJXg==}
     peerDependencies:
       '@algolia/client-search': ^4.9.1
@@ -146,10 +146,10 @@ packages:
     resolution: {integrity: sha512-gaP6TxxwQC+K8D6TRx5WULUWKrcbzECOPA2KCVMuI+6C7dNiGUk5yXXzVhc5sld79XKYLnO9DRTI4mjXDYkh+g==}
     dev: true
 
-  /@docsearch/js/3.2.1_ygzyjl425qrcgm3zeayiliwge4:
+  /@docsearch/js/3.2.1_@algolia+client-search@4.13.1:
     resolution: {integrity: sha512-H1PekEtSeS0msetR2YGGey2w7jQ2wAKfGODJvQTygSwMgUZ+2DHpzUgeDyEBIXRIfaBcoQneqrzsljM62pm6Xg==}
     dependencies:
-      '@docsearch/react': 3.2.1_ygzyjl425qrcgm3zeayiliwge4
+      '@docsearch/react': 3.2.1_@algolia+client-search@4.13.1
       preact: 10.8.2
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -158,7 +158,7 @@ packages:
       - react-dom
     dev: true
 
-  /@docsearch/react/3.2.1_ygzyjl425qrcgm3zeayiliwge4:
+  /@docsearch/react/3.2.1_@algolia+client-search@4.13.1:
     resolution: {integrity: sha512-EzTQ/y82s14IQC5XVestiK/kFFMe2aagoYFuTAIfIb/e+4FU7kSMKonRtLwsCiLQHmjvNQq+HO+33giJ5YVtaQ==}
     peerDependencies:
       '@types/react': '>= 16.8.0 < 19.0.0'
@@ -173,7 +173,7 @@ packages:
         optional: true
     dependencies:
       '@algolia/autocomplete-core': 1.7.1
-      '@algolia/autocomplete-preset-algolia': 1.7.1_jr4xm7x4v4vd7iifhnoo3rb33u
+      '@algolia/autocomplete-preset-algolia': 1.7.1_4c79767efcaf2a3fa1053b5cedc43bdd
       '@docsearch/css': 3.2.1
       algoliasearch: 4.13.1
     transitivePeerDependencies:
@@ -697,12 +697,12 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.9_ygzyjl425qrcgm3zeayiliwge4:
+  /vitepress/1.0.0-alpha.9_@algolia+client-search@4.13.1:
     resolution: {integrity: sha512-+VxgjflIcssbuyUBRYjZRpQ8w25v6XnIbXFmm9qwLVaqZdC0rN6qViEp7oRwA3HUlrGxj7GEzqQjW7xj4+E83w==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.1
-      '@docsearch/js': 3.2.1_ygzyjl425qrcgm3zeayiliwge4
+      '@docsearch/js': 3.2.1_@algolia+client-search@4.13.1
       '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
       '@vue/devtools-api': 6.2.1
       '@vueuse/core': 9.1.0_vue@3.2.37
