@@ -125,9 +125,9 @@ You can set up the Jupyter notebook with `config.jupyter` function. The followin
 ```python 
 def build():
     base(os="ubuntu20.04", language="python")
-    # Use `config.jupyter(password="")` 
+    # Use `config.jupyter()` 
     # if you do not need to set up password.
-    config.jupyter(password="password")
+    config.jupyter(token="password")
 ```
 
 </custom-title>

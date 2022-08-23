@@ -25,6 +25,13 @@ Functions like [`install.python_packages`](/api/starlark/install#python_packages
 
 `envd` evaluates the `build` function with the starlark interpreter, thus you can use loops, if/else conditional execution or other statements in `build.envd`.
 
+:::warning
+
+Code below is for conceptual demonstration purposes only. Some features are not yet implemented.
+
+:::
+
+
 ```python
 # build.envd
 # The function `build` will be evaluated by default.
@@ -38,7 +45,7 @@ def dev_env(version, custom_shell):
         "tensorflow=="+version,
         "tensorboard"
     ])
-    config.jupyter(password="")
+    config.jupyter()
     # Configure zsh if it is specified.
     if custom_shell == "zsh":
       shell("zsh")
