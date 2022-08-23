@@ -4,10 +4,10 @@
 
 ## 构建并检查你的环境
 
-通过 [构建 `envd` 环境](./build-envd) 的教程，您已经能够成功构建项目环境。在本章节中，我们将使用 `mnist` 项目来演示后续操作。构建成功后，您可以使用 `envd get envs` 命令来检查环境状态。
+通过 [构建 `envd` 环境](./build-envd) 的教程，您已经能够成功构建项目环境。在本章节中，我们将使用 `mnist` 项目来演示后续操作。构建成功后，您可以使用 `envd envs list` 命令来检查环境状态。
 
 ```
-$ envd get envs
+$ envd envs list
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID
 mnist   http://localhost:48484   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
 ```
@@ -48,15 +48,15 @@ mnist   http://localhost:48484   mnist.envd      /home/ubuntu/workspace/envd/exa
 ```python 
 def build():
     ...
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
 </custom-title>
 
-您也可以使用 `envd get envs` 命令获得 Jupyter 的端口信息。
+您也可以使用 `envd envs list` 命令获得 Jupyter 的端口信息。
 
 ```bash
-$ envd get envs
+$ envd envs list
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID
 mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
 ```
@@ -79,10 +79,10 @@ def build():
 
 </custom-title>
 
-RStudio 的地址可以通过 `envd get envs` 命令得到。
+RStudio 的地址可以通过 `envd envs list` 命令得到。
 
 ```
-$ envd get envs
+$ envd envs list
 NAME    ENDPOINT                        SSH TARGET      IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   <none>  <none>  Up 6 hours      1eb7d40e5a8a
 ```

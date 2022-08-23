@@ -5,10 +5,10 @@ Here we use the example at [envd/examples/mnist](https://github.com/tensorchord/
 ## Build your environment
 
 Following [previous tutorial](/guide/build-envd), you'll be able to setup the project environment by `envd`. In this tutorial, we used `mnist` project.
-After setting up the project, you can check the environment status by `envd get envs`.
+After setting up the project, you can check the environment status by `envd envs list`.
 
 ```
-$ envd get envs
+$ envd envs list
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 mnist   http://localhost:48484   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
 ```
@@ -43,13 +43,13 @@ In `build.envd` file, we've declared the jupyter environment, with no password.
 ```python
 def build():
     ...
-    config.jupyter(password="")
+    config.jupyter()
 ```
 
-You can also get the jupyter port through `envd get envs` command.
+You can also get the jupyter port through `envd envs list` command.
 
 ```bash
-$ envd get envs
+$ envd envs list
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
 ```
@@ -72,10 +72,10 @@ def build():
 
 </custom-title>
 
-Endpoint can be got through `envd get envs` command.
+Endpoint can be got through `envd envs list` command.
 
 ```
-$ envd get envs
+$ envd envs list
 NAME    ENDPOINT                        SSH TARGET      IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   <none>  <none>  Up 6 hours      1eb7d40e5a8a
 ```
