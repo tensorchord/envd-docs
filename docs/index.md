@@ -23,7 +23,7 @@ features:
   - icon: 🖨️
     title: Built-in Jupyter/VSCode
     details: First-class support for Jupyter and VSCode remote extension.
-  - icon: ⏱️ 
+  - icon: ⏱️
     title: Save time
     details: Better cache management to save your time, keep the focus on the model, instead of dependencies.
   - icon: ☁️
