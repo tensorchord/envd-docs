@@ -14,11 +14,21 @@ Please update the python file there instead of directly editing file inside envd
 def command(commands: Dict[str, str])
 ```
 
-Execute commands
+Execute commands during runtime
 
 **Arguments**:
 
 - `commands` _Dict[str, str]_ - map name to command, similar to Makefile
+  
+  Example usage:
+```
+runtime.command(commands={
+    "train": "python train.py --epoch 20 --notify me@tensorchord.ai",
+    "run": "python server.py --batch 1 --host 0.0.0.0 --port 8000",
+})
+```
+  
+  You can run `envd run --command train` to train the model.
 
 ## expose
 
