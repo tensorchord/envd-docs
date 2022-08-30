@@ -45,11 +45,9 @@ model.fit(train_data,
 
 ## Nvidia Nsight Systems
 
-Nvidia Nsight Systems 是用来调试和优化 GPU 程序的有力工具。
+Nvidia [Nsight Systems](https://docs.nvidia.com/nsight-systems/UserGuide/index.html) 是用来调试和优化 GPU 程序的有力工具。针对深度学习训练任务，Nsight Systems 能够以可视化的方式分析显存使用、CUDA Kernel 执行情况等。它虽然功能非常强大，但是也有比较高的学习门槛。如果不是非常了解 Nsight 软件系列产品的工程师，或者并不追求极致优化的时候，很少会使用它来进行性能优化。
 
-![](./assets/metrics-survey/nsight.png)
-
-TODO
+<img src="./assets/metrics-survey/nsight.png" width=550 style="display: block; margin: 0 auto">
 
 ## Nvidia DLProf
 
@@ -61,7 +59,9 @@ TODO
 
 虽然有各种各样的工具可供选择，但是在我们看来，这些工具都比较难以使用。我们在之前的工作中也经常遇到与 GPU 相关的性能问题时头疼不已。
 
+为了能够更好地支持训练指标收集和任务的性能 profiling，我们设计了一个小规模的调查 [机器学习开发可观测性小调查](https://wenjuan.feishu.cn/m?t=s37flrIUVpFi-qsib)，我们希望在 [envd](https://envd.tensorchord.ai/) 中支持更符合算法工程师使用需求的 profiler 功能。欢迎参与！
 
+<img src="./assets/metrics-survey/code.png" width=200 style="display: block; margin: 0 auto">
 
 ## 参考文献
 
