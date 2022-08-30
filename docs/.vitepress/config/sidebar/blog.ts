@@ -11,4 +11,13 @@ export const blogSidebar: DefaultTheme.Sidebar = {
       ]
     }
   ],
+  '/zh/blog/': [
+    {
+      text: '博客',
+      items: [
+        { text: '如何更好地 Profile 深度学习训练？', link: '/zh/blog/metrics-survey' },
+        { text: 'TensorChord Tea Hour: Buildkit Internals', link: '/zh/blog/tea-hour-1'},
+      ]
+    }
+  ],
 }

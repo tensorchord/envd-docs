@@ -1,5 +1,5 @@
 ---
-author: 'Gao Ce'
+author: 'Ce Gao'
 avatar: 'https://www.github.com/gaocegege.png'
 github: 'https://github.com/gaocegege'
 twitter: 'https://twitter.com/gaocegege'
