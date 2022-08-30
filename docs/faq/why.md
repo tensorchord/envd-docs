@@ -69,7 +69,7 @@ AI/ML models are optimized by trials and errors. And the environment will be upd
 Thus, we have to maintain such a complicated `Dockerfile`.
 
 ```docker
-FROM nvidia:cuda:11.6.2-devel-ubuntu20.04
+FROM nvidia/cuda:11.6.2-devel-ubuntu20.04
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     --no-install-suggests --fix-missing bash-static \
