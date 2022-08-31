@@ -6,7 +6,7 @@ twitter: 'https://twitter.com/gaocegege'
 introduction: 'Ce Gao 是 envd 的维护者之一。与此之外，他还是机器学习基础设施开源项目 Kubeflow 的 Co-chair。他主要关注机器学习的模型训练、自动机器学习等领域。'
 ---
 
-# 如何更好地 Profile 深度学习训练？
+# 如何对深度学习训练进行性能调优？
 
 > TL; DR
 > 为了能够更好地支持训练指标收集和任务的性能 profiling，我们设计了一个小规模的调查 [机器学习开发可观测性小调查](https://wenjuan.feishu.cn/m?t=s37flrIUVpFi-qsib)，我们希望在 [envd](https://envd.tensorchord.ai/) 中支持更符合算法工程师使用需求的 profiler 功能。欢迎参与！
