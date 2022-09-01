@@ -42,8 +42,8 @@ Proposal: https://github.com/tensorchord/envd/pull/780
 **Arguments**:
 
 - `envd_port` _str_ - port in `envd` container
-- `host_port` _Optional[str]_ - port in the host, if not provided, `envd` will
-  randomly choose a free port
+- `host_port` _Optional[str]_ - port in the host, if not provided or
+  `host_port=0`, `envd` will randomly choose a free port
 - `service` _Optional[str]_ - service name
 
 ## daemon
