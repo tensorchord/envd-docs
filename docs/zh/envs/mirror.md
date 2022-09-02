@@ -1,55 +1,54 @@
-# Faster Build with Software Mirrors
+# 使用镜像加速构建
 
-There are several ways to accelarate the building process. We will introduce how to use software mirrors (docker hub mirror, pip index mirror, conda channel mirror and so on) in envd.
+本章我们将介绍在 `envd` 中设置下列镜像加速构建：
+- Docker Hub
+- PyPI
+- Conda
 
-## Setting up docker hub pull through mirror
+## 设置 Docker hub 镜像
 
-If docker image pulls are too slow, you can add a [pull through registry mirror](https://docs.docker.com/registry/recipes/mirror/) to the docker. It may bring additional performance improvements with a pull through registry mirror since network roundtrips to docker hub are reduced.
+如果 docker pull 时很慢，你可以在 `docker` 中添加  [pull through registry mirror](https://docs.docker.com/registry/recipes/mirror/)，由于减少了到 docker hub 的网络往返，可能会给 docker 带来额外的性能改进。
 
-You can set the mirror when `envd bootstrap`:
+你可以通过 `envd bootstrap` 来设置 docker 镜像：
 
 <custom-title title="Set docker mirror">
 
-
-```bash 
+```bash
 envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 ```
 
 </custom-title>
 
-Here are some registry mirrors:
+国内其他 Docker hub 镜像站：
+- https://docker.mirrors.sjtug.sjtu.edu.cn
+- https://hub-mirror.c.163.com
 
-- `https://docker.mirrors.sjtug.sjtu.edu.cn` in China.
-- `https://hub-mirror.c.163.com` in China.
+## 设置 PyPI 镜像
 
-## Setting up pip index mirror
+PyPI 的镜像或缓存可以加快本地软件包的安装，支持离线工作。
 
-Mirroring or caching of PyPI can be used to speed up local package installation, allow offline work, handle corporate firewalls or just plain Internet flakiness.
-
-PyPI index mirror can be set with `config.pip_index(url="<index>", extra_url=<extra>)`:
+你可以通过 `config.pip_index(url="<index>", extra_url=<extra>)` 来设置 PyPI 的镜像。
 
 <custom-title title="Set pip index mirror">
 
-```python 
+```python
 config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 ```
 
 </custom-title>
 
-envd will use the index to pull python packages. Here are some pip indexes:
+国内其他的 PyPI 镜像站：
 
-- `https://pypi.tuna.tsinghua.edu.cn/simple` in China.
-- `https://mirror.sjtu.edu.cn/pypi/web/simple` in China.
+- https://pypi.tuna.tsinghua.edu.cn/simple
+- https://mirror.sjtu.edu.cn/pypi/web/simple
 
-## Setting up apt source mirror
+## 设置 apt source 镜像
 
-Apt downloads packages from one or more software repositories (sources) and installs them onto your computer.
-
-Official ubuntu apt source is used in envd by default, but you can change to a mirror which is close to you:
+apt 从一个或多个软件库源下载软件包，并将它们安装到你的计算机上。在 `envd` 中默认使用官方 ubuntu apt 源，你可以通过下列方式更换 apt 的软件源。
 
 <custom-title title="Set apt source mirror">
 
-```python 
+```python
 config.apt_source(source="""
 # See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
 # newer versions of the distribution.
@@ -76,15 +75,15 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
 
 </custom-title>
 
-## Setting up conda channel mirror
+## 设置 Conda 镜像
 
-Mirroring or caching of conda can be used to speed up local package installation, allow offline work, handle corporate firewalls or just plain Internet flakiness.
+Conda 的镜像或缓存可以加速本地软件包安装，支持离线工作。
 
-You can set up the conda channel mirror via:
+你可以通过以下方式设置镜像：
 
 <custom-title title="Set conda channel mirror">
 
-```python 
+```python
 config.conda_channel(channel="""
 channels:
   - defaults
@@ -106,6 +105,6 @@ custom_channels:
 ```
 </custom-title>
 
-## Setting up R mirror
+## 设置 R 包镜像
 
-To be added
+待补充。
