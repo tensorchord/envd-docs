@@ -23,7 +23,8 @@ Install package by system-level package manager(apt on Ubuntu)
 ## python\_packages
 
 ```python
-def python_packages(name: List[str], requirements: str)
+def python_packages(name: List[str], requirements: str,
+                    local_wheels: List[str])
 ```
 
 Install python package by pip
@@ -31,7 +32,9 @@ Install python package by pip
 **Arguments**:
 
 - `name` _List[str]_ - package name list
-- `requirements` - (str): requirements file path
+- `requirements` _str_ - requirements file path
+- `local_wheels` _List[str]_ - local wheels
+  (wheel files should be placed under the current directory)
 
 ## conda\_packages
 
