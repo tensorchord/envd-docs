@@ -6,7 +6,7 @@ We will use TensorBoard as an example.
 
 ```python
 def tensorboard(port):
-    io.mount(src="/var/log/tensorboard", dest="/home/envd/logs")
+    io.mount(host_path="/var/log/tensorboard", envd_path="/home/envd/logs")
     runtime.daemon(commands=[
         ["tensorboard", "--logdir", "/home/envd/logs", "--port", "8888", "--host", "0.0.0.0", ">>tensorboard.log", "2>&1"],
     ])
