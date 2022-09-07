@@ -18,23 +18,24 @@ introduction: 'Ce Gao 是 envd 的维护者之一。与此之外，他还是机�
 >
 > A: 我的版本和你一样啊（挠头）
 
-[envd](https://github.com/tensorchord/envd) 希望能够让 AI/ML 领域的环境配置不再让人困扰。envd 为使用者提供了通过 Python 来描述环境的可能。你甚至不需要专门学习就能利用 envd 来完成一些复杂的环境构建过程。其次 envd 仍在支持更多的运行时，其中包括 Kubernetes、远端服务器、本地 Docker 或 Podman 等。确保使用者可以在任何地方都可以自信地进行模型训练和推理。这一切都是建立在不需要了解 Kubernetes 等基础设施的基础上。作为基础设施领域的工程师，我们坚信，使用 Kubernetes 体验最好的方式就是你永远不需要了解它。
+[envd](https://github.com/tensorchord/envd) 希望能够让 AI/ML 领域的环境配置不再让人困扰。envd 为使用者提供了通过 Python 来描述环境的可能。你甚至不需要专门学习就能利用 [envd](https://github.com/tensorchord/envd) 来完成一些复杂的环境构建过程。其次 [envd](https://github.com/tensorchord/envd) 仍在支持更多的运行时，其中包括 Kubernetes、远端服务器、本地 Docker 或 Podman 等。确保使用者可以在任何地方都可以自信地进行模型训练和推理。这一切都是建立在不需要了解 Kubernetes 等基础设施的基础上。作为基础设施领域的工程师，我们坚信，使用 Kubernetes 体验最好的方式就是你永远不需要了解它。
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
-    install.python_packages(name = [
-        "numpy",
+    base(os="ubuntu20.04", language="python")
+    install.cuda(version="11.6", cudnn="8")
+    install.python_packages(name=[
+        "tensorflow-gpu"
     ])
 ```
 
-最后，在 AI/ML 的场景下，envd 的构建速度比 Docker[^1] **快 6 倍**。更快的构建帮助使用者更快地迭代模型。
+最后，在 AI/ML 的场景下，[envd](https://github.com/tensorchord/envd) 的构建速度比 Docker[^1] **快 6 倍**。更快的构建帮助使用者更快地迭代模型。
 
 [^1]: Dockerfile v1
 
 ## envd 的起源
 
-让我们回到 envd 出生的那天。2022 年初，我和我的朋友金晶聊起了我们在 AI/ML 领域遇到的令人讨厌的问题。
+让我们回到 [envd](https://github.com/tensorchord/envd) 出生的那天。2022 年初，我和我的朋友金晶聊起了我们在 AI/ML 领域遇到的令人讨厌的问题。
 
 问题非常多，但是要说最烦人的，毫无疑问是与训练开发环境相关的一系列问题。作为 AI 基础设施的工程师，我最常被我所服务的算法工程师们问到的问题包括但不限于：
 
@@ -46,7 +47,7 @@ def build():
 
 于是我们就此陷入了对各自遇到的稀奇古怪的环境问题的吐槽中去了。当然我们也交流了 VSCode Remote 和 Jupyter notebook 哪个更好用之类的。2022 年了，我们讨论的话题仍旧离不开程序员三大件：编程语言、编程环境、和编辑器。
 
-讨论结束后，我们一起脑洞了一个好的体验应该是什么样子的。这就是 envd 的由来。
+讨论结束后，我们一起脑洞了一个好的体验应该是什么样子的。这就是 [envd](https://github.com/tensorchord/envd) 的由来。
 
 ## 问题在哪里
 
@@ -60,13 +61,13 @@ def build():
 
 ## envd 是如何设计的
 
-所以，envd 希望能够将这些目前已经在工业界广泛使用的基础设施，面向 AI/ML 领域进一步抽象，为算法工程师和数据科学家团队们提供更加简单易用的工具和产品。envd 的愿景是使用者再也不需要关心基础设施，只需要通过 TensorFlow、PyTorch、Jax 等框架开发模型即可。
+所以，[envd](https://github.com/tensorchord/envd) 希望能够将这些目前已经在工业界广泛使用的基础设施，面向 AI/ML 领域进一步抽象，为算法工程师和数据科学家团队们提供更加简单易用的工具和产品。[envd](https://github.com/tensorchord/envd) 的愿景是使用者再也不需要关心基础设施，只需要通过 TensorFlow、PyTorch、Jax 等框架开发模型即可。
 
 <div align="center">
 <img src='https://user-images.githubusercontent.com/5100735/188788542-269d1049-6b19-4c9d-82c2-5fb828ebdc6d.png' width='60%'>
 </div>
 
-为此，envd 引入了基于 python 的构建文件 `build.envd`。它不再像 Kubernetes 的 YAML 配置或者是 Dockerfile 一样，围绕基础设施或者是通用容器的构建来定义配置。而是围绕 AI/ML 的模型开发与推理来进行。
+为此，[envd](https://github.com/tensorchord/envd) 引入了基于 python 的构建文件 `build.envd`。它不再像 Kubernetes 的 YAML 配置或者是 Dockerfile 一样，围绕基础设施或者是通用容器的构建来定义配置。而是围绕 AI/ML 的模型开发与推理来进行。
 
 ![envd](https://user-images.githubusercontent.com/5100735/188821980-dcbd9069-b504-436a-9ffd-05ac5543a6d1.png)
 
@@ -74,7 +75,7 @@ def build():
 
 ![](https://user-images.githubusercontent.com/5100735/188850235-633cbef7-3522-4c56-81e8-2486fd889f5b.svg)
 
-为了能够在 Kubernetes、远端服务器等不同的环境下使用 envd 构建的环境，我们维护了一个非常轻量级的 sshd 的实现，并内置于其中。因此用户可以通过 ssh 协议连接到环境进行开发和调试。当然，你可以可以通过 envd 提供的语法在环境中安装需要的 vscode extension，或者是配置使用 Jupyter。
+为了能够在 Kubernetes、远端服务器等不同的环境下使用 [envd](https://github.com/tensorchord/envd) 构建的环境，我们维护了一个非常轻量级的 sshd 的实现，并内置于其中。因此用户可以通过 ssh 协议连接到环境进行开发和调试。当然，你可以可以通过 [envd](https://github.com/tensorchord/envd) 提供的语法在环境中安装需要的 vscode extension，或者是配置使用 Jupyter。
 
 ```python
 def build():
@@ -90,11 +91,11 @@ def build():
 
 ## envd 的构建速度
 
-因为聚焦在 AI/ML 领域，因此我们对 Docker 和 buildkit 的使用进行了特殊的优化。使得在这一场景下的 envd 构建速度比 Docker **快 6 倍**。
+因为聚焦在 AI/ML 领域，因此我们对 Docker 和 buildkit 的使用进行了特殊的优化。使得在这一场景下的 [envd](https://github.com/tensorchord/envd) 构建速度比 Docker **快 6 倍**。
 
-这得益于 envd 在各个层次上的 cache。举个例子来说明，在 Docker 中如果 Dockerfile 前面的命令缓存失效了，那么后续的命令都要重新执行，也包括 `pip install` 命令。它需要重新下载。
+这得益于 [envd](https://github.com/tensorchord/envd) 在各个层次上的 cache。举个例子来说明，在 Docker 中如果 Dockerfile 前面的命令缓存失效了，那么后续的命令都要重新执行，也包括 `pip install` 命令。它需要重新下载。
 
-而 envd 会在多次构建间维护 pip index 的 cache，使得后续的构建不需要再重新下载 wheel，只需要使用已经被缓存的包即可。
+而 [envd](https://github.com/tensorchord/envd) 会在多次构建间维护 pip index 的 cache，使得后续的构建不需要再重新下载 wheel，只需要使用已经被缓存的包即可。
 
 <table>
 <tr>
@@ -122,7 +123,7 @@ $ docker build
 </tr>
 </table>
 
-在多种不同的优化加持下，envd 的构建速度在特定场景下比 Docker 快 6 倍。
+在多种不同的优化加持下，[envd](https://github.com/tensorchord/envd) 的构建速度在特定场景下比 Docker 快 6 倍。
 
 <p align=center>
   <img src="https://user-images.githubusercontent.com/5100735/188601795-8c37f5a3-b13b-422b-816f-8a0c51f1f8b1.svg" width="65%"/>
@@ -130,7 +131,7 @@ $ docker build
 
 ## 在你的团队中使用
 
-在一个团队里，通常大家会基于相同的基础配置进行修改的方式配置环境。在之前只能通过口耳相传的 Dockerfile 进行。而在 envd 中可以定义 python 函数来完成。下面例子中的 `configure_streamlit` 和 `configure_mnist` 就可以被复用。在团队内的构建需要可以以 envd 中定义的函数的形式积累下来，形成 envd Hub（目前正在进一步设计中，通过它可以在团队内更好地共享环境配置）。
+在一个团队里，通常大家会基于相同的基础配置进行修改的方式配置环境。在之前只能通过口耳相传的 Dockerfile 进行。而在 [envd](https://github.com/tensorchord/envd) 中可以定义 python 函数来完成。下面例子中的 `configure_streamlit` 和 `configure_mnist` 就可以被复用。在团队内的构建需要可以以 [envd](https://github.com/tensorchord/envd) 中定义的函数的形式积累下来，形成 envd Hub（目前正在进一步设计中，通过它可以在团队内更好地共享环境配置）。
 
 ```python
 def build():
