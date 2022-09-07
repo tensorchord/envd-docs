@@ -69,8 +69,6 @@ def build():
 
 为此，[envd](https://github.com/tensorchord/envd) 引入了基于 python 的构建文件 `build.envd`。它不再像 Kubernetes 的 YAML 配置或者是 Dockerfile 一样，围绕基础设施或者是通用容器的构建来定义配置。而是围绕 AI/ML 的模型开发与推理来进行。
 
-![envd](https://user-images.githubusercontent.com/5100735/188821980-dcbd9069-b504-436a-9ffd-05ac5543a6d1.png)
-
 下面是一个非常简单的示例。展示了如何构建一个 TensorFlow 的开发环境。
 
 ![](https://user-images.githubusercontent.com/5100735/188850235-633cbef7-3522-4c56-81e8-2486fd889f5b.svg)
