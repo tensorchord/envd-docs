@@ -160,11 +160,13 @@ def configure_mnist():
 
 团队的使用还有很多方式，比如 CI/CD 的集成支持等，后续我们通过单独的文章进行介绍。
 
-## FAQ
-
-### 为什么不直接用 Docker
-
 ## 结论
+
+[envd](https://github.com/tensorchord/envd) 目前仍处于非常早期的阶段，我们只是踏出了第一步，帮助算法工程师和数据科学家团队关注于 AI/ML 业务，而非基础设施。在近期 [envd](https://github.com/tensorchord/envd) 会着眼于更好的团队需求支持，提供更加完善的 Kubernetes 运行时。
+
+欢迎大家保持关注!
+
+🍻
 
 ---
 
