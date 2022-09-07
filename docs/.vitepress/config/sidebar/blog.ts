@@ -15,6 +15,7 @@ export const blogSidebar: DefaultTheme.Sidebar = {
     {
       text: '博客',
       items: [
+        { text: 'envd: 配置深度学习炼丹环境的新选择', link: 'zh/blog/envd'},
         { text: '如何对深度学习训练进行性能调优？', link: '/zh/blog/metrics-survey' },
         { text: 'TensorChord Tea Hour: Buildkit Internals', link: '/zh/blog/tea-hour-1'},
       ]
