@@ -11,26 +11,26 @@ Please update the python file there instead of directly editing file inside envd
 ## copy
 
 ```python
-def copy(src: str, dest: str)
+def copy(host_path: str, envd_path: str)
 ```
 
-Copy from host `src` to container `dest` (build time)
+Copy from host path to container path (build time)
 
 **Arguments**:
 
-- `src` _str_ - source path
-- `dest` _str_ - destination path
+- `host_path` _str_ - source path in the host machine
+- `envd_path` _str_ - destination path in the envd container
 
 ## mount
 
 ```python
-def mount(src: str, dest: str)
+def mount(host_path: str, envd_path: str)
 ```
 
-Mount from host `src` to container `dest` (runtime)
+Mount from host path to container path (runtime)
 
 **Arguments**:
 
-- `src` _str_ - source path
-- `dest` _str_ - destination path
+- `host_path` _str_ - source path in the host machine
+- `envd_path` _str_ - destination path in the envd container
 
