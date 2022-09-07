@@ -28,9 +28,13 @@ def build():
     ])
 ```
 
+最后，在 AI/ML 的场景下，envd 的构建速度比 Docker[^1] **快 6 倍**。更快的构建帮助使用者更快地迭代模型。
+
+[^1]: Dockerfile v1
+
 ## envd 的起源
 
-那么，让我们回到 envd 出生的那天。2022 年初，我和我的朋友金晶聊起了我们在 AI/ML 领域遇到的令人讨厌的问题。
+让我们回到 envd 出生的那天。2022 年初，我和我的朋友金晶聊起了我们在 AI/ML 领域遇到的令人讨厌的问题。
 
 问题非常多，但是要说最烦人的，毫无疑问是与训练开发环境相关的一系列问题。作为 AI 基础设施的工程师，我最常被我所服务的算法工程师们问到的问题包括但不限于：
 
@@ -86,7 +90,43 @@ def build():
 
 ## envd 的构建速度
 
+因为聚焦在 AI/ML 领域，因此我们对 Docker 和 buildkit 的使用进行了特殊的优化。使得在这一场景下的 envd 构建速度比 Docker **快 6 倍**。
 
+这得益于 envd 在各个层次上的 cache。举个例子来说明，在 Docker 中如果 Dockerfile 前面的命令缓存失效了，那么后续的命令都要重新执行，也包括 `pip install` 命令。它需要重新下载。
+
+而 envd 会在多次构建间维护 pip index 的 cache，使得后续的构建不需要再重新下载 wheel，只需要使用已经被缓存的包即可。
+
+<table>
+<tr>
+<td> envd </td> <td> Docker </td>
+</tr>
+<tr>
+<td>
+
+```diff
+$ envd build
+=> pip install tensorflow       5s
++ => Using cached tensorflow-...-.whl (511.7 MB)
+```
+
+</td>
+<td>
+
+```diff
+$ docker build
+=> pip install tensorflow      278s
+- => Downloading tensorflow-...-.whl (511.7 MB)
+```
+
+</td>
+</tr>
+</table>
+
+在多种不同的优化加持下，envd 的构建速度在特定场景下比 Docker 快 6 倍。
+
+<p align=center>
+  <img src="https://user-images.githubusercontent.com/5100735/188601795-8c37f5a3-b13b-422b-816f-8a0c51f1f8b1.svg" width="65%"/>
+</p>
 
 ## 在你的团队中使用
 
