@@ -11,7 +11,7 @@ Please update the python file there instead of directly editing file inside envd
 ## apt\_source
 
 ```python
-def apt_source(mode: Optional[str], source: Optional[str])
+def apt_source(source: Optional[str])
 ```
 
 Configure apt sources
@@ -34,7 +34,6 @@ apt_source(source='''
 
 **Arguments**:
 
-- `mode` _str, optional_ - This argument is not supported currently
 - `source` _str, optional_ - The apt source configuration
 
 ## jupyter
@@ -53,14 +52,13 @@ Configure jupyter notebook configuration
 ## pip\_index
 
 ```python
-def pip_index(mode: str, url: str, extra_url: str)
+def pip_index(url: str, extra_url: str)
 ```
 
 Configure pypi index mirror
 
 **Arguments**:
 
-- `mode` _str_ - NOT supported yet
 - `url` _str_ - PyPI index URL (i.e. https://mirror.sjtu.edu.cn/pypi/web/simple)
 - `extra_url` _str_ - PyPI extra index URL. `url` and `extra_url` will be
   treated equally, see https://github.com/pypa/pip/issues/8606

@@ -8,13 +8,13 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
-## system\_packages
+## apt\_packages
 
 ```python
-def system_packages(name: List[str])
+def apt_packages(name: List[str])
 ```
 
-Install package by system-level package manager(apt on Ubuntu)
+Install package by system-level package manager (apt on Ubuntu)
 
 **Arguments**:
 
