@@ -91,6 +91,10 @@ def build():
 
 因为聚焦在 AI/ML 领域，因此我们对 Docker 和 buildkit 的使用进行了特殊的优化。使得在这一场景下的 [envd](https://github.com/tensorchord/envd) 构建速度比 Docker **快 6 倍**。
 
+<p align=center>
+  <img src="https://user-images.githubusercontent.com/5100735/188601795-8c37f5a3-b13b-422b-816f-8a0c51f1f8b1.svg" width="65%"/>
+</p>
+
 这得益于 [envd](https://github.com/tensorchord/envd) 在各个层次上的 cache。举个例子来说明，在 Docker 中如果 Dockerfile 前面的命令缓存失效了，那么后续的命令都要重新执行，也包括 `pip install` 命令。它需要重新下载。
 
 而 [envd](https://github.com/tensorchord/envd) 会在多次构建间维护 pip index 的 cache，使得后续的构建不需要再重新下载 wheel，只需要使用已经被缓存的包即可。
@@ -121,11 +125,6 @@ $ docker build
 </tr>
 </table>
 
-在多种不同的优化加持下，[envd](https://github.com/tensorchord/envd) 的构建速度在特定场景下比 Docker 快 6 倍。
-
-<p align=center>
-  <img src="https://user-images.githubusercontent.com/5100735/188601795-8c37f5a3-b13b-422b-816f-8a0c51f1f8b1.svg" width="65%"/>
-</p>
 
 ## 在你的团队中使用
 
