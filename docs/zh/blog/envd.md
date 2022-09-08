@@ -71,7 +71,7 @@ def build():
 
 下面是一个非常简单的示例。展示了如何构建一个 TensorFlow 的开发环境。
 
-![](https://user-images.githubusercontent.com/5100735/188850235-633cbef7-3522-4c56-81e8-2486fd889f5b.svg)
+![](https://user-images.githubusercontent.com/5100735/189038209-9d400aff-c816-4cfc-a68f-1b6c481806ae.svg)
 
 为了能够在 Kubernetes、远端服务器等不同的环境下使用 [envd](https://github.com/tensorchord/envd) 构建的环境，我们维护了一个非常轻量级的 sshd 的实现，并内置于其中。因此用户可以通过 ssh 协议连接到环境进行开发和调试。当然，你可以可以通过 [envd](https://github.com/tensorchord/envd) 提供的语法在环境中安装需要的 vscode extension，或者是配置使用 Jupyter。
 
