@@ -11,15 +11,16 @@ Please update the python file there instead of directly editing file inside envd
 ## base
 
 ```python
-def base(os: str, language: str)
+def base(os: str, language: str, image: Optional[str])
 ```
 
 Set base image
 
 **Arguments**:
 
-- `os` _str_ - The operating system(i.e. `ubuntu20.04`)
-- `language` _str_ - The programing language dependency(i.e. `python3.8`)
+- `os` _str_ - The operating system (i.e. `ubuntu20.04`)
+- `language` _str_ - The programing language dependency (i.e. `python3.8`)
+- `image` _Optional[str]_ - Custom image (i.e. `python:3.9-slim`)
 
 ## shell
 
@@ -31,7 +32,7 @@ Interactive shell
 
 **Arguments**:
 
-- `name` _str_ - shell name(i.e. `zsh`, `bash`)
+- `name` _str_ - shell name (i.e. `zsh`, `bash`)
 
 ## run
 

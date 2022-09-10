@@ -21,16 +21,17 @@ Copy from host path to container path (build time)
 - `host_path` _str_ - source path in the host machine
 - `envd_path` _str_ - destination path in the envd container
 
-## mount
+## http
 
 ```python
-def mount(host_path: str, envd_path: str)
+def http(url: str, checksum: Optional[str], filename: Optional[str])
 ```
 
-Mount from host path to container path (runtime)
+Download file with HTTP to `/home/envd/extra_source`
 
 **Arguments**:
 
-- `host_path` _str_ - source path in the host machine
-- `envd_path` _str_ - destination path in the envd container
+- `url` _str_ - URL
+- `checksum` _Optional[str]_ - checksum for the downloaded file
+- `filename` _Optional[str]_ - rewrite the filename
 
