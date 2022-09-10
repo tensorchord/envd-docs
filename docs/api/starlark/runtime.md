@@ -86,3 +86,16 @@ Add runtime environments
 runtime.environ(env={"ENVD_MODE": "DEV"})
 ```
 
+## mount
+
+```python
+def mount(host_path: str, envd_path: str)
+```
+
+Mount from host path to container path (runtime)
+
+**Arguments**:
+
+- `host_path` _str_ - source path in the host machine
+- `envd_path` _str_ - destination path in the envd container
+
