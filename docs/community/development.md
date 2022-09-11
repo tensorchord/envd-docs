@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Development Tutorial
 
-Thanks for your interest in contributing to `envd` 🌟! 
+Thanks for your interest in contributing to `envd` 🌟!
 
 Our community values contributions of all forms and seeks to expand the meaning of the word "contributor" as far and wide as possible. Our [contributing](./contributing) page gives an overview of some different ways to get involved and contribute. For technical contributions, read on to get started.
 
@@ -16,9 +16,9 @@ The `envd` source code lives in [github.com/tensorchord/envd](https://github.com
 There are a lot of files here! Here's a brief overview. It can be confusing, but you don't need to understand every file in the repository to get started. We recommend beginning in one area (for example, adding a new function in `envd`), and working your way outwards to exploring more.
 
 - [📁 base-images/](https://github.com/tensorchord/envd/tree/main/base-images) contains Dockerfiles and build scripts of the base images used in envd.
-- [📁 cmd/](https://github.com/tensorchord/envd/tree/main/cmd) contains the command line interface `envd` and `envd-ssh`. 
+- [📁 cmd/](https://github.com/tensorchord/envd/tree/main/cmd) contains the command line interface `envd` and `envd-sshd`.
     - [📁 envd/](https://github.com/tensorchord/envd/tree/main/cmd/envd) the main command line interface.
-    - [📁 envd-ssh/](https://github.com/tensorchord/envd/tree/main/cmd/envd-ssh) `envd-ssh` will not be used directly by envd users. It will be injected into the environment to set up the sshd.
+    - [📁 envd-sshd/](https://github.com/tensorchord/envd/tree/main/cmd/envd-sshd) `envd-sshd` will not be used directly by envd users. It will be injected into the environment to set up the sshd.
 - [📁 docs/](https://github.com/tensorchord/envd/tree/main/docs) does not actually contain docs! Rather, it contains the proposals or static assets used in `README.md`. The docs lives in [github.com/tensorchord/envd-docs](https://github.com/tensorchord/envd-docs).
 - [📁 envd/](https://github.com/tensorchord/envd/tree/main/envd) contains a fake python package which is only used to generate `envd` API reference. You do not need to take care of it if you do not change the `envd` API.
 - [📁 examples/](https://github.com/tensorchord/envd/tree/main/examples) contains some examples of `envd`.
@@ -100,5 +100,5 @@ make test
 
 ## GitHub Issue Flow
 
-- Issues tagged as [`good first issue 💖`](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) are a good place to get started. 
+- Issues tagged as [`good first issue 💖`](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) are a good place to get started.
 - If you'd like to start working on an existing issue, comment on the issue that you plan to work on it so other contributors know it's being handled and can offer help.
