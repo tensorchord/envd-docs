@@ -65,9 +65,7 @@ def dummy(images, **kwargs):
     return images, False
 
 # Read prompt from command line
-args = sys.argv
-del args[0]
-prompt = " ".join(args)
+prompt = " ".join(sys.argv[1:])
 
 pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4",
                                                 use_auth_token=os.environ['HUGGINGFACE_TOKEN'])
