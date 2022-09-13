@@ -66,7 +66,7 @@ export default defineConfig({
       // add the default post link here
       { text: '开始了解', link: '/guide/getting-started'},
       { text: 'API', link: '/api/cli/cli',activeMatch: '/api/' },
-      { text: '博客', link: '/blog/welcome',activeMatch: '/blog/' },
+      { text: '博客', link: '/blog/stable-diffusion-cpu'},
       { text: '版本历史', link: 'https://github.com/tensorchord/envd/releases'}
     ],
     editLink: {
