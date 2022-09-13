@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "description": "Development Environment for Machine Learning Engineers",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "serve": "vitepress serve"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "dev:zh": "vitepress dev docs-zh",
+    "build:zh": "vitepress build docs-zh",
+    "serve:zh": "vitepress build docs-zh"
   },
   "keywords": [],
   "author": "",
