@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /zh/guide/getting-started
+      link: /guide/getting-started
     - theme: alt
       text: 在 GitHub 查看
       link: https://github.com/tensorchord/envd
@@ -29,9 +29,6 @@ features:
   - icon: ☁️
     title: 本地云端，无缝迁移
     details:  envd 与 Docker 紧密结合，构建兼容 Docker 镜像标准的环境镜像，在本地云端都可以使用。
-  - icon: 🔁 
-    title: 可复现的构建和结果
-    details: 完全复现相同的环境，无论是在你的笔记本电脑上，还是在数据中心，亦或是在公有云服务上。更好地复现训练结果。
 ---
 <!-- 
 <VPTeamPage>

@@ -91,7 +91,7 @@ make test
 
 ## 从开发者的角度理解 `envd up`
 
-`envd`会解析 `build.envd` 中的所有语句并执行 `build()` 函数。像 [`install.python_packages`](../api/install#python_packages) 和 [`config.jupyter`](../api/config#jupyter) 的函数调用会在 envd 储存在内存的静态图中注册自己的信息。随后，`envd` 会根据这些信息来构建 [buildkit LLB 流程图](https://github.com/moby/buildkit#exploring-llb) 并用它来构建产出镜像。
+`envd`会解析 `build.envd` 中的所有语句并执行 `build()` 函数。像 [`install.python_packages`](../api/starlark/install#python_packages) 和 [`config.jupyter`](../api/starlark/config#jupyter) 的函数调用会在 envd 储存在内存的静态图中注册自己的信息。随后，`envd` 会根据这些信息来构建 [buildkit LLB 流程图](https://github.com/moby/buildkit#exploring-llb) 并用它来构建产出镜像。
 
 ![](./assets/envd-arch.svg)
 
