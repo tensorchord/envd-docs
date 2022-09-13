@@ -56,7 +56,7 @@ export default defineConfig({
       text: '',
       items: [
         { text: 'English', link: '/guide/getting-started' },
-        { text: '简体中文', link: '/zh/guide/getting-started' },
+        { text: '简体中文', link: 'https://zh.envd.tensorchord.ai' },
       ],
     },
 
