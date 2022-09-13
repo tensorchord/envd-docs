@@ -169,7 +169,7 @@ array([2, 3, 4])
 
 ### 配置 ZSH Shell
 
-通过 [`envd` API](../api/starlark/global%20functions) 中的 `Shell` 函数配置环境中的 `Shell` 程序：
+通过 [`envd` API](../api/starlark/global_functions) 中的 `Shell` 函数配置环境中的 `Shell` 程序：
 
 <custom-title title="build.envd">
 
@@ -282,5 +282,5 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
 如果您想进一步探索 `envd` ，以下是一些快速链接：
 
 - [`envd` GitHub 仓库](https://github.com/tensorchord/envd)
-- [为什么使用 envd？](/zh/faq/why)
+- [为什么使用 envd？](/faq/why)
 - [`envd` CLI 命令](../cli)
