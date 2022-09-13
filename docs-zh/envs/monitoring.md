@@ -1,8 +1,10 @@
-# Set Up Experiment Tracking Stack
+# 设置实验监控
 
-Experiment tracking can help you better understand your model performance during machine learning model training. `envd` already has built-in features to help you integrate with your favorite tools.
+实验监控（tracking experiments）可以帮助你了解模型训练期间的性能。envd 提供 API 帮助集成你喜欢的工具。
 
-We will use TensorBoard as an example.
+以集成 [TensorBoard](https://www.tensorflow.org/tensorboard?hl=zh-cn) 为例：
+
+<custom-title title="设置 TensorBoard">
 
 ```python
 def tensorboard(port):
@@ -18,7 +20,10 @@ def build():
     install.python_packages(name=["tensorboard"])
     tensorboard(8888)
 ```
+</custom-title>
 
-Make sure you have permission for the mounted directory.
+:::tip 提示
+请确保你拥有挂载目录的权限。
+:::
 
-This example includes `mount`, `daemon` and `expose`. For more details, can check `envd` [API reference](/api/starlark/runtime).
+这个示例包括 mount、daemon 和 expose 操作，更多功能请参考 envd [API reference](/api/starlark/runtime)。
