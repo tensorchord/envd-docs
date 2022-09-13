@@ -55,7 +55,7 @@ export default defineConfig({
     localeLinks: {
       text: '',
       items: [
-        { text: 'English', link: 'https://envd.tensorchord.ai' },
+        { text: 'English', link: '/' },
         { text: '简体中文', link: 'https://zh.envd.tensorchord.ai' },
       ],
     },

@@ -51,7 +51,7 @@ export default defineConfig({
       text: '',
       items: [
         { text: 'English', link: 'https://envd.tensorchord.ai' },
-        { text: '简体中文', link: 'https://zh.envd.tensorchord.ai' },
+        { text: '简体中文', link: '/' },
       ],
     },
 
