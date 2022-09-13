@@ -7,11 +7,6 @@ export default defineConfig({
   lastUpdated: true,
   locales: {
     '/': {
-      lang: 'en-US',
-      title: 'envd',
-      description: 'AI/ML Development Environment'
-    },
-    '/zh/': {
       lang: 'zh-CN',
       title: 'envd',
       description: 'AI/ML 开发环境'
@@ -69,10 +64,10 @@ export default defineConfig({
     sidebar,
     nav:[
       // add the default post link here
-      { text: 'Get Started', link: '/guide/getting-started'},
-      { text: 'Reference', link: '/api/cli/cli',activeMatch: '/api/' },
-      { text: 'Blog', link: '/blog/welcome',activeMatch: '/blog/' },
-      { text: 'Releases', link: 'https://github.com/tensorchord/envd/releases'}
+      { text: '开始了解', link: '/guide/getting-started'},
+      { text: 'API', link: '/api/cli/cli',activeMatch: '/api/' },
+      { text: '博客', link: '/blog/welcome',activeMatch: '/blog/' },
+      { text: '版本历史', link: 'https://github.com/tensorchord/envd/releases'}
     ],
     editLink: {
       pattern: 'https://github.com/tensorchord/envd-docs/tree/main/docs/:path',
