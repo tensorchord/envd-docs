@@ -92,10 +92,6 @@ We’re focused on helping data scientists and teams that develop AI/ML models. 
 
 :::
 
-|       Before envd        |       After envd        |
-| :----------------------: | :---------------------: |
-| ![](/before.svg) | ![](/after.svg) |
-
 ## Installation
 
 ### Requirements
