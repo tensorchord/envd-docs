@@ -92,3 +92,15 @@ r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   
 ![](./assets/rstudio.png)
 
 ![](./assets/rstudio-main.png)
+
+## 将你的服务暴露出去
+
+目前，你可以通过 [localtunnel](https://github.com/localtunnel/localtunnel) 等工具将本地的服务暴露到公网：
+
+```bash
+$ envd envs list
+NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID
+mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
+$ npx localtunnel --port 48737
+your url is: https://xxx.loca.lt
+```
