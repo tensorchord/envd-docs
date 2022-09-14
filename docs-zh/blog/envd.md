@@ -93,7 +93,7 @@ def build():
 [^2]: 300Mbps 带宽网络环境下的 Dockerfile v1
 
 <p align=center>
-  <img src="https://user-images.githubusercontent.com/5100735/188601795-8c37f5a3-b13b-422b-816f-8a0c51f1f8b1.svg" width="65%"/>
+  <img src="https://user-images.githubusercontent.com/5100735/189928628-543f4851-87b7-462b-b811-372cbf46ff25.svg" width="65%"/>
 </p>
 
 这得益于 [envd](https://github.com/tensorchord/envd) 在各个层次上的 cache。举个例子来说明，在 Docker 中如果 Dockerfile 前面的命令缓存失效了，那么后续的命令都要重新执行，也包括 `pip install` 命令。它需要重新下载。
@@ -136,36 +136,16 @@ $ docker build
 
 envd 不只是面向个人使用者设计的，它更是要解决算法团队在环境管理上的问题。
 
-在一个团队里，通常大家会基于相似的基础配置进行修改的方式配置环境。在之前只能通过口耳相传的 Dockerfile 进行。而在 [envd](https://github.com/tensorchord/envd) 中可以定义 python 函数来完成。
+在一个团队里，通常大家会基于相似的基础配置进行修改的方式配置环境。在之前只能通过口耳相传的 Dockerfile 进行。而在 [envd](https://github.com/tensorchord/envd) 中可以定义 python 函数来完成。下面例子中，`envd.tensorboard` 就是定义在其他 Git repo 中的构建函数。用户可以通过 `include` 引入后直接复用，而不需要再复制粘贴过去的 Dockerfile 了。
 
-下面例子中的两个函数 `configure_streamlit` 和 `configure_mnist` 可以被其他的使用者复用。这些构建配置，在团队内以 [envd](https://github.com/tensorchord/envd) 中定义的新函数的形式积累下来，形成 envd Hub（目前这一功能仍在设计中），这就是团队的环境管理知识库。以后再也不需要维护“祖传”的 Dockerfile 啦。
+在团队内以 [envd](https://github.com/tensorchord/envd) 中函数的形式把各种依赖的安装方式积累下来，形成 envd Hub（目前这一功能仍在设计中），这就是团队的环境管理知识库。
 
 ```python
+envdlib = include("https://github.com/tensorchord/envdlib")
+
 def build():
-    base(os="ubuntu20.04", language="python3")
-    configure_mnist()
-    configure_streamlit(8501)
-
-def configure_streamlit(port):
-    install.python_packages([
-        "streamlit",
-        "streamlit_drawable_canvas",
-    ])
-    runtime.expose(envd_port=port, host_port=port, service="streamlit")
-    runtime.daemon(commands=[
-        ["streamlit", "run", "~/streamlit-mnist/app.py"]
-    ])
-
-def configure_mnist():
-    install.apt_packages([
-        "libgl1",
-    ])
-    install.python_packages([
-        "tensorflow",
-        "numpy",
-        "opencv-python",
-        "matplotlib",
-    ])
+    base(os="ubuntu20.04", language="python")
+    envdlib.tensorboard(8888)
 ```
 
 ## 结论
