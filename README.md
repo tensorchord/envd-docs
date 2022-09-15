@@ -19,7 +19,10 @@ pnpm i
 ### Local Development
 
 ```shell
-pnpm docs:dev
+# dev en-US docs
+pnpm dev
+# dev zh-CN docs
+pnpm dev:zh
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -27,7 +30,10 @@ This command starts a local development server and opens up a browser window. Mo
 ### Build
 
 ```shell
-pnpm docs:build
+# build en-US docs
+pnpm build
+# build zh-CN docs
+pnpm build:zh
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
@@ -57,5 +63,5 @@ Your codeblock
 ### Blog
 
 if you want to write a blog, the following things you need to do
-- add new post under `docs/blog` them just wirte the markdown file.
-- add new item to `/docs/.vitepress/config/sidebar.ts` `/blog/`.
+- add new post under `docs/blog` or `docs-zh/blog` then just wirte the markdown file.
+- add new item to `/docs/.vitepress/config/sidebar.ts` or `/docs-zh/.vitepress/config/sidebar.ts` `/blog/`.
