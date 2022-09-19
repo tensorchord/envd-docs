@@ -15,32 +15,6 @@ importers:
       vitepress: 1.0.0-alpha.9_ygzyjl425qrcgm3zeayiliwge4
       vue: 3.2.37
 
-  docs:
-    specifiers:
-      '@algolia/client-search': ^4.9.1
-      markdown-it-footnote: ^3.0.3
-      vitepress: 1.0.0-alpha.9
-      vue: ^3.2.37
-    dependencies:
-      '@algolia/client-search': 4.13.1
-      markdown-it-footnote: 3.0.3
-    devDependencies:
-      vitepress: 1.0.0-alpha.9_ygzyjl425qrcgm3zeayiliwge4
-      vue: 3.2.37
-
-  docs-zh:
-    specifiers:
-      '@algolia/client-search': ^4.9.1
-      markdown-it-footnote: ^3.0.3
-      vitepress: 1.0.0-alpha.9
-      vue: ^3.2.37
-    dependencies:
-      '@algolia/client-search': 4.13.1
-      markdown-it-footnote: 3.0.3
-    devDependencies:
-      vitepress: 1.0.0-alpha.9_ygzyjl425qrcgm3zeayiliwge4
-      vue: 3.2.37
-
 packages:
 
   /@algolia/autocomplete-core/1.7.1:
