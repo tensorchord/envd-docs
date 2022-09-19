@@ -20,15 +20,11 @@ Do these scenarios look familiar to you? What happens to the machine learning de
 
 Dealing with the environment is just the first step of your work. It should be made easy but it's never easy. Although we need to admit that it's much easier than the day we had to search how to install NumPy.
 
----
 
 Meanwhile, from the machine learning infra engineers' perspective:
 
-* The docker images provided by the data science team are huge and don't follow the best practice, as usual.
-* Oh no, they copied the legacy Dockerfile but forgot to change the library version. It's already deprecated.
-* I wish they could terminate their Jupyter notebook to release the GPU resources, so I don't need to contact them one by one.
+<img src="https://user-images.githubusercontent.com/52693877/191036993-922c27cb-36d3-4db3-a6eb-03f8b16207c9.png" alt="angry developer">
 
----
 
 Infra engineers are never the enemies of machine learning engineers. A better tool can make everyone happy.
 
