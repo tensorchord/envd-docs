@@ -10,9 +10,7 @@ introduction: 'Keming is one of the envd maintainers. He mainly focus on the onl
 
 As a machine learning engineer that works on different deep learning models, unexpected environmental issues always bother me.
 
-* Why did my CUDA stop working after lunch?
-* How come my code cannot run in the cluster but works fine on my dev machine?
-* "Hey Bob, can you send me your Dockerfile?" It is tedious to copy and make some changes but always has to be done before deployment.
+<img src="https://user-images.githubusercontent.com/52693877/191025031-b3b1822f-7c54-4641-90a8-986fadff606f.png" alt="confused developer">
 
 Do these scenarios look familiar to you? What happens to the machine learning development environment?
 
