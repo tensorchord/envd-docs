@@ -124,7 +124,7 @@ def build():
         "tensorflow==2.9.1",
         "numpy",
     ])
-    install.cuda(version="11.6", cudnn="8")
+    install.cuda(version="11.2", cudnn="8")
     shell("zsh")
     config.jupyter()
 ```
