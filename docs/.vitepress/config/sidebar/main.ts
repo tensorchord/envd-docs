@@ -6,6 +6,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       text: 'Guide',
       collapsible: true,
       items:[
+        { text: "What's envd?", link: '/guide/intro' },
         { text: 'Getting Started', link: '/guide/getting-started' },
         { text: 'Running Your First Environment', link:'/guide/build-envd'},
         { text: 'Using envd Environment', link:'/guide/ide'},
