@@ -14,7 +14,7 @@ This year's hacktoberfest is not *ALL* about code. We also need your help with w
 
 [envd](https://github.com/tensorchord/envd) is participating Hacktoberfest this year! There are some [first contributor friendly issues](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22).
 
-[Contributing](./contributing) and [Development](./development) docs may help you get familiar with our codebase and contributing process.
+[Contributing](/community/contributing) and [Development](/community/development) docs may help you get familiar with our codebase and contributing process.
 
 What are you waiting for? Come, join us and celebrate!
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
