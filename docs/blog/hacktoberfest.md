@@ -10,6 +10,8 @@ introduction: 'Do cool things that matter | Co-founder @tensorchord | Co-chair @
 
 [Hacktoberfest](https://hacktoberfest.com/) is an open source festival celebrated during October every year, encouraging people worldwide to actively participate and contribute to participating open source projects hosted across GitHub and GitLab.
 
+This year's hacktoberfest is not *ALL* about code. We also need your help with writing, designing, and testing. For the details about non-code contributions, check the doc [here](https://hacktoberfest.com/about/#low-or-non-code).
+
 [envd](https://github.com/tensorchord/envd) is participating Hacktoberfest this year! There are some [first contributor friendly issues](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22).
 
 What are you waiting for? Come, join us and celebrate!
