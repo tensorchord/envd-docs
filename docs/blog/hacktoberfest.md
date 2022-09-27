@@ -17,15 +17,9 @@ This year's hacktoberfest is not *ALL* about code. We also need your help with w
 [Contributing](/community/contributing) and [Development](/community/development) docs may help you get familiar with our codebase and contributing process.
 
 What are you waiting for? Come, join us and celebrate!
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
-<div style="text-align:center; align-items:center;">
-    <br>
-    <p style="font-family:caveat; font-size:4em;">
-        Hacktoberfest with envd
-    </p>
-    <br>
-<div>
-<img style="display: inline;" src="https://user-images.githubusercontent.com/52693877/190860902-ac07b00d-4441-47d4-b1d4-beff74926134.gif" alt="envd-logo"/>
-</div>
-</div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat&display=swap&&text=Hacktoberfest%20with%20envd">
+<p style="font-family:caveat,monospace; font-size:72px; line-height: 64px; text-align:center; margin: 48px auto;">
+    Hacktoberfest with envd
+</p>
+<img style="margin: 12px auto" src="https://user-images.githubusercontent.com/52693877/190860902-ac07b00d-4441-47d4-b1d4-beff74926134.gif" alt="envd-logo"/>
 <Author/>
