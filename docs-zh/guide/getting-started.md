@@ -66,12 +66,12 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
     )
     runtime.expose(envd_port=envd_port, host_port=host_port, service="tensorboard")
 
-````
+```
 </details>
 
-⏱️ **Builtkit原生，构建速度提高6倍**。
+⏱️ **Builtkit 原生，构建速度提高6倍**
 
-[Buildkit](https://github.com/moby/buildkit)支持并行构建和构建时的软件缓存（例如pip和apt缓存）。你可以在不用了解细节的情况下享受到它的强大之处。
+[Buildkit](https://github.com/moby/buildkit) 支持并行构建和构建时的软件缓存（例如pip和apt缓存）。你可以在不用了解细节的情况下享受到它的强大之处。
 
 例如，PyPI 缓存是在不同的构建过程中可以被被共享。因此如果软件包以前被下载过，就会直接利用缓存安装。
 
@@ -79,7 +79,7 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
   <img src="https://user-images.githubusercontent.com/5100735/189928628-543f4851-87b7-462b-b811-372cbf46ff25.svg" width="65%"/>
 </p>
 
-🐍 **单个配置文件完成一切需求**。
+🐍 **单个配置文件完成一切需求**
 
 开发环境中充满了 Dockerfile、bash 脚本、Kubernetes YAML 文件和许多其他冗长的脚本文件，这些文件在环境的不断迭代下可能失效。有了 envd 之后，你只需要一个配置文件`build.envd`[^1]，它对本地 Docker 和云端的 Kubernetes 集群都适用。
 
@@ -88,7 +88,7 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 [^1]: 构建语言实际上是 Python 的一个方言 [starlark](https://docs.bazel.build/versions/main/skylark/language.html).
 
 
-✍️ **不必为了工程化牺牲开发者体验**。
+✍️ **不必为了工程化牺牲开发者体验**
 
 envd 环境主要通过 SSH 接口访问。你可以在环境中使用 VSCode-Remote、Jupyter、Pycharm 或其他你任何喜欢的 IDE。除此之外，你可以在 envd 文件里声明你想要的IDE插件， `envd` 会安装他们。
 
@@ -97,7 +97,7 @@ def build():
     install.vscode_extensions([
         "ms-python.python",
     ])
-````
+```
 
 ☁️ **可追踪的开发环境**。
 
