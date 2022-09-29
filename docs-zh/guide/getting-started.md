@@ -14,13 +14,13 @@ envd（`ɪnˈvdɪ`）是一个命令行工具，可以帮助你为 AI/ML 创建�
   <img src="https://user-images.githubusercontent.com/5100735/189058399-3865a039-9459-4e74-83dd-3ee2ecadfef5.svg" width="75%"/>
 </p>
 
-## 为什么使用`envd`？
+## 为什么使用 `envd` ？
 
-使用`envd`构建的环境提供了以下开箱即用的功能。
+使用 `envd` 构建的环境提供了以下开箱即用的功能。
 
 ❤️ **团队的知识积累**。
 
-`envd`构建函数可以被重用。使用`include`函数来导入任何 git 仓库中的 envd 函数。复用不再需要复制粘贴 Dockerfile 中的命令，可以直接复用已有函数。
+ `envd` 构建函数可以被重用。使用 `include` 函数来导入任何 git 仓库中的 envd 函数。复用不再需要复制粘贴 Dockerfile 中的命令，可以直接复用已有函数。
 
 ```python
 envdlib = include("https://github.com/tensorchord/envdlib")
@@ -73,7 +73,7 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 
 [Buildkit](https://github.com/moby/buildkit)支持并行构建和构建时的软件缓存（例如pip和apt缓存）。你可以在不用了解细节的情况下享受到它的强大之处。
 
-例如，PyPI缓存是在不同的构建过程中可以被被共享。因此如果软件包以前被下载过，就会直接利用缓存安装。
+例如，PyPI 缓存是在不同的构建过程中可以被被共享。因此如果软件包以前被下载过，就会直接利用缓存安装。
 
 <p align=center>
   <img src="https://user-images.githubusercontent.com/5100735/189928628-543f4851-87b7-462b-b811-372cbf46ff25.svg" width="65%"/>
@@ -81,16 +81,16 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 
 🐍 **单个配置文件完成一切需求**。
 
-开发环境中充满了Dockerfile、bash脚本、Kubernetes YAML文件和许多其他冗长的脚本文件，这些文件在环境的不断迭代下可能失效。有了envd之后，你只需要一个配置文件`build.envd`[^1]，它对本地Docker和云端的Kubernetes集群都适用。
+开发环境中充满了 Dockerfile、bash 脚本、Kubernetes YAML 文件和许多其他冗长的脚本文件，这些文件在环境的不断迭代下可能失效。有了 envd 之后，你只需要一个配置文件`build.envd`[^1]，它对本地 Docker 和云端的 Kubernetes 集群都适用。
 
 ![envd](https://user-images.githubusercontent.com/5100735/188821980-dcbd9069-b504-436a-9ffd-05ac5543a6d1.png)
 
-[^1]: 构建语言实际上是Python的一个方言 [starlark](https://docs.bazel.build/versions/main/skylark/language.html).
+[^1]: 构建语言实际上是 Python 的一个方言 [starlark](https://docs.bazel.build/versions/main/skylark/language.html).
 
 
 ✍️ **不必为了工程化牺牲开发者体验**。
 
-envd环境主要通过SSH接口访问。你可以在环境中使用VSCode-Remote、Jupyter、Pycharm或其他你任何喜欢的IDE。除此之外，你可以在envd文件里声明你想要的IDE插件，`envd`会安装他们。
+envd 环境主要通过 SSH 接口访问。你可以在环境中使用 VSCode-Remote、Jupyter、Pycharm 或其他你任何喜欢的 IDE。除此之外，你可以在 envd 文件里声明你想要的IDE插件， `envd` 会安装他们。
 
 ```python
 def build():
@@ -101,7 +101,7 @@ def build():
 
 ☁️ **可追踪的开发环境**。
 
-你是否正在进行多个项目，而这些项目都需要不同版本的 CUDA？`envd`可以帮助你创建隔离的、干净的环境。
+你是否正在进行多个项目，而这些项目都需要不同版本的 CUDA？ `envd` 可以帮助你创建隔离的、干净的环境。
 
 ## 谁应该使用 envd？
 
@@ -117,9 +117,9 @@ def build():
 
 - Docker (20.10.0 or above)
 
-###安装和初始化`envd`。
+### 安装和初始化 `envd` 
 
-`envd`可以用`pip`来安装（只支持 Python3）。安装完成后，请运行`envd bootstrap`来初始化。
+ `envd` 可以用 `pip` 来安装（只支持 Python3）。安装完成后，请运行`envd bootstrap`来初始化。
 
 ```bash
 pip3 install --pre --upgrade envd
@@ -136,7 +136,7 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 
 :::
 
-### 创建一个`envd`环境
+### 创建一个 `envd` 环境
 
 先克隆仓库[`envd-quick-start`](https://github.com/tensorchord/envd-quick-start):
 
@@ -157,7 +157,9 @@ def build():
     shell("zsh")
 ```
 
-_我们在这里使用 Python 作为例子，envd 也支持其他语言，如 R 和 Julia，点击[这里](https://github.com/tensorchord/envd/tree/main/examples)。_
+:::tip
+我们在这里使用 Python 作为例子，envd 也支持其他语言，如 R 和 Julia，点击[这里](https://github.com/tensorchord/envd/tree/main/examples)。
+:::
 
 然后可以运行下面的命令来建立一个新的环境：
 
@@ -226,7 +228,7 @@ envd-quick-start        http://localhost:42779   envd-quick-start.envd   /home/g
 
 我们的路线图在这里 [ROADMAP](https://envd.tensorchord.ai/community/roadmap.html)。
 
-## 为`envd`贡献 😊
+## 为 `envd` 贡献 😊
 
 我们欢迎来自开源社区、个人和合作伙伴的各种贡献。
 
