@@ -14,7 +14,7 @@ You can use remote cache to accelerate the build process. `envd` build cache[^1]
 
 ## How to use?
 
-The arguments `--export-cache` and `--import-cache` are used to export and import the cache. 
+The arguments `--export-cache` and `--import-cache` are used to export and import the cache.
 
 The build cache will be exported to the given location if `--export-cache` is specified. And the build cache will be imported from the given location if `--import-cache` is specified.
 
@@ -110,6 +110,7 @@ GitHub Actions cache saves both cache metadata and layers to GitHub's Cache serv
 Similarly to using [actions/cache](https://github.com/actions/cache), caches are [scoped by branch](https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows#restrictions-for-accessing-a-cache), with the default and target branches being available to every branch.
 
 Following attributes are required to authenticate against the [GitHub Actions Cache service API](https://github.com/tonistiigi/go-actions-cache/blob/master/api.md#authentication):
+
 - `url`: Cache server URL (default `$ACTIONS_CACHE_URL`)
 - `token`: Access token (default `$ACTIONS_RUNTIME_TOKEN`)
 
@@ -136,14 +137,17 @@ envd build ... \
 ```
 
 The following attributes are required:
+
 - `bucket`: AWS S3 bucket (default: `$AWS_BUCKET`)
 - `region`: AWS region (default: `$AWS_REGION`)
 
 Storage locations:
+
 - blobs: `s3://<bucket>/<prefix><blobs_prefix>/<sha256>`, default: `s3://<bucket>/blobs/<sha256>`
 - manifests: `s3://<bucket>/<prefix><manifests_prefix>/<name>`, default: `s3://<bucket>/manifests/<name>`
 
 S3 configuration:
+
 - `blobs_prefix`: global prefix to store / read blobs on s3 (default: `blobs/`)
 - `manifests_prefix`: global prefix to store / read blobs on s3 (default: `manifests/`)
 - `endpoint_url`: specify a specific S3 endpoint (default: empty)
@@ -158,6 +162,7 @@ Others options are:
 - Access key ID and Secret Access Key, using the `access_key_id` and `secret_access_key` attributes.
 
 `--export-cache` options:
+
 - `type=s3`
 - `mode=<min|max>`: specify cache layers to export (default: `min`)
   - `min`: only export layers for the resulting image
@@ -167,6 +172,7 @@ Others options are:
   - Multiple manifest names can be specified at the same time, separated by `;`. The standard use case is to use the git sha1 as name, and the branch name as duplicate, and load both with 2 `import-cache` commands.
 
 `--import-cache` options:
+
 - `type=s3`
 - `prefix=<prefix>`: set global prefix to store / read files on s3 (default: empty)
 - `blobs_prefix=<prefix>`: set global prefix to store / read blobs on s3 (default: `blobs/`)

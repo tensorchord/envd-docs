@@ -1,4 +1,3 @@
-
 # 构建您的 envd 环境
 
 `envd` 通过读取 `build.envd` 文件中的配置来自动构建镜像。`build.envd` 是一个包含所有命令的配置文件。
@@ -36,7 +35,7 @@ $ envd build --path examples/mnist
 
 <custom-title title="build.envd">
 
-```python 
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -69,7 +68,7 @@ def build():
 
 ```bash
 $ envd up
-[+] ⌚ parse build.envd and download/cache dependencies 0.0s ✅ (finished) 
+[+] ⌚ parse build.envd and download/cache dependencies 0.0s ✅ (finished)
 [+] 🐋 build envd environment 7.9s (16/16) ✅ (finished)
  ...
  => exporting to oci image format                                      0.4s
@@ -77,15 +76,14 @@ $ envd up
  => => exporting manifest sha256:7ef2e8571485ce51d966b4cf5fe83232520f  0.0s
  => => exporting config sha256:abec960de30fce69dc19126577c7aaae3f9b62  0.0s
  => => sending tarball                                                 0.4s
-envd@588f26349c61 $ 
+envd@588f26349c61 $
 ```
 
 </custom-title>
 
 3. 重新进入您的环境，如果您退出了当前 `shell`，使用 `ssh <project-directory-name>.envd` 命令将重新进入环境。
 
-
-```bash 
+```bash
 envd@588f26349c61 $ exit
 $ ssh demo.envd
 envd@588f26349c61 $ # 欢迎回来！
@@ -125,15 +123,13 @@ def build():
 
 `base` 将声明您在该环境中使用的操作系统和语言。
 
-
-
 ### 安装 Python 包
 
 通过 [`envd` install API](../api/starlark/install) 中的 `install.python_packages` 函数在环境中安装 Python 包：
 
 <custom-title title="build.envd">
 
-```python 
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -173,7 +169,7 @@ array([2, 3, 4])
 
 <custom-title title="build.envd">
 
-```python 
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
@@ -214,7 +210,7 @@ def build():
 ```bash
 $ envd up --detach
 $ envd get env
-NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
+NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID
 envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
 ```
 
@@ -226,7 +222,7 @@ envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/g
 
 <custom-title title="build.envd">
 
-```python 
+```python
 def build():
     config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
     base(os="ubuntu20.04", language="python3")
@@ -239,7 +235,6 @@ def build():
 
 </custom-title>
 配置成功后，Python 包将从新的源下载，而不是 [pypi.org](https://pypi.org/)
-
 
 ### 更多 build.envd 示例
 

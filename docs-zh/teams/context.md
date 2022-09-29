@@ -18,7 +18,7 @@ Viewing the default context is the easiest way to see what a context looks like.
 
 ```bash
 $ envd context ls
-CONTEXT                 BUILDER                 SOCKET                            
+CONTEXT                 BUILDER                 SOCKET
 default (current)       docker-container        docker-container://envd_buildkitd
 ```
 
@@ -31,8 +31,8 @@ A new context can be created with the `envd context create` command.
 ```bash
 $ envd context create --name demo \
     --builder-socket buildkitd-demo --use --builder docker-container
-INFO[2022-08-15T15:33:24+08:00] Context demo is created                      
-INFO[2022-08-15T15:33:24+08:00] Current context is now "demo"       
+INFO[2022-08-15T15:33:24+08:00] Context demo is created
+INFO[2022-08-15T15:33:24+08:00] Current context is now "demo"
 ```
 
 The argument `--use` switches to the newly created context. Then all the commands issued by `envd` will run in the new context.
