@@ -1,12 +1,12 @@
 # 在团队里使用 envd
 
-`envd`是为团队使用设计的! 🥰
+`envd` 是为团队使用设计的! 🥰
 
 这个教程将展示了如何轻松 `envd` 成到你的基础设施。如果你遇到问题，请在[💬 Discord](https://discord.gg/KqswhpVgdU)上联系我们，我们很乐意帮助你！
 
 ## 它是如何工作的？
 
-你的 git 仓库中的`build.envd`将负责描述`envd`的环境配置。运行 `envd build` 来构建和推送镜像，您可以轻松地集成在现有 CI/CD 系统中，如 GitHub Actions、Jenkins 或 Argo。
+你的 git 仓库中的 `build.envd` 将负责描述 `envd` 的环境配置。运行 `envd build` 来构建和推送镜像，您可以轻松地集成在现有 CI/CD 系统中，如 GitHub Actions、Jenkins 或 Argo。
 
 用户可以将镜像推送到任何 OCI 兼容的镜像仓库，如 Docker Hub、Harbor 或 Quay。之后您就可以在内部额 AI/ML 平台上使用。
 
@@ -33,7 +33,7 @@ AI/ML 工程师和基础设施工程师都可以从 `envd` 中受益。AI/ML 工
 $ envd build --output type=image,name=docker.io/<username>/<image>, push=true
 ```
 
-`envd build --output`支持的选项
+`envd build --output` 支持的选项
 
 - `type=image`：指定输出类型是镜像。
 - `name=<value>`: 指定镜像名称
@@ -41,6 +41,6 @@ $ envd build --output type=image,name=docker.io/<username>/<image>, push=true
 
 ## 使用镜像
 
-`envd`镜像默认包含一个 sshd 服务器和一个名为`envd`的 conda 环境。sshd 服务器的默认端口是 2222。你可能需要在你的 Kubernetes 部署中公开该端口的访问。
+`envd` 镜像默认包含一个 sshd 服务器和一个名为 `envd` 的 conda 环境。sshd 服务器的默认端口是 2222。你可能需要在你的 Kubernetes 部署中公开该端口的访问。
 
 除此之外，git 仓库源代码不会在镜像中。因此，你可能需要另外操作将 git 仓库里的源代码集成到镜像中。

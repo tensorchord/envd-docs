@@ -7,10 +7,7 @@ titleTemplate: Development Environment for Machine Learning Engineers
 hero:
   name: envd
   text: AI/ML Development Environment
-  tagline: A machine learning development environment for data science and AI/ML engineering teams.  
-  # image:
-  #   src: images/envd_cat.gif
-  #   alt: envd_cat
+  tagline: A machine learning development environment for data science and AI/ML engineering teams.
   actions:
     - theme: brand
       text: Get Started

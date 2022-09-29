@@ -20,7 +20,7 @@ envd（`ɪnˈvdɪ`）是一个命令行工具，可以帮助你为 AI/ML 创建�
 
 ❤️ **团队的知识积累**。
 
- `envd` 构建函数可以被重用。使用 `include` 函数来导入任何 git 仓库中的 envd 函数。复用不再需要复制粘贴 Dockerfile 中的命令，可以直接复用已有函数。
+`envd` 构建函数可以被重用。使用 `include` 函数来导入任何 git 仓库中的 envd 函数。复用不再需要复制粘贴 Dockerfile 中的命令，可以直接复用已有函数。
 
 ```python
 envdlib = include("https://github.com/tensorchord/envdlib")
@@ -30,9 +30,8 @@ def build():
     envdlib.tensorboard(8888)
 ```
 
-<details>
-  <summary><code>envdlib.tensorboard</code> 来自 <a href="https://github.com/tensorchord/envdlib/blob/main/src/monitoring.envd">github.com/tensorchord/envdlib</a></summary>
-  
+::: details `envdlib.tensorboard` 来自 [github.com/tensorchord/envdlib](https://github.com/tensorchord/envdlib/blob/main/src/monitoring.envd)
+
 ```python
 def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
         host_port=0, host_dir="/var/log/tensorboard"):
@@ -67,11 +66,12 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
     runtime.expose(envd_port=envd_port, host_port=host_port, service="tensorboard")
 
 ```
-</details>
 
-⏱️ **Builtkit 原生，构建速度提高6倍**
+:::
 
-[Buildkit](https://github.com/moby/buildkit) 支持并行构建和构建时的软件缓存（例如pip和apt缓存）。你可以在不用了解细节的情况下享受到它的强大之处。
+⏱️ **Builtkit 原生，构建速度提高 6 倍**
+
+[Buildkit](https://github.com/moby/buildkit) 支持并行构建和构建时的软件缓存（例如 pip 和 apt 缓存）。你可以在不用了解细节的情况下享受到它的强大之处。
 
 例如，PyPI 缓存是在不同的构建过程中可以被被共享。因此如果软件包以前被下载过，就会直接利用缓存安装。
 
@@ -87,10 +87,9 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 
 [^1]: 构建语言实际上是 Python 的一个方言 [starlark](https://docs.bazel.build/versions/main/skylark/language.html).
 
-
 ✍️ **不必为了工程化牺牲开发者体验**
 
-envd 环境主要通过 SSH 接口访问。你可以在环境中使用 VSCode-Remote、Jupyter、Pycharm 或其他你任何喜欢的 IDE。除此之外，你可以在 envd 文件里声明你想要的IDE插件， `envd` 会安装他们。
+envd 环境主要通过 SSH 接口访问。你可以在环境中使用 VSCode-Remote、Jupyter、Pycharm 或其他你任何喜欢的 IDE。除此之外，你可以在 envd 文件里声明你想要的 IDE 插件， `envd` 会安装他们。
 
 ```python
 def build():
@@ -117,9 +116,9 @@ def build():
 
 - Docker (20.10.0 or above)
 
-### 安装和初始化 `envd` 
+### 安装和初始化 `envd`
 
- `envd` 可以用 `pip` 来安装（只支持 Python3）。安装完成后，请运行 `envd bootstrap` 来初始化。
+`envd` 可以用 `pip` 来安装（只支持 Python3）。安装完成后，请运行 `envd bootstrap` 来初始化。
 
 ```bash
 pip3 install --pre --upgrade envd
