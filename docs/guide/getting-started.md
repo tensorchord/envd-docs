@@ -230,8 +230,14 @@ We welcome all kinds of contributions from the open-source community, individual
 
 - Join our [discord community](https://discord.gg/KqswhpVgdU)!
 - To build from the source, please read our [contributing documentation](https://envd.tensorchord.ai/community/contributing.html) and [development tutorial](https://envd.tensorchord.ai/community/development.html).
-- [**Set up a time to chat!**](https://forms.gle/9HDBHX5Y3fzuDCDAA)
-
 
 Develop with gitpod: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tensorchord/envd)
+
+### Talk with us
+
+💬 Interested in talking with us about your experience building or managing AI/ML applications?
+
+[**Set up a time to chat!**](https://forms.gle/9HDBHX5Y3fzuDCDAA)
+
+
 

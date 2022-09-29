@@ -6,8 +6,8 @@ envd（`ɪnˈvdɪ`）是一个命令行工具，可以帮助你为 AI/ML 创建�
 
 开发环境通常包括了 Python，系统依赖，CUDA，BASH 脚本，Dockerfiles，SSH 配置，Kubernetes YAMLs，以及许多其他冗长的设置。在长年累月的开发中，系统里的东西总会越来越多，改动无法追踪，最终导致错误。 envd 就是要解决这样的问题。
 
-1. 在`build.envd`中声明需要的软件依赖（CUDA、Python 包、你最喜欢的 IDE 等）。
-2. 在命令行里运行`envd up`。
+1. 在 `build.envd` 中声明需要的软件依赖（CUDA、Python 包、你最喜欢的 IDE 等）。
+2. 在命令行里运行 `envd up` 。
 3. 在独立且隔离的环境中开发。
 
 <p align="center">
@@ -119,7 +119,7 @@ def build():
 
 ### 安装和初始化 `envd` 
 
- `envd` 可以用 `pip` 来安装（只支持 Python3）。安装完成后，请运行`envd bootstrap`来初始化。
+ `envd` 可以用 `pip` 来安装（只支持 Python3）。安装完成后，请运行 `envd bootstrap` 来初始化。
 
 ```bash
 pip3 install --pre --upgrade envd
@@ -128,7 +128,7 @@ envd bootstrap
 
 ::: tip
 
-你可以在运行`envd bootstrap`时添加`--dockerhub-mirror`或`-m`选项，来设置 docker.io 仓库的镜像。
+你可以在运行 `envd bootstrap` 时添加 `--dockerhub-mirror`或`-m`选项，来设置 docker.io 仓库的镜像。
 
 ```bash
 envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
@@ -144,7 +144,7 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 git clone https://github.com/tensorchord/envd-quick-start.git
 ```
 
-声明文件`build.envd`是这样的:
+声明文件 `build.envd` 是这样的:
 
 ```python title=build.envd
 def build():
@@ -197,7 +197,7 @@ envd-quick-start via Py v3.9.13 via 🅒 envd
 
 ### 设置 Jupyter Notebook
 
-修改`build.envd`开启 jupyter notebook 支持:
+修改 `build.envd` 开启 jupyter notebook 支持:
 
 ```python title=build.envd
 def build():
@@ -211,7 +211,7 @@ def build():
     config.jupyter()
 ```
 
-你可以通过`envd envs ls`获得正在运行的 Jupyter 笔记本的端口。
+你可以通过 `envd envs ls` 获得正在运行的 Jupyter 笔记本的端口。
 
 ```bash
 $ envd up --detach
