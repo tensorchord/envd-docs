@@ -50,3 +50,9 @@ build:
 
 dev:
 	@pnpm docs:dev
+
+lintmd:
+	@pnpm prettier --check "**/*.md"
+
+prettiermd:
+	@pnpm prettier --write "**/*.md"
