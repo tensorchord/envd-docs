@@ -1,32 +1,35 @@
-# `envd` vs. Other tools
+# `envd` 和其他工具的比较
 
-## What is `envd`?
+## `envd` 是什么?
 
-`envd` is a tool to build portable environments for machine learning and data science scenarios with Python-like syntax. 
+`envd`是一个为机器学习和数据科学场景建立可迁移，可复现环境的工具。
 
+## `envd` 能带来的好处
 
-## `envd` Benefits
-Benefits of using `envd` include:
-- Clear dev environment setup and management for each project. No longer worry about the conflict between CUDA, system package, virtualenv, etc. Each project will have its dev environment. And you can easily use the environment on any machine and share it with your collaborators. 
-- Unify dev and production environments by `envd`'s multi-target supports.
-- Integrate with container ecosystem. `envd` can be used in any container, such as Docker, Kubernetes, etc.
-- Dataset support. `envd` can be used to download and preprocess datasets.
+使用 `envd` 的好处包括：
 
-## How does it work?
-- Parallelize the image build process. Powered by buildkit, `envd` can parallelize different tools installation to minimize the build time.
-- Cache support for standard installation tools, such as pip, conda, apt, and so on. In a standard dockerfile build, each layer depends on the previous layer. Any change that happens before will trigger the re-build for all the later stages, which greatly increases the build time. `envd` had built-in cache support for most common-used tools and reduced the dependency between them, which minimizes the time to wait when you make modifications to your environment. 
-- Python-like language syntax. `envd` use a python dialect called starlark as the language and provide a set of built-in functions to simplify your burden. Declare what you want, and `envd` will take care of the rest, including user permission, ssh server, entrypoint setup, etc...
+- 为每个项目提供清晰可追踪的开发环境设置和管理。不再担心 CUDA、apt 包、virtualenv 等之间的冲突。每个项目都会有自己的开发环境。而且你可以很容易地将这个环境部署到任何机器上，你可以很容易地将这个环境部署到任何机器上，并且可以将它分享给你的同事们。
+- 通过 `envd` 的多目标支持来统一开发和生产环境。
+- 与容器生态系统整合：`envd` 可以在任何容器生态中使用，如 Docker，Kubernetes 等。
+- 数据集支持：`envd` 可以用来下载和预处理数据集。
 
+##它是如何工作的？
 
-## `envd` vs. conda
-`envd` doesn't conflict with conda. You can also use conda inside `envd` by `install.conda_packages`
-- `envd` environment is built from the pure official image. There will be no legacy installation artifacts. Only those you declare in the file will appear in the environment. conda's environment isolation functionality depends on environment variable and rewrite library's rpath. Users might meet conflict between system package and the conda package (such as CUDA). In corner cases, it might result in unexpected behaviors.
-- `envd` can export containers used for production or pipeline stages, narrowing the gap between development and production. You can build multiple environments for different purposes(research, development, serving, data processing, etc.) from the same file.
-<!-- We can add data related section once finished -->
+- 并行镜像构建过程：在 buildkit 的支持下，`envd` 可以将不同的工具安装并行化，以减少构建时间。
+- 复用常见包管理工具的缓存，如 pip、conda、apt 等。在一个标准的 dockerfile 构建中，每一层都依赖于前一层。之前发生的任何变化都会触发后面所有阶段的重新构建，这大大增加了构建时间。`envd` 对大多数常用的工具都有内置的缓存支持，并减少了它们之间的依赖性，这使你在对环境进行修改时，再次构建的时间降到最低。
+- 和 Python 类似的语法。`envd` 使用一种叫做 starlark 的 python 方言作为语言，并提供了一组内置函数来简化你的负担。声明你想要的东西，`envd`会处理其余的事情，包括用户权限、ssh 服务器、入口设置等……
 
+## `envd` 与 conda 的区别
 
-## `envd` vs. docker
-`envd` is built on top of the docker ecosystem, and fully compatible with docker.
-- `envd` parallelizes the image build process, accelerating the build process. 
-- docker uses dockerfile as the major language. `envd` uses starlark as the language, which is more familiar to the data science practitioners.
-- `envd` supports multi-target build from a single file, while docker usually needs to write multiple files for each scenario, which makes reuse of the building block complicated.
+`envd` 与 conda 并不冲突。你也可以通过 `install.conda_packages` 在 `envd` 中使用 conda。
+
+- `envd` 环境是从标准干净的官方镜像构建的。不会有任何之前使用遗留下的痕迹。只有那些你在 `envd` 文件中声明的部分才会出现在环境中。相对比，conda 的环境隔离功能依赖于环境变量和重写库的 rpath。用户可能会遇到系统包和 conda 包（比如 CUDA）之间的冲突。在特殊情况下，可能会导致预期外的行为。
+- `envd` 可以导出用于生产或流水线阶段的容器，缩小了开发环境和生产环境之间的差距。你可以利用同一个文件中为不同工作阶段（研究、开发、上线、数据处理等）声明多个环境。
+
+## `envd` 与 docker 对比
+
+`envd` 是建立在 docker 生态系统之上的，与 docker 完全兼容。
+
+- `envd` 将镜像构建过程并行化，加速了构建过程。
+- docker 使用 dockerfile 作为主要语言。 `envd` 使用 starlark 作为语言，类似 Python 的语法对数据科学从业者来说更为熟悉简单。
+- `envd` 支持从一个文件进行多目标构建，而 docker 通常需要为每个场景编写多个文件，这使得重用模块使用变得复杂。

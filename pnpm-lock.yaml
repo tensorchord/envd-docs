@@ -6,12 +6,14 @@ importers:
     specifiers:
       '@algolia/client-search': ^4.9.1
       markdown-it-footnote: ^3.0.3
+      prettier: 2.7.1
       vitepress: 1.0.0-alpha.9
       vue: ^3.2.37
     dependencies:
       '@algolia/client-search': 4.13.1
       markdown-it-footnote: 3.0.3
     devDependencies:
+      prettier: 2.7.1
       vitepress: 1.0.0-alpha.9_ygzyjl425qrcgm3zeayiliwge4
       vue: 3.2.37
 
@@ -620,6 +622,12 @@ packages:
 
   /preact/10.8.2:
     resolution: {integrity: sha512-AKGt0BsDSiAYzVS78jZ9qRwuorY2CoSZtf1iOC6gLb/3QyZt+fLT09aYJBjRc/BEcRc4j+j3ggERMdNE43i1LQ==}
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /resolve/1.22.1:

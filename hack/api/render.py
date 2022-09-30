@@ -53,7 +53,7 @@ def main():
     }
     docs_path.mkdir(exist_ok=True, parents=True)
 
-    for f in generated_doc_dir.rglob("*.md"):
+    for f in sorted(generated_doc_dir.rglob("*.md")):
         if f.name == "__init__.md":
             parent_name = f.parent.name
             if parent_name == "api":
