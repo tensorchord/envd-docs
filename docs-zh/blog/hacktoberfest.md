@@ -20,7 +20,7 @@ Hacktoberfest 是为期一个月的，由 DigitalOcean 运行的开源软件庆�
 
 为了帮助大家更好地参与社区，熟悉 envd 的设计与实现，我们也准备好了[开源贡献指南](https://zh.envd.tensorchord.ai/community/contributing.html)和 [envd 开发指南文档](https://zh.envd.tensorchord.ai/community/development.html)。
 
-当你遇到问题时，可以通过 [discord](https://discord.gg/KqswhpVgdU) 与我们联系，通过与其他贡献者的交流来帮助你解决疑惑。
+当你遇到问题时，可以通过 [discord](https://discord.gg/KqswhpVgdU) 与我们联系，与其他贡献者交流来帮助你解决疑惑。
 
 还在等什么，快来一起哈皮⑧
 
