@@ -45,11 +45,17 @@ generate-cli-ref:
 generate-api-ref:
 	@python hack/api/render.py
 
-build: 
-	@pnpm docs:build
+build:
+	@pnpm build
+
+build-zh:
+	@pnpm build:zh
 
 dev:
 	@pnpm docs:dev
+
+dev-zh:
+	@pnpm dev:zh
 
 lintmd:
 	@pnpm prettier --check "**/*.md"
