@@ -1,20 +1,20 @@
-# `envd` Contexts
+# `envd` 上下文
 
-This guide shows how contexts make it easy for a single `envd` CLI to manage multiple builder instances. You can also use `envd` to build the images in CI/CD systems with the help of `envd` contexts.
+本篇会详细介绍如何轻松使用一个 `envd` 命令来管理多个构建实例。在 `envd` 上下文的帮助下，你也可以在 CI/CD 系统中使用 `envd` 来构建镜像。
 
-A single `envd` CLI can have multiple contexts. Each context contains the endpoint and security information required to manage different builder instances. A builder instance is responsible for building images and storing the building cache. A builder instance runs a separate [buildkit daemon](https://github.com/moby/buildkit).
+每个 `envd` 命令行都对应多个上下文。每个上下文包含管理不同构建实例的终端和安全信息。构建实例负责构建镜像并保存构建过程中的缓存。每个构建实例都需要有一个独立的 [buildkit daemon](https://github.com/moby/buildkit)。
 
-The docker context command makes it easy to configure these contexts and switch between them.
+`envd context` 命令能够轻松设置上下文并进行切换。
 
-## The anatomy of a context
+## 上下文详解
 
-There are the properties of a context:
+上下文包含以下几个属性：
 
-- `name`: name of the context
-- `builder`: type of the builder instance (`docker-container`, `kube-pod`, `tcp`)
-- `builder-socket`: builder instance endpoint
+- `name`: 上下文名称
+- `builder`: 构建实例的类型（`docker-container`, `kube-pod`, `tcp`
+- `builder-socket`: 构建实例的终端
 
-Viewing the default context is the easiest way to see what a context looks like.
+了解上下文长什么样子最简单的办法就是运行以下命令：
 
 ```bash
 $ envd context ls
@@ -22,11 +22,11 @@ CONTEXT                 BUILDER                 SOCKET
 default (current)       docker-container        docker-container://envd_buildkitd
 ```
 
-This shows the default context. `envd` bootstraps a builder container instance `envd_buildkitd` in Docker, and uses it to execute all `envd` commands.
+上面显示的是默认的上下文。`envd` 会引导启动一个名叫 `envd_buildkitd` 的构建实例镜像，并用它来执行所有的 `envd` 命令。
 
-## Create a new context
+## 创建一个新的上下文
 
-A new context can be created with the `envd context create` command.
+可以通过 `envd context create` 命令来创建一个新的上下文。
 
 ```bash
 $ envd context create --name demo \
@@ -35,31 +35,31 @@ INFO[2022-08-15T15:33:24+08:00] Context demo is created
 INFO[2022-08-15T15:33:24+08:00] Current context is now "demo"
 ```
 
-The argument `--use` switches to the newly created context. Then all the commands issued by `envd` will run in the new context.
+参数 `--use` 声明要切换到新创建的上下文。之后执行的所有 `envd` 命令都会跑在这个新的上下文中。
 
-Or you can use `envd context use` command to switch between the existing contexts.
+你也可以通过 `envd context use` 在已有的上下文中进行切换。
 
-## Remove a context
+## 删除一个上下文
 
-A context can be removed with the `envd context rm` command.
+可以执行 `envd context rm` 命令来删除一个上下文。
 
 ```bash
 $ envd context rm --name demo
 ```
 
-## Remote build (Advanced)
+## 远程构建（进阶）
 
-The builder instance `buildktid` can be run on a remote machine. There are some benefits:
+`buildkitd` 构建实例可以跑在远程机器上。这样做有以下好处：
 
-- **No need to install Docker**: You don't need to install Docker on CI/CD machines or the remote builder machines.
-- **Faster build**: The cache can be shared in different builds, Thus it will be faster to get the envd images.
-- **Safer deployment**: The secret keys and tokens are stored in the builder machine. Programs in CI/CD builds cannot access them.
+- **不需要安装 Docker**: 你不需要在 CI/CD 的机器上或者其他远程构建机器上安装 Docker。
+- **构建速度更快**: 不同构建之间可以共享缓存，因此构建速度可以更快。
+- **部署更安全**: 安全密钥和口令存储在构建机器上，CI/CD 里的程序不会访问到这些内容。
 
 ![](./assets/remote-build.png)
 
-### Start remote buildkitd on builder machine
+### 在远程构建机器上启动 buildkitd
 
-Before you run `envd` remote build, please start the buildkitd and expose it as a TCP service on the remote machine. You can have a look at the [buildkitd docs](https://github.com/moby/buildkit/blob/master/README.md#expose-buildkit-as-a-tcp-service) for more details.
+在你运行 `envd` 远程构建之前，请先在远程构建机器上启动 buildkitd 并暴露为一个 TCP 服务。你可以在 [buildkitd 文档](https://github.com/moby/buildkit/blob/master/README.md#expose-buildkit-as-a-tcp-service) 中找到详细信息。
 
 ```bash
 $ buildkitd \
@@ -67,11 +67,11 @@ $ buildkitd \
   ...
 ```
 
-The process should be long-running on the machine. All builds use this service.
+该程序需要长期运行在机器上，所有的构建都会使用这个服务。
 
-### Create `envd` context in build job
+### 在构建任务中创建 `envd` 上下文
 
-Then, let's create the corresponding `envd` context in the build job.
+让我们在构建任务中创建对应的 `envd` 上下文吧。
 
 ```bash
 $ envd context create --name remote-context \
@@ -80,9 +80,9 @@ $ envd context create --name remote-context \
   --use
 ```
 
-### Build and push the image in build job
+### 在构建任务中创建并推送镜像
 
-Then you can build and push the image in the build job.
+你可以通过以下命令构建并推送镜像。
 
 ```bash
 $ envd build --output type=image,name=docker.io/<username>/<image>,push=true
