@@ -105,7 +105,7 @@ envd build ... \
   --import-cache type=gha
 ```
 
-GitHub Actions cache saves both cache metadata and layers to GitHub's Cache service. This cache currently has a [size limit of 10GB](https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows#usage-limits-and-eviction-policy) that is shared accross different caches in the repo. If you exceed this limit, GitHub will save your cache but will begin evicting caches until the total size is less than 10 GB. Recycling caches too often can result in slower runtimes overall.
+GitHub Actions cache saves both cache metadata and layers to GitHub's Cache service. This cache currently has a [size limit of 10GB](https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows#usage-limits-and-eviction-policy) that is shared across different caches in the repo. If you exceed this limit, GitHub will save your cache but will begin evicting caches until the total size is less than 10 GB. Recycling caches too often can result in slower runtimes overall.
 
 Similarly to using [actions/cache](https://github.com/actions/cache), caches are [scoped by branch](https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows#restrictions-for-accessing-a-cache), with the default and target branches being available to every branch.
 
@@ -145,7 +145,7 @@ Storage locations:
 
 S3 configuration:
 - `blobs_prefix`: global prefix to store / read blobs on s3 (default: `blobs/`)
-- `manifests_prefix`: global prefix to store / read blobs on s3 (default: `manifests/`)
+- `manifests_prefix`: global prefix to store / read manifest on s3 (default: `manifests/`)
 - `endpoint_url`: specify a specific S3 endpoint (default: empty)
 - `use_path_style`: if set to `true`, put the bucket name in the URL instead of in the hostname (default: `false`)
 
@@ -155,7 +155,7 @@ The simplest way is to use an IAM Instance profile.
 Others options are:
 
 - Any system using environment variables / config files supported by the [AWS Go SDK](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html). The configuration must be available for the buildkit daemon, not for the client.
-- Access key ID and Secret Access Key, using the `access_key_id` and `secret_access_key` attributes.
+- Access Key ID and Secret Access Key, using the `access_key_id` and `secret_access_key` attributes.
 
 `--export-cache` options:
 - `type=s3`
@@ -164,7 +164,7 @@ Others options are:
   - `max`: export all the layers of all intermediate steps
 - `prefix=<prefix>`: set global prefix to store / read files on s3 (default: empty)
 - `name=<manifest>`: specify name of the manifest to use (default `buildkit`)
-  - Multiple manifest names can be specified at the same time, separated by `;`. The standard use case is to use the git sha1 as name, and the branch name as duplicate, and load both with 2 `import-cache` commands.
+  - Multiple manifest names can be specified at the same time, separated by `;`. The standard use case is to use the Git SHA1 as name, and the branch name as duplicate, and load both with 2 `import-cache` commands.
 
 `--import-cache` options:
 - `type=s3`
