@@ -1,10 +1,10 @@
-# CI/CD Integration
+# 集成 CI/CD
 
-`envd` only has one software dependency: [Buildkitd](https://github.com/moby/buildkit#containerizing-buildkit), thus `envd` is compatible with most Continuous Integration systems. Please contact us on [💬 Discord](https://discord.gg/KqswhpVgdU) if you have problems about integrating `envd` with your CI/CD system, we are glad to help!
+`envd` 仅有一个依赖软件：[Buildkitd](https://github.com/moby/buildkit#containerizing-buildkit)。因此 `envd` 兼容绝大多数持续集成系统。如果你在这方面遇到问题，可以通过 [💬 Discord](https://discord.gg/KqswhpVgdU) 联系我们。我们很乐于提供这方面的帮助。
 
 ## GitHub Actions
 
-Here is an [example](https://github.com/tensorchord/envd-quick-start/blob/master/.github/workflows/release.yml) of a GitHub Action build.
+这里有一个使用 GitHub Action 构建的 [例子](https://github.com/tensorchord/envd-quick-start/blob/master/.github/workflows/release.yml)。
 
 <custom-title title="Build and push envd image to ghcr.io">
 
@@ -38,7 +38,7 @@ jobs:
 
 </custom-title>
 
-If you just want to verify if `envd build` works, things are easier:
+如果你想验证 `envd build` 是否生效，可以通过以下方式：
 
 <custom-title title="Build envd image">
 
@@ -68,7 +68,7 @@ jobs:
 
 ## GitLab CI
 
-The example below uses [docker.io/docker:dind](https://hub.docker.com/layers/docker/library/docker/dind/images/sha256-95d63c46fdbeca706f6cb736ebcfbbf81e845c3f5a64ab5133cb0fe15ecbbfc4?context=explore) to build the `envd` image.
+下面的例子使用 [docker.io/docker:dind](https://hub.docker.com/layers/docker/library/docker/dind/images/sha256-95d63c46fdbeca706f6cb736ebcfbbf81e845c3f5a64ab5133cb0fe15ecbbfc4?context=explore) 来构建 `envd` 镜像。
 
 <custom-title title=".gitlab-ci.yml">
 
@@ -88,7 +88,7 @@ envd:
 
 </custom-title>
 
-If you do not want to enable docker in the CI environment, you can create a remote buildkitd instance on remote docker daemon or Kubernetes cluster.
+如果你不想在 CI 环境中启动 docker，你可以在远程 Docker 或 Kubernetes 集群中创建一个 buildkitd 实例。
 
 <custom-title title=".gitlab-ci.yml">
 
