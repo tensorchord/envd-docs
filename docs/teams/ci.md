@@ -29,15 +29,6 @@ kind: ConfigMap
 metadata:
   name: envd-daemonless-demo
 data:
-  build.envd: |-
-    def build():
-        install.apt_packages(name=["via])
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: envd-daemonless-demo
-data:
   build.envd: |
     def build():
       install.apt_packages(name=["via"])
