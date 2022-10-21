@@ -2,6 +2,93 @@
 
 `envd` 仅有一个依赖软件：[Buildkitd](https://github.com/moby/buildkit#containerizing-buildkit)。因此 `envd` 兼容绝大多数持续集成系统。如果你在这方面遇到问题，可以通过 [💬 Discord](https://discord.gg/KqswhpVgdU) 联系我们。我们很乐于提供这方面的帮助。
 
+## Deamonless Mode
+
+如果你想像 Kaniko 一样，在一个 Job 中运行 envd 构建镜像的过程，那么你可以使用 `tensorchord/envd:${ENVD_VERSION}-rootless` 镜像：
+
+```
+docker run \                
+    -it \
+    --rm \
+    --security-opt seccomp=unconfined \
+    --security-opt apparmor=unconfined \
+    -e BUILDKITD_FLAGS=--oci-worker-no-process-sandbox \
+    --entrypoint /envd-daemonless.sh \
+    -v path-to-envd-dir:/tmp/work \
+    tensorchord/envd:${ENVD_VERSION}-rootless \
+    --debug build -p /tmp/work --output type=image,name=<image-name>,push=true
+```
+
+在 Kubernetes 上可以使用 Job 来完成：
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: envd-daemonless-demo
+data:
+  build.envd: |-
+    def build():
+        install.apt_packages(name=["via])
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: envd-daemonless-demo
+data:
+  build.envd: |
+    def build():
+      install.apt_packages(name=["via"])
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: envd-daemonless-job
+spec:
+  template:
+    metadata:
+      annotations:
+        container.apparmor.security.beta.kubernetes.io/envd: unconfined
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: envd
+          # Update the image tag to the expected version of envd.
+          image: tensorchord/envd:v0.2.4-alpha.15-rootless
+          env:
+            - name: BUILDKITD_FLAGS
+              value: --oci-worker-no-process-sandbox
+          command:
+            - /envd-daemonless.sh
+          args:
+            - --debug
+            - build
+            - -p
+            - /
+            - --output
+            - type=image,name=<image-name>,push=true
+          securityContext:
+            # Needs Kubernetes >= 1.19
+            seccompProfile:
+              type: Unconfined
+          volumeMounts:
+            - name: workspace
+              readOnly: true
+              subPath: build.envd
+              mountPath: /build.envd
+            # https://github.com/moby/buildkit/issues/879#issuecomment-1240347038
+            - mountPath: /home/user/.local/share/buildkit
+              name: buildkitd
+      # To push the image, you also need to create `~/.docker/config.json` secret
+      # and set $DOCKER_CONFIG to `/path/to/.docker` directory.
+      volumes:
+        - configMap:
+            name: envd-daemonless-demo
+          name: workspace
+        - name: buildkitd
+          emptyDir: {}
+```
+
 ## GitHub Actions
 
 这里有一个使用 GitHub Action 构建的 [例子](https://github.com/tensorchord/envd-quick-start/blob/master/.github/workflows/release.yml)。
