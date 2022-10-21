@@ -4,7 +4,9 @@
 
 ## Deamonless Mode
 
-You can run `envd build` in a single container (which likes kaniko):
+You can run `envd build` in a single container (which likes kaniko).
+
+There are many features of envd and buildkit cannot be used in the daemonless mode. For example, you cannot share the cache during the multiple builds. But at the same time, you do not need to deploy a buildkit daemon instance on Kubernetes.
 
 ```
 docker run \                

@@ -4,7 +4,9 @@
 
 ## Deamonless Mode
 
-如果你想像 Kaniko 一样，在一个 Job 中运行 envd 构建镜像的过程，那么你可以使用 `tensorchord/envd:${ENVD_VERSION}-rootless` 镜像：
+如果你希望像 Kaniko 一样，在一个 Job 中运行 envd 构建镜像的过程，那么你可以使用 `tensorchord/envd:${ENVD_VERSION}-rootless` 镜像。
+
+如果使用 daemonless 的方式，很多 envd 和 buildkit 带来的特性将无法被使用。比如你将不能在多次构建之间共享缓存。但是同时你也不需要在 Kubernetes 长时间运行一个 buildkitd 实例。
 
 ```
 docker run \                
