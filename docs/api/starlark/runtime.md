@@ -99,3 +99,15 @@ Mount from host path to container path (runtime)
 - `host_path` _str_ - source path in the host machine
 - `envd_path` _str_ - destination path in the envd container
 
+## init
+
+```python
+def init(commands: List[str])
+```
+
+Commands to be executed when start the container
+
+**Arguments**:
+
+- `commands` _List[str]_ - list of commands
+
