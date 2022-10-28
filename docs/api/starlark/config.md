@@ -160,3 +160,16 @@ def rstudio_server()
 
 Enable the RStudio Server (only work for `base(os="ubuntu20.04", language="r")`)
 
+## repo
+
+```python
+def repo(url: str, description: str)
+```
+
+Setup repo related information. Will save to the image labels.
+
+**Arguments**:
+
+- `url` _str_ - repo URL
+- `description` _str_ - repo description
+
