@@ -46,17 +46,24 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       collapsible: true,
       items:[
         { text: 'Why Use envd?', link: '/faq/why' },
-        { text: 'envd vs. Others', link:'/faq/comparison' }
+        { text: 'envd vs. Others', link: '/faq/comparison' }
       ]
     },
     {
       text: 'Community',
       collapsible: true,
-      items:[
-        {text:'Contributing to envd', link:'/community/contributing'},
-        {text:'Development Tutorial', link:'/community/development'},
-        {text:'Roadmap', link:'/community/roadmap'},
+      items: [
+        {text: 'Contributing to envd', link: '/community/contributing'},
+        {text: 'Development Tutorial', link: '/community/development'},
+        {text: 'Roadmap', link: '/community/roadmap'},
       ]
+    },
+    {
+      text: 'Misc',
+      collapsed: true,
+      items: [
+        {text: 'Telemetry', link: '/misc/telemetry'},
+      ],
     },
   ],
 }
