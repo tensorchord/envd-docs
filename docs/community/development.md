@@ -55,7 +55,7 @@ The steps below walk you through the setup process. If you have questions, you c
     $ go mod tidy
     $ make
     $ ./bin/envd bootstrap
-    $ ./bin/envd --version
+    $ ./bin/envd version
     ```
 1. Make some changes locally to the codebase and commit them with Git.
     ```

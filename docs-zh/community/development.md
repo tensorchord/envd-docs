@@ -52,7 +52,7 @@
     $ go mod tidy
     $ make
     $ ./bin/envd bootstrap
-    $ ./bin/envd --version
+    $ ./bin/envd version
     ```
 1. 在本地的代码库中进行修改并且用 Git 将这些改动 Commit。
     ```
