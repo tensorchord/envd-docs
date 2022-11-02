@@ -30,7 +30,7 @@ def build():
 
 def build_gpu():
     build() # include all dependency decalred in build function
-    install.cuda(version="11.2.0", cudnn="8")
+    install.cuda(version="11.2.2", cudnn="8")
 ```
 
 </custom-title>

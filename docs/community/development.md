@@ -45,24 +45,24 @@ There are a lot of files here! Here's a brief overview. It can be confusing, but
 The steps below walk you through the setup process. If you have questions, you can ask on [discord](https://discord.gg/KqswhpVgdU) or post an issue that describes the place you are stuck, and we'll do our best to help.
 
 1. Install [Docker](https://www.docker.com/products/docker-desktop/) (20.10.0 or above) and [Golang](https://go.dev/dl/) (1.18 or above).
-1. [Fork](https://help.github.com/articles/fork-a-repo) the [`envd` repository](https://github.com/tensorchord/envd) into your own GitHub account.
-1. Clone your new fork of the repository from GitHub onto your local computer.
+2. [Fork](https://help.github.com/articles/fork-a-repo) the [`envd` repository](https://github.com/tensorchord/envd) into your own GitHub account. (Remember to uncheck the "Copy the `main` branch only")
+3. Clone your new fork of the repository from GitHub onto your local computer.
     ```
     $ git clone https://github.com/YOUR_USERNAME/envd.git
     ```
-1. Install the dependencies and compile `envd`.
+4. Install the dependencies and compile `envd`. Make sure you can get the correct version from git tags.
     ```
     $ go mod tidy
     $ make
     $ ./bin/envd bootstrap
     $ ./bin/envd version
     ```
-1. Make some changes locally to the codebase and commit them with Git.
+5. Make some changes locally to the codebase and commit them with Git.
     ```
     $ git add -u
     $ git commit -m "YOUR COMMIT MESSAGE"
     ```
-1. [Push](https://help.github.com/articles/github-glossary/#push) your new changes to your fork on GitHub.
+6. [Push](https://help.github.com/articles/github-glossary/#push) your new changes to your fork on GitHub.
     ```
     $ git push
     ```
