@@ -75,7 +75,7 @@ pipe.safety_checker = dummy
 # Run until we exit with CTRL+C
 while True:
     n = random.randint(1000, 9999)
-    image = pipe(prompt, guidance_scale=7.5)["sample"][0]
+    image = pipe(prompt, guidance_scale=7.5).images[0]
     image.save(f'{n}.jpeg')
 ```
 
