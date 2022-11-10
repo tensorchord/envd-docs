@@ -73,7 +73,7 @@ Run `envd up` in your directory to start you environment.
 
 ### Access it from your local computer
 
-First, you can copy the private key access the environment/container to your local computer. on remote machine, open the `~/.ssh/config`, find the section whose host matched the directory you build your environment. For example, if you build your environment in the directory named `demo`, the host will be `host.envd`. 
+First, you can copy the private key access the environment/container to your local computer. on remote machine, open the `~/.ssh/config`, find the section whose host matched the directory you build your environment. For example, if you build your environment in the directory named `demo`, the host will be `demo.envd`. 
 ```
 Host demo.envd
   ForwardAgent yes
