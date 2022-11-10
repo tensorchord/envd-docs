@@ -7,7 +7,7 @@ introduction: 'nullday is one of the envd maintainers. He has a dog called Shouf
 
 # 5 minutes to run your ML/AI environment on you remote machine
 
-Envd provided a strong way to run your machine learning environment. For some people, we may be provided a powerful server had a bundle of cuda devices. We also want our actual running happens on the remote server and be able to easily access the environment from our local machine.
+envd provided a strong way to run your machine learning environment. For some people, we may be provided a powerful server had a bundle of cuda devices. We also want our actual running happens on the remote server and be able to easily access the environment from our local machine.
 
 Here is the the guide. 
 
