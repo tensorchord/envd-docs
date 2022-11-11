@@ -9,7 +9,7 @@ export const blogSidebar: DefaultTheme.Sidebar = {
         // eg: { text: 'Blog', link: '/blog/post1' },
         { text: 'Machine Learning Environment Should Be Easy', link: '/blog/ml-env' },
         { text: 'envd Is Participating Hacktoberfest!', link: '/blog/hacktoberfest' },
-        { text: '5 minutes to run your ML/AI environment on you remote machine', link: '/blog/envd-on-remote-serve' },
+        { text: '5 minutes to run your ML/AI environment on your remote machine', link: '/blog/envd-on-remote-serve' },
       ]
     }
   ],
