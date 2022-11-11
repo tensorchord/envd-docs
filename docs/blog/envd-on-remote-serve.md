@@ -39,7 +39,7 @@ There is a also a mirror for some China users:
 ```bash
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre --upgrade envd
 ```
-Bootstarp the envd:
+Bootstrap the envd:
 ```
 envd bootstrap
 # or for China users
@@ -54,7 +54,7 @@ Verify the installation:
 ### Run your environment
 
 Here is a example for you:
-```starlark
+```python
 def build():
     base(os="ubuntu20.04", language="python3")
     install.python_packages(name = [
