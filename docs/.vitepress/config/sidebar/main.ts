@@ -27,6 +27,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       collapsible: true,
       items:[
         { text: 'Overview', link: '/teams/overview'},
+        { text: 'envd on Kubernetes (Experimental)', link: '/teams/kubernetes'},
         { text: 'CI/CD Integration', link:'/teams/ci'},
         { text: 'envd Contexts', link: '/teams/context'},
         { text: 'Remote Cache (Advanced)', link: '/teams/cache'},
