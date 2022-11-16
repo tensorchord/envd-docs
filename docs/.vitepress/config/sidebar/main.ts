@@ -43,20 +43,27 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       ]
     },
     {
+      text: 'Community',
+      collapsible: true,
+      items: [
+        { text: 'Contributing to envd', link: '/community/contributing' },
+        { text: 'Roadmap', link: '/community/roadmap' },
+      ]
+    },
+    {
+      text: 'for Developers',
+      collapsible: true,
+      items: [
+        { text: 'Development Tutorial', link: '/developers/development' },
+        { text: 'envd-server', link: '/developers/kubernetes' },
+      ]
+    },
+    {
       text: 'FAQs',
       collapsible: true,
       items:[
         { text: 'Why Use envd?', link: '/faq/why' },
         { text: 'envd vs. Others', link: '/faq/comparison' }
-      ]
-    },
-    {
-      text: 'Community',
-      collapsible: true,
-      items: [
-        {text: 'Contributing to envd', link: '/community/contributing'},
-        {text: 'Development Tutorial', link: '/community/development'},
-        {text: 'Roadmap', link: '/community/roadmap'},
       ]
     },
     {

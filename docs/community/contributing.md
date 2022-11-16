@@ -35,7 +35,7 @@ One great way you can contribute to the project without writing any code is to h
 
 ### 👨‍💻 Contribute to `envd`
 
-If you find an issue you would like to fix, open a pull request. Please read [development tutorials](./development) to get started.
+If you find an issue you would like to fix, open a pull request. Please read [development tutorials](/developers/development) to get started.
 
 ### 👉 Improve documentation
 
