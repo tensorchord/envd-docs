@@ -7,7 +7,7 @@ sidebar_position: 6
 
 Thanks for your interest in contributing to `envd` 🌟!
 
-Our community values contributions of all forms and seeks to expand the meaning of the word "contributor" as far and wide as possible. Our [contributing](./contributing) page gives an overview of some different ways to get involved and contribute. For technical contributions, read on to get started.
+Our community values contributions of all forms and seeks to expand the meaning of the word "contributor" as far and wide as possible. Our [contributing](/community/contributing) page gives an overview of some different ways to get involved and contribute. For technical contributions, read on to get started.
 
 ## Repository file structure
 
