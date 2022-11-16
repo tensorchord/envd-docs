@@ -232,7 +232,7 @@ envd-quick-start        http://localhost:42779   envd-quick-start.envd   /home/g
 我们欢迎来自开源社区、个人和合作伙伴的各种贡献。
 
 - 加入我们的[Discord 社区](https://discord.gg/KqswhpVgdU)!
-- 从源码构建可以阅读我们的[贡献指南](https://envd.tensorchord.ai/community/contributing.html) 和[开发教程](https://envd.tensorchord.ai/community/development.html).
+- 从源码构建可以阅读我们的[贡献指南](https://envd.tensorchord.ai/community/contributing.html) 和[开发教程](https://envd.tensorchord.ai/developers/development.html).
 
 利用 Gitpod 来开发: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tensorchord/envd)
 
