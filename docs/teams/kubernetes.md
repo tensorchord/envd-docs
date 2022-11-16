@@ -10,7 +10,9 @@
 
 ## Run envd-server on Kubernetes
 
-This feature requires a envd-server running on the Kubernetes. Thus you need to deploy it with the helm chart provided in the [envd-server](https://github.com/tensorchord/envd-server) repository:
+This feature requires a envd-server running on the Kubernetes. The envd-server is a piece of software that can help you manage your AI/ML environments more effectively. It is easy to use and has a wide range of features.
+
+You need to deploy it with the helm chart provided in the [envd-server](https://github.com/tensorchord/envd-server) repository:
 
 ```bash
 $ git clone https://github.com/tensorchord/envd-server
