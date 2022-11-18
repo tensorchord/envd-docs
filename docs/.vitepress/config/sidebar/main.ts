@@ -10,6 +10,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
         { text: 'Running Your First Environment', link:'/guide/build-envd'},
         { text: 'Using envd Environment', link:'/guide/ide'},
         { text: 'envd Concepts', link:'/guide/concepts'},
+        { text: 'Modularize your build', link:'/guide/modularize'},
       ],
     },
     {
