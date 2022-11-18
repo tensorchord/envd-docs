@@ -33,7 +33,8 @@ runtime.command(commands={
 ## expose
 
 ```python
-def expose(envd_port: str, host_port: Optional[str], service: Optional[str])
+def expose(envd_port: str, host_port: Optional[str], service: Optional[str],
+           listen_addr: Optional[str])
 ```
 
 Expose port to host
@@ -45,6 +46,7 @@ Proposal: https://github.com/tensorchord/envd/pull/780
 - `host_port` _Optional[str]_ - port in the host, if not provided or
   `host_port=0`, `envd` will randomly choose a free port
 - `service` _Optional[str]_ - service name
+- `listen_addr` _Optional[str]_ - address to listen on
 
 ## daemon
 
@@ -98,4 +100,16 @@ Mount from host path to container path (runtime)
 
 - `host_path` _str_ - source path in the host machine
 - `envd_path` _str_ - destination path in the envd container
+
+## init
+
+```python
+def init(commands: List[str])
+```
+
+Commands to be executed when start the container
+
+**Arguments**:
+
+- `commands` _List[str]_ - list of commands
 

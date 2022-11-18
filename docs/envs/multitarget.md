@@ -77,16 +77,16 @@ Steps to run the example are shown here.
 
 1. First create the development environment.
 
-    ```
-    envd up
-    ```
+   ```
+   envd up
+   ```
 
 2. Train model
 
-    Run all the cells of [train.ipynb](train.ipynb) manually.
+   Run all the cells of [train.ipynb](https://github.com/tensorchord/envd/blob/main/examples/streamlit-mnist/train.ipynb) manually.
 
 3. Run demo web-app
 
-    ```
-    envd up -f :serve
-    ```
+   ```
+   envd up -f :serve
+   ```

@@ -21,7 +21,7 @@ introduction: 'Ce Gao 是 envd 的维护者之一。与此之外，他还是机�
 ```python
 def build():
     base(os="ubuntu20.04", language="python")
-    install.cuda(version="11.2.0", cudnn="8")
+    install.cuda(version="11.2.2", cudnn="8")
     install.python_packages(name=[
         "tensorflow-gpu"
     ])

@@ -58,5 +58,12 @@ export const mainSidebar: DefaultTheme.Sidebar = {
         { text: '路线图', link: '/community/roadmap' },
       ]
     },
+    {
+      text: '其他',
+      collapsible: true,
+      items: [
+        { text: 'Telemetry', link: '/misc/telemetry' },
+      ]
+    },
   ],
 }

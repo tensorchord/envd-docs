@@ -28,6 +28,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       collapsible: true,
       items:[
         { text: 'Overview', link: '/teams/overview'},
+        { text: 'envd on Kubernetes (Experimental)', link: '/teams/kubernetes'},
         { text: 'CI/CD Integration', link:'/teams/ci'},
         { text: 'envd Contexts', link: '/teams/context'},
         { text: 'Remote Cache (Advanced)', link: '/teams/cache'},
@@ -43,21 +44,35 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       ]
     },
     {
+      text: 'Community',
+      collapsible: true,
+      items: [
+        { text: 'Contributing to envd', link: '/community/contributing' },
+        { text: 'Roadmap', link: '/community/roadmap' },
+      ]
+    },
+    {
+      text: 'for Developers',
+      collapsible: true,
+      items: [
+        { text: 'Development Tutorial', link: '/developers/development' },
+        { text: 'envd-server', link: '/developers/kubernetes' },
+      ]
+    },
+    {
       text: 'FAQs',
       collapsible: true,
       items:[
         { text: 'Why Use envd?', link: '/faq/why' },
-        { text: 'envd vs. Others', link:'/faq/comparison' }
+        { text: 'envd vs. Others', link: '/faq/comparison' }
       ]
     },
     {
-      text: 'Community',
-      collapsible: true,
-      items:[
-        {text:'Contributing to envd', link:'/community/contributing'},
-        {text:'Development Tutorial', link:'/community/development'},
-        {text:'Roadmap', link:'/community/roadmap'},
-      ]
+      text: 'Misc',
+      collapsed: true,
+      items: [
+        {text: 'Telemetry', link: '/misc/telemetry'},
+      ],
     },
   ],
 }
