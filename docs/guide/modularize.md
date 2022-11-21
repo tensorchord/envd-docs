@@ -1,6 +1,6 @@
 # Modularize your build function
 
-Envd allows you to easily create reusable components, so that the building file can be more organized.
+envd allows you to easily create reusable components, so that the building file can be more organized.
 
 ## Defining your own package
 
@@ -8,7 +8,7 @@ envd support most Python syntax, including string format, for-loop, if-statement
 
 For example, you can define a function for tensorflow package like this
 ```python
-def tensorfloow(version):
+def tensorflow(version):
     if version.startswith("1"):
         # execute command to install tf1.x
         run(["pip install tensorflow-gpu=={}".format(version)])
@@ -34,10 +34,14 @@ envdlib = include("https://github.com/tensorchord/envdlib")
 # use it in your build function
 def build():
     base(os="ubuntu20.04", language="python")
-    envdlib.tensorboard(8888)
+    envdlib.tensorboard(host_port=8888)
 ```
 
 And now you'll have tensorboard on your 8888 port.
+
+:::tip
+You can also build your own package such as for internal or domain-specific tools following [envdlib](https://github.com/tensorchord/envdlib) and share it with others.
+:::
 
 ## Contribute to envdlib
 
