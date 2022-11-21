@@ -8,7 +8,7 @@
 
 ## Usage
 
-Command `envd up -f {build_file}:{build_func}` can specify the build target, by running the `build_func` in `build_file`. 
+Command `envd up -f {build_file}:{build_func}` can specify the build target, by running the `build_func` in `build_file`.
 
 For example, you can decalre multiple functions in one `envd` file, following python's syntax
 
@@ -27,18 +27,18 @@ def build():
     ])
     shell("zsh")
     config.jupyter(token="", port=8888)
-    
+
 def build_gpu():
     build() # include all dependency decalred in build function
-    install.cuda(version="11.2.0", cudnn="8")
+    install.cuda(version="11.2.2", cudnn="8")
 ```
 
 </custom-title>
 
-Then, to start with cpu, any of commands below works the same way 
+Then, to start with cpu, any of commands below works the same way
 
-- `envd up`, this will run `build` function in `build.envd` file in 
-current working directory
+- `envd up`, this will run `build` function in `build.envd` file in
+  current working directory
 - `envd up -f :build`, explicitly specify `build` function
 - `envd up -f build.envd`, explicitly specify `build.envd`
 - `envd up -f build.envd:build`, explicitly specify both `build.envd` and `build` function

@@ -30,7 +30,7 @@ def build():
 
 <custom-title title="build.envd">
 
-```python 
+```python
 # 默认调用 `build` 函数。
 def build():
     version = "2.9.1"

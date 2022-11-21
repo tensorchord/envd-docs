@@ -42,24 +42,24 @@
 下面的这些步骤会带你熟悉如何初始的设置步骤和开发流程。如果你有任何疑问，你可以在 [discord](https://discord.gg/KqswhpVgdU) 上问，或者在 issues 板块中描述你有疑问的步骤，我们会尽力帮助你解决问题。
 
 1. 安装 [Docker](https://www.docker.com/products/docker-desktop/) (20.10.0 或更新版本) 以及 [Golang](https://go.dev/dl/) (1.18 或更新版本).
-1. 在你自己的 GitHub 账号中 [Fork](https://help.github.com/articles/fork-a-repo) [`envd` 代码库](https://github.com/tensorchord/envd)。
-1. 将你账号中刚 Fork 的代码库 Clone 到你电脑的本地磁盘上。
+2. 在你自己的 GitHub 账号中 [Fork](https://help.github.com/articles/fork-a-repo) [`envd` 代码库](https://github.com/tensorchord/envd)。（请不要勾选 "Copy the `main` branch only"）
+3. 将你账号中刚 Fork 的代码库 Clone 到你电脑的本地磁盘上。
     ```
     $ git clone https://github.com/YOUR_USERNAME/envd.git
     ```
-1. 安装相关的依赖库并编译 `envd`。
+4. 安装相关的依赖库并编译 `envd`。确保能输出正确的 version 信息，否则检查 git tags 是否包含历史 tags。
     ```
     $ go mod tidy
     $ make
     $ ./bin/envd bootstrap
-    $ ./bin/envd --version
+    $ ./bin/envd version
     ```
-1. 在本地的代码库中进行修改并且用 Git 将这些改动 Commit。
+5. 在本地的代码库中进行修改并且用 Git 将这些改动 Commit。
     ```
     $ git add -u
     $ git commit -m "YOUR COMMIT MESSAGE"
     ```
-1. 将你本地的改动[Push](https://help.github.com/articles/github-glossary/#push) 到你 GitHub 上的远程仓库中。
+6. 将你本地的改动[Push](https://help.github.com/articles/github-glossary/#push) 到你 GitHub 上的远程仓库中。
     ```
     $ git push
     ```

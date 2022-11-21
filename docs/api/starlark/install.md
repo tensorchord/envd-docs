@@ -66,15 +66,15 @@ Install R packages by R package manager
 ## cuda
 
 ```python
-def cuda(version: str, cudnn: Optional[str] = None)
+def cuda(version: str, cudnn: Optional[str] = "8")
 ```
 
 Install CUDA dependency
 
 **Arguments**:
 
-- `version` _str_ - CUDA version, such as '11.6'
-- `cudnn` _optional, str_ - CUDNN version, such as '6'
+- `version` _str_ - CUDA version, such as '11.6.2'
+- `cudnn` _optional, str_ - CUDNN version, such as '8'
 
 ## vscode\_extensions
 
