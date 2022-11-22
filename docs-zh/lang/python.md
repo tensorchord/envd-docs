@@ -1,28 +1,43 @@
-# Building a Python Environment
+# 创建一个 Python 环境
 
-This guide covers configuring Python environments in envd. If you’re new to envd please read our [Tutorial](/guide/getting-started) and [build configuration guides](/guide/build-envd) first.
+这份指南包含如何通过 `envd` 配置 Python 环境。如果你还没有用过 `envd`，请先阅读我们的 [教程](/guide/getting-started) 和 [搭建配置指南](/guide/build-envd)。
 
-Let's begin 🐍!
 
-## Specifying Python
+让我们开始 🐍 吧!
 
-The default language in envd is Python, thus there is no need to specify language. Or you can use `base` function to specify.
+## 指定 Python
+
+`envd` 默认的语言就是 Python，因此你不需要特意指定语言。或者你可以使用 `base` 函数来指定。
 
 <custom-title title="build.envd">
 
-```python 
+```python
 def build():
     base(os="ubuntu20.04", language="python")
 ```
 
 </custom-title>
 
-## Conda packages
-
-You can install conda packages with `install.conda_packages` function. The following example installs `numpy` and `scipy`:
+`envd` 中 Python 的默认版本是 3.9（最新的修订号可以参考[这里](https://anaconda.org/anaconda/python/files)）。如果你需要使用特定版本，只需要用类似 `pythonX.Y.Z` 的字符串来填充 `language` 项：
 
 <custom-title title="build.envd">
 
+```python
+def build():
+    base(os="ubuntu20.04", language="python3.11")
+```
+
+</custom-title>
+
+:::warning
+Python2 不被 `envd` 所支持。
+:::
+
+## Conda 包
+
+你可以使用 `install.conda_packages` 函数来安装 conda 包。 下面的例子安装了 `numpy` 和 `scipy`：
+
+<custom-title title="build.envd">
 
 ```python 
 def build():
@@ -34,9 +49,9 @@ def build():
 ```
 </custom-title>
 
-## PyPI packages
+## PyPI 包
 
-You can install Python packages from PyPI with `install.python_packages` function. The following example installs `scikit-learn` and `matplotlib`:
+你可以使用 `install.python_packages` 函数来从 PyPI 安装 Python 包。 下面的例子安装了 `scikit-learn` 和 `matplotlib`：
 
 <custom-title title="build.envd">
 
@@ -51,9 +66,9 @@ def build():
 
 </custom-title>
 
-envd uses system-wide [pip](https://pip.pypa.io/) to install Python packages in the previous example.
+前面的例子中，`envd` 使用系统范围内的 [pip](https://pip.pypa.io/) 来安装 Python 包。
 
-If conda is enabled, you can also install Python packages from PyPI with `install.python_packags` function. The following example installs `numpy` and `scipy` with conda, and installs `scikit-learn` and `matplotlib` with pip:
+如果 conda 已启用，你也可以使用  `install.python_packags` 函数来从 PyPI 安装 Python 包。下面的例子里，使用 conda 安装了 `numpy` and `scipy`，与此同时，使用 pip 安装了 `scikit-learn` 和 `matplotlib`：
 
 <custom-title title="build.envd">
 
@@ -72,11 +87,11 @@ def build():
 
 </custom-title>
 
-envd uses pip in the current conda environment to install the packages in this example.
+这个例子里，`envd` 在当前 conda 环境中使用了 pip 来安装包。
 
-## Specifying shell program
+## 指定 shell 程序
 
-You can specify shell program used in the environment with `shell` function. The following example uses `zsh`:
+你可以通过 `shell` 函数来指定环境中使用的 `shell` 程序。下面的例子里使用了 `zsh` ：
 
 <custom-title title="build.envd">
 
@@ -85,12 +100,11 @@ def build():
     base(os="ubuntu20.04", language="python")
     shell("zsh")
 ```
-
 </custom-title>
 
-## Specifying VSCode extensions
+## 指定 VSCode 插件
 
-You can specify VSCode extensions with `install.vscode_extensions` function. The following example installs [`ms-python.python`](https://open-vsx.org/extension/ms-python/python)[^1]:
+你可以使用 `install.vscode_extensions` 函数来指定 VSCode 插件。下面的例子安装了 [`ms-python.python`](https://open-vsx.org/extension/ms-python/python)[^1]：
 
 <custom-title title="build.envd">
 
@@ -101,11 +115,11 @@ def build():
 ```
 </custom-title>
 
-[^1]: [open-vsx](https://open-vsx.org/) is used instead of Microsoft VSCode Marketplace due to [licensing issues](https://github.com/tensorchord/envd/issues/160).
+[^1]: 因为[许可证问题](https://github.com/tensorchord/envd/issues/160)，这里用 [open-vsx](https://open-vsx.org/) 替代了 Microsoft VSCode Marketplace。
 
-## Setting up the Jupyter notebook
+## 建立 Jupyter notebook
 
-You can set up the Jupyter notebook with `config.jupyter` function. The following example sets up a Jupyter notebook:
+你可以使用 `config.jupyter` 来建立 Jupyter notebook。接下来的例子里建立了一个 Jupyter notebook：
 
 <custom-title title="build.envd">
 
@@ -121,15 +135,15 @@ def build():
 
 ![jupyter](/guide/assets/jupyter.png)
 
-## Setting up PyPI index mirror
+## 设定 PyPI 索引镜像
 
-Mirroring or caching of PyPI can be used to speed up local package installation, allow offline work, handle corporate firewalls or just plain Internet flakiness.
+PyPI 的镜像或缓存可用于加快本地包安装、允许脱机工作、处理公司防火墙或单纯的网络不稳定。
 
-PyPI index mirror can be set with `config.pip_index(url="<index>", extra_url=<extra>)`:
+PyPI 索引镜像可以使用 `config.pip_index(url="<index>", extra_url=<extra>)` 来设定：
 
 <custom-title title="pip index mirror">
 
-```python 
+```python
 config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 ```
 
