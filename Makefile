@@ -62,3 +62,6 @@ lintmd:
 
 prettiermd:
 	@pnpm prettier --write "**/*.md"
+
+clean:
+	@-rm -rf hack/api/docs
