@@ -10,7 +10,6 @@ export const mainSidebar: DefaultTheme.Sidebar = {
         { text: 'Running Your First Environment', link:'/guide/build-envd'},
         { text: 'Using envd Environment', link:'/guide/ide'},
         { text: 'envd Concepts', link:'/guide/concepts'},
-        { text: 'Modularize your build', link:'/guide/modularize'},
       ],
     },
     {
@@ -28,7 +27,6 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       collapsible: true,
       items:[
         { text: 'Overview', link: '/teams/overview'},
-        { text: 'envd on Kubernetes (Experimental)', link: '/teams/kubernetes'},
         { text: 'CI/CD Integration', link:'/teams/ci'},
         { text: 'envd Contexts', link: '/teams/context'},
         { text: 'Remote Cache (Advanced)', link: '/teams/cache'},
@@ -47,6 +45,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       text: 'Community',
       collapsible: true,
       items: [
+        { text: 'Join envd Community', link: '/community/community' },
         { text: 'Contributing to envd', link: '/community/contributing' },
         { text: 'Roadmap', link: '/community/roadmap' },
       ]
