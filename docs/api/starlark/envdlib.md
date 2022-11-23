@@ -12,6 +12,18 @@ Install packages from OpenMMLab
 - `packages` _List[str]_ - package name
 
 
+## golang
+
+```python
+def golang(version="1.18.8")
+```
+
+Install Golang.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - golang version
+
 
 ## tensorboard
 
@@ -57,7 +69,7 @@ Configure Jupyter Lab.
 def tensorrt(os="20.04", cuda="11.6.2", trt="8.4.3.1")
 ```
 
-Install tensorrt
+Install tensorrt.
 
 **Arguments**:
 
