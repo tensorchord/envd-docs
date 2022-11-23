@@ -1,10 +1,10 @@
-# Building a Julia Environment
+# 创建一个 Julia 环境
 
-This guide covers configuring Julia environments in envd. If you’re new to envd please read our [Tutorial](/guide/getting-started) and [build configuration guides](/guide/build-envd) first.
+这份指南包含如何通过 `envd` 配置 Julia 环境。如果你还没有用过 `envd`，请先阅读我们的 [教程](/guide/getting-started) 和 [搭建配置指南](/guide/build-envd)。
 
-## Specifying Julia
+## 指定 Julia
 
-First, you can specify to use the Julia language in the `base` function.
+首先，你可以通过 `base` 函数来指定使用 Julia 语言。
 
 <custom-title title="build.envd">
 
@@ -15,9 +15,9 @@ def build():
 
 </custom-title>
 
-## Julia packages
+## Julia 包
 
-You can install Julia packages with `install.julia_packages` function. The following example installs `Example`:
+你可以使用 `install.julia_packages` 函数来安装 Julia 包。下面的例子安装了 `Example` 包。
 
 <custom-title title="build.envd">
 
@@ -30,9 +30,9 @@ def build():
 ```
 </custom-title>
 
-## Configure Julia package server
+## 配置 Julia 包服务
 
-By default, the Julia package server `"pkg.julialang.org"` is used when downloading and installing Julia packages. However, you can specify any other servers via `config.julia_pkg_server()` like the following:
+默认情况下，会通过 Julia 包服务 `"pkg.julialang.org"` 来下载安装 R 包。不过，你也可以使用 `config.julia_pkg_server()` 来指定任何其他服务，比如下面这个例子：
 
 <custom-title title="build.envd">
 
@@ -47,9 +47,9 @@ def build():
 
 </custom-title>
 
-## Specifying shell program
+## 指定 shell 程序
 
-You can specify shell program used in the environment with `shell` function. The following example uses `zsh`:
+你可以通过 `shell` 函数来指定环境中使用的 `shell` 程序。下面的例子里使用了 `zsh` ：
 
 <custom-title title="build.envd">
 
@@ -61,9 +61,10 @@ def build():
 
 </custom-title>
 
-## Specifying VSCode extensions
+## 指定 VSCode 插件
 
-You can specify VSCode extensions with `install.vscode_extensions` function. The following example installs [`julialang.language-julia`](https://open-vsx.org/extension/julialang/language-julia)[^1]:
+你可以使用 `install.vscode_extensions` 函数来指定 VSCode 插件。下面的例子安装了 [`julialang.language-julia`](https://open-vsx.org/extension/julialang/language-julia)[^1]：
+
 
 <custom-title title="build.envd">
 
@@ -75,4 +76,4 @@ def build():
 
 </custom-title>
 
-[^1]: [open-vsx](https://open-vsx.org/) is used instead of Microsoft VSCode Marketplace due to [licensing issues](https://github.com/tensorchord/envd/issues/160).
+[^1]: 因为[许可证问题](https://github.com/tensorchord/envd/issues/160)，这里用 [open-vsx](https://open-vsx.org/) 替代了 Microsoft VSCode Marketplace。
