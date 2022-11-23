@@ -4,7 +4,7 @@
 
 - 加入我们的 Discord 社区 [💬 Discord](https://discord.gg/KqswhpVgdU)
 - 查看 [good first issue 💖](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22) 问题！
-- 社区贡献指南 [contributing page](community/contributing.md)
+- 社区贡献指南 [contributing page](./contributing.md)
 
 ## 短期目标 - 我们正在做什么 🎉
 
