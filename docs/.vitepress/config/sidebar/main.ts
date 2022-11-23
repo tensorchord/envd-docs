@@ -47,6 +47,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       text: 'Community',
       collapsible: true,
       items: [
+        { text: 'Join envd Community', link: '/community/community' },
         { text: 'Contributing to envd', link: '/community/contributing' },
         { text: 'Roadmap', link: '/community/roadmap' },
       ]
