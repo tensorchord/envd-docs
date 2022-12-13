@@ -1,4 +1,4 @@
-# Building Your First Environment
+# Running Your First Environment
 
 `envd` can build images automatically by reading the instructions from a `build.envd`. A `build.envd` is a text document that contains all the commands a user could call on the command line to assemble an image.
 
