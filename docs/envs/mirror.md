@@ -31,7 +31,7 @@ envdlib = include("https://github.com/tensorchord/envdlib")
 envdlib.mirror(pip="tuna", conda="tuna", apt="tuna")
 ```
 
-For more information about this function, check the [API reference](/api/starlark/envdlib) page.
+For more information about this function, check the [API reference](/api/starlark/envdlib#mirror) page.
 
 ## Setting up pip index mirror
 
