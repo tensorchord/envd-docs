@@ -21,6 +21,18 @@ Here are some registry mirrors:
 - `https://docker.mirrors.sjtug.sjtu.edu.cn` in China.
 - `https://hub-mirror.c.163.com` in China.
 
+### Using envdlib to set up the pip/conda/apt mirrors
+
+You can use `envdlib` to set up the pip/conda/apt mirrors all in one line!
+
+```python
+envdlib = include("https://github.com/tensorchord/envdlib")
+
+envdlib.mirror(pip="tuna", conda="tuna", apt="tuna")
+```
+
+For more information about this function, check the [API reference](/api/starlark/envdlib) page.
+
 ## Setting up pip index mirror
 
 Mirroring or caching of PyPI can be used to speed up local package installation, allow offline work, handle corporate firewalls or just plain Internet flakiness.
