@@ -46,6 +46,11 @@ jobs:
           python -m pip install -r hack/api/requirement.txt
           make generate-api-ref
           popd
+      - name: Copy API docs to zh docs
+        run: |
+          pushd envd-docs
+          cp -r docs/api docs-zh/ 
+          popd
       - name: Generate CLI docs
         run: |
           pushd envd-docs
