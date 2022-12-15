@@ -125,7 +125,7 @@ def build():
 
 ### 安装 Python 包
 
-通过 [`envd` install API](../api/starlark/install) 中的 `install.python_packages` 函数在环境中安装 Python 包：
+通过 [`envd` install API](../api/starlark/v0/install) 中的 `install.python_packages` 函数在环境中安装 Python 包：
 
 <custom-title title="build.envd">
 
@@ -165,7 +165,7 @@ array([2, 3, 4])
 
 ### 配置 ZSH Shell
 
-通过 [`envd` API](../api/starlark/global_functions) 中的 `Shell` 函数配置环境中的 `Shell` 程序：
+通过 [`envd` API](../api/starlark/v0/global) 中的 `Shell` 函数配置环境中的 `Shell` 程序：
 
 <custom-title title="build.envd">
 
@@ -189,7 +189,7 @@ $ envd up
 
 ### 使用 Jupyter Notebooks
 
-Jupyter Notebooks 是使用 Python 进行数据分析的互动计算环境。`envd` 通过 `config.jupyter` [API 函数](../api/starlark/config) 帮助您在环境中配置 Jupyter Notebooks。
+Jupyter Notebooks 是使用 Python 进行数据分析的互动计算环境。`envd` 通过 `config.jupyter` [API 函数](../api/starlark/v0/config) 帮助您在环境中配置 Jupyter Notebooks。
 
 <custom-title title="build.envd">
 
