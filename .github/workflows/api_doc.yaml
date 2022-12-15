@@ -29,7 +29,7 @@ jobs:
           fetch-depth: 1
           path: envd
       - run: |
-          mkdir -p envd-docs/hack/api/api/
+          mkdir -p envd-docs/hack/api/
           cp -r envd/envd/api/* envd-docs/hack/api/
       - name: Checkout Envd lib
         uses: actions/checkout@v3

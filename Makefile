@@ -52,7 +52,7 @@ build-zh:
 	@pnpm build:zh
 
 dev:
-	@pnpm docs:dev
+	@pnpm dev
 
 dev-zh:
 	@pnpm dev:zh
