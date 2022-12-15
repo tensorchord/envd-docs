@@ -21,7 +21,7 @@ def build():
     # envd instructions here.
 ```
 
-Functions like [`install.python_packages`](/api/starlark/install#python_packages) and [`config.jupyter`](/api/starlark/config#jupyter) can be used to register information. The information will be kept in a static graph in the memory. `envd` uses the static graph to build the environment at the `envd` of execution.
+Functions like [`install.python_packages`](/api/starlark/v0/install#python_packages) and [`config.jupyter`](/api/starlark/config#jupyter) can be used to register information. The information will be kept in a static graph in the memory. `envd` uses the static graph to build the environment at the `envd` of execution.
 
 `envd` evaluates the `build` function with the starlark interpreter, thus you can use loops, if/else conditional execution or other statements in `build.envd`.
 

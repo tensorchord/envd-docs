@@ -85,9 +85,10 @@ def main():
     docs_path.mkdir(exist_ok=True, parents=True)
 
     items = []
-    for module in ["v0", "lib"]:
+    for module in ["v0", "v1", "lib"]:
         md_dir = base_path / "docs"
         ref_dir = md_dir / "reference"
+        ref_dir.mkdir(exist_ok=True, parents=True)
         render_doc(base_path / module, md_dir)
         update_global_func(ref_dir)
         items.append(generate_sidebar(module, ref_dir, f"api/starlark/{module}"))

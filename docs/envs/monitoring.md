@@ -21,4 +21,4 @@ def build():
 
 Make sure you have permission for the mounted directory.
 
-This example includes `mount`, `daemon` and `expose`. For more details, can check `envd` [API reference](/api/starlark/runtime).
+This example includes `mount`, `daemon` and `expose`. For more details, can check `envd` [API reference](/api/starlark/v0/runtime).
