@@ -1,1 +1,63 @@
-{"text": "API Reference", "items": [{"text": "global functions", "link": "api/starlark/global_functions"}, {"text": "config modules", "link": "api/starlark/config"}, {"text": "install modules", "link": "api/starlark/install"}, {"text": "io modules", "link": "api/starlark/io"}, {"text": "runtime modules", "link": "api/starlark/runtime"}, {"text": "envdlib", "link": "api/starlark/envdlib"}]}
+{
+  "text": "API Reference",
+  "type": "category",
+  "items": [
+    {
+      "text": "v0",
+      "type": "category",
+      "items": [
+        {
+          "text": "io",
+          "link": "api/starlark/v0/io"
+        },
+        {
+          "text": "install",
+          "link": "api/starlark/v0/install"
+        },
+        {
+          "text": "runtime",
+          "link": "api/starlark/v0/runtime"
+        },
+        {
+          "text": "config",
+          "link": "api/starlark/v0/config"
+        },
+        {
+          "text": "global",
+          "link": "api/starlark/v0/global"
+        }
+      ]
+    },
+    {
+      "text": "v1",
+      "type": "category",
+      "items": [
+        {
+          "text": "io",
+          "link": "api/starlark/v1/io"
+        },
+        {
+          "text": "install",
+          "link": "api/starlark/v1/install"
+        },
+        {
+          "text": "runtime",
+          "link": "api/starlark/v1/runtime"
+        },
+        {
+          "text": "config",
+          "link": "api/starlark/v1/config"
+        },
+        {
+          "text": "global",
+          "link": "api/starlark/v1/global"
+        }
+      ]
+    },
+    {
+      "text": "lib",
+      "type": "category",
+      "items": []
+    }
+  ]
+}
