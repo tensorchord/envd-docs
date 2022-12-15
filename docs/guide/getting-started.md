@@ -32,7 +32,7 @@ def build():
 
 <details>
   <summary><code>envdlib.tensorboard</code> is defined in <a href="https://github.com/tensorchord/envdlib/blob/main/src/monitoring.envd">github.com/tensorchord/envdlib</a></summary>
-  
+
 ```python
 def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
         host_port=0, host_dir="/var/log/tensorboard"):
@@ -99,7 +99,7 @@ def build():
 
 ☁️ **No polluted environment**
 
-Are you working on multiple projects, all of which need different versions of CUDA? `envd` helps you create isolated and clean environments. 
+Are you working on multiple projects, all of which need different versions of CUDA? `envd` helps you create isolated and clean environments.
 
 ## Who should use envd?
 
@@ -117,10 +117,53 @@ We’re focused on helping data scientists and teams that develop AI/ML models. 
 
 ### Install and bootstrap `envd`
 
-`envd` can be installed with `pip` (only support Python3). After the installation, please run `envd bootstrap` to bootstrap.
+<tabs>
+<tab name="Install Script">
+
+Run the following command in your terminal to install the latest release of `envd`:
 
 ```bash
-pip3 install --pre --upgrade envd
+curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh
+```
+
+Or to specify a version:
+
+```bash
+curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh - 0.2.0
+```
+
+</tab>
+<tab name="Homebrew">
+
+If you are on MacOS, `envd` can be installed with [homebrew](https://brew.sh/):
+
+```bash
+brew install envd
+```
+</tab>
+<tab name="pipx">
+
+`envd` can be installed with [pipx](https://pypi.org/project/pipx).
+
+```bash
+pipx install envd
+```
+
+</tab>
+<tab name="pip">
+
+`envd` can be installed with `pip` (only support Python3).
+
+```bash
+pip3 install --upgrade envd
+```
+
+</tab>
+</tabs>
+
+After the installation, please run `envd bootstrap` to bootstrap:
+
+```bash
 envd bootstrap
 ```
 
@@ -187,7 +230,7 @@ $ cd envd-quick-start && envd up
  => => exporting manifest sha256:7dbe9494d2a7a39af16d514b997a5a8f08b637f  0.0s
  => => exporting config sha256:1da06b907d53cf8a7312c138c3221e590dedc2717  0.0s
  => => sending tarball                                                    0.4s
-envd-quick-start via Py v3.9.13 via 🅒 envd 
+envd-quick-start via Py v3.9.13 via 🅒 envd
 ⬢ [envd]❯ # You are in the container-based environment!
 ```
 
