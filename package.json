@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "prettier": "2.7.1",
-    "vitepress": "1.0.0-alpha.9",
+    "vitepress": "1.0.0-alpha.31",
     "vue": "^3.2.37"
   },
   "pnpm": {
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.9.1",
-    "markdown-it-footnote": "^3.0.3"
+    "markdown-it-footnote": "^3.0.3",
+    "vue3-tabs-component": "^1.1.2"
   }
 }
