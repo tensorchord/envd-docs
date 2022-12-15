@@ -18,6 +18,7 @@ from pydoc_markdown.contrib.renderers.docusaurus import (
 
 def render_doc(path: Path, output_dir: Path, enable_prefix: bool = False):
     """Generate the markdown files"""
+    rename_envd_file(path)
     config = PydocMarkdown(
         loaders=[PythonLoader(search_path=[path])],
         processors=[
@@ -53,6 +54,17 @@ def update_global_func(path: Path):
     if (init).is_dir():
         shutil.copyfile(init / "__init__.md", path / "global.md")
         shutil.rmtree(init)
+
+
+def rename_envd_file(path: Path):
+    """Rename '.envd' to '.py' to generate the doc."""
+    for path, _, filenames in os.walk(path):
+        for file in filenames:
+            if file.endswith(".envd"):
+                os.rename(
+                    os.path.join(path, file),
+                    os.path.join(path, file.replace(".envd", ".py", 1)),
+                )
 
 
 def generate_sidebar(title: str, path: Path, target_dir: Path):
