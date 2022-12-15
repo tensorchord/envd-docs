@@ -47,6 +47,8 @@ jobs:
           python -m pip install -r hack/api/requirement.txt
           make generate-api-ref
           popd
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - name: Generate CLI docs
         run: |
           pushd envd-docs
