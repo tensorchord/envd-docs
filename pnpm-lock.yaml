@@ -9,7 +9,6 @@ importers:
       prettier: 2.7.1
       vitepress: 1.0.0-alpha.9
       vue: ^3.2.37
-      vue3-tabs-component: ^1.1.2
     dependencies:
       '@algolia/client-search': 4.13.1
       markdown-it-footnote: 3.0.3
@@ -17,7 +16,6 @@ importers:
       prettier: 2.7.1
       vitepress: 1.0.0-alpha.9_ygzyjl425qrcgm3zeayiliwge4
       vue: 3.2.37
-      vue3-tabs-component: 1.1.2_vue@3.2.37
 
 packages:
 
@@ -764,12 +762,4 @@ packages:
       '@vue/runtime-dom': 3.2.37
       '@vue/server-renderer': 3.2.37_vue@3.2.37
       '@vue/shared': 3.2.37
-    dev: true
-
-  /vue3-tabs-component/1.1.2_vue@3.2.37:
-    resolution: {integrity: sha512-cm5tjisnwSruUuOabFdyL+6IODd3uutuo8Ilw7Ud8xg/yaAoUrfzr2fAXhVQ36Z/u1cqDlGWMySaLb854pDiPw==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      vue: 3.2.37
     dev: true
