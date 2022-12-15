@@ -40,15 +40,12 @@ jobs:
       - run: |
           mkdir -p envd-docs/hack/api/lib/
           cp -r envdlib/src/* envd-docs/hack/api/lib/
-          find envd-docs/hack/api/lib/ -type f -name "*.envd" | xargs -I {} mv {} "$(basename {} .envd).py"
       - name: Generate API docs
         run: |
           pushd envd-docs
           python -m pip install -r hack/api/requirement.txt
           make generate-api-ref
           popd
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
       - name: Generate CLI docs
         run: |
           pushd envd-docs
