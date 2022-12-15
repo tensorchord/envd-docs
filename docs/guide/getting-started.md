@@ -126,12 +126,6 @@ Run the following command in your terminal to install the latest release of `env
 curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh
 ```
 
-Or to specify a version:
-
-```bash
-curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh - 0.2.0
-```
-
 </tab>
 <tab name="Homebrew">
 

@@ -2,6 +2,7 @@ import { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import CustomTitle from '../components/CustomTitle.vue'
 import Author from '../components/Author.vue'
+import { Tabs, Tab } from 'vue3-tabs-component'
 import "./custom.css"
 
 export default {
@@ -10,5 +11,7 @@ export default {
     app
       .component('CustomTitle', CustomTitle)
       .component('Author', Author)
+      .component('tabs', Tabs)
+      .component('tab', Tab)
   },
 }
