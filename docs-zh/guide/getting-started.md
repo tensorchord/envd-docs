@@ -110,7 +110,7 @@ def build():
 - 环境更新。你是否总是需要问基础设施工程师如何在 Dockerfile 中添加一个新的 Python/R/Julia 包？
 - 管理环境和机器。你是否总是忘记哪些机器是用于特定项目的，因为你同时处理多个项目？
 
-## 试试 envd
+## 三分钟建立你的 envd 环境
 
 ### 安装要求
 
@@ -118,10 +118,47 @@ def build():
 
 ### 安装和初始化 `envd`
 
-`envd` 可以用 `pip` 来安装（只支持 Python3）。安装完成后，请运行 `envd bootstrap` 来初始化。
+<tabs>
+<tab name="安装脚本">
+
+在终端中运行以下命令即可安装最新版本的 `envd`:
 
 ```bash
-pip3 install --pre --upgrade envd
+curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh
+```
+
+</tab>
+<tab name="Homebrew">
+
+如果你使用的是 MacOS，可以通过 [homebrew](https://brew.sh/) 来安装 `envd`。
+
+```bash
+brew install envd
+```
+</tab>
+<tab name="pipx">
+
+`envd` 也可以通过 [pipx](https://pypi.org/project/pipx) 安装。
+
+```bash
+pipx install envd
+```
+
+</tab>
+<tab name="pip">
+
+`envd` 也可以用 `pip` 来安装（只支持 Python3）。
+
+```bash
+pip3 install --upgrade envd
+```
+
+</tab>
+</tabs>
+
+安装完成后，请运行 `envd bootstrap` 来初始化。
+
+```bash
 envd bootstrap
 ```
 
