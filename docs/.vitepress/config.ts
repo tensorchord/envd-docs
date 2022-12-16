@@ -81,7 +81,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the Apache-2.0 License. Built with VitePress.',
-      copyright: 'Copyright © 2022 TensorChord, Inc. <p><a href="https://www.netlify.com"> <img style="margin: 0 auto" src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a></p>'
+      copyright: 'Copyright © 2022 TensorChord, Inc. <a href="https://www.netlify.com"> <img style="margin: 0 auto" src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /></a>'
     }
   },
 
