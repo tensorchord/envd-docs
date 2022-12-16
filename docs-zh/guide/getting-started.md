@@ -119,7 +119,7 @@ pipx install envd
 在终端中运行以下命令即可安装最新版本的 `envd`:
 
 ```bash
-curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh
+curl -sSfL https://envd.tensorchord.ai/install.sh | sudo bash
 ```
 
 </tab>
