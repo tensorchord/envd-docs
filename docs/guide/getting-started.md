@@ -117,7 +117,7 @@ pipx install envd
 Run the following command in your terminal to install the latest release of `envd`:
 
 ```bash
-curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh
+curl -sSfL https://envd.tensorchord.ai/install.sh | sudo bash
 ```
 
 </tab>
