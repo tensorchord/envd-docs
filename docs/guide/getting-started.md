@@ -78,38 +78,6 @@ For example, the PyPI cache is shared across builds and thus the package will be
   <img src="https://user-images.githubusercontent.com/5100735/189928628-543f4851-87b7-462b-b811-372cbf46ff25.svg" width="65%"/>
 </p>
 
-🐍 **One configuration to rule them all**
-
-Development environments are full of Dockerfiles, bash scripts, Kubernetes YAML manifests, and many other clunky files that are always breaking. You just need one configuration file `build.envd`[^1], it works both for local Docker and Kubernetes clusters in the cloud.
-
-![envd](https://user-images.githubusercontent.com/5100735/188821980-dcbd9069-b504-436a-9ffd-05ac5543a6d1.png)
-
-[^1]: The build language is [starlark](https://docs.bazel.build/versions/main/skylark/language.html), which is a dialect of Python.
-
-✍️ **Don't sacrifice your developer experience**
-
-SSH is configured for the created environment. You can use vscode-remote, jupyter, pycharm or other IDEs that you love. Besides this, declare the IDE extensions you want, let `envd` take care of them.
-
-```python
-def build():
-    install.vscode_extensions([
-        "ms-python.python",
-    ])
-```
-
-☁️ **No polluted environment**
-
-Are you working on multiple projects, all of which need different versions of CUDA? `envd` helps you create isolated and clean environments.
-
-## Who should use envd?
-
-We’re focused on helping data scientists and teams that develop AI/ML models. And they may suffer from:
-
-- building the development environments with Python/R/Julia, CUDA, Docker, SSH, and so on. Do you have a complicated Dockerfile or build script that sets up all your dev environments, but is always breaking?
-- Updating the environment. Do you always need to ask infrastructure engineers how to add a new Python/R/Julia package in the Dockerfile?
-- Managing environments and machines. Do you always forget which machines are used for the specific project, because you handle multiple projects concurrently?
-
-
 ## Setup your first `envd` environment in 3 minutes
 ### Requirements
 
@@ -118,12 +86,12 @@ We’re focused on helping data scientists and teams that develop AI/ML models. 
 ### Install and bootstrap `envd`
 
 <tabs>
-<tab name="Install Script">
+<tab name="pip">
 
-Run the following command in your terminal to install the latest release of `envd`:
+`envd` can be installed with `pip`.
 
 ```bash
-curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh
+pip3 install --upgrade envd
 ```
 
 </tab>
@@ -144,12 +112,12 @@ pipx install envd
 ```
 
 </tab>
-<tab name="pip">
+<tab name="Install Script">
 
-`envd` can be installed with `pip` (only support Python3).
+Run the following command in your terminal to install the latest release of `envd`:
 
 ```bash
-pip3 install --upgrade envd
+curl -sSfL https://envd.tensorchord.ai/install.sh | sudo sh
 ```
 
 </tab>
