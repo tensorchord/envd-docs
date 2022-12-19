@@ -49,7 +49,8 @@ Or you could build the image by yourself and push it to the registry, and then c
 ```bash
 $ envd run --image <your-image>
 ```
-you could build and push the image to a public registry.
+
+You could build and push the image to a public registry.
 
 ```bash
 $ envd build --output type=image,name=docker.io/<loginname in docker hub>/<image>,push=true
