@@ -2,7 +2,7 @@
 
 :::warning
 
-**This feature is in the experimental stage, which means it may be subject to change.**.
+**This feature is in the experimental stage, which means it may be subject to change.**
 
 :::
 
@@ -24,8 +24,7 @@ After that, you need to forward two TCP ports to `localhost`.
 
 ```bash
 $ export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=envd-server,app.kubernetes.io/instance=envd-server" -o jsonpath="{.items[0].metadata.name}")
-$ kubectl --namespace default port-forward $POD_NAME 8080:8080
-$ kubectl --namespace default port-forward $POD_NAME 2222:2222
+$ kubectl --namespace default port-forward $POD_NAME 8080:8080 2222:2222
 ```
 
 ## Create the `envd` context
@@ -38,15 +37,23 @@ $ envd context create --name envd-server --use --builder docker-container --runn
 
 ## Create the environment on Kubernetes
 
-After that, you could build and push the image to a public registry.
-
-```bash
-$ envd build --output type=image,name=docker.io/<username>/<image>,push=true
-```
-
-Once you login to envd-server, you can create environments by running the `envd create` command (which is a hidden command for now).
+After that, you can create environments by running the `envd create` command (which is a hidden command for now).
 
 ```bash
 $ envd login
-$ envd create --image <username>/<image>
+$ envd create --image tensorchord/python-basic
+```
+
+Or you could build the image by yourself and push it to the registry, and then create the environment by running the `envd run` command.
+
+```bash
+$ envd run --image <your-image>
+```
+
+You could build and push the image to a public registry.
+
+```bash
+$ envd build --output type=image,name=docker.io/<loginname in docker hub>/<image>,push=true
+$ envd login --username <username>
+$ envd run --image <your-image>
 ```
