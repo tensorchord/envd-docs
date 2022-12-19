@@ -44,13 +44,15 @@ $ envd login
 $ envd create --image tensorchord/python-basic
 ```
 
-Or you could build the image by yourself and push it to the registry, and then create the environment by running the `envd create` command.
+Or you could build the image by yourself and push it to the registry, and then create the environment by running the `envd run` command.
 
 ```bash
+$ envd run --image <your-image>
+```
 you could build and push the image to a public registry.
 
 ```bash
 $ envd build --output type=image,name=docker.io/<loginname in docker hub>/<image>,push=true
 $ envd login --username <username>
-$ envd create --image <loginname in docker hub>/<image>
+$ envd run --image <your-image>
 ```
