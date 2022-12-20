@@ -20,6 +20,62 @@ $ cd ./envd-server
 $ helm install envd-server ./manifests
 ```
 
+You can customize the envd-server by modifying the `values.yaml` file. For example, you can change the `server.debug` value to `true` to enable the debug mode.
+
+```yaml
+# envd server debug mode
+server:
+  debug: false
+  noauth: true
+  imagePullSecret: ""
+  # Whether to run the database migration process
+  migration: true
+  # Leave blank will use ${image.Repository}-migration:${image.tag} as the migration image
+  migrationImage: ""
+```
+
+### Configure image pull secret (Optional)
+
+This page shows how to create a envd server instance that uses a Secret to pull an image from a private container image registry or repository.
+
+If you already ran docker login, you can copy that credential into Kubernetes:
+
+```bash
+kubectl create secret generic regcred \
+    --from-file=.dockerconfigjson=<path/to/.docker/config.json> \
+    --type=kubernetes.io/dockerconfigjson
+```
+
+Then you can check the secret:
+
+```bash
+kubectl get secret regcred --output=yaml
+```
+
+The output should be similar to this:
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  ...
+  name: regcred
+  ...
+data:
+  .dockerconfigjson: eyJodHRwczovL2luZGV4L ... J0QUl6RTIifX0=
+type: kubernetes.io/dockerconfigjson
+```
+
+You can use the secret to pull the image:
+
+```bash
+$ helm install --set server.imagePullSecret=regcred envd-server ./manifests
+```
+
+The server will use the secret to pull the image. If you have any problem, please take a look at the [guide in Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
+
+## Port forward
+
 After that, you need to forward two TCP ports to `localhost`.
 
 ```bash
