@@ -57,3 +57,39 @@ $ envd build --output type=image,name=docker.io/<loginname in docker hub>/<image
 $ envd login --username <username>
 $ envd run --image <your-image>
 ```
+
+## Customization
+
+You could customize the environment by adding a [pod defaulting webhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/) to the Kubernetes cluster. Here is an example [envd-server-pod-webhook](https://github.com/tensorchord/envd-server-pod-webhook).
+
+The webhook will [add an environment variable](https://github.com/tensorchord/envd-server-pod-webhook/blob/main/pkg/mutation/inject_env.go#L28) `KUBE=true` to the pod:
+
+```go
+// Mutate returns a new mutated pod according to set env rules
+func (se injectEnv) Mutate(pod *corev1.Pod) (*corev1.Pod, error) {
+	se.Logger = se.Logger.WithField("mutation", se.Name())
+	mpod := pod.DeepCopy()
+
+	// build out env var slice
+	envVars := []corev1.EnvVar{{
+		Name:  "KUBE",
+		Value: "true",
+	}}
+
+	// inject env vars into pod
+	for _, envVar := range envVars {
+		se.Logger.Debugf("pod env injected %s", envVar)
+		injectEnvVar(mpod, envVar)
+	}
+
+	return mpod, nil
+}
+```
+
+To deploy the webhook, you could run the following commands:
+
+```bash
+$ git clone https://github.com/tensorchord/envd-server-pod-webhook
+$ cd ./envd-server-pod-webhook
+$ make deploy
+```
