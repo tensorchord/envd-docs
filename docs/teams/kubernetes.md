@@ -36,7 +36,7 @@ server:
 
 ### Configure image pull secret (Optional)
 
-This page shows how to create a envd server instance that uses a Secret to pull an image from a private container image registry or repository. There are many private registries in use. This task uses Docker Hub as an example registry.
+This page shows how to create a envd server instance that uses a Secret to pull an image from a private container image registry or repository.
 
 If you already ran docker login, you can copy that credential into Kubernetes:
 
