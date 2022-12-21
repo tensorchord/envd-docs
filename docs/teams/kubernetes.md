@@ -93,11 +93,11 @@ $ envd context create --name envd-server --use --builder docker-container --runn
 
 ## Create the environment on Kubernetes
 
-After that, you can create environments by running the `envd create` command (which is a hidden command for now).
+After that, you can create environments by running the `envd run` command (which is a hidden command for now).
 
 ```bash
 $ envd login
-$ envd create --image tensorchord/python-basic
+$ envd run --image tensorchord/python-basic
 ```
 
 Or you could build the image by yourself and push it to the registry, and then create the environment by running the `envd run` command.

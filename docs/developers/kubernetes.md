@@ -49,7 +49,7 @@ $ envd build --output type=image,name=docker.io/<username>/<image>,push=true
 # login to the envd-server.
 $ envd login
 # Create the environment and attach to the the environment.
-$ envd create --image <username>/<image>
+$ envd run --image <username>/<image>
 ```
 
 ## References
