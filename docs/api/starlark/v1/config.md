@@ -179,3 +179,18 @@ Setup repo related information. Will save to the image labels.
 - `url` _str_ - repo URL
 - `description` _str_ - repo description
 
+## owner
+
+```python
+def owner(uid: int, gid: int)
+```
+
+Configure uid:gid as the environmen owner.
+This can also be achieved by using flag `envd --owner uid:gid build` or environment
+variable `ENVD_BUILD_OWNER=uid:gid envd build`
+
+**Arguments**:
+
+- `uid` _int_ - UID
+- `gid` _int_ - GID
+
