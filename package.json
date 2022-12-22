@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "prettier": "2.7.1",
-    "vitepress": "1.0.0-alpha.31",
+    "vitepress": "1.0.0-alpha.32",
     "vue": "^3.2.37"
   },
   "pnpm": {
