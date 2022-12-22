@@ -85,43 +85,29 @@ For example, the PyPI cache is shared across builds and thus the package will be
 
 ### Install and bootstrap `envd`
 
-<tabs>
-<tab name="pip">
+::: code-group
 
-`envd` can be installed with `pip`.
-
-```bash
+```bash [Pip]
+# `envd` can be installed with `pip`.
 pip3 install --upgrade envd
 ```
 
-</tab>
-<tab name="Homebrew">
-
-If you are on MacOS, `envd` can be installed with [homebrew](https://brew.sh/):
-
-```bash
+```bash [Homebrew]
+# If you are on MacOS, `envd` can be installed with [homebrew](https://brew.sh/):
 brew install envd
 ```
-</tab>
-<tab name="pipx">
 
-`envd` can be installed with [pipx](https://pypi.org/project/pipx).
-
-```bash
+```bash [Pipx]
+# `envd` can be installed with [pipx](https://pypi.org/project/pipx).
 pipx install envd
 ```
 
-</tab>
-<tab name="Install Script">
-
-Run the following command in your terminal to install the latest release of `envd`:
-
-```bash
+```bash [Install Script]
+# Run the following command in your terminal to install the latest release of `envd`:
 curl -sSfL https://envd.tensorchord.ai/install.sh | sudo bash
 ```
 
-</tab>
-</tabs>
+:::
 
 After the installation, please run `envd bootstrap` to bootstrap:
 
