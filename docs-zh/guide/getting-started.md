@@ -4,7 +4,7 @@
 
 envd（`ɪnˈvdɪ`）是一个命令行工具，可以帮助你为 AI/ML 创建基于容器的开发环境。
 
-开发环境通常包括了 Python，系统依赖，CUDA，BASH 脚本，Dockerfiles，SSH 配置，Kubernetes YAMLs，以及许多其他冗长的设置。在长年累月的开发中，系统里的东西总会越来越多，改动无法追踪，最终导致错误。 envd 就是要解决这样的问题。
+开发环境通常包括了 Python，系统依赖，CUDA，BASH 脚本，Dockerfiles，SSH 配置，Kubernetes YAMLs，以及许多其他冗长的设置。在长年累月的开发中，系统里的东西总会越来越多，改动无法追踪，最终导致错误。envd 就是要解决这样的问题。
 
 1. 在 `build.envd` 中声明需要的软件依赖（CUDA、Python 包、你最喜欢的 IDE 等）。
 2. 在命令行里运行 `envd up` 。
@@ -87,43 +87,33 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 
 ### 安装和初始化 `envd`
 
-<tabs>
-<tab name="pip">
+::: code-group
 
-`envd` 也可以用 `pip` 来安装。
+```bash [pip]
+# envd 也可以用 pip 来安装。
 
-```bash
 pip3 install --upgrade envd
 ```
 
-</tab>
-<tab name="Homebrew">
+```bash [Homebrew]
+# 如果你使用的是 MacOS，可以通过 homebrew 来安装 envd。
 
-如果你使用的是 MacOS，可以通过 [homebrew](https://brew.sh/) 来安装 `envd`。
-
-```bash
 brew install envd
 ```
-</tab>
-<tab name="pipx">
 
-`envd` 也可以通过 [pipx](https://pypi.org/project/pipx) 安装。
+```bash [pipx]
+# envd 也可以通过 pipx 安装。
 
-```bash
 pipx install envd
 ```
 
-</tab>
-<tab name="安装脚本">
+```bash [安装脚本]
+# 在终端中运行以下命令即可安装最新版本的 envd：
 
-在终端中运行以下命令即可安装最新版本的 `envd`:
-
-```bash
 curl -sSfL https://envd.tensorchord.ai/install.sh | sudo bash
 ```
 
-</tab>
-</tabs>
+:::
 
 安装完成后，请运行 `envd bootstrap` 来初始化。
 
@@ -149,7 +139,7 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 git clone https://github.com/tensorchord/envd-quick-start.git
 ```
 
-声明文件 `build.envd` 是这样的:
+声明文件 `build.envd` 是这样的：
 
 ```python title=build.envd
 def build():
@@ -202,7 +192,7 @@ envd-quick-start via Py v3.9.13 via 🅒 envd
 
 ### 设置 Jupyter Notebook
 
-修改 `build.envd` 开启 jupyter notebook 支持:
+修改 `build.envd` 开启 jupyter notebook 支持：
 
 ```python title=build.envd
 def build():
@@ -240,7 +230,7 @@ envd-quick-start        http://localhost:42779   envd-quick-start.envd   /home/g
 - 加入我们的[Discord 社区](https://discord.gg/KqswhpVgdU)!
 - 从源码构建可以阅读我们的[贡献指南](https://envd.tensorchord.ai/community/contributing.html) 和[开发教程](https://envd.tensorchord.ai/developers/development.html).
 
-利用 Gitpod 来开发: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tensorchord/envd)
+利用 Gitpod 来开发：[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tensorchord/envd)
 
 ---
 
