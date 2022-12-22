@@ -40,5 +40,8 @@ docs/public/sponsors
 
 __pycache__
 
-# Intermediate result, should not update to git 
+# Intermediate result, should not update to git
 hack/api/
+
+docs/.vitepress/cache
+docs-zh/.vitepress/cache
