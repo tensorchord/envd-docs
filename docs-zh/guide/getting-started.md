@@ -87,43 +87,30 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 
 ### 安装和初始化 `envd`
 
-<tabs>
-<tab name="pip">
+::: code-group
 
-`envd` 也可以用 `pip` 来安装。
-
-```bash
+```bash [pip]
+# `envd` 也可以用 `pip` 来安装。
 pip3 install --upgrade envd
 ```
 
-</tab>
-<tab name="Homebrew">
-
-如果你使用的是 MacOS，可以通过 [homebrew](https://brew.sh/) 来安装 `envd`。
-
-```bash
+```bash [Homebrew]
+# 如果你使用的是 MacOS，可以通过 [homebrew](https://brew.sh/) 来安装 `envd`。
 brew install envd
 ```
-</tab>
-<tab name="pipx">
 
-`envd` 也可以通过 [pipx](https://pypi.org/project/pipx) 安装。
-
-```bash
+```bash [pipx]
+# `envd` 也可以通过 [pipx](https://pypi.org/project/pipx) 安装。
 pipx install envd
 ```
 
-</tab>
-<tab name="安装脚本">
-
-在终端中运行以下命令即可安装最新版本的 `envd`:
-
-```bash
+```bash [安装脚本]
+# 在终端中运行以下命令即可安装最新版本的 `envd`:
 curl -sSfL https://envd.tensorchord.ai/install.sh | sudo bash
 ```
 
-</tab>
-</tabs>
+:::
+
 
 安装完成后，请运行 `envd bootstrap` 来初始化。
 
