@@ -75,7 +75,7 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 For example, the PyPI cache is shared across builds and thus the package will be cached if it has been downloaded before.
 
 <p align=center>
-  <img src="https://user-images.githubusercontent.com/5100735/189928628-543f4851-87b7-462b-b811-372cbf46ff25.svg" width="65%"/>
+  <img style="background-color:white" src="https://user-images.githubusercontent.com/5100735/189928628-543f4851-87b7-462b-b811-372cbf46ff25.svg" width="65%"/>
 </p>
 
 ## Setup your first `envd` environment in 3 minutes
@@ -87,27 +87,23 @@ For example, the PyPI cache is shared across builds and thus the package will be
 
 ::: code-group
 
-```bash [pip]
+```bash [Pip]
 # envd can be installed with pip.
-
 pip3 install --upgrade envd
 ```
 
 ```bash [Homebrew]
 # If you are on MacOS, envd can be installed with homebrew.
-
 brew install envd
 ```
 
-```bash [pipx]
+```bash [Pipx]
 # envd can be installed with pipx.
-
 pipx install envd
 ```
 
-```bash [install Script]
+```bash [Install Script]
 # Run the following command in your terminal to install the latest release of envd.
-
 curl -sSfL https://envd.tensorchord.ai/install.sh | sudo bash
 ```
 
