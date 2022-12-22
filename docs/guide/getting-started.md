@@ -88,22 +88,22 @@ For example, the PyPI cache is shared across builds and thus the package will be
 ::: code-group
 
 ```bash [Pip]
-# `envd` can be installed with `pip`.
+# envd can be installed with pip.
 pip3 install --upgrade envd
 ```
 
 ```bash [Homebrew]
-# If you are on MacOS, `envd` can be installed with [homebrew](https://brew.sh/):
+# If you are on MacOS, envd can be installed with homebrew.
 brew install envd
 ```
 
 ```bash [Pipx]
-# `envd` can be installed with [pipx](https://pypi.org/project/pipx).
+# envd can be installed with pipx.
 pipx install envd
 ```
 
 ```bash [Install Script]
-# Run the following command in your terminal to install the latest release of `envd`:
+# Run the following command in your terminal to install the latest release of envd.
 curl -sSfL https://envd.tensorchord.ai/install.sh | sudo bash
 ```
 
