@@ -88,7 +88,7 @@ $ kubectl --namespace default port-forward $POD_NAME 8080:8080 2222:2222
 To create a development environment, you could create a new `envd` [context](./context.md), to tell `envd` that we are going to use the envd-server to manage environments on Kubernetes.
 
 ```bash
-$ envd context create --name envd-server --use --builder docker-container --runner envd-server --runner-address localhost:2222
+$ envd context create --name envd-server --use --builder docker-container --runner envd-server --runner-address http://localhost:8080 
 ```
 
 ## Create the environment on Kubernetes
