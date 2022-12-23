@@ -43,7 +43,7 @@ Then login to the `envd-server`, and create the environment to test if it works.
 
 ```bash
 # Create the context to tell envd to use the envd-server to run the environments.
-$ envd context create --name envd-server --use --builder docker-container --runner envd-server --runner-address localhost:2222
+$ envd context create --name envd-server --use --builder docker-container --runner envd-server --runner-address http://localhost:8080
 # Build the image, and push it to docker hub.
 $ envd build --output type=image,name=docker.io/<username>/<image>,push=true
 # login to the envd-server.
