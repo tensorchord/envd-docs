@@ -7,7 +7,7 @@ sidebar_position: 6
 
 Thanks for your interest in contributing to `envd` 🌟!
 
-Our community values contributions of all forms and seeks to expand the meaning of the word "contributor" as far and wide as possible. Our [contributing](./contributing) page gives an overview of some different ways to get involved and contribute. For technical contributions, read on to get started.
+Our community values contributions of all forms and seeks to expand the meaning of the word "contributor" as far and wide as possible. Our [contributing](/community/contributing) page gives an overview of some different ways to get involved and contribute. For technical contributions, read on to get started.
 
 ## Repository file structure
 
@@ -94,7 +94,7 @@ make test
 
 ## `envd up` from a developer's perspective
 
-`envd` interprets all statements in `build.envd` and executes `build()`. The function calls such as [`install.python_packages`](../api/starlark/install#python_packages) and [`config.jupyter`](../api/starlark/config#jupyter) register information to envd's in-memory static graph. Then `envd` constructs the [buildkit LLB DAG graph](https://github.com/moby/buildkit#exploring-llb) according to the information and uses it to build resulting image.
+`envd` interprets all statements in `build.envd` and executes `build()`. The function calls such as [`install.python_packages`](../api/starlark/v0/install#python_packages) and [`config.jupyter`](../api/starlark/v0/config#jupyter) register information to envd's in-memory static graph. Then `envd` constructs the [buildkit LLB DAG graph](https://github.com/moby/buildkit#exploring-llb) according to the information and uses it to build resulting image.
 
 ![](./assets/envd-arch.svg)
 

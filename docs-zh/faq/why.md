@@ -1,21 +1,21 @@
 
-# Why Use envd?
+# 为何选择 envd？
 
-It is still too difficult to configure development environments and reproduce results in AI/ML applications.
+目前在 AI/ML 应用程序中配置开发环境和重现结果仍然太困难。
 
-`envd` is a **machine learning development environment** for data science and AI/ML engineering teams. Environments built with `envd` provide the following features out-of-the-box:
+`envd` 是一个面向数据科学和 AI/ML 工程团队的**机器学习开发环境**。使用 `envd` 构建的环境提供以下开箱即用的功能：
 
-🐍 **Life is short, use Python[^1]**
+🐍 **人生苦短，我用 Python[^1]**
 
-Development environments are full of Dockerfiles, bash scripts, Kubernetes YAML manifests, and many other clunky files that are always breaking. `envd` builds are isolated and clean. You can write simple instructions in Python, instead of Bash / Makefile / Dockerfile / ...
+开发环境总是充满了 Dockerfile、bash 脚本、Kubernetes YAML 清单和许多其他总是出问题的笨重文件。 `envd` 构建是独立且干净的。你可以用 Python 编写简单的指令，而不是 Bash / Makefile / Dockerfile / ……
 
 ![envd](./assets/envd.png)
 
-[^1]: The build language is [starlark](https://docs.bazel.build/versions/main/skylark/language.html), which is a dialect of Python.
+[^1]: 这个构建语言是 [starlark](https://docs.bazel.build/versions/main/skylark/language.html)，是 Python 的一种方言。
 
-⏱️ **Save you plenty of time**
+⏱️ **节省你的大量时间**
 
-`envd` adopts a multi-level cache mechanism to accelerate the building process. For example, the PyPI cache is shared across builds and thus the package will be cached if it has been downloaded before. It saves plenty of time, especially when you update the environment by trial and error.
+`envd` 采用多级缓存机制来加速构建过程。例如，PyPI 缓存在构建之间共享，因此如果之前下载过该包，则该包将被缓存。它可以节省大量时间，尤其是当你通过反复试验更新环境时。
 
 <table>
 <tr>
@@ -47,27 +47,27 @@ $ docker build
 </tr>
 </table>
 
-[^2]: Docker without [buildkit](https://github.com/moby/buildkit)
+[^2]: Docker 但不使用 [buildkit](https://github.com/moby/buildkit)
 
-☁️ **Local & cloud native**
+☁️ **本地和云原生**
 
-`envd` integrates seamlessly with Docker, you can share, version, and publish `envd` environments with Docker Hub or any other OCI image registries. The `envd` environments can be run on Docker or Kubernetes.
+`envd` 与 Docker 无缝集成，你可以通过 Docker Hub 或任何其他 OCI 镜像注册站来共享、版本化和发布 `envd` 环境。 `envd` 环境可以在 Docker 或 Kubernetes 上运行。
 
-🔁 **Repeatable builds & reproducible results**
+🔁 **可重复的构建和可复现的结果**
 
-You can reproduce the same dev environment, on your laptop, public cloud VMs, or Docker containers, without any change in setup. You can also collaborate with your colleagues without "let me configure the environment in your machine".
+你可以在笔记本电脑、公共云 VM 或 Docker 容器上重现相同的开发环境，而无需更改任何设置。你也可以与同事协作，而无需“让我给你的机器配置环境”。
 
-🖨️ **Seamless experience of Jupyter/VSCode** 
+🖨️ **在 Jupyter/VSCode 中无缝体验** 
 
-`envd` provides first-class support for Jupyter and VSCode remote extension. You benefit without sacrificing any developer experience.
+`envd` 为 Jupyter 和 VSCode 远程扩展提供了一流的支持。你可以在不牺牲任何开发人员体验的情况下受益。
 
-## How to build a machine learning development environment, without envd?
+## 如果不用 envd，应该怎么搭建机器学习开发环境？
 
-We have to play with Docker, conda, CUDA, GPU Drivers, and even Kubernetes if the training jobs are running in the cloud, to make things happen.
+如果训练作业在云端运行，我们必须使用 Docker、conda、CUDA、GPU 驱动程序，甚至 Kubernetes，才能达成。
 
-AI/ML models are optimized by trials and errors. And the environment will be updated, modified, or rebuilt again, and again, in place. 
+AI/ML 模型通过反复试验进行优化。环境也将一次又一次地更新、修改或重建。
 
-Thus, we have to maintain such a complicated `Dockerfile`.
+因此，我们不得不维护这么复杂的 `Dockerfile`。
 
 ```docker
 FROM nvidia:cuda:11.6.2-devel-ubuntu20.04
@@ -108,11 +108,11 @@ wait -n`' >> /init.bash
 ENTRYPOINT ["tini", "--", "bash", "init.bash"]
 ```
 
-## How to do with envd?
+## 用 envd 会怎么做?
 
-envd provides build language similar to Python and has first-class support for jupyter, vscode, and python dependencies in container technologies.
+`envd` 提供类似于 Python 的构建语言，并且在容器技术中对 Jupyter、VSCode 和 Python 依赖项具有一流的支持。
 
-The same logic in envd looks like this:
+`envd` 中的相同逻辑如下所示：
 
 ```python
 def build():
@@ -129,10 +129,12 @@ def build():
     config.jupyter()
 ```
 
-## Who should use envd?
+## 谁应该使用 envd?
 
-Currently, we’re focused on helping data scientists and teams that develop AI/ML models. And they may suffer from:
+目前，我们专注于帮助开发 AI/ML 模型的数据科学家和团队。
 
-- building the development environments with Python, CUDA, Docker, SSH, and so on. Do you have a complicated Dockerfile or build script that sets up all your dev environments, but is always breaking?
-- Updating the environment. Do you always need to ask infrastructure engineers how to add a new python package in the Dockerfile?
-- Managing environments and machines. Do you always forget which machines are used for the specific project, because you handle multiple projects concurrently?
+他们可能苦于：
+
+- 使用 Python、CUDA、Docker、SSH 等构建开发环境。你是否有一个复杂的 Dockerfile 或构建脚本来设置你的所有开发环境，但总是出问题？
+- 更新环境。是不是总要问基础架构工程师如何在 Dockerfile 中添加一个新的Python 包？
+- 管理环境和机器。你是否总是因为同时处理多个项目而忘记具体项目使用了哪些机器？

@@ -34,7 +34,7 @@ export default defineConfig({
       "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-HRD26FG2QW');"
     ],
 
-    ['link', { rel: 'icon', href: '/logo.svg', alt:'envd'}],
+    ['link', { rel: 'icon', href: '/logo_light.svg', alt:'envd'}],
     ['meta', { name: 'keywords', content: 'envd, AI, ML, development environment, data science, engineering teams, No Docker, only Python, Jupyter, VSCode, save time, Local & cloud, Repeatable builds, reproducible results'}],
     ['meta', { property: 'og:title', content: 'envd' }],
     ['meta', { property: 'og:description', content: 'A machine learning development environment for data science and AI/ML engineering teams.' }],
@@ -46,7 +46,10 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/logo.svg',
+    logo: {
+      light: '/logo_light.svg',
+      dark: '/logo_dark.svg',
+    },
     algolia: {
       appId: 'KGSWV0XY1D',
       apiKey: 'a3c4e766b63fac5bee147fb9fc269cb0',
@@ -81,7 +84,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the Apache-2.0 License. Built with VitePress.',
-      copyright: 'Copyright © 2022 TensorChord, Inc.'
+      copyright: 'Copyright © 2022 TensorChord, Inc. <a href="https://www.netlify.com"> <img style="margin: 0 auto" src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /></a>'
     }
   },
 

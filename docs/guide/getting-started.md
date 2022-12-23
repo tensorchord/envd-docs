@@ -32,7 +32,7 @@ def build():
 
 <details>
   <summary><code>envdlib.tensorboard</code> is defined in <a href="https://github.com/tensorchord/envdlib/blob/main/src/monitoring.envd">github.com/tensorchord/envdlib</a></summary>
-  
+
 ```python
 def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
         host_port=0, host_dir="/var/log/tensorboard"):
@@ -75,40 +75,8 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 For example, the PyPI cache is shared across builds and thus the package will be cached if it has been downloaded before.
 
 <p align=center>
-  <img src="https://user-images.githubusercontent.com/5100735/189928628-543f4851-87b7-462b-b811-372cbf46ff25.svg" width="65%"/>
+  <img style="background-color:white" src="https://user-images.githubusercontent.com/5100735/189928628-543f4851-87b7-462b-b811-372cbf46ff25.svg" width="65%"/>
 </p>
-
-🐍 **One configuration to rule them all**
-
-Development environments are full of Dockerfiles, bash scripts, Kubernetes YAML manifests, and many other clunky files that are always breaking. You just need one configuration file `build.envd`[^1], it works both for local Docker and Kubernetes clusters in the cloud.
-
-![envd](https://user-images.githubusercontent.com/5100735/188821980-dcbd9069-b504-436a-9ffd-05ac5543a6d1.png)
-
-[^1]: The build language is [starlark](https://docs.bazel.build/versions/main/skylark/language.html), which is a dialect of Python.
-
-✍️ **Don't sacrifice your developer experience**
-
-SSH is configured for the created environment. You can use vscode-remote, jupyter, pycharm or other IDEs that you love. Besides this, declare the IDE extensions you want, let `envd` take care of them.
-
-```python
-def build():
-    install.vscode_extensions([
-        "ms-python.python",
-    ])
-```
-
-☁️ **No polluted environment**
-
-Are you working on multiple projects, all of which need different versions of CUDA? `envd` helps you create isolated and clean environments. 
-
-## Who should use envd?
-
-We’re focused on helping data scientists and teams that develop AI/ML models. And they may suffer from:
-
-- building the development environments with Python/R/Julia, CUDA, Docker, SSH, and so on. Do you have a complicated Dockerfile or build script that sets up all your dev environments, but is always breaking?
-- Updating the environment. Do you always need to ask infrastructure engineers how to add a new Python/R/Julia package in the Dockerfile?
-- Managing environments and machines. Do you always forget which machines are used for the specific project, because you handle multiple projects concurrently?
-
 
 ## Setup your first `envd` environment in 3 minutes
 ### Requirements
@@ -117,10 +85,33 @@ We’re focused on helping data scientists and teams that develop AI/ML models. 
 
 ### Install and bootstrap `envd`
 
-`envd` can be installed with `pip` (only support Python3). After the installation, please run `envd bootstrap` to bootstrap.
+::: code-group
+
+```bash [Pip]
+# envd can be installed with pip.
+pip3 install --upgrade envd
+```
+
+```bash [Homebrew]
+# If you are on MacOS, envd can be installed with homebrew.
+brew install envd
+```
+
+```bash [Pipx]
+# envd can be installed with pipx.
+pipx install envd
+```
+
+```bash [Install Script]
+# Run the following command in your terminal to install the latest release of envd.
+curl -sSfL https://envd.tensorchord.ai/install.sh | sudo bash
+```
+
+:::
+
+After the installation, please run `envd bootstrap` to bootstrap:
 
 ```bash
-pip3 install --pre --upgrade envd
 envd bootstrap
 ```
 
@@ -187,7 +178,7 @@ $ cd envd-quick-start && envd up
  => => exporting manifest sha256:7dbe9494d2a7a39af16d514b997a5a8f08b637f  0.0s
  => => exporting config sha256:1da06b907d53cf8a7312c138c3221e590dedc2717  0.0s
  => => sending tarball                                                    0.4s
-envd-quick-start via Py v3.9.13 via 🅒 envd 
+envd-quick-start via Py v3.9.13 via 🅒 envd
 ⬢ [envd]❯ # You are in the container-based environment!
 ```
 
@@ -229,7 +220,7 @@ Please checkout [ROADMAP](https://envd.tensorchord.ai/community/roadmap.html).
 We welcome all kinds of contributions from the open-source community, individuals, and partners.
 
 - Join our [discord community](https://discord.gg/KqswhpVgdU)!
-- To build from the source, please read our [contributing documentation](https://envd.tensorchord.ai/community/contributing.html) and [development tutorial](https://envd.tensorchord.ai/community/development.html).
+- To build from the source, please read our [contributing documentation](https://envd.tensorchord.ai/community/contributing.html) and [development tutorial](https://envd.tensorchord.ai/developers/development.html).
 
 Develop with gitpod: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tensorchord/envd)
 
@@ -238,6 +229,3 @@ Develop with gitpod: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.
 💬 Interested in talking with us about your experience building or managing AI/ML applications?
 
 [**Set up a time to chat!**](https://forms.gle/9HDBHX5Y3fzuDCDAA)
-
-
-

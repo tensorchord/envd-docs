@@ -52,7 +52,7 @@ build-zh:
 	@pnpm build:zh
 
 dev:
-	@pnpm docs:dev
+	@pnpm dev
 
 dev-zh:
 	@pnpm dev:zh
@@ -62,3 +62,6 @@ lintmd:
 
 prettiermd:
 	@pnpm prettier --write "**/*.md"
+
+clean:
+	@-rm -rf hack/api/docs

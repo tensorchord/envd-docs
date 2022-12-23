@@ -29,13 +29,27 @@ jobs:
           fetch-depth: 1
           path: envd
       - run: |
-          mkdir -p envd-docs/hack/api/api/
-          cp -r envd/envd/api/* envd-docs/hack/api/api/      
+          mkdir -p envd-docs/hack/api/
+          cp -r envd/envd/api/* envd-docs/hack/api/
+      - name: Checkout Envd lib
+        uses: actions/checkout@v3
+        with:
+          repository: 'tensorchord/envdlib'
+          fetch-depth: 1
+          path: envdlib
+      - run: |
+          mkdir -p envd-docs/hack/api/lib/
+          cp -r envdlib/src/* envd-docs/hack/api/lib/
       - name: Generate API docs
         run: |
           pushd envd-docs
           python -m pip install -r hack/api/requirement.txt
           make generate-api-ref
+          popd
+      - name: Copy API docs to zh docs
+        run: |
+          pushd envd-docs
+          cp -r docs/api docs-zh/ 
           popd
       - name: Generate CLI docs
         run: |

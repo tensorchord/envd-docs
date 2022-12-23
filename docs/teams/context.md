@@ -12,17 +12,21 @@ There are the properties of a context:
 
 - `name`: name of the context
 - `builder`: type of the builder instance (`docker-container`, `kube-pod`, `tcp`)
-- `builder-socket`: builder instance endpoint
+- `builder-addr`: builder instance endpoint
+- `runner`: type of the runner instance (`docker`, `envd-server`)
+- `runner-addr`: runner instance endpoint
 
 Viewing the default context is the easiest way to see what a context looks like.
 
 ```bash
 $ envd context ls
-CONTEXT                 BUILDER                 SOCKET                            
+CONTEXT                 BUILDER                 BUILDER ADDR                            
 default (current)       docker-container        docker-container://envd_buildkitd
 ```
 
 This shows the default context. `envd` bootstraps a builder container instance `envd_buildkitd` in Docker, and uses it to execute all `envd` commands.
+
+The `builder` is used to build envd images. And the `runner` is to run envd environments. There are two types of `runner`: `docker` and `envd-server`. `envd-server` is an experimental runner to [run envd environments on Kubernetes](./kubernetes.md).
 
 ## Create a new context
 
@@ -30,7 +34,8 @@ A new context can be created with the `envd context create` command.
 
 ```bash
 $ envd context create --name demo \
-    --builder-socket buildkitd-demo --use --builder docker-container
+    --builder-address buildkitd-demo --use --builder docker-container \
+    --runner docker
 INFO[2022-08-15T15:33:24+08:00] Context demo is created                      
 INFO[2022-08-15T15:33:24+08:00] Current context is now "demo"       
 ```

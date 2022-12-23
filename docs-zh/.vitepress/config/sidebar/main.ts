@@ -53,9 +53,17 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       text: '社区',
       collapsible: true,
       items: [
+        { text: '加入社区', link: '/community/community' },
         { text: '贡献 envd', link: '/community/contributing' },
-        { text: '开发教程', link: '/community/development' },
         { text: '路线图', link: '/community/roadmap' },
+      ]
+    },
+    {
+      text: '开发者',
+      collapsible: true,
+      items: [
+        { text: '开发教程', link: '/developer/development' },
+        { text: 'envd-server', link: '/developers/kubernetes' },
       ]
     },
     {

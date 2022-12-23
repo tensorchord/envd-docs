@@ -26,4 +26,4 @@ def build():
 请确保你拥有挂载目录的权限。
 :::
 
-这个示例包括 mount、daemon 和 expose 操作，更多功能请参考 envd [API reference](/api/starlark/runtime)。
+这个示例包括 mount、daemon 和 expose 操作，更多功能请参考 envd [API reference](/api/starlark/v0/runtime)。
