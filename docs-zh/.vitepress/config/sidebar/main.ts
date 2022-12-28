@@ -10,6 +10,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
         { text: '构建你的开发环境', link: '/guide/build-envd' },
         { text: '连接你的开发环境', link: '/guide/ide' },
         { text: 'envd 核心概念', link: '/guide/concepts' },
+        { text: '模块化你的构建', link:'/guide/modularize'},
       ],
     },
     {
@@ -27,6 +28,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       collapsible: true,
       items: [
         { text: '总览', link: '/teams/overview'},
+        { text: '在 Kubernetes 上使用 envd (试验性)', link: '/teams/kubernetes'},
         { text: 'CI/CD 集成', link: '/teams/ci' },
         { text: 'envd Contexts 上下文', link: '/teams/context' },
         { text: 'Remote Cache（高级特性）', link: '/teams/cache' },
@@ -42,14 +44,6 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       ]
     },
     {
-      text: '常见问题',
-      collapsible: true,
-      items: [
-        { text: '为何选择 envd', link: '/faq/why' },
-        { text: 'envd 和其他工具的比较', link: '/faq/comparison' },
-      ]
-    },
-    {
       text: '社区',
       collapsible: true,
       items: [
@@ -62,8 +56,16 @@ export const mainSidebar: DefaultTheme.Sidebar = {
       text: '开发者',
       collapsible: true,
       items: [
-        { text: '开发教程', link: '/developer/development' },
+        { text: '开发教程', link: '/developers/development' },
         { text: 'envd-server', link: '/developers/kubernetes' },
+      ]
+    },
+    {
+      text: '常见问题',
+      collapsible: true,
+      items: [
+        { text: '为何选择 envd', link: '/faq/why' },
+        { text: 'envd 和其他工具的比较', link: '/faq/comparison' },
       ]
     },
     {
