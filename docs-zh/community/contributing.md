@@ -34,7 +34,7 @@
 
 ### 👨‍💻 向 `envd` 贡献
 
-如果你想要修复一个 issue，那么请开启一个 pull request。请阅读 [开发指南](/developer/development) 来作为贡献的起点。
+如果你想要修复一个 issue，那么请开启一个 pull request。请阅读 [开发指南](/developers/development) 来作为贡献的起点。
 
 ### 👉 改进文档
 
