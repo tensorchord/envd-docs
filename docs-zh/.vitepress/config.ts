@@ -20,7 +20,7 @@ export default defineConfig({
       'script',
       {
         async: "true",
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-HRD26FG2QW' 
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-HRD26FG2QW'
       }
     ],
     [
@@ -73,8 +73,13 @@ export default defineConfig({
       { text: '版本历史', link: 'https://github.com/tensorchord/envd/releases'}
     ],
     editLink: {
-      pattern: 'https://github.com/tensorchord/envd-docs/tree/main/docs/:path',
-      text: 'Suggest changes to this page',
+      pattern: 'https://github.com/tensorchord/envd-docs/tree/main/docs-zh/:path',
+      text: '对本页提出修改建议',
+    },
+    lastUpdatedText: '最后更新',
+    docFooter: {
+      next: '下一页',
+      prev: '上一页'
     },
 
     footer: {
