@@ -1,37 +1,40 @@
-# Development Tutorial for `envd-server`
+# `envd-server` 的开发指南
 
-`envd-server` is the backend server for `envd`. It manages environments on Kubernetes and supports multiple concurrent users.
+`envd-server` 是 `envd` 的后端服务。它在 Kubernetes 上管理环境并支持多个并发用户。
 
-## Workflow
 
-Here is the workflow for how an `envd` environment is created on Kubernetes.
+## 工作流程
 
-- The user creates an environment using `envd` in the envd console.
-- `envd-server` validates the environment and prepares it for provisioning on Kubernetes.
-- `envd-server` provisions the environment on Kubernetes.
-- The user is notified that the environment is ready to use.
-- User attaches to the environment with `ssh`.
-- [containerssh](https://github.com/ContainerSSH/libcontainerssh/) is a ssh proxy that captures and forwards the ssh connection to the desired pod.
+
+以下是如何在 Kubernetes 上创建 `envd` 环境的工作流程。
+
+- 用户在 envd 控制台使用 `envd` 创建一个环境。
+- `envd-server` 对环境进行验证，并为在 Kubernetes 上的配置做准备。
+- `envd-server` 在 Kubernetes 上配置环境。
+- 用户会被通知环境已经准备好了，可以使用。
+- 用户用 `ssh` 连接到环境。
+- [containerssh](https://github.com/ContainerSSH/libcontainerssh/)是一个 ssh 代理，捕获并转发 ssh 连接到所需的 pod。
 
 ![](https://user-images.githubusercontent.com/5100735/201919714-0539bb67-3855-42f7-9b39-0d1f6a8f21e5.svg)
 
-## Development Process
+## 开发过程
 
-The steps below walk you through the setup process. If you have questions, you can ask on [discord](https://discord.gg/KqswhpVgdU) or post an issue that describes the place you are stuck, and we'll do our best to help.
+下面的步骤指导你完成设置过程。如果你有问题，你可以在 [discord](https://discord.gg/KqswhpVgdU) 上提问，或者发布一个 issue，描述你被卡住的地方，我们会尽力帮助。
 
-First, you could run the command in `envd-server` to build and push the development image.
+首先，你可以运行 `envd-server` 中的命令来构建和推送开发镜像。
 
 ```bash
 $ BASE_REGISTRY_USER=<username in docker hub> make build-image
 ```
 
-After that, you could use helm to install the `envd-server` with the new image:
+之后，你可以用 helm 将 `envd-server` 和新镜像一起安装：
 
 ```bash
 $ helm install --set image.repository=<username in docker hub>/envd-server --set image.tag=dev envd-server ./manifests
 ```
 
-Then forward these two ports to localhost for debug purpose:
+然后将这两个端口转发到 localhost 用于调试：
+
 
 ```bash
 $ export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=envd-server,app.kubernetes.io/instance=envd-server" -o jsonpath="{.items[0].metadata.name}")
@@ -39,7 +42,7 @@ $ kubectl --namespace default port-forward $POD_NAME 8080:8080
 $ kubectl --namespace default port-forward $POD_NAME 2222:2222
 ```
 
-Then login to the `envd-server`, and create the environment to test if it works.
+然后登录到 `envd-server`，并创建环境以测试其是否工作：
 
 ```bash
 # Create the context to tell envd to use the envd-server to run the environments.
@@ -52,7 +55,7 @@ $ envd login
 $ envd run --image <username>/<image>
 ```
 
-## References
+## 参考资料
 
 - [envd-server design proposal](https://github.com/tensorchord/envd/blob/main/docs/proposals/20220603-kubernetes-vendor.md)
 - [envd-server community issue](https://github.com/tensorchord/envd/issues/179)

@@ -1,49 +1,94 @@
-# Multi-target Build
+# 多目标构建
 
-`envd` supports building different container images from one single file, for different purpose. Typical scenario includes:
+有时你需要为开发、服务或其他目的构建不同的镜像。本指南展示了`envd build`如何支持多目标构建。
 
-- Use cpu for model development, need gpu for large scale training jobs
-- Use `envd` in daily development, but want to containerize dependency and publish it for model serving
-- Require both X86 and ARM platforms.
 
-## Usage
+一个 `build.envd` 可以有多个构建目标。 `build.envd` 默认的构建目标是 `build`：
 
-Command `envd up -f {build_file}:{build_func}` can specify the build target, by running the `build_func` in `build_file`. 
+```py
+def build():
+    # ...
+```
 
-For example, you can decalre multiple functions in one `envd` file, following python's syntax
+## 创建一个新的构建目标
 
-<custom-title title=" build.envd">
+新的构建目标可以被定义为 `build.envd` 中的函数：
 
-```python
+```py
+def build():
+    # ...
+def serve():
+    # ...
+```
+
+## 例子
+
+`envd build -f :<target>` 执行对指定目标的构建。下面是一个[例子](https://github.com/tensorchord/envd/tree/main/examples/streamlit-mnist)。
+
+```py
 def build():
     base(os="ubuntu20.04", language="python3")
     install.vscode_extensions([
         "ms-python.python",
     ])
 
+    configure_mnist()
+    # Configure jupyter notebooks.
+    config.jupyter()
+    # Configure zsh.
+    shell("zsh")
+
+def serve():
+    base(os="ubuntu20.04", language="python3")
+    configure_streamlit(8501)
+    configure_mnist()
+
+def configure_streamlit(port):
+    install.python_packages([
+        "streamlit",
+        "streamlit_drawable_canvas",
+    ])
+    runtime.expose(envd_port=port, host_port=port, service="streamlit")
+    runtime.daemon(commands=[
+        ["streamlit", "run", "~/streamlit-mnist/app.py"]
+    ])
+
+def configure_mnist():
+    # config.pip_index(url = "https://pypi.tuna.tsinghua.edu.cn/simple")
+    install.apt_packages([
+        "libgl1",
+    ])
     install.python_packages([
         "tensorflow",
         "numpy",
+        "opencv-python",
+        "matplotlib",
     ])
-    shell("zsh")
-    config.jupyter(token="", port=8888)
-    
-def build_gpu():
-    build() # include all dependency decalred in build function
-    install.cuda(version="11.2.2", cudnn="8")
 ```
 
-</custom-title>
+这个演示包含两个部分：使用 mnist 数据集训练一个简单的数字识别模型和一个实时演示该模型的 web 应用程序。
 
-Then, to start with cpu, any of commands below works the same way 
 
-- `envd up`, this will run `build` function in `build.envd` file in 
-current working directory
-- `envd up -f :build`, explicitly specify `build` function
-- `envd up -f build.envd`, explicitly specify `build.envd`
-- `envd up -f build.envd:build`, explicitly specify both `build.envd` and `build` function
+<p align="center">
 
-Simiarly, if you want to start with cuda support declared in `build_gpu` function, you can try
+![](./assets/demo.gif){ style="display: block; margin: 0 auto" }
 
-- `envd up -f :build_gpu`, explicitly specify `build_gpu` function
-- `envd up -f build.envd:build_gpu`, explicitly specify both `build.envd` and `build_gpu` function
+</p>
+
+运行该例子的步骤在此显示。
+
+1. 首先创建开发环境。
+
+   ```
+   envd up
+   ```
+
+2. 训练模型
+
+    手动运行 [train.ipynb](https://github.com/tensorchord/envd/blob/main/examples/streamlit-mnist/train.ipynb) 的所有单元。
+
+3. 运行示例 web 应用程序。
+
+   ```
+   envd up -f :serve
+   ```
