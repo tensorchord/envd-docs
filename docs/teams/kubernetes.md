@@ -116,7 +116,7 @@ $ envd run --image <your-image>
 
 ## Dashboard
 
-You can get the dashboard by visiting `http://localhost:8080/dashboard/` in your browser.
+You can access the dashboard by visiting `http://localhost:8080/dashboard/` in your browser.
 
 ![envd dashboard](./assets/env.png)
 
