@@ -116,6 +116,14 @@ $ envd login --username <username>
 $ envd run --image <your-image>
 ```
 
+## Dashboard
+
+你可以通过 `http://localhost:8080/dashboard/` 访问 envd dashboard。
+
+![envd dashboard](./assets/env.png)
+
+![envd dashboard](./assets/image.png)
+
 ## 定制化
 
 你可以通过在 Kubernetes 集群中添加一个 [pod defaulting webhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/) 来定制这个环境。下面是一个例子[envd-server-pod-webhook](https://github.com/tensorchord/envd-server-pod-webhook)。
