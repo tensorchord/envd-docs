@@ -1,6 +1,13 @@
 import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
 import { sidebar } from './config/sidebar'
+import { SitemapStream } from 'sitemap'
+import { createWriteStream } from 'node:fs'
+import { resolve } from 'node:path'
+
+// This links array is used to temporarily store all page link information, in order to generate sitemap.
+const links: any[] = []
+const siteHostName = 'https://zh.envd.tensorchord.ai/'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -92,5 +99,24 @@ export default defineConfig({
     config: (md) => {
       md.use(footnote)
     }
+  },
+
+  transformHtml: (_, id, { pageData }) => {
+    if (!/[\\/]404\.html$/.test(id))
+      links.push({
+        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+        lastmod: pageData.lastUpdated
+      })
+  },
+
+  buildEnd: async ({ outDir }) => {
+    const sitemap = new SitemapStream({
+      hostname: siteHostName
+    })
+    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+    sitemap.pipe(writeStream)
+    links.forEach((link) => sitemap.write(link))
+    sitemap.end()
+    await new Promise((r) => writeStream.on('finish', r))
   },
 })
