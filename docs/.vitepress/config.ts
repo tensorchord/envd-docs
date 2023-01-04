@@ -4,6 +4,7 @@ import { sidebar } from './config/sidebar'
 import { SitemapStream } from 'sitemap'
 import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
+import { blogSidebar } from './config/sidebar/blog'
 
 // This links array is used to temporarily store all page link information, in order to generate sitemap.
 const links: any[] = []
@@ -80,8 +81,10 @@ export default defineConfig({
     nav:[
       // add the default post link here
       { text: 'Get Started', link: '/guide/getting-started'},
-      { text: 'Reference', link: '/api/cli/cli',activeMatch: '/api/' },
-      { text: 'Blog', link: '/blog/ml-env',activeMatch: '/blog/' },
+      { text: 'Reference', link: '/api/cli/cli', activeMatch: '/api/' },
+      // Use latest blog as the default one
+      // @ts-ignore
+      { text: 'Blog', link: blogSidebar['/blog/'][0].items[0].link, activeMatch: '/blog/' },
       { text: 'Releases', link: 'https://github.com/tensorchord/envd/releases'}
     ],
     editLink: {
