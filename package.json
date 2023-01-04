@@ -14,7 +14,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/markdown-it-footnote": "^3.0.0",
     "prettier": "2.7.1",
+    "sitemap": "^7.1.1",
     "vitepress": "1.0.0-alpha.33",
     "vue": "^3.2.37"
   },
