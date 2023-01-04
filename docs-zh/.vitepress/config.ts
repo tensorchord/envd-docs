@@ -104,7 +104,7 @@ export default defineConfig({
   transformHtml: (_, id, { pageData }) => {
     if (!/[\\/]404\.html$/.test(id))
       links.push({
-        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+        url: pageData.relativePath.replace(/\.md$/, '.html'),
         lastmod: pageData.lastUpdated
       })
   },
