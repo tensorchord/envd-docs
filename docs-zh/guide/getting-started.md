@@ -69,9 +69,9 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 
 :::
 
-⏱️ **Builtkit 原生，构建速度提高 6 倍**
+⏱️ **BuildKit 原生，构建速度提高 6 倍**
 
-[Buildkit](https://github.com/moby/buildkit) 支持并行构建和构建时的软件缓存（例如 pip 和 apt 缓存）。你可以在不用了解细节的情况下享受到它的强大之处。
+[BuildKit](https://github.com/moby/buildkit) 支持并行构建和构建时的软件缓存（例如 pip 和 apt 缓存）。你可以在不用了解细节的情况下享受到它的强大之处。
 
 例如，PyPI 缓存是在不同的构建过程中可以被被共享。因此如果软件包以前被下载过，就会直接利用缓存安装。
 
@@ -217,18 +217,18 @@ envd-quick-start        http://localhost:42779   envd-quick-start.envd   /home/g
 
 ## 更多文档 📝
 
-访问[envd 文档](https://envd.tensorchord.ai/guide/getting-started.html)。
+访问 [envd 文档](../guide/getting-started)。
 
 ## 路线图 🗂️
 
-我们的路线图在这里 [ROADMAP](https://envd.tensorchord.ai/community/roadmap.html)。
+我们的路线图在这里 [ROADMAP](../community/roadmap)。
 
 ## 为 `envd` 贡献 😊
 
 我们欢迎来自开源社区、个人和合作伙伴的各种贡献。
 
-- 加入我们的[Discord 社区](https://discord.gg/KqswhpVgdU)!
-- 从源码构建可以阅读我们的[贡献指南](https://envd.tensorchord.ai/community/contributing.html) 和[开发教程](https://envd.tensorchord.ai/developers/development.html).
+- 加入我们的 [Discord 社区](https://discord.gg/KqswhpVgdU)!
+- 从源码构建可以阅读我们的[贡献指南](../community/contributing)和[开发教程](../developers/development).
 
 利用 Gitpod 来开发：[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tensorchord/envd)
 

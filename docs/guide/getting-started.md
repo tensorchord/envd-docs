@@ -68,9 +68,9 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 ```
 </details>
 
-⏱️ **Builtkit native, build up to 6x faster**
+⏱️ **BuiltKit native, build up to 6x faster**
 
-[Buildkit](https://github.com/moby/buildkit) supports parallel builds and software cache (e.g. pip index cache and apt cache). You can enjoy the benefits without knowledge of it.
+[BuildKit](https://github.com/moby/buildkit) supports parallel builds and software cache (e.g. pip index cache and apt cache). You can enjoy the benefits without knowledge of it.
 
 For example, the PyPI cache is shared across builds and thus the package will be cached if it has been downloaded before.
 
@@ -209,18 +209,18 @@ envd-quick-start        http://localhost:42779   envd-quick-start.envd   /home/g
 
 ## More on documentation 📝
 
-See [envd documentation](https://envd.tensorchord.ai/guide/getting-started.html).
+See [envd documentation](../guide/getting-started).
 
 ## Roadmap 🗂️
 
-Please checkout [ROADMAP](https://envd.tensorchord.ai/community/roadmap.html).
+Please check out [ROADMAP](../community/roadmap).
 
 ## Contribute 😊
 
 We welcome all kinds of contributions from the open-source community, individuals, and partners.
 
 - Join our [discord community](https://discord.gg/KqswhpVgdU)!
-- To build from the source, please read our [contributing documentation](https://envd.tensorchord.ai/community/contributing.html) and [development tutorial](https://envd.tensorchord.ai/developers/development.html).
+- To build from the source, please read our [contributing documentation](../community/contributing) and [development tutorial](../developers/development).
 
 Develop with gitpod: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tensorchord/envd)
 
