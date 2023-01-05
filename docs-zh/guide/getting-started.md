@@ -215,10 +215,6 @@ NAME                    JUPYTER                 SSH TARGET              CONTEXT 
 envd-quick-start        http://localhost:42779   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
 ```
 
-## 更多文档 📝
-
-访问 [envd 文档](../guide/getting-started)。
-
 ## 路线图 🗂️
 
 我们的路线图在这里 [ROADMAP](../community/roadmap)。
