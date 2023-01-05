@@ -1,6 +1,14 @@
 import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
 import { sidebar } from './config/sidebar'
+import { SitemapStream } from 'sitemap'
+import { createWriteStream } from 'node:fs'
+import { resolve } from 'node:path'
+import { blogSidebar } from './config/sidebar/blog'
+
+// This links array is used to temporarily store all page link information, in order to generate sitemap.
+const links: any[] = []
+const siteHostName = 'https://zh.envd.tensorchord.ai/'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -68,8 +76,10 @@ export default defineConfig({
     nav:[
       // add the default post link here
       { text: '开始了解', link: '/guide/getting-started'},
-      { text: 'API', link: '/api/cli/cli',activeMatch: '/api/' },
-      { text: '博客', link: '/blog/envd',activeMatch: '/blog/' },
+      { text: 'API', link: '/api/cli/cli',activeMatch: '/api/' },    
+      // Use latest blog as the default one
+      // @ts-ignore
+      { text: '博客', link: blogSidebar['/blog/'][0].items[0].link, activeMatch: '/blog/' },
       { text: '版本历史', link: 'https://github.com/tensorchord/envd/releases'}
     ],
     editLink: {
@@ -92,5 +102,24 @@ export default defineConfig({
     config: (md) => {
       md.use(footnote)
     }
+  },
+
+  transformHtml: (_, id, { pageData }) => {
+    if (!/[\\/]404\.html$/.test(id))
+      links.push({
+        url: pageData.relativePath.replace(/\.md$/, '.html'),
+        lastmod: pageData.lastUpdated
+      })
+  },
+
+  buildEnd: async ({ outDir }) => {
+    const sitemap = new SitemapStream({
+      hostname: siteHostName
+    })
+    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+    sitemap.pipe(writeStream)
+    links.forEach((link) => sitemap.write(link))
+    sitemap.end()
+    await new Promise((r) => writeStream.on('finish', r))
   },
 })
