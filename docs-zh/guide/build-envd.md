@@ -1,12 +1,12 @@
-# 构建您的 envd 环境
+# 构建你的 envd 环境
 
-`envd` 通过读取 `build.envd` 文件中的配置来自动构建镜像。`build.envd` 是一个包含所有命令的配置文件。
+`envd` 通过读取 `build.envd` 文件中的配置来自动构建镜像。`build.envd` 是一个文本文件，其中包含所有用户能在命令行中调用以组装镜像的命令。
 
 ## 基础命令
 
-- `envd build`：从 build.envd 构建镜像。
-- `envd up`：从 build.envd 构建镜像并立即运行。
-- `envd build/envd up --path/-p` : 指定镜像的构建目录（指定目录下必须包含 build.envd 文件）。
+- `envd build`：从 `build.envd` 构建镜像。
+- `envd up`：从 `build.envd` 构建镜像并立即运行。
+- `envd build/envd up --path/-p` : 指定镜像的构建目录（指定目录下必须包含 `build.envd` 文件）。
 
 ```bash
 # 在当前目录下构建镜像
@@ -29,7 +29,7 @@ $ envd build --path examples/mnist
 
 ## build.envd 示例
 
-`build.envd` 使用 [starlark](https://docs.bazel.build/versions/main/skylark/language.html)（Python3 的一种简化方言）语法编写，如果您了解 Python，那么您也可以毫无障碍编写 build.envd。
+`build.envd` 使用 [Starlark](https://bazel.build/rules/language)（Python3 的一种简化方言）语法编写，如果您了解 Python，那么您也可以毫无障碍编写 build.envd。
 
 以下是 `build.envd` 的示例代码：
 
@@ -62,7 +62,7 @@ def build():
 
 </custom-title>
 
-2. 运行环境，在控制台使用 `envd up` 命令运行它。恭喜！您成功构建了第一个 envd 环境。
+2. 运行环境，在控制台使用 `envd up` 命令运行它。恭喜！您成功构建了第一个 `envd` 环境。
 
 <custom-title title="envd up shell">
 
@@ -189,7 +189,7 @@ $ envd up
 
 ### 使用 Jupyter Notebooks
 
-Jupyter Notebooks 是使用 Python 进行数据分析的互动计算环境。`envd` 通过 `config.jupyter` [API 函数](../api/starlark/v0/config) 帮助您在环境中配置 Jupyter Notebooks。
+Jupyter Notebook 是使用 Python 进行数据分析的互动计算环境。`envd` 通过 `config.jupyter` [API 函数](../api/starlark/v0/config) 帮助您在环境中配置 Jupyter Notebook。
 
 <custom-title title="build.envd">
 
@@ -205,7 +205,7 @@ def build():
 
 </custom-title>
 
-`envd up` 命令执行成功后，通过 `envd envs list` 查看 Jupyter 的地址。
+`envd up` 命令执行成功后，通过 `envd envs list` 查看 Jupyter Notebook 的地址。
 
 ```bash
 $ envd up --detach
@@ -234,7 +234,8 @@ def build():
 ```
 
 </custom-title>
-配置成功后，Python 包将从新的源下载，而不是 [pypi.org](https://pypi.org/)
+
+配置成功后，Python 包将从新的源下载，而不是 [pypi.org](https://pypi.org/)。
 
 ### 更多 build.envd 示例
 
@@ -270,12 +271,12 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
 
 ## 下一步
 
-恭喜您已经成功配置好了 `envd` 环境。
+恭喜你已经成功配置好了 `envd` 环境！
 
-如果您在使用本指南时遇到任何问题，请随时在 [Discord](https://discord.gg/KqswhpVgdU) 与我们交流。
+如果你在使用本指南时遇到任何问题，请随时在 [Discord](https://discord.gg/KqswhpVgdU) 与我们交流。
 
-如果您想进一步探索 `envd` ，以下是一些快速链接：
+如果你想进一步探索 `envd` ，以下是一些快速链接：
 
 - [`envd` GitHub 仓库](https://github.com/tensorchord/envd)
-- [为什么使用 envd？](/faq/why)
+- [为什么使用 `envd`？](../faq/why)
 - [`envd` CLI 命令](../cli)

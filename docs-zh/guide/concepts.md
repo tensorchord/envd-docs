@@ -12,7 +12,7 @@
 
 ### 实现模型
 
-`build.envd` 是用 [Starlark](https://github.com/bazelbuild/starlark), 编写的，这是 Python 3 的一种简化方言。build() 函数将在启动时调用。
+`build.envd` 是用 [Starlark](https://github.com/bazelbuild/starlark), 编写的，这是 Python 3 的一种简化方言。`build()` 函数将在启动时调用。
 
 <custom-title title="build.envd">
 
@@ -28,9 +28,15 @@ def build():
 
 `envd` 使用 starlark 解释器加载 `build()` 函数，因此您可以在 `build.envd` 中使用 loops、if/else 或其他语句。
 
-<custom-title title="build.envd">
+:::warning
+
+下面的代码仅用于概念性的演示。有些功能还没有实现。
+
+:::
+
 
 ```python
+# build.envd
 # 默认调用 `build` 函数。
 def build():
     version = "2.9.1"
@@ -47,5 +53,3 @@ def dev_env(version, custom_shell):
     if custom_shell == "zsh":
       shell("zsh")
 ```
-
-</custom-title>

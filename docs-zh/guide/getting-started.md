@@ -101,7 +101,7 @@ pip3 install --upgrade envd
 brew install envd
 ```
 
-```bash [pipx]
+```bash [Pipx]
 # envd 也可以通过 pipx 安装。
 
 pipx install envd
@@ -153,7 +153,7 @@ def build():
 ```
 
 :::tip
-我们在这里使用 Python 作为例子，envd 也支持其他语言，如 R 和 Julia，点击[这里](https://github.com/tensorchord/envd/tree/main/examples)。
+我们在这里使用 Python 作为例子，envd 也支持其他语言，如 R 和 Julia，参见[这里](https://github.com/tensorchord/envd/tree/main/examples)。
 :::
 
 然后可以运行下面的命令来建立一个新的环境：
@@ -192,7 +192,7 @@ envd-quick-start via Py v3.9.13 via 🅒 envd
 
 ### 设置 Jupyter Notebook
 
-修改 `build.envd` 开启 jupyter notebook 支持：
+修改 `build.envd` 开启 Jupyter Notebook 支持：
 
 ```python title=build.envd
 def build():
@@ -206,7 +206,7 @@ def build():
     config.jupyter()
 ```
 
-你可以通过 `envd envs ls` 获得正在运行的 Jupyter 笔记本的端口。
+你可以通过 `envd envs ls` 获得正在运行的 Jupyter Notebook 的端口。
 
 ```bash
 $ envd up --detach

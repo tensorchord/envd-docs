@@ -11,18 +11,22 @@
 上下文包含以下几个属性：
 
 - `name`: 上下文名称
-- `builder`: 构建实例的类型（`docker-container`, `kube-pod`, `tcp`
-- `builder-socket`: 构建实例的终端
+- `builder`: `builder` 实例的类型（`docker-container`, `kube-pod`, `tcp`
+- `builder-addr`: `builder` 实例的终端
+- `runner`: runner 实例的类型 (`docker`, `envd-server`)
+- `runner-addr`: runner 实例的终端
 
 了解上下文长什么样子最简单的办法就是运行以下命令：
 
 ```bash
 $ envd context ls
-CONTEXT                 BUILDER                 SOCKET
+CONTEXT                 BUILDER                 BUILDER ADDR                            
 default (current)       docker-container        docker-container://envd_buildkitd
 ```
 
-上面显示的是默认的上下文。`envd` 会引导启动一个名叫 `envd_buildkitd` 的构建实例镜像，并用它来执行所有的 `envd` 命令。
+上面显示的是默认的上下文。`envd` 会引导启动一个名叫 `envd_buildkitd` 的 `builder` 实例镜像，并用它来执行所有的 `envd` 命令。
+
+`builder` 用于构建 `envd` 镜像。而 `runner` 是用来运行 `envd` 环境的。有两种类型的 `runner`：`docker` 和 `envd-server`。`envd-server`是一种实验性的 `runner`，用于[在 Kubernetes 上运行 `envd` 环境](./kubernetes.md)。
 
 ## 创建一个新的上下文
 

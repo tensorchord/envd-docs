@@ -32,7 +32,7 @@ def build():
 
 ## 配置 Julia 包服务
 
-默认情况下，会通过 Julia 包服务 `"pkg.julialang.org"` 来下载安装 R 包。不过，你也可以使用 `config.julia_pkg_server()` 来指定任何其他服务，比如下面这个例子：
+默认情况下，会通过 Julia 包服务 `"pkg.julialang.org"` 来下载安装 Julia 包。不过，你也可以使用 `config.julia_pkg_server()` 来指定任何其他服务，比如下面这个例子：
 
 <custom-title title="build.envd">
 

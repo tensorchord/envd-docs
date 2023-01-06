@@ -73,7 +73,7 @@ type: kubernetes.io/dockerconfigjson
 $ helm install --set server.imagePullSecret=regcred envd-server ./manifests
 ```
 
-服务器将使用该 secret 来拉取镜像。如果你有任何问题，请看一下[Kubernetes文档中的指南](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)。
+服务器将使用该 secret 来拉取镜像。如果你有任何问题，请参考 [Kubernetes 文档中的指南](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)。
 
 ## 端口转发
 

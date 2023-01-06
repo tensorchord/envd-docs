@@ -23,6 +23,19 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 - https://docker.mirrors.sjtug.sjtu.edu.cn
 - https://hub-mirror.c.163.com
 
+### 使用 envdlib 来设置 pip/conda/apt 镜像
+
+你可以通过 `envdlib` 在一行里设置 pip/conda/apt 镜像！
+
+```python
+envdlib = include("https://github.com/tensorchord/envdlib")
+
+envdlib.mirror(pip="tuna", conda="tuna", apt="tuna")
+```
+
+此函数的更多信息请参见 [API reference](../api/starlark/lib/mirror)
+
+
 ## 设置 PyPI 镜像
 
 PyPI 的镜像或缓存可以加快本地软件包的安装，支持离线工作。

@@ -5,8 +5,8 @@
 - `registry`: 分别推送镜像和缓存到镜像仓库。
 - `inline`: 把缓存内嵌到镜像中，然后一起推送到镜像仓库。
 - `local`: 从本地路径导入/导出
-- `gha`（实验中 🧪）：从 GitHub Actions cache 导入/导出
-- `s3`（实验中 🧪）：从 S3 导入/导出
+- `gha`（试验中 🧪）：从 GitHub Actions cache 导入/导出
+- `s3`（试验中 🧪）：从 S3 导入/导出
 
 大多数情况下推荐使用 `registry`。
 
@@ -96,7 +96,7 @@ envd build ... --import-cache type=local,src=path/to/input-dir
 - `digest=sha256:<sha256digest>`: 显式指定要导入的 manifest digest 列表
 - `tag=<tag>`: 指定镜像的自定义 tag。`index.json` 中默认的”latest“ tag 是 digest，不是 tag
 
-### GitHub Actions cache（实验中）
+### GitHub Actions cache（试验中）
 
 ```bash
 envd build ... \
@@ -127,7 +127,7 @@ GitHub Actions cache 会把缓存元信息和 layers 保存到 GitHub 的 Cache 
 - `type=gha`
 - `scope=<scope>`: 选择所属的范围（默认为 `buildkit`）
 
-### S3 cache（experimental）
+### S3 cache（试验中）
 
 ```bash
 envd build ... \
