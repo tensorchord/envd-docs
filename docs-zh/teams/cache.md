@@ -94,7 +94,7 @@ envd build ... --import-cache type=local,src=path/to/input-dir
 - `type=local`
 - `src=<path>`: 导入缓存的来源路径
 - `digest=sha256:<sha256digest>`: 显式指定要导入的 manifest digest 列表
-- `tag=<tag>`: 指定镜像的自定义 tag。`index.json` 中默认的”latest“ tag 是 digest，不是 tag
+- `tag=<tag>`: 指定镜像的自定义 tag。`index.json` 中默认的"latest"  tag 是 digest，不是 tag
 
 ### GitHub Actions cache（试验中）
 

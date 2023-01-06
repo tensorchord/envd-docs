@@ -1,0 +1,5 @@
+docs/api/
+docs/.vitepress/
+
+docs-zh/api/
+docs-zh/.vitepress/
