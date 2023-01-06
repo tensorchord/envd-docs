@@ -1,0 +1,16 @@
+name: auto correct
+
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  auto-correct:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check source code
+        uses: actions/checkout@v3
+
+      - name: AutoCorrect
+        uses: huacnlee/autocorrect-action@main
