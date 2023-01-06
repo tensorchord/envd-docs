@@ -1,0 +1,6 @@
+User-agent: *
+
+Disallow: /404/
+Disallow: /404.html
+
+Sitemap: https://envd.tensorchord.ai/sitemap.xml
