@@ -1,10 +1,10 @@
 # Modularize your build function
 
-envd allows you to easily create reusable components, so that the building file can be more organized.
+`envd` allows you to easily create reusable components, so that the building file can be more organized.
 
 ## Defining your own package
 
-envd support most Python syntax, including string format, for-loop, if-statement, function definition. 
+`envd` support most Python syntax, including string format, for-loop, if-statement, function definition. 
 
 For example, you can define a function for tensorflow package like this
 ```python

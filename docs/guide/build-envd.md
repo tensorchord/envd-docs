@@ -26,7 +26,7 @@ $ envd build --path examples/mnist
 
 ## build.envd Example
 
-The syntax of `build.envd` is [starlark](https://docs.bazel.build/versions/main/skylark/language.html), a simplified dialect of Python3. If you know Python, then you can write `build.envd` without an issue.
+The syntax of `build.envd` is [Starlark](https://bazel.build/rules/language), a simplified dialect of Python3. If you know Python, then you can write `build.envd` without an issue.
 
 Here is an example of `build.envd`:
 
@@ -59,6 +59,7 @@ def build():
 ```
 
 </custom-title>
+
 You can save the file and run `envd up`. Congrats! You get your first `envd` environment.
 
 <custom-title title="envd up shell">
@@ -101,7 +102,20 @@ INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 
 </custom-title>
 
-Let's have a look at `build.envd`. `build` is the default function name in `build.envd`. `envd` invokes the function if you run `envd build` or `envd up`.
+### build.envd
+
+Let's have a look at `build.envd`.
+
+<custom-title title="build.envd">
+
+```python
+def build():
+    base(os="ubuntu20.04", language="python3")
+```
+
+</custom-title>
+
+`build` is the default function name in `build.envd`. `envd` invokes the function if you run `envd build` or `envd up`.
 
 :::warning
 
@@ -174,9 +188,9 @@ $ envd up
 (envd) ➜  docs # zsh in the environment
 ```
 
-### Use jupyter
+### Use Jupyter Notebook
 
-[Jupyter Notebooks](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [`envd` config API](../api/starlark/v0/config) function `config.jupyter` helps you set up jupyter notebooks in the environment:
+[Jupyter Notebook](https://jupyter.org/) are a powerful way to write and iterate on your Python code for data analysis. The [`envd` config API](../api/starlark/v0/config) function `config.jupyter` helps you set up Jupyter Notebook in the environment:
 
 <custom-title title="build.envd">
 
@@ -191,6 +205,15 @@ def build():
 ```
 
 </custom-title>
+
+After the `envd up` command is executed successfully, check the address of Jupyter Notebook by `envd envs list`.
+
+```bash
+$ envd up --detach
+$ envd get env
+NAME                    JUPYTER                 SSH TARGET              CONTEXT                                 IMAGE                   GPU     CUDA    CUDNN   STATUS          CONTAINER ID
+envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/gaocegege/code/envd-quick-start   envd-quick-start:dev    false   <none>  <none>  Up 54 seconds   bd3f6a729e94
+```
 
 ![jupyter](./assets/jupyter.png)
 

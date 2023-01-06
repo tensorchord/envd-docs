@@ -25,7 +25,7 @@ def tensorflow(version):
 
 ## 通过 envdlib 使用预定义包
 
-`envd` 提供了一组预定义库，这些苦通常被用于机器学习任务。你可以在 https://github.com/tensorchord/envdlib 找到它们。
+`envd` 提供了一组预定义库，这些库通常被用于机器学习任务。你可以在 https://github.com/tensorchord/envdlib 找到它们。
 
 如果你需要使用，只需要在你的 envd 文件中添加一行：
 ```python
@@ -38,7 +38,7 @@ def build():
     envdlib.tensorboard(host_port=8888)
 ```
 
-现在你可以访问 tensorboard 了，就在你的 8888 端口。
+现在你可以通过 8888 端口访问 tensorboard 了。
 
 :::tip
 你还可以创建你自己的包，比如针对内部的或者像 [envdlib](https://github.com/tensorchord/envdlib) 特定于领域的工具，然后与其他人分享。
@@ -46,5 +46,4 @@ def build():
 
 ## 给 envdlib 做贡献
 
-We're extending our package coverage of envdlib. Please don't hesitate to file a pull request or raise an issue if you have any need. Your contribution is welcomed.
-我们正在扩展 `envdlib`  包的覆盖范围。如果你有任何需要，请毫不犹豫地提出 PR 或 issue。欢迎你的贡献。
+我们正在扩展 `envdlib` 的包覆盖范围。如果你有任何需要，请毫不犹豫地提出 PR 或 issue。欢迎你的贡献。

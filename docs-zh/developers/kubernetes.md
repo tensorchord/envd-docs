@@ -13,7 +13,7 @@
 - `envd-server` 在 Kubernetes 上配置环境。
 - 用户会被通知环境已经准备好了，可以使用。
 - 用户用 `ssh` 连接到环境。
-- [containerssh](https://github.com/ContainerSSH/libcontainerssh/)是一个 ssh 代理，捕获并转发 ssh 连接到所需的 pod。
+- [containerssh](https://github.com/ContainerSSH/libcontainerssh/) 是一个 ssh 代理，捕获并转发 ssh 连接到所需的 pod。
 
 ![](https://user-images.githubusercontent.com/5100735/201919714-0539bb67-3855-42f7-9b39-0d1f6a8f21e5.svg)
 

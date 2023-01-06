@@ -10,7 +10,7 @@ Development environments are full of Dockerfiles, bash scripts, Kubernetes YAML 
 
 ![envd](./assets/envd.png)
 
-[^1]: The build language is [starlark](https://docs.bazel.build/versions/main/skylark/language.html), which is a dialect of Python.
+[^1]: The build language is [Starlark](https://bazel.build/rules/language), which is a dialect of Python.
 
 ⏱️ **Save you plenty of time**
 

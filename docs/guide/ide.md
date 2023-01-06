@@ -85,3 +85,15 @@ Then you can connect to the RStudio server by using `http://localhost:34621` in 
 ![](./assets/rstudio.png)
 
 ![](./assets/rstudio-main.png)
+
+## Expose your services to the public
+
+Currently, you can expose local services to the public network through tools such as [localtunnel](https://github.com/localtunnel/localtunnel).
+
+```bash
+$ envd envs list
+NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID
+mnist   http://localhost:48737   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
+$ npx localtunnel --port 48737
+your url is: https://xxx.loca.lt
+```

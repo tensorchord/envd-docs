@@ -59,7 +59,7 @@
     $ git add -u
     $ git commit -m "YOUR COMMIT MESSAGE"
     ```
-6. 将你本地的改动[Push](https://help.github.com/articles/github-glossary/#push) 到你 GitHub 上的远程仓库中。
+6. 将你本地的改动 [Push](https://help.github.com/articles/github-glossary/#push) 到你 GitHub 上的远程仓库中。
     ```
     $ git push
     ```

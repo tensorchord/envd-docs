@@ -11,7 +11,7 @@
 
 ![envd](./assets/envd.png)
 
-[^1]: 这个构建语言是 [starlark](https://docs.bazel.build/versions/main/skylark/language.html)，是 Python 的一种方言。
+[^1]: 这个构建语言是 [Starlark](https://bazel.build/rules/language)，是 Python 的一种方言。
 
 ⏱️ **节省你的大量时间**
 
