@@ -13,7 +13,7 @@ git_config(name="My Name", email="my@email.com", editor="vim")
 ```
 </custom-title>
 
-这个文件应该被放置在 [XDG](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) 配置路径中:
+这个文件应该被放置在 [XDG](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) 配置路径中：
 
 - Linux & macOS: `~/.config/envd/config.envd`
 

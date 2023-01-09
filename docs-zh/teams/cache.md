@@ -114,7 +114,7 @@ GitHub Actions cache 会把缓存元信息和 layers 保存到 GitHub 的 Cache 
 - `url`: Cache 服务 URL（默认 `$ACTIONS_CACHE_URL`）
 - `token`: Access token（默认 `$ACTIONS_RUNTIME_TOKEN`）
 
-`--export-cache` 选项:
+`--export-cache` 选项：
 
 - `type=gha`
 - `mode=<min|max>`: 指定导出模式（默认为 `min`）
@@ -122,7 +122,7 @@ GitHub Actions cache 会把缓存元信息和 layers 保存到 GitHub 的 Cache 
   - `max`: 导出所有中间过程的 layers
 - `scope=<scope>`: 选择所属的范围（默认为 `buildkit`）
 
-`--import-cache` 选项:
+`--import-cache` 选项：
 
 - `type=gha`
 - `scope=<scope>`: 选择所属的范围（默认为 `buildkit`）

@@ -43,7 +43,7 @@ This command generates static content into the `build` directory and can be serv
 Recommended to read the following part before you start to contribute the docs.
 
 - Chinese docs is under `/docs-zh`
-- VitePress markdown features [VitePress markdown](https://vitepress.vuejs.org/guide/markdown.html)
+- VitePress Markdown features [VitePress markdown](https://vitepress.vuejs.org/guide/markdown.html)
 - When you add new file to the docs, please add config of sidebar menu in `/docs/vitepress/config/sidebar.ts`
 
 ### Custom title for code block
@@ -63,5 +63,5 @@ Your codeblock
 ### Blog
 
 If you want to write a blog, the following things you need to do
-- Add new post under `docs/blog` or `docs-zh/blog` then just wirte the markdown file.
+- Add new post under `docs/blog` or `docs-zh/blog` then just wirte the Markdown file.
 - Add new item to `/docs/.vitepress/config/sidebar.ts` or `/docs-zh/.vitepress/config/sidebar.ts` `/blog/`.

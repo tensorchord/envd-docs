@@ -3,7 +3,7 @@
 这份指南包含如何通过 `envd` 配置 Python 环境。如果你还没有用过 `envd`，请先阅读我们的 [教程](/guide/getting-started) 和 [搭建配置指南](/guide/build-envd)。
 
 
-让我们开始 🐍 吧!
+让我们开始 🐍 吧！
 
 ## 指定 Python
 
@@ -35,7 +35,7 @@ Python2 不被 `envd` 所支持。
 
 ## Conda 包
 
-你可以使用 `install.conda_packages` 函数来安装 conda 包。 下面的例子安装了 `numpy` 和 `scipy`：
+你可以使用 `install.conda_packages` 函数来安装 conda 包。下面的例子安装了 `numpy` 和 `scipy`：
 
 <custom-title title="build.envd">
 
@@ -51,7 +51,7 @@ def build():
 
 ## PyPI 包
 
-你可以使用 `install.python_packages` 函数来从 PyPI 安装 Python 包。 下面的例子安装了 `scikit-learn` 和 `matplotlib`：
+你可以使用 `install.python_packages` 函数来从 PyPI 安装 Python 包。下面的例子安装了 `scikit-learn` 和 `matplotlib`：
 
 <custom-title title="build.envd">
 

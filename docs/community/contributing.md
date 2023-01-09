@@ -8,7 +8,7 @@ Contributors and people new to open source alike will find the following guides 
 
 ## Code of Conduct
 
-A code of conduct is a document that establishes expectations for behavior for the project’s participants. Adopting, and enforcing, a code of conduct can help create a positive social atmosphere for the community.
+A code of conduct is a document that establishes expectations for behavior for the project's participants. Adopting, and enforcing, a code of conduct can help create a positive social atmosphere for the community.
 
 If you do not know what code of conduct is, please have a look at [Your Code of Conduct | Open Source Guides](https://opensource.guide/code-of-conduct/).
 

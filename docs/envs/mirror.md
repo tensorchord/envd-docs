@@ -55,7 +55,7 @@ config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 
 Apt downloads packages from one or more software repositories (sources) and installs them onto your computer.
 
-Official ubuntu apt source is used in `envd` by default, but you can change to a mirror which is close to you:
+Official Ubuntu apt source is used in `envd` by default, but you can change to a mirror which is close to you:
 
 <custom-title title="Set apt source mirror">
 

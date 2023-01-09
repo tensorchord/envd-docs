@@ -2,7 +2,7 @@
 
 `envd` supports building different container images from one single file, for different purpose. Typical scenario includes:
 
-- Use cpu for model development, need gpu for large scale training jobs
+- Use CPU for model development, need GPU for large scale training jobs
 - Use `envd` in daily development, but want to containerize dependency and publish it for model serving
 - Require both X86 and ARM platforms.
 

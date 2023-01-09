@@ -1,6 +1,6 @@
 # 在团队里使用 envd
 
-`envd` 是为团队使用设计的! 🥰
+`envd` 是为团队使用设计的！🥰
 
 这个教程将展示了如何轻松 `envd` 成到你的基础设施。如果你遇到问题，请在[💬 Discord](https://discord.gg/KqswhpVgdU)上联系我们，我们很乐意帮助你！
 
