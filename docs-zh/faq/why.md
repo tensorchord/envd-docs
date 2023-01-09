@@ -108,7 +108,7 @@ wait -n`' >> /init.bash
 ENTRYPOINT ["tini", "--", "bash", "init.bash"]
 ```
 
-## 用 envd 会怎么做?
+## 用 envd 会怎么做？
 
 `envd` 提供类似于 Python 的构建语言，并且在容器技术中对 Jupyter、VSCode 和 Python 依赖项具有一流的支持。
 
@@ -136,5 +136,5 @@ def build():
 他们可能苦于：
 
 - 使用 Python、CUDA、Docker、SSH 等构建开发环境。你是否有一个复杂的 Dockerfile 或构建脚本来设置你的所有开发环境，但总是出问题？
-- 更新环境。是不是总要问基础架构工程师如何在 Dockerfile 中添加一个新的Python 包？
+- 更新环境。是不是总要问基础架构工程师如何在 Dockerfile 中添加一个新的 Python 包？
 - 管理环境和机器。你是否总是因为同时处理多个项目而忘记具体项目使用了哪些机器？

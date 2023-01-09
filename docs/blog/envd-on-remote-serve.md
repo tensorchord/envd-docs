@@ -11,7 +11,7 @@ envd provided a strong way to run your machine learning environment. For some pe
 
 Here is the the guide. 
 
-## For linux server
+## For Linux server
 
 **Prerequisite:**
 

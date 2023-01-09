@@ -57,7 +57,7 @@ config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
 
 ## 设置 apt source 镜像
 
-apt 从一个或多个软件库源下载软件包，并将它们安装到你的计算机上。在 `envd` 中默认使用官方 ubuntu apt 源，你可以通过下列方式更换 apt 的软件源。
+apt 从一个或多个软件库源下载软件包，并将它们安装到你的计算机上。在 `envd` 中默认使用官方 Ubuntu apt 源，你可以通过下列方式更换 apt 的软件源。
 
 <custom-title title="Set apt source mirror">
 

@@ -130,7 +130,7 @@ def build():
 
 ## Who should use envd?
 
-Currently, we’re focused on helping data scientists and teams that develop AI/ML models. And they may suffer from:
+Currently, we're focused on helping data scientists and teams that develop AI/ML models. And they may suffer from:
 
 - building the development environments with Python, CUDA, Docker, SSH, and so on. Do you have a complicated Dockerfile or build script that sets up all your dev environments, but is always breaking?
 - Updating the environment. Do you always need to ask infrastructure engineers how to add a new python package in the Dockerfile?

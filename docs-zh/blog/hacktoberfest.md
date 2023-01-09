@@ -8,9 +8,9 @@ introduction: 'Ce Gao 是 envd 的维护者之一。与此之外，他还是机�
 
 # 2022 年黑客啤酒节 Hacktoberfest 开始，与 envd 社区一起参加！
 
-Hacktoberfest 是为期一个月的，由 DigitalOcean 运行的开源软件庆祝活动。Hacktoberfest 鼓励全球范围内的学生、工程师或者任何职业的人参与开源项目的贡献。贡献不仅仅包括代码，还包括文档、UI/UX 设计、测试等等。在过去的9年里，成千上万的人都参加了 Hacktoberfest，以支持他们热爱的项目，实践技能。这不仅可以提高他们的职业技能，也认识像他们一样热爱开源的新朋友。
+Hacktoberfest 是为期一个月的，由 DigitalOcean 运行的开源软件庆祝活动。Hacktoberfest 鼓励全球范围内的学生、工程师或者任何职业的人参与开源项目的贡献。贡献不仅仅包括代码，还包括文档、UI/UX 设计、测试等等。在过去的 9 年里，成千上万的人都参加了 Hacktoberfest，以支持他们热爱的项目，实践技能。这不仅可以提高他们的职业技能，也认识像他们一样热爱开源的新朋友。
 
-[envd](https://github.com/tensorchord/envd) 是今年 6 月刚刚开源的项目，目前已经有接近 40 位贡献者参与了 envd 的开发和设计。envd 为 AI/ML 场景带来了简单易用、可复现的开发环境。在人工智能的开发过程中，充斥着各种各样的工具与依赖。从 GPU 等硬件再到编程语言的各种库等等， 这让配置开发环境的过程变得非常复杂。用户通过 envd 可以用 Python 来声明期望的依赖，构建出基于容器的 AI/ML 环境。不仅能够在本地开发，在团队中也可以使用任何你期望的 IDE 进行远程开发。
+[envd](https://github.com/tensorchord/envd) 是今年 6 月刚刚开源的项目，目前已经有接近 40 位贡献者参与了 envd 的开发和设计。envd 为 AI/ML 场景带来了简单易用、可复现的开发环境。在人工智能的开发过程中，充斥着各种各样的工具与依赖。从 GPU 等硬件再到编程语言的各种库等等，这让配置开发环境的过程变得非常复杂。用户通过 envd 可以用 Python 来声明期望的依赖，构建出基于容器的 AI/ML 环境。不仅能够在本地开发，在团队中也可以使用任何你期望的 IDE 进行远程开发。
 
 <div align="center">
 <img src='https://user-images.githubusercontent.com/5100735/189058399-3865a039-9459-4e74-83dd-3ee2ecadfef5.svg'>
