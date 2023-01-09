@@ -43,8 +43,9 @@ This command generates static content into the `build` directory and can be serv
 Recommended to read the following part before you start to contribute the docs.
 
 - Chinese docs is under `/docs-zh`
-- VitePress Markdown features [VitePress markdown](https://vitepress.vuejs.org/guide/markdown.html)
+- VitePress Markdown features [VitePress Markdown](https://vitepress.vuejs.org/guide/markdown.html)
 - When you add new file to the docs, please add config of sidebar menu in `/docs/vitepress/config/sidebar.ts`
+- We have enabled [AutoCorrect](https://github.com/huacnlee/autocorrect) to improve copywriting, correct spaces, words, punctuations between CJK. If your PR encounter this kind of problems, please check your PR's check result and fix them.
 
 ### Custom title for code block
 
