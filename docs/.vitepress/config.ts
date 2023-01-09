@@ -9,6 +9,7 @@ import { blogSidebar } from './config/sidebar/blog'
 // This links array is used to temporarily store all page link information, in order to generate sitemap.
 const links: any[] = []
 const siteHostName = 'https://envd.tensorchord.ai/'
+const og = 'https://og.tensorchord.ai/api/og?title='
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -104,12 +105,12 @@ export default defineConfig({
     }
   },
 
-  transformHead: (ctx) => {
+  transformHead: async (ctx) => {
     return [
       ['meta', { property: 'og:title', content: ctx.pageData.title }],
       ['meta', { property: 'og:description', content: ctx.pageData.description }],
       ['meta', { property: 'og:url', content: siteHostName + ctx.pageData.relativePath }],
-      ['meta', { property: 'og:image', content: ""}],
+      ['meta', { property: 'og:image', content: encodeURI(og + ctx.pageData.title) }],
       ['meta', { name: 'twitter:title', content: ctx.pageData.title }],
       ['meta', { name: 'twitter:description', content: ctx.pageData.description }],
       ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
