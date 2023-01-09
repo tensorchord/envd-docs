@@ -104,6 +104,19 @@ export default defineConfig({
     }
   },
 
+  transformHead: (ctx) => {
+    return [
+      ['meta', { property: 'og:title', content: ctx.pageData.title }],
+      ['meta', { property: 'og:description', content: ctx.pageData.description }],
+      ['meta', { property: 'og:url', content: siteHostName + ctx.pageData.relativePath }],
+      ['meta', { property: 'og:image', content: ""}],
+      ['meta', { name: 'twitter:title', content: ctx.pageData.title }],
+      ['meta', { name: 'twitter:description', content: ctx.pageData.description }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:site', content: '@TensorChord' }],
+    ]
+  },
+
   transformHtml: (_, id, { pageData }) => {
     if (!/[\\/]404\.html$/.test(id))
       links.push({
