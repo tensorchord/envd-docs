@@ -40,7 +40,7 @@ There is a also a mirror for some China users:
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre --upgrade envd
 ```
 Bootstrap the envd:
-```
+```bash
 envd bootstrap
 # or for China users
 envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn

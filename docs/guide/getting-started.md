@@ -129,7 +129,7 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 
 Please clone the [`envd-quick-start`](https://github.com/tensorchord/envd-quick-start):
 
-```
+```bash
 git clone https://github.com/tensorchord/envd-quick-start.git
 ```
 
@@ -150,11 +150,11 @@ def build():
 
 Then please run the command below to set up a new environment:
 
-```
+```bash
 cd envd-quick-start && envd up
 ```
 
-```
+```bash
 $ cd envd-quick-start && envd up
 [+] ⌚ parse build.envd and download/cache dependencies 2.8s ✅ (finished)
  => download oh-my-zsh                                                    2.8s

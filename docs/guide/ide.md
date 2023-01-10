@@ -7,7 +7,7 @@ Here we use the example at [envd/examples/mnist](https://github.com/tensorchord/
 Following [previous tutorial](/guide/build-envd), you'll be able to setup the project environment by `envd`. In this tutorial, we used `mnist` project.
 After setting up the project, you can check the environment status by `envd envs list`.
 
-```
+```bash
 $ envd envs list
 NAME    JUPYTER                 SSH TARGET      CONTEXT                                         IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 mnist   http://localhost:48484   mnist.envd      /home/ubuntu/workspace/envd/examples/mnist      mnist:dev       false   <none>  <none>  Up 2 hours      f3452559ee20
@@ -74,7 +74,7 @@ def build():
 
 Endpoint can be got through `envd envs list` command.
 
-```
+```bash
 $ envd envs list
 NAME    ENDPOINT                        SSH TARGET      IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   <none>  <none>  Up 6 hours      1eb7d40e5a8a

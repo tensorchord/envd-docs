@@ -44,23 +44,23 @@
 1. 安装 [Docker](https://www.docker.com/products/docker-desktop/) (20.10.0 或更新版本) 以及 [Golang](https://go.dev/dl/) (1.18 或更新版本).
 2. 在你自己的 GitHub 账号中 [Fork](https://help.github.com/articles/fork-a-repo) [`envd` 代码库](https://github.com/tensorchord/envd)。（请不要勾选 "Copy the `main` branch only"）
 3. 将你账号中刚 Fork 的代码库 Clone 到你电脑的本地磁盘上。
-    ```
+    ```bash
     $ git clone https://github.com/YOUR_USERNAME/envd.git
     ```
 4. 安装相关的依赖库并编译 `envd`。确保能输出正确的 version 信息，否则检查 git tags 是否包含历史 tags。
-    ```
+    ```bash
     $ go mod tidy
     $ make
     $ ./bin/envd bootstrap
     $ ./bin/envd version
     ```
 5. 在本地的代码库中进行修改并且用 Git 将这些改动 Commit。
-    ```
+    ```bash
     $ git add -u
     $ git commit -m "YOUR COMMIT MESSAGE"
     ```
 6. 将你本地的改动 [Push](https://help.github.com/articles/github-glossary/#push) 到你 GitHub 上的远程仓库中。
-    ```
+    ```bash
     $ git push
     ```
 
@@ -68,13 +68,13 @@
 
 你可以运行下面的指令来对代码进行测试
 
-```
+```bash
 make lint
 ```
 
 如果你的代码有格式或语法错误，你会看到和下面相似的输出：
 
-```
+```bash
 cmd/envd/main.go:36:67: Revision not declared by package version (typecheck)
                 fmt.Println(c.App.Name, version.Package, c.App.Version, version.Revision)
                                                                                 ^
@@ -85,7 +85,7 @@ make: *** [Makefile:102: lint] Error 1
 
 你可以运行下面的指令来测试你的代码
 
-```
+```bash
 make test
 ```
 
