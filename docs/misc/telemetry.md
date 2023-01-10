@@ -49,6 +49,6 @@ Sent every time a `envd up` or `envd build` is run.
 
 If you would like to disable the data collection, please run:
 
-```
+```bash
 export ENVD_ANALYTICS=false
 ```

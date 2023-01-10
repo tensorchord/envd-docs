@@ -94,7 +94,7 @@ def build():
 
 Endpoint can be got through `envd envs list` command.
 
-```
+```bash
 $ envd envs list
 NAME    ENDPOINT                        SSH TARGET      IMAGE           GPU     CUDA    CUDNN   STATUS          CONTAINER ID 
 r-basic rstudio: http://localhost:34621 r-basic.envd    r-basic:dev     false   <none>  <none>  Up 6 hours      1eb7d40e5a8a

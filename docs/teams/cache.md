@@ -29,9 +29,11 @@ You can use the mechanism to accelerate the build process dramatically.
 
 ## Reference
 
+This feature is supported by [BuildKit](https://github.com/moby/buildkit#cache).
+
 ### Registry (push image and cache separately)
 
-```
+```bash
 envd build ... \
   --output type=image,name=docker.io/username/image,push=true \
   --export-cache type=registry,ref=docker.io/username/image \
