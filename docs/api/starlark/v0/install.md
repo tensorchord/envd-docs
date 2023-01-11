@@ -18,7 +18,7 @@ Install package by system-level package manager (apt on Ubuntu)
 
 **Arguments**:
 
-- `name` _str_ - apt package name list
+- `name` _List[str]_ - apt package name list
 
 ## python\_packages
 
