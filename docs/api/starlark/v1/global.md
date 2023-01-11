@@ -44,14 +44,14 @@ Interactive shell
 ## run
 
 ```python
-def run(commands: str, mount_host: bool = False)
+def run(commands: List[str], mount_host: bool = False)
 ```
 
 Execute command
 
 **Arguments**:
 
-- `commands` _str_ - command to run during the building process
+- `commands` _List[str]_ - command to run during the building process
 - `mount_host` _bool_ - mount the host directory. Default is False.
   Enabling this will disable the build cache for this operation.
   
