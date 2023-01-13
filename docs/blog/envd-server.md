@@ -14,7 +14,7 @@ We are glad to announce that `envd` already supports this feature with [envd-ser
 
 As an admin, you may want to know the current resource usage for different teammates. Now you can get the information from the `envd` dashboard. For teams already using Kubernetes for RBAC and resource control, it's also compatible with the `envd` server. You can set the [ResourceQuota](https://kubernetes.io/docs/concepts/policy/resource-quotas/) to ensure the resources are well utilized.
 
-Check the [`envd` on Kubernetes](/teams/kubernetes.html) documentation to set up the `envd` server in a Kubernetes cluster. We provide a Helm chart to help you set up all the essential components. You can also customize the installation by editing the [values.yaml](https://github.com/tensorchord/envd-server/blob/main/manifests/values.yaml) file.
+Check the [`envd` on Kubernetes](/teams/kubernetes.html) documentation to set up the `envd` server in a Kubernetes cluster. We provide a Helm Chart to help you set up all the essential components. You can also customize the installation by editing the [values.yaml](https://github.com/tensorchord/envd-server/blob/main/manifests/values.yaml) file.
 
 In the future, we will support more authentication methods, audit logs, file syncing, etc. We are looking forward to your feedback!
 
