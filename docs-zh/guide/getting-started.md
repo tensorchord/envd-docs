@@ -143,8 +143,9 @@ git clone https://github.com/tensorchord/envd-quick-start.git
 
 ```python title=build.envd
 def build():
+    config.repo(url="https://github.com/tensorchord/envd", description="envd quick start example")
     base(os="ubuntu20.04", language="python3")
-    # Configure the pip index if needed.
+    # Configure pip index if needed.
     # config.pip_index(url = "https://pypi.tuna.tsinghua.edu.cn/simple")
     install.python_packages(name = [
         "numpy",
@@ -196,8 +197,9 @@ envd-quick-start via Py v3.9.13 via 🅒 envd
 
 ```python title=build.envd
 def build():
+    config.repo(url="https://github.com/tensorchord/envd", description="envd quick start example")
     base(os="ubuntu20.04", language="python3")
-    # Configure the pip index if needed.
+    # Configure pip index if needed.
     # config.pip_index(url = "https://pypi.tuna.tsinghua.edu.cn/simple")
     install.python_packages(name = [
         "numpy",
