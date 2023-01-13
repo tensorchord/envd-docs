@@ -49,8 +49,6 @@ def r_lang()
 
 Install R Lang.
 
-Not implemented yet. Please use v0 if you need R.
-
 ## julia
 
 ```python
@@ -58,8 +56,6 @@ def julia()
 ```
 
 Install Julia.
-
-Not implemented yet. Please use v0 if you need Julia.
 
 ## apt\_packages
 

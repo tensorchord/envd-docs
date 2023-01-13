@@ -52,7 +52,7 @@ Configure jupyter notebook configuration
 ## pip\_index
 
 ```python
-def pip_index(url: str, extra_url: str)
+def pip_index(url: str, extra_url: str = "", trust: bool = False)
 ```
 
 Configure pypi index mirror
@@ -62,6 +62,7 @@ Configure pypi index mirror
 - `url` _str_ - PyPI index URL (i.e. https://mirror.sjtu.edu.cn/pypi/web/simple)
 - `extra_url` _str_ - PyPI extra index URL. `url` and `extra_url` will be
   treated equally, see https://github.com/pypa/pip/issues/8606
+- `trust` _bool_ - trust the provided index
 
 ## conda\_channel
 
