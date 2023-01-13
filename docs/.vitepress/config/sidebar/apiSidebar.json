@@ -7,12 +7,8 @@
       "type": "category",
       "items": [
         {
-          "text": "io",
-          "link": "api/starlark/v0/io"
-        },
-        {
-          "text": "install",
-          "link": "api/starlark/v0/install"
+          "text": "global",
+          "link": "api/starlark/v0/global"
         },
         {
           "text": "runtime",
@@ -23,8 +19,12 @@
           "link": "api/starlark/v0/config"
         },
         {
-          "text": "global",
-          "link": "api/starlark/v0/global"
+          "text": "io",
+          "link": "api/starlark/v0/io"
+        },
+        {
+          "text": "install",
+          "link": "api/starlark/v0/install"
         }
       ]
     },
@@ -33,12 +33,8 @@
       "type": "category",
       "items": [
         {
-          "text": "io",
-          "link": "api/starlark/v1/io"
-        },
-        {
-          "text": "install",
-          "link": "api/starlark/v1/install"
+          "text": "global",
+          "link": "api/starlark/v1/global"
         },
         {
           "text": "runtime",
@@ -49,8 +45,12 @@
           "link": "api/starlark/v1/config"
         },
         {
-          "text": "global",
-          "link": "api/starlark/v1/global"
+          "text": "io",
+          "link": "api/starlark/v1/io"
+        },
+        {
+          "text": "install",
+          "link": "api/starlark/v1/install"
         }
       ]
     },
@@ -59,28 +59,28 @@
       "type": "category",
       "items": [
         {
-          "text": "lang",
-          "link": "api/starlark/lib/lang"
-        },
-        {
-          "text": "cv",
-          "link": "api/starlark/lib/cv"
-        },
-        {
           "text": "monitoring",
           "link": "api/starlark/lib/monitoring"
         },
         {
-          "text": "mirror",
-          "link": "api/starlark/lib/mirror"
+          "text": "notebook",
+          "link": "api/starlark/lib/notebook"
         },
         {
           "text": "tensorrt",
           "link": "api/starlark/lib/tensorrt"
         },
         {
-          "text": "notebook",
-          "link": "api/starlark/lib/notebook"
+          "text": "lang",
+          "link": "api/starlark/lib/lang"
+        },
+        {
+          "text": "mirror",
+          "link": "api/starlark/lib/mirror"
+        },
+        {
+          "text": "cv",
+          "link": "api/starlark/lib/cv"
         }
       ]
     }
