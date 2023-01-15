@@ -24,7 +24,7 @@ def build():
 
 </custom-title>
 
-`install.python_packages` 和 `config.jupyter` 等函数用于注册信息。这些信息将被保存在内存的静态图中。`envd` 使用静态图在执行的 `envd` 建立环境。
+[`install.python_packages`](/api/starlark/v0/install#python_packages) 和 [`config.jupyter`](/api/starlark/v0/config#jupyter) 等函数用于注册信息。这些信息将被保存在内存的静态图中。`envd` 使用静态图在执行的 `envd` 建立环境。
 
 `envd` 使用 starlark 解释器加载 `build()` 函数，因此您可以在 `build.envd` 中使用 loops、if/else 或其他语句。
 

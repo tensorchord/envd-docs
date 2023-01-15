@@ -154,7 +154,7 @@ def build():
 ```
 
 :::tip
-我们在这里使用 Python 作为例子，envd 也支持其他语言，如 R 和 Julia，参见[这里](https://github.com/tensorchord/envd/tree/main/examples)。
+我们在这里使用 Python 作为例子，除此之外，`envd` 也支持其他语言，如 R 和 Julia，参见[这里](https://github.com/tensorchord/envd/tree/main/examples)。
 :::
 
 然后可以运行下面的命令来建立一个新的环境：
