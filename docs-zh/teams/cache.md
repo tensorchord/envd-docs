@@ -29,6 +29,8 @@ envd build ... \
 
 ## 参考
 
+这个特性由 [BuildKit](https://github.com/moby/buildkit#cache) 支持。
+
 ### Registry（分别推送镜像和缓存）
 
 ```
