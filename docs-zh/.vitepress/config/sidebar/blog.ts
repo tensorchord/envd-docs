@@ -5,6 +5,7 @@ export const blogSidebar: DefaultTheme.Sidebar = {
     {
       text: '博客',
       items: [
+        { text: '在 Kubernetes 上做机器学习开发', link: '/blog/envd-server' },
         { text: 'TensorChord: 2022 in Review', link: '/blog/2022'},
         { text: 'TensorChord Tea Hour: Cellular Automaton', link: '/blog/tea-hour-2'},
         { text: '2022 年黑客啤酒节 Hacktoberfest 开始，与 envd 社区一起参加！', link: '/blog/hacktoberfest'},
