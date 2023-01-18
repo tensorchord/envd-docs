@@ -111,8 +111,6 @@ def r_packages(name: List[str])
 
 Install R packages by R package manager.
 
-Not implemented yet. Please use v0 if you need R.
-
 **Arguments**:
 
 - `name` _List[str]_ - package name list
@@ -125,11 +123,9 @@ def julia_packages(name: List[str])
 
 Install Julia packages.
 
-Not implemented yet. Please use v0 if you need Julia.
-
 **Arguments**:
 
-  name (List(str)): List of Julia packages
+- `name` _List[str]_ - List of Julia packages
 
 ## vscode\_extensions
 
