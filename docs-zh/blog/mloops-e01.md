@@ -18,9 +18,9 @@ TL; DR: 前往 [小宇宙播客](https://www.xiaoyuzhoufm.com/episode/63c7db546b
 
 本期嘉宾：方佳瑞，孙天祥，高策（主播）
 
-- [方佳瑞](https://github.com/feifeibear)：HPCAITech（潞晨科技）Cofounder & CTO ，专注于大模型的训练和推理框架
-- [孙天祥](https://txsun1997.github.io/)：复旦大学自然语言处理实验室博士研究生 个人主页
-- [高策](https://gaocegege.com/)：TensorChord Cofounder & CEO 博客, GitHub 个人主页
+- [方佳瑞](https://github.com/feifeibear)：HPCAITech（潞晨科技）Cofounder & CTO，专注于大模型的训练和推理框架
+- [孙天祥](https://txsun1997.github.io/)：复旦大学自然语言处理实验室博士研究生
+- [高策](https://gaocegege.com/)：TensorChord Cofounder & CEO 博客
 
 ## 我们聊了什么
 
@@ -50,7 +50,7 @@ TL; DR: 前往 [小宇宙播客](https://www.xiaoyuzhoufm.com/episode/63c7db546b
 - [tensorchord/envd](https://github.com/tensorchord/envd)
 - [microsoft/DeepSpeed](https://github.com/microsoft/DeepSpeed)
 - [hpcaitech/ColossalAI](https://github.com/hpcaitech/ColossalAI)
-- [Percy Liang、李飞飞等发布200多页综述，阐述大模型机遇与风险的论文](https://arxiv.org/abs/2108.07258)
+- [Percy Liang、李飞飞等发布 200 多页综述，阐述大模型机遇与风险的论文](https://arxiv.org/abs/2108.07258)
 - [2017 年谷歌大脑发表的 Transformer 论文](https://arxiv.org/abs/1706.03762)
 - [Chain of Thought 论文](https://arxiv.org/abs/2201.11903)
 
