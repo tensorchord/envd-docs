@@ -20,7 +20,7 @@ TL; DR: 前往 [小宇宙播客](https://www.xiaoyuzhoufm.com/episode/63c7db546b
 
 - [方佳瑞](https://github.com/feifeibear)：HPCAITech（潞晨科技）Cofounder & CTO，专注于大模型的训练和推理框架
 - [孙天祥](https://txsun1997.github.io/)：复旦大学自然语言处理实验室博士研究生
-- [高策](https://gaocegege.com/)：TensorChord Cofounder & CEO 博客
+- [高策](https://gaocegege.com/)：TensorChord Cofounder & CEO，MLOops 主播
 
 ## 我们聊了什么
 
