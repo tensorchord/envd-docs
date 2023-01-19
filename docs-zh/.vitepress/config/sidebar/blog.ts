@@ -5,6 +5,7 @@ export const blogSidebar: DefaultTheme.Sidebar = {
     {
       text: '博客',
       items: [
+        { text: 'MLOops 播客第一期：从工程师的角度聊聊 ChatGPT 与大模型', link: '/blog/mloops-e01' },
         { text: '在 Kubernetes 上做机器学习开发', link: '/blog/envd-server' },
         { text: 'TensorChord: 2022 in Review', link: '/blog/2022'},
         { text: 'TensorChord Tea Hour: Cellular Automaton', link: '/blog/tea-hour-2'},
