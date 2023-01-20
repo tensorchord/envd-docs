@@ -71,7 +71,7 @@ def generate_sidebar(title: str, path: Path, target_dir: Path):
     """Generate vitepress sidebar file"""
     sidebar = {"text": title, "type": "category"}
     items = []
-    for file in os.listdir(path):
+    for file in sorted(os.listdir(path)):
         if file.endswith(".json"):
             (path / file).unlink()
             continue
