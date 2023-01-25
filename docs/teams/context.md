@@ -74,6 +74,10 @@ $ buildkitd \
 
 The process should be long-running on the machine. All builds use this service.
 
+::: tip
+By default, buildkitd will set the cache limit size to 10% of your disk space. It will trigger the garbage collection after exceeding this limit. You can customize this by modifying the `worker.oci.gckeepstorage` or `worker.containerd.gckeepstorage` in the `buildkitd.toml` file. For more information, check the [buildkit config](https://github.com/moby/buildkit/blob/master/docs/buildkitd.toml.md).
+:::
+
 ### Create `envd` context in build job
 
 Then, let's create the corresponding `envd` context in the build job.

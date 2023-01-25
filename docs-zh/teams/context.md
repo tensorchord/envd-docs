@@ -71,6 +71,10 @@ $ buildkitd \
   ...
 ```
 
+::: tip
+buildkitd 默认会使用磁盘空间的 10% 作为缓存上限，超过之后会触发垃圾回收。你可以通过修改 `buildkitd.toml` 文件中的 `worker.oci.gckeepstorage` 或 `worker.containerd.gckeepstorage` 来定制。详情可查阅 [buildkit config](https://github.com/moby/buildkit/blob/master/docs/buildkitd.toml.md)。
+:::
+
 该程序需要长期运行在机器上，所有的构建都会使用这个服务。
 
 ### 在构建任务中创建 `envd` 上下文
