@@ -46,6 +46,8 @@
 3. 将你账号中刚 Fork 的代码库 Clone 到你电脑的本地磁盘上。
     ```bash
     $ git clone https://github.com/YOUR_USERNAME/envd.git
+    # 或者使用 GitHub 的命令行工具 gh（它会帮你自动配置好 upstream 的信息）
+    $ gh repo clone YOUR_USERNAME/envd
     ```
 4. 安装相关的依赖库并编译 `envd`。确保能输出正确的 version 信息，否则检查 git tags 是否包含历史 tags。
     ```bash
@@ -56,13 +58,19 @@
     ```
 5. 在本地的代码库中进行修改并且用 Git 将这些改动 Commit。
     ```bash
+    $ git checkout -b NEW_BRANCH_NAME
     $ git add -u
-    $ git commit -m "YOUR COMMIT MESSAGE"
+    $ git commit -s -m "YOUR COMMIT MESSAGE"
     ```
 6. 将你本地的改动 [Push](https://help.github.com/articles/github-glossary/#push) 到你 GitHub 上的远程仓库中。
     ```bash
+    $ git config --global --add --bool push.autoSetupRemote true
     $ git push
     ```
+7. 在 GitHub 上的 repo 界面创建一个 [Pull Request](https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request)。
+    - 标题名称应使用 `feat/docs/fix/refact` 之一作为前缀。
+    - 描述当前 PR 的目的，链接到对应的 issue。
+    - 邀请对应的 owner 来 review 改动。
 
 ### Lint（用于检查代码格式/错误的工具）
 
@@ -87,6 +95,12 @@ make: *** [Makefile:102: lint] Error 1
 
 ```bash
 make test
+```
+
+### 在 VSCode 中调试代码
+
+```bash
+make debug
 ```
 
 ## 从开发者的角度理解 `envd up`

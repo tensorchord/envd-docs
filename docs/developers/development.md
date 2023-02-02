@@ -47,37 +47,45 @@ The steps below walk you through the setup process. If you have questions, you c
 1. Install [Docker](https://www.docker.com/products/docker-desktop/) (20.10.0 or above) and [Golang](https://go.dev/dl/) (1.18 or above).
 2. [Fork](https://help.github.com/articles/fork-a-repo) the [`envd` repository](https://github.com/tensorchord/envd) into your own GitHub account. (Remember to uncheck the "Copy the `main` branch only")
 3. Clone your new fork of the repository from GitHub onto your local computer.
-    ```
+    ```bash
     $ git clone https://github.com/YOUR_USERNAME/envd.git
+    # or using gh CLI (this will help you set up the upstream automatically)
+    $ gh repo clone YOUR_USERNAME/envd
     ```
 4. Install the dependencies and compile `envd`. Make sure you can get the correct version from git tags.
-    ```
+    ```bash
     $ go mod tidy
     $ make
     $ ./bin/envd bootstrap
     $ ./bin/envd version
     ```
 5. Make some changes locally to the codebase and commit them with Git.
-    ```
+    ```bash
+    $ git checkout -b NEW_BRANCH_NAME
     $ git add -u
-    $ git commit -m "YOUR COMMIT MESSAGE"
+    $ git commit -s -m "YOUR COMMIT MESSAGE"
     ```
 6. [Push](https://help.github.com/articles/github-glossary/#push) your new changes to your fork on GitHub.
-    ```
+    ```bash
+    $ git config --global --add --bool push.autoSetupRemote true
     $ git push
     ```
+7. Create a [Pull Request](https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request) on the GitHub repo page.
+    - Title should start with `feat/docs/fix/refact` etc.
+    - Describe the purpose of this PR, link to the relevent issue.
+    - Invite the owner to review your PR.
 
 ### Lint
 
 You could run the command below
 
-```
+```bash
 make lint
 ```
 
 You should see output similar to the following if there is any linting issue:
 
-```
+```bash
 cmd/envd/main.go:36:67: Revision not declared by package version (typecheck)
                 fmt.Println(c.App.Name, version.Package, c.App.Version, version.Revision)
                                                                                 ^
@@ -88,8 +96,14 @@ make: *** [Makefile:102: lint] Error 1
 
 To run tests you can issue
 
-```
+```bash
 make test
+```
+
+### Debug with VSCode
+
+```bash
+make debug
 ```
 
 ## `envd up` from a developer's perspective
