@@ -46,7 +46,7 @@
 3. 将你账号中刚 Fork 的代码库 Clone 到你电脑的本地磁盘上。
     ```bash
     $ git clone https://github.com/YOUR_USERNAME/envd.git
-    # 或者使用 GitHub 的命令行工具 gh （它会帮你自动配置好 upstream 的信息）
+    # 或者使用 GitHub 的命令行工具 gh（它会帮你自动配置好 upstream 的信息）
     $ gh repo clone YOUR_USERNAME/envd
     ```
 4. 安装相关的依赖库并编译 `envd`。确保能输出正确的 version 信息，否则检查 git tags 是否包含历史 tags。
