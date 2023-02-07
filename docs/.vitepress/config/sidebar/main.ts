@@ -50,6 +50,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
         { text: 'Join envd Community', link: '/community/community' },
         { text: 'Contributing to envd', link: '/community/contributing' },
         { text: 'Roadmap', link: '/community/roadmap' },
+        { text: 'GSoC 2023', link: '/community/gsoc' },
       ]
     },
     {
