@@ -128,4 +128,4 @@ Print envd version information
 
 **--short, -s**: Only print the version number
 
-The documentation is auto-generated from [api package](https://github.com/tensorchord/envd/tree/main/envd/api), please do not edit it manually.
+The documentation is auto-generated from [API package](https://github.com/tensorchord/envd/tree/main/envd/api), please do not edit it manually.
