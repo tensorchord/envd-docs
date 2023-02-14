@@ -236,4 +236,4 @@ envd-quick-start        http://localhost:42779   envd-quick-start.envd   /home/g
 
 💬 有兴趣和我们交流一下您在构建或管理 AI/ML 应用方面的经验吗？
 
-[**约个时间聊聊!**](https://forms.gle/9HDBHX5Y3fzuDCDAA)
+[**约个时间聊聊！**](https://forms.gle/9HDBHX5Y3fzuDCDAA)
