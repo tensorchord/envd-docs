@@ -186,7 +186,7 @@ Setup repo related information. Will save to the image labels.
 def owner(uid: int, gid: int)
 ```
 
-Configure uid:gid as the environmen owner.
+Configure uid:gid as the environment owner.
 This can also be achieved by using flag `envd --owner uid:gid build` or environment
 variable `ENVD_BUILD_OWNER=uid:gid envd build`
 
