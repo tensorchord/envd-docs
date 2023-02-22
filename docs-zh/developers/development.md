@@ -62,13 +62,13 @@
     $ git add -u
     $ git commit -s -m "YOUR COMMIT MESSAGE"
     ```
-6. 将你本地的改动 [Push](https://help.github.com/articles/github-glossary/#push) 到你 GitHub 上的远程仓库中。
+6. 将你本地的改动 [Push](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository) 到你 GitHub 上的远程仓库中。
     ```bash
     $ git config --global --add --bool push.autoSetupRemote true
     $ git push
     ```
-7. 在 GitHub 上的 repo 界面创建一个 [Pull Request](https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request)。
-    - 标题名称应使用 `feat/docs/fix/refact` 之一作为前缀。
+7. 在 GitHub 的代码仓库界面[创建一个 Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)。
+    - 标题名称应当遵循 [Conventional Commits 标准](https://www.conventionalcommits.org/en/v1.0.0/)，即以 `feat`/`docs`/`fix`/`refactor` 等作为前缀。
     - 描述当前 PR 的目的，链接到对应的 issue。
     - 邀请对应的 owner 来 review 改动。
 
@@ -82,7 +82,7 @@ make lint
 
 如果你的代码有格式或语法错误，你会看到和下面相似的输出：
 
-```bash
+```
 cmd/envd/main.go:36:67: Revision not declared by package version (typecheck)
                 fmt.Println(c.App.Name, version.Package, c.App.Version, version.Revision)
                                                                                 ^
