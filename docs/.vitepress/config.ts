@@ -90,7 +90,7 @@ export default defineConfig({
     ],
     editLink: {
       pattern: 'https://github.com/tensorchord/envd-docs/tree/main/docs/:path',
-      text: 'Suggest changes to this page',
+      text: 'Edit this page',
     },
 
     footer: {
