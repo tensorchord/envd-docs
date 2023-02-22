@@ -65,13 +65,13 @@ The steps below walk you through the setup process. If you have questions, you c
     $ git add -u
     $ git commit -s -m "YOUR COMMIT MESSAGE"
     ```
-6. [Push](https://help.github.com/articles/github-glossary/#push) your new changes to your fork on GitHub.
+6. [Push](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository) your new changes to your fork on GitHub.
     ```bash
     $ git config --global --add --bool push.autoSetupRemote true
     $ git push
     ```
-7. Create a [Pull Request](https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request) on the GitHub repo page.
-    - Title should start with `feat/docs/fix/refact` etc.
+7. [Create a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on the GitHub repo page.
+    - PR title should start with `feat`/`docs`/`fix`/`refactor` etc., following the [Conventional Commits spec](https://www.conventionalcommits.org/en/v1.0.0/).
     - Describe the purpose of this PR, link to the relevent issue.
     - Invite the owner to review your PR.
 
@@ -85,7 +85,7 @@ make lint
 
 You should see output similar to the following if there is any linting issue:
 
-```bash
+```
 cmd/envd/main.go:36:67: Revision not declared by package version (typecheck)
                 fmt.Println(c.App.Name, version.Package, c.App.Version, version.Revision)
                                                                                 ^
