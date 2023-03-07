@@ -8,14 +8,11 @@
 </p>
 This website is built using [VitePress](https://vitepress.vuejs.org/), Vite & Vue Powered Static Site Generator.
 
-```
-npm run docs:dev -- --host 172.25.16.119
-```
-
 ### Installation
 
 ```shell
-npm i -g pnpm
+# npm i -g pnpm 这条命令安装以后，pnpm一直安装有问题
+npm i pnpm -g
 pnpm i
 ```
 
