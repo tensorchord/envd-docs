@@ -1,8 +1,8 @@
 ---
 layout: home
 
-title: envd
-titleTemplate: 开发环境管理工具
+title: HyperDL
+titleTemplate: 深度学习计算服务平台4.3
 
 hero:
   name: envd
@@ -14,7 +14,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: 在 GitHub 查看
-      link: https://github.com/tensorchord/envd
+      link: https://github.com/bobo4u/envd-docs
 
 features:
   - icon: 🐍
@@ -24,10 +24,10 @@ features:
     title: 内置的 Jupyter/VSCode 支持
     details: 原生支持 Jupyter notebooks 和 VSCode remote 扩展，提供良好的开发体验。
   - icon: ⏱️ 
-    title: 节省时间
-    details: 充分利用软件源和 Docker/Buildkit 的缓存机制，大大加快构建速度，节省构建时间。
+    title: 开箱即用，一站式AI开发平台
+    details: 平台预置AI开发全流程工具链，提供从数据上传，样本标注，算法开发，模型训练到推理服务上线端到端AI开发能力。
   - icon: ☁️
-    title: 本地云端，无缝迁移
+    title: 异构算力，混合调度
     details:  envd 与 Docker 紧密结合，构建兼容 Docker 镜像标准的环境镜像，在本地云端都可以使用。
 ---
 <!-- 
@@ -52,21 +52,21 @@ import {
 
 const members = [
   {
-    avatar: 'https://www.github.com/gaocegege.png',
-    name: 'Ce Gao',
-    title: 'Co-founder',
+    avatar: 'https://www.github.com/bobo4u.png',
+    name: 'bobo4u',
+    title: 'Learning gaocegege',
     links: [
-      { icon: 'github', link: 'https://github.com/gaocegege' },
-      { icon: 'twitter', link: 'https://twitter.com/gaocegege' }
+      { icon: 'github', link: 'https://github.com/bobo4u },
+      { icon: 'twitter', link: '暂无' }
     ]
   },
   {
-    avatar: 'https://www.github.com/terrytangyuan.png',
-    name: 'Yuan Tang',
-    title: 'Maintainer',
+    avatar: 'https://www.github.com/gaocegege.png',
+    name: 'gaocegege',
+    title: 'Oener',
     links: [
-      { icon: 'github', link: 'https://github.com/terrytangyuan' },
-      { icon: 'twitter', link: 'https://twitter.com/TerryTangYuan' }
+      { icon: 'github', link: 'https://github.com/gaocegege'},
+      { icon: 'twitter', link: 'https://twitter.com/TensorChord' }
     ]
   },
 ]
