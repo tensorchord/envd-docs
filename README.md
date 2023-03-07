@@ -6,8 +6,11 @@
 <a href="https://discord.gg/KqswhpVgdU"><img alt="discord invitation link" src="https://img.shields.io/discord/974584200327991326?label=discord&style=social"></a>
 <a href="https://app.netlify.com/sites/envd/deploys"><img alt="netlify status" src="https://api.netlify.com/api/v1/badges/535ba0bd-b9fa-43b4-a8b2-ce2fbfa3a424/deploy-status"></a>
 </p>
-
 This website is built using [VitePress](https://vitepress.vuejs.org/), Vite & Vue Powered Static Site Generator.
+
+```
+npm run docs:dev -- --host 172.25.16.119
+```
 
 ### Installation
 
