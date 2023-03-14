@@ -20,24 +20,24 @@ require (
 	github.com/cockroachdb/redact v1.1.3 // indirect
 	github.com/containerd/cgroups v1.1.0 // indirect
 	github.com/containerd/console v1.0.3 // indirect
-	github.com/containerd/containerd v1.6.17 // indirect
+	github.com/containerd/containerd v1.6.18 // indirect
 	github.com/containerd/continuity v0.3.0 // indirect
 	github.com/containerd/typeurl v1.0.2 // indirect
-	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
-	github.com/docker/cli v20.10.13+incompatible // indirect
+	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
+	github.com/docker/cli v23.0.0-rc.1+incompatible // indirect
 	github.com/docker/distribution v2.8.1+incompatible // indirect
-	github.com/docker/docker v20.10.7+incompatible // indirect
+	github.com/docker/docker v23.0.0-rc.1+incompatible // indirect
 	github.com/docker/go-connections v0.4.0 // indirect
-	github.com/docker/go-units v0.4.0 // indirect
+	github.com/docker/go-units v0.5.0 // indirect
 	github.com/emirpasic/gods v1.12.0 // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/getsentry/sentry-go v0.12.0 // indirect
 	github.com/go-git/gcfg v1.5.0 // indirect
 	github.com/go-git/go-billy/v5 v5.3.1 // indirect
 	github.com/go-git/go-git/v5 v5.4.2 // indirect
-	github.com/go-logr/logr v1.2.2 // indirect
+	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
-	github.com/gofrs/flock v0.7.3 // indirect
+	github.com/gofrs/flock v0.8.1 // indirect
 	github.com/gogo/googleapis v1.4.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
@@ -55,8 +55,8 @@ require (
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
-	github.com/moby/buildkit v0.10.3 // indirect
-	github.com/moby/sys/mountinfo v0.6.2 // indirect
+	github.com/moby/buildkit v0.11.4 // indirect
+	github.com/moby/patternmatcher v0.5.0 // indirect
 	github.com/moby/sys/signal v0.7.0 // indirect
 	github.com/moby/term v0.0.0-20210619224110-3f7ff695adc6 // indirect
 	github.com/morikuni/aec v1.0.0 // indirect
@@ -77,7 +77,7 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.4.0 // indirect
 	github.com/stretchr/testify v1.8.1 // indirect
-	github.com/tonistiigi/fsutil v0.0.0-20220115021204-b19f7f9cb274 // indirect
+	github.com/tonistiigi/fsutil v0.0.0-20230105215944-fb433841cbfa // indirect
 	github.com/tonistiigi/units v0.0.0-20180711220420-6950e57a87ea // indirect
 	github.com/tonistiigi/vt100 v0.0.0-20210615222946-8066bb97264f // indirect
 	github.com/urfave/cli/v2 v2.8.1 // indirect
@@ -91,14 +91,14 @@ require (
 	go.opentelemetry.io/otel/trace v1.4.1 // indirect
 	go.opentelemetry.io/proto/otlp v0.12.0 // indirect
 	go.starlark.net v0.0.0-20220328144851-d1966c6b9fcd // indirect
-	golang.org/x/crypto v0.0.0-20220315160706-3147a52a75dd // indirect
+	golang.org/x/crypto v0.2.0 // indirect
 	golang.org/x/mod v0.8.0 // indirect
-	golang.org/x/net v0.6.0 // indirect
+	golang.org/x/net v0.8.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
-	golang.org/x/sys v0.5.0 // indirect
-	golang.org/x/term v0.5.0 // indirect
-	golang.org/x/text v0.7.0 // indirect
-	golang.org/x/time v0.0.0-20210723032227-1f47c861a9ac // indirect
+	golang.org/x/sys v0.6.0 // indirect
+	golang.org/x/term v0.6.0 // indirect
+	golang.org/x/text v0.8.0 // indirect
+	golang.org/x/time v0.1.0 // indirect
 	golang.org/x/tools v0.6.0 // indirect
 	google.golang.org/genproto v0.0.0-20230209215440-0dfe4f8abfcc // indirect
 	google.golang.org/grpc v1.53.0 // indirect
