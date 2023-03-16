@@ -17,7 +17,7 @@ def build():
 
 </custom-title>
 
-The default version of python in `envd` is 3.9 (the latest patch version can be refered [here](https://anaconda.org/anaconda/python/files)). If you need to specify a particular version, just assign `language` to a string like `pythonX.Y.Z`:
+The default version of python in `envd` is 3.9 (the latest patch version can be referred [here](https://anaconda.org/anaconda/python/files)). If you need to specify a particular version, just assign `language` to a string like `pythonX.Y.Z`:
 
 <custom-title title="build.envd">
 

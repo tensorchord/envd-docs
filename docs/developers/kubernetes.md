@@ -11,7 +11,7 @@ Here is the workflow for how an `envd` environment is created on Kubernetes.
 - `envd-server` provisions the environment on Kubernetes.
 - The user is notified that the environment is ready to use.
 - User attaches to the environment with `ssh`.
-- [containerssh](https://github.com/ContainerSSH/libcontainerssh/) is a ssh proxy that captures and forwards the ssh connection to the desired pod.
+- [containerssh](https://github.com/ContainerSSH/libcontainerssh/) is an ssh proxy that captures and forwards the ssh connection to the desired pod.
 
 ![](https://user-images.githubusercontent.com/5100735/201919714-0539bb67-3855-42f7-9b39-0d1f6a8f21e5.svg)
 

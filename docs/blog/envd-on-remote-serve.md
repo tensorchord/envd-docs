@@ -113,7 +113,7 @@ Remember to execute ssh forwarding when you need to access the environment.
 
 #### Expose environment on internet
 
-If your remote server has a accessiable public ip address and be authorized to listen on some ports, you could user the following commands:
+If your remote server has an accessible public ip address and be authorized to listen on some ports, you could user the following commands:
 ```bash
 envd up --host 0.0.0.0
 # or

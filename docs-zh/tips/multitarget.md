@@ -43,7 +43,7 @@ Then, to start with cpu, any of commands below works the same way
 - `envd up -f build.envd`, explicitly specify `build.envd`
 - `envd up -f build.envd:build`, explicitly specify both `build.envd` and `build` function
 
-Simiarly, if you want to start with cuda support declared in `build_gpu` function, you can try
+Similarly, if you want to start with cuda support declared in `build_gpu` function, you can try
 
 - `envd up -f :build_gpu`, explicitly specify `build_gpu` function
 - `envd up -f build.envd:build_gpu`, explicitly specify both `build.envd` and `build_gpu` function
