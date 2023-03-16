@@ -24,7 +24,7 @@ export SHELL := bash
 # It's necessary to set the errexit flags for the bash shell.
 export SHELLOPTS := errexit
 
-# Build direcotory.
+# Build directory.
 BUILD_DIR := ./build
 
 #

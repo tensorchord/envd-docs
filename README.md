@@ -64,5 +64,5 @@ Your codeblock
 ### Blog
 
 If you want to write a blog, the following things you need to do
-- Add new post under `docs/blog` or `docs-zh/blog` then just wirte the Markdown file.
+- Add new post under `docs/blog` or `docs-zh/blog` then just write the Markdown file.
 - Add new item to `/docs/.vitepress/config/sidebar.ts` or `/docs-zh/.vitepress/config/sidebar.ts` `/blog/`.

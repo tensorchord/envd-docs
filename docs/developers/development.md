@@ -72,7 +72,7 @@ The steps below walk you through the setup process. If you have questions, you c
     ```
 7. [Create a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on the GitHub repo page.
     - PR title should start with `feat`/`docs`/`fix`/`refactor` etc., following the [Conventional Commits spec](https://www.conventionalcommits.org/en/v1.0.0/).
-    - Describe the purpose of this PR, link to the relevent issue.
+    - Describe the purpose of this PR, link to the relevant issue.
     - Invite the owner to review your PR.
 
 ### Lint
