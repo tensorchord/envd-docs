@@ -54,7 +54,7 @@ TL; DR: 前往 [小宇宙播客](https://www.xiaoyuzhoufm.com/episode/63c7db546b
 - [2017 年谷歌大脑发表的 Transformer 论文](https://arxiv.org/abs/1706.03762)
 - [Chain of Thought 论文](https://arxiv.org/abs/2201.11903)
 
-[本期文字记录（Transript）](https://tensorchord.feishu.cn/docx/PK0zd58qaoI9DZxEjOGchxAynie)
+[本期文字记录（Transcript）](https://tensorchord.feishu.cn/docx/PK0zd58qaoI9DZxEjOGchxAynie)
 
 如果您也对大模型感兴趣，欢迎通过 [Discord](https://discord.gg/DUUMAXqxv5) 频道告诉我们你感兴趣的内容和建议！
 
