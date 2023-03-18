@@ -33,7 +33,7 @@ runtime.command(commands={
 ## expose
 
 ```python
-def expose(envd_port: str, host_port: Optional[str], service: Optional[str],
+def expose(envd_port: int, host_port: Optional[int], service: Optional[str],
            listen_addr: Optional[str])
 ```
 
@@ -42,8 +42,8 @@ Proposal: https://github.com/tensorchord/envd/pull/780
 
 **Arguments**:
 
-- `envd_port` _str_ - port in `envd` container
-- `host_port` _Optional[str]_ - port in the host, if not provided or
+- `envd_port` _int_ - port in `envd` container
+- `host_port` _Optional[int]_ - port in the host, if not provided or
   `host_port=0`, `envd` will randomly choose a free port
 - `service` _Optional[str]_ - service name
 - `listen_addr` _Optional[str]_ - address to listen on
