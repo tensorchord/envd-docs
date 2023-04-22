@@ -89,12 +89,12 @@ $ ssh demo.envd
 envd@588f26349c61 $ # 欢迎回来！
 ```
 
-4. 删除环境，如果您不再使用它，请不要忘记使用 `envd destroy` 命令来删除环境。
+4. 删除环境，如果您不再使用它，请不要忘记使用 `envd destroy` 命令来删除环境。使用 `-p` 参数指定要删除的环境的路径。
 
 <custom-title title="删除环境">
 
 ```bash
-$ envd destroy
+$ envd destroy -p .
 INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 ```
 
