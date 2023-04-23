@@ -91,12 +91,12 @@ envd@588f26349c61 $ # You are in the environment again!
 
 </custom-title>
 
-Do not forget to remove the environment if you do not use it.
+Do not forget to remove the environment if you do not use it. Use the `-p` flag to specify the path of the environment to destroy.
 
 <custom-title title="destroy the environment">
 
 ```text 
-$ envd destroy
+$ envd destroy -p .
 INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 ```
 
