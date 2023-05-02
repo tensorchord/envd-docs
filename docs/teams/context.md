@@ -85,7 +85,7 @@ Then, let's create the corresponding `envd` context in the build job.
 ```bash
 $ envd context create --name remote-context \
   --builder tcp \
-  --builder-socket <remote-machine-ip>:8888 \
+  --builder-address <remote-machine-ip>:8888 \
   --use
 ```
 

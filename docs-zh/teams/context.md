@@ -34,7 +34,7 @@ default (current)       docker-container        docker-container://envd_buildkit
 
 ```bash
 $ envd context create --name demo \
-    --builder-socket buildkitd-demo --use --builder docker-container
+    --builder-address buildkitd-demo --use --builder docker-container
 INFO[2022-08-15T15:33:24+08:00] Context demo is created
 INFO[2022-08-15T15:33:24+08:00] Current context is now "demo"
 ```
@@ -84,7 +84,7 @@ buildkitd 默认会使用磁盘空间的 10% 作为缓存上限，超过之后�
 ```bash
 $ envd context create --name remote-context \
   --builder tcp \
-  --builder-socket <remote-machine-ip>:8888 \
+  --builder-address <remote-machine-ip>:8888 \
   --use
 ```
 
