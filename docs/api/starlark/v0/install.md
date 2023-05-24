@@ -14,7 +14,7 @@ Please update the python file there instead of directly editing file inside envd
 def apt_packages(name: List[str])
 ```
 
-Install package by system-level package manager (apt on Ubuntu)
+Install package using the system package manager (apt on Ubuntu)
 
 **Arguments**:
 
