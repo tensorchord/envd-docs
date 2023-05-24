@@ -63,7 +63,7 @@ Install Julia.
 def apt_packages(name: List[str] = [])
 ```
 
-Install package by system-level package manager (apt on Ubuntu).
+Install package using the system package manager (apt on Ubuntu).
 
 **Arguments**:
 
