@@ -32,7 +32,7 @@ Set up the base env.
 ## shell
 
 ```python
-def shell(name: str = "base")
+def shell(name: str = "bash")
 ```
 
 Interactive shell
