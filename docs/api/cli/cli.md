@@ -44,6 +44,36 @@ Bootstraps envd installation including shell autocompletion and buildkit image d
 
 **--with-autocomplete**: Add envd autocompletions
 
+**--registry**: Specify the registry to pull/push the image
+
+**--registry-ca-keypair**: Specify the ca/key/cert file path for the private registry.
+
+Format:
+'ca=/etc/config/ca.pem,key=/etc/config/key.pem,cert=/etc/config/cert.pem'
+
+**--registry-config**: Path to a JSON file containing registry(s) configurations. Cannot be used with 'registry' or 'registry-ca-keypair'. Only name field is required.
+
+Format:
+{
+    "registries": [
+      {
+        "name": "my_registry_1",
+        "ca": "/etc/my_registry_1/ca.crt",
+        "key": "",
+        "cert": "",
+        "use_http": false
+      },
+      {
+        "name": "my_registry_2",
+        "ca": "/etc/my_registry_2/ca.crt",
+        "key": "",
+        "cert": "",
+        "use_http": false
+      }
+    ]
+}
+
+
 ## build, b
 
 build envd environment
