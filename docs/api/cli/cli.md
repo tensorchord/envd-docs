@@ -44,9 +44,9 @@ Bootstraps envd installation including shell autocompletion and buildkit image d
 
 **--with-autocomplete**: Add envd autocompletions
 
-**--registry**: Specify the registry to pull/push the image
+**--registry, -r**: Specify the registry to pull/push the image
 
-**--registry-ca-keypair**: Specify the ca/key/cert file path for the private registry.
+**--registry-ca-keypair, -ca**: Specify the ca/key/cert file path for the private registry.
 
 Format:
 'ca=/etc/config/ca.pem,key=/etc/config/key.pem,cert=/etc/config/cert.pem'
