@@ -61,14 +61,16 @@ Format:
         "ca": "/etc/my_registry_1/ca.crt",
         "key": "",
         "cert": "",
-        "use_http": false
+        "use_http": false,
+        "mirror": "my_mirror"
       },
       {
         "name": "my_registry_2",
         "ca": "/etc/my_registry_2/ca.crt",
         "key": "",
         "cert": "",
-        "use_http": false
+        "use_http": false,
+        "mirror": ""
       }
     ]
 }
