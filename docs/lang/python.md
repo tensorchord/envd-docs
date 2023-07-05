@@ -67,7 +67,7 @@ def build():
 
 `envd` uses system-wide [pip](https://pip.pypa.io/) to install Python packages in the previous example.
 
-If conda is enabled, you can also install Python packages from PyPI with `install.python_packags` function. The following example installs `numpy` and `scipy` with conda, and installs `scikit-learn` and `matplotlib` with pip:
+If conda is enabled, you can also install Python packages from PyPI with `install.python_packages` function. The following example installs `numpy` and `scipy` with conda, and installs `scikit-learn` and `matplotlib` with pip:
 
 <custom-title title="build.envd">
 
