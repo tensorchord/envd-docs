@@ -16,7 +16,7 @@ jobs:
           python-version: '3.9'
       - uses: actions/setup-go@v3
         with:
-          go-version: '1.18'
+          go-version: '1.19'
       - name: Checkout Envd-docs
         uses: actions/checkout@v3
         with:
