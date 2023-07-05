@@ -20,9 +20,10 @@ func main() {
 
 This is a reference for the CLI commands of envd.
 
-`
-	footer := `
+::: tip
 The documentation is auto-generated from [api package](https://github.com/tensorchord/envd/tree/main/envd/api), please do not edit it manually.
+:::
+
 `
 
 	dir, err := os.Getwd()
@@ -30,7 +31,7 @@ The documentation is auto-generated from [api package](https://github.com/tensor
 		panic(err)
 	}
 	if err := os.WriteFile(
-		filepath.Join(dir, "docs/api/cli/cli.md"), []byte(header+content+footer), 0644); err != nil {
+		filepath.Join(dir, "docs/api/cli/cli.md"), []byte(header+content), 0644); err != nil {
 		panic(err)
 	}
 	logrus.Info("cli reference generated")
