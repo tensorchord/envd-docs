@@ -21,7 +21,7 @@ func main() {
 This is a reference for the CLI commands of envd.
 
 ::: tip
-The documentation is auto-generated from [api package](https://github.com/tensorchord/envd/tree/main/envd/api), please do not edit it manually.
+The documentation is auto-generated from [envd app](https://github.com/tensorchord/envd/blob/main/pkg/app/app.go), please do not edit it manually.
 :::
 
 `

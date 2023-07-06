@@ -68,7 +68,7 @@ def build():
 
 前面的例子中，`envd` 使用系统范围内的 [pip](https://pip.pypa.io/) 来安装 Python 包。
 
-如果 conda 已启用，你也可以使用  `install.python_packags` 函数来从 PyPI 安装 Python 包。下面的例子里，使用 conda 安装了 `numpy` and `scipy`，与此同时，使用 pip 安装了 `scikit-learn` 和 `matplotlib`：
+如果 conda 已启用，你也可以使用  `install.python_packages` 函数来从 PyPI 安装 Python 包。下面的例子里，使用 conda 安装了 `numpy` and `scipy`，与此同时，使用 pip 安装了 `scikit-learn` 和 `matplotlib`：
 
 <custom-title title="build.envd">
 
