@@ -41,7 +41,7 @@ Bootstrap the envd installation
 
 **--buildkit, -b**: Download the image and bootstrap buildkit
 
-**--dockerhub-mirror, -m**="": Dockerhub mirror to use
+**--dockerhub-mirror, -m**="": DockerHub mirror to use
 
 **--registry, -r**="": Specify the registry to pull the image from (default: docker.io)
 
@@ -49,11 +49,11 @@ Bootstrap the envd installation
 
 **--registry-config**="": Path to a JSON file containing registry configuration. Cannot be used with 'registry' or 'registry-ca-keypair'
 
-**--ssh-keypair, -k**="": Manually specify ssh key pair as `publicKey,privateKey`. Envd will generate a keypair at /home/runner/.config/envd/id_rsa_envd.pub and /home/runner/.config/envd/id_rsa_envd if not specified
+**--ssh-keypair, -k**="": Manually specify ssh key pair as `publicKey,privateKey`. envd will generate a keypair at /home/runner/.config/envd/id_rsa_envd.pub and /home/runner/.config/envd/id_rsa_envd if not specified
 
 **--use-http**: Use HTTP instead of HTTPS for the registry
 
-**--with-autocomplete**: Add envd autocompletions
+**--with-autocomplete**: Add envd auto-completions
 
 ## run, c
 
@@ -65,7 +65,7 @@ Run the envd environment from the existing image
 
 **--gpu**="": Request GPU resources (number of gpus), such as 1, 2
 
-**--host**="": Assign the host address for environment ssh acesss server listening (default: 127.0.0.1)
+**--host**="": Assign the host address for the environment SSH access server listening (default: 127.0.0.1)
 
 **--image**="": image name (default: PROJECT:dev)
 
@@ -133,13 +133,13 @@ Use the specified envd context
 
 Build the envd environment
 
-**--export-cache, --ec**="": Export the cache (e.g. type=registry,ref=<image>)
+**--export-cache, --ec**="": Export the cache (e.g. `type=registry,ref=<image>`)
 
 **--force**: Force rebuild the image
 
 **--from, -f**="": Function to execute, format `file:func` (default: build.envd:build)
 
-**--import-cache, --ic**="": Import the cache (e.g. type=registry,ref=<image>)
+**--import-cache, --ic**="": Import the cache (e.g. `type=registry,ref=<image>`)
 
 **--output, -o**="": Output destination (e.g. type=tar,dest=path,push=true)
 
@@ -274,15 +274,15 @@ Build and run the envd environment
 
 **--detach**: Detach from the container
 
-**--export-cache, --ec**="": Export the cache (e.g. type=registry,ref=<image>)
+**--export-cache, --ec**="": Export the cache (e.g. `type=registry,ref=<image>`)
 
 **--force**: Force rebuild and run the container although the previous container is running
 
 **--from, -f**="": Function to execute, format `file:func` (default: build.envd:build)
 
-**--host**="": Assign the host address for environment ssh acesss server listening (default: 127.0.0.1)
+**--host**="": Assign the host address for the environment SSH access server listening (default: 127.0.0.1)
 
-**--import-cache, --ic**="": Import the cache (e.g. type=registry,ref=<image>)
+**--import-cache, --ic**="": Import the cache (e.g. `type=registry,ref=<image>`)
 
 **--memory**="": Request Memory, such as 512Mb, 2Gb
 
