@@ -17,7 +17,7 @@
     "@types/markdown-it-footnote": "^3.0.0",
     "prettier": "2.7.1",
     "sitemap": "^7.1.1",
-    "vitepress": "1.0.0-alpha.33",
+    "vitepress": "1.0.0-beta.5",
     "vue": "^3.2.37"
   },
   "pnpm": {
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.9.1",
-    "markdown-it-footnote": "^3.0.3"
+    "markdown-it-footnote": "^3.0.3",
+    "search-insights": "^2.6.0"
   }
 }
