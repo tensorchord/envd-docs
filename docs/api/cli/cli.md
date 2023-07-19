@@ -99,7 +99,7 @@ Manage envd contexts
 
 Create envd context
 
-**--builder**="": Builder to use (docker-container, kube-pod, tcp, unix) (default: docker-container)
+**--builder**="": Builder to use (docker-container, kube-pod, tcp, unix, moby-worker, nerdctl-container) (default: docker-container)
 
 **--builder-address**="": Builder address (default: envd_buildkitd)
 
@@ -141,12 +141,12 @@ Build the envd environment
 
 **--import-cache, --ic**="": Import the cache (e.g. `type=registry,ref=<image>`)
 
-**--output, -o**="": Output destination (e.g. type=tar,dest=path,push=true)
+**--output, -o**="": Output destination (e.g. `type=tar,dest=path,push=true`)
 
 **--path, -p**="": Path to the directory containing the build.envd (default: .)
 
-**--platform**="": Specify the target platforms for the build output (for example, windows/amd64 or linux/amd64,darwin/arm64).
-	Build images with same tags could cause image overwriting, platform suffixes will be added to differentiate the images. (default: linux/amd64)
+**--platform**="": Specify the target platforms for the build output (for example, "windows/amd64" or "linux/amd64,darwin/arm64").
+Build images with same tags could cause image overwriting, platform suffixes will be added to differentiate the images. (default: linux/amd64)
 
 **--tag, -t**="": Name and optionally a tag in the 'name:tag' format (default: PROJECT:dev)
 
