@@ -280,6 +280,8 @@ Build and run the envd environment
 
 **--from, -f**="": Function to execute, format `file:func` (default: build.envd:build)
 
+**--gpus**="": Number of GPUs used in this environment (default: 0)
+
 **--host**="": Assign the host address for the environment SSH access server listening (default: 127.0.0.1)
 
 **--import-cache, --ic**="": Import the cache (e.g. `type=registry,ref=<image>`)
@@ -288,7 +290,7 @@ Build and run the envd environment
 
 **--name**="": environment name
 
-**--no-gpu**: Launch the CPU container
+**--no-gpu**: Launch the CPU container even if it's a GPU image
 
 **--path, -p**="": Path to the directory containing the build.envd (default: .)
 
