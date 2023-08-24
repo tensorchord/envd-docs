@@ -31,7 +31,7 @@ Copy from host path to container path (build time)
 
 **Examples**:
 
-```
+```python
 # copy from host to container
 io.copy(source='main.py', target='/home/envd/')
 # copy from image to container

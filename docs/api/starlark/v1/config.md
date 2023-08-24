@@ -24,7 +24,7 @@ Configure apt sources
 
 Example usage:
 
-```
+```python
 apt_source(source='''
     deb https://mirror.sjtu.edu.cn/ubuntu focal main restricted
     deb https://mirror.sjtu.edu.cn/ubuntu focal-updates main restricted
@@ -80,7 +80,7 @@ Configure conda channel mirror
 
 Example usage:
 
-```
+```python
 config.conda_channel(channel='''
 channels:
     - defaults
@@ -108,7 +108,7 @@ Configure entrypoint for custom base image
 
 Example usage:
 
-```
+```python
 config.entrypoint(["date", "-u"])
 ```
 
@@ -126,7 +126,7 @@ Configure the number of GPUs required
 
 Example usage:
 
-```
+```python
 config.gpu(count=2)
 ```
 

@@ -58,7 +58,7 @@ Execute command
 
 **Example**:
 
-```
+```python
 run(commands=["conda install -y -c conda-forge exa"])
 ```
 
@@ -70,7 +70,7 @@ def git_config(name: Optional[str] = None,
                editor: Optional[str] = None)
 ```
 
-Setup git config
+Setup git config.
 
 **Arguments**:
 
@@ -79,7 +79,7 @@ Setup git config
 - `editor` _str_ - Editor for git operations
   
   Example usage:
-```
+```python
 git_config(name="My Name", email="my@email.com", editor="vim")
 ```
 
@@ -99,7 +99,7 @@ contains all the variables/functions defined (except the ones with `_` prefix).
 - `git` _str_ - git URL
   
   Example usage:
-```
+```python
 envd = include("https://github.com/tensorchord/envdlib")
 
 def build():
