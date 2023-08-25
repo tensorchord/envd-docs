@@ -128,6 +128,24 @@ config.gpu(count=2)
 
 - `count` _int_ - number of GPUs
 
+## shm\_size
+
+```python
+def shm_size(size: int)
+```
+
+Configure the shared memory size (megabyte) of docker containers
+
+Example usage:
+
+```python
+config.shm_size(size=1024)
+```
+
+**Arguments**:
+
+- `size` _int_ - the shared memory size (megabyte) of docker containers
+
 ## cran\_mirror
 
 ```python
