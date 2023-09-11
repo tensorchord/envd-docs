@@ -40,6 +40,12 @@ jobs:
       - run: |
           mkdir -p envd-docs/hack/api/lib/
           cp -r envdlib/src/* envd-docs/hack/api/lib/
+      - name: Install latest envd
+        run: |
+          pushd envd
+          make build
+          cp bin/envd /usr/local/bin/envd
+          popd
       - name: Generate API docs
         run: |
           pushd envd-docs

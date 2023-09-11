@@ -39,9 +39,7 @@ init:
 	@pnpm i
 
 generate-cli-ref:
-	@go get -u github.com/tensorchord/envd
-	@go mod tidy
-	@go run hack/cli/generate-cli-ref.go
+	@envd reference --output docs/api/cli/cli.md
 
 generate-api-ref:
 	@python hack/api/render.py
