@@ -11,6 +11,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
         { text: '连接你的开发环境', link: '/guide/ide' },
         { text: 'envd 核心概念', link: '/guide/concepts' },
         { text: '模块化你的构建', link:'/guide/modularize'},
+        { text: '升级到 v1', link: '/guide/v1' },
       ],
     },
     {
