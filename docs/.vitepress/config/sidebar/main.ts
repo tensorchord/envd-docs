@@ -11,6 +11,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
         { text: 'Using envd Environment', link:'/guide/ide'},
         { text: 'envd Concepts', link:'/guide/concepts'},
         { text: 'Modularize your build', link:'/guide/modularize'},
+        { text: 'Upgrade to v1', link: '/guide/v1' },
       ],
     },
     {
