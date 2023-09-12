@@ -18,6 +18,7 @@ envd
 ```
 [--analytics-enabled]
 [--debug]
+[--help|-h]
 ```
 
 **Usage**:
@@ -31,6 +32,8 @@ envd [GLOBAL OPTIONS] command [COMMAND OPTIONS] [ARGUMENTS...]
 **--analytics-enabled**: enable analytics
 
 **--debug**: enable debug output in logs
+
+**--help, -h**: show help
 
 
 # COMMANDS
@@ -333,3 +336,15 @@ Print envd version information
 ## top
 
 Show statistics about the containers managed by the environment.
+
+## reference
+
+Print envd reference documentation
+
+**--help, -h**: show help
+
+**--output**="": Output file, if not specified, print to stderr
+
+### help, h
+
+Shows a list of commands or help for one command
