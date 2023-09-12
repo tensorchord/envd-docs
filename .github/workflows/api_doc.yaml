@@ -43,7 +43,7 @@ jobs:
       - name: Install latest envd
         run: |
           pushd envd
-          make build
+          make
           cp bin/envd /usr/local/bin/envd
           popd
       - name: Generate API docs
