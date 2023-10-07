@@ -95,3 +95,26 @@ $ envd context create --name remote-context \
 ```bash
 $ envd build --output type=image,name=docker.io/<username>/<image>,push=true
 ```
+
+### 非 Root 模式
+
+BuildKitd 默认要求以 root 身份运行。如果你担心安全问题，或者在你的环境中禁止使用特权容器，你可以考虑在非 root 模式下运行 BuildKitd。
+
+- 在本地运行 BuildKitd：你需要先安装 [rootlesskit](https://github.com/rootless-containers/rootlesskit/)
+
+```bash
+rootlesskit buildkitd
+```
+
+- 在容器中运行 BuildKitd
+```bash
+docker run \
+  --name buildkitd \
+  -d \
+  --security-opt seccomp=unconfined \
+  --security-opt apparmor=unconfined \
+  --device /dev/fuse \
+  moby/buildkit:rootless --oci-worker-no-process-sandbox
+```
+
+- 在 Kubernetes 集群中运行 BuildKitd：请参考 [Kubernetes manifests for BuildKit Document](https://github.com/moby/buildkit/tree/master/examples/kubernetes)

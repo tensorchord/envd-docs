@@ -96,3 +96,26 @@ Then you can build and push the image in the build job.
 ```bash
 $ envd build --output type=image,name=docker.io/<username>/<image>,push=true
 ```
+
+### Rootless Mode
+
+BuildKitd requires running as root by default. If you are concerned about security, or privileged containers are forbidden in your environment, you may consider running BuildKitd in rootless mode.
+
+- run BuildKitd on the host: you need to use the [rootlesskit](https://github.com/rootless-containers/rootlesskit/)
+
+```bash
+rootlesskit buildkitd
+```
+
+- run BuildKitd in the container
+```bash
+docker run \
+  --name buildkitd \
+  -d \
+  --security-opt seccomp=unconfined \
+  --security-opt apparmor=unconfined \
+  --device /dev/fuse \
+  moby/buildkit:rootless --oci-worker-no-process-sandbox
+```
+
+- run BuildKitd in the Kubernetes cluster: please refer to the [Kubernetes manifests for BuildKit Document](https://github.com/moby/buildkit/tree/master/examples/kubernetes)
