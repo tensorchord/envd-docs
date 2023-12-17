@@ -2,6 +2,7 @@
   "name": "docs",
   "version": "0.0.0",
   "description": "Development Environment for Machine Learning Engineers",
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
@@ -17,21 +18,10 @@
     "@types/markdown-it-footnote": "^3.0.0",
     "prettier": "2.7.1",
     "sitemap": "^7.1.1",
-    "vitepress": "1.0.0-beta.5",
-    "vue": "^3.2.37"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@types/react",
-        "react",
-        "react-dom"
-      ]
-    }
+    "vitepress": "1.0.0-rc.32",
+    "vue": "^3.3.12"
   },
   "dependencies": {
-    "@algolia/client-search": "^4.9.1",
-    "markdown-it-footnote": "^3.0.3",
-    "search-insights": "^2.6.0"
+    "markdown-it-footnote": "^3.0.3"
   }
 }

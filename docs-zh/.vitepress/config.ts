@@ -15,11 +15,15 @@ export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
   locales: {
-    '/': {
-      lang: 'zh-CN',
-      title: 'envd',
-      description: 'AI/ML 开发环境'
+    root:{
+      label:'简体中文',
+      lang:'zh',
     },
+    zh:{
+      label:'English',
+      lang:'en',
+      link:'https://envd.tensorchord.ai'
+    }
   },
   title: 'envd',
 
@@ -54,19 +58,9 @@ export default defineConfig({
       light: '/logo_light.svg',
       dark: '/logo_dark.svg',
     },
-    algolia: {
-      appId: 'KGSWV0XY1D',
-      apiKey: 'a3c4e766b63fac5bee147fb9fc269cb0',
-      indexName: 'tensorchord',
+    search:{
+      provider: 'local'
     },
-    localeLinks: {
-      text: '',
-      items: [
-        { text: 'English', link: 'https://envd.tensorchord.ai' },
-        { text: '简体中文', link: '/' },
-      ],
-    },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/tensorchord/envd' },
       { icon: 'twitter', link: 'https://twitter.com/TensorChord' },

@@ -4,7 +4,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
   '/': [
     {
       text: '开始了解',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: '快速开始', link: '/guide/getting-started' },
         { text: '构建你的开发环境', link: '/guide/build-envd' },
@@ -16,7 +16,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '管理 envd 环境',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: '利用软件镜像源更快地构建环境', link: '/envs/mirror' },
         { text: '用户相关配置', link: '/envs/config' },
@@ -26,7 +26,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '在团队中使用 envd',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: '总览', link: '/teams/overview'},
         { text: '在 Kubernetes 上使用 envd (试验性)', link: '/teams/kubernetes'},
@@ -37,7 +37,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '编程语言',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: 'Python 语言', link: '/lang/python' },
         { text: 'Julia 语言', link: '/lang/julia' },
@@ -46,7 +46,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '社区',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: '加入社区', link: '/community/community' },
         { text: '贡献 envd', link: '/community/contributing' },
@@ -55,7 +55,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '开发者',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: '开发教程', link: '/developers/development' },
         { text: 'envd-server', link: '/developers/kubernetes' },
@@ -63,7 +63,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '常见问题',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: '为何选择 envd', link: '/faq/why' },
         { text: 'envd 和其他工具的比较', link: '/faq/comparison' },
@@ -71,7 +71,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '其他',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: 'Telemetry', link: '/misc/telemetry' },
       ]

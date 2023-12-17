@@ -12,19 +12,18 @@ const siteHostName = 'https://envd.tensorchord.ai/'
 const og = 'https://og.tensorchord.ai/api/og?title='
 
 export default defineConfig({
-  lang: 'zh-CN',
+  lang: 'en-US',
   lastUpdated: true,
   locales: {
-    '/': {
-      lang: 'en-US',
-      title: 'envd',
-      description: 'AI/ML Development Environment'
+    root:{
+      label:'English',
+      lang:'en'
     },
-    '/zh/': {
-      lang: 'zh-CN',
-      title: 'envd',
-      description: 'AI/ML 开发环境'
-    },
+    zh:{
+      label:'简体中文',
+      lang:'zh',
+      link:'https://zh.envd.tensorchord.ai'
+    }
   },
   title: 'envd',
 
@@ -55,21 +54,12 @@ export default defineConfig({
   ],
 
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     logo: {
       light: '/logo_light.svg',
       dark: '/logo_dark.svg',
-    },
-    algolia: {
-      appId: 'KGSWV0XY1D',
-      apiKey: 'a3c4e766b63fac5bee147fb9fc269cb0',
-      indexName: 'tensorchord',
-    },
-    localeLinks: {
-      text: '',
-      items: [
-        { text: 'English', link: '/' },
-        { text: '简体中文', link: 'https://zh.envd.tensorchord.ai' },
-      ],
     },
 
     socialLinks: [

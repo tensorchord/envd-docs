@@ -4,7 +4,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
   '/':[
     {
       text: 'Guide',
-      collapsible: true,
+      collapsed: true,
       items:[
         { text: 'Getting Started', link: '/guide/getting-started' },
         { text: 'Running Your First Environment', link:'/guide/build-envd'},
@@ -16,7 +16,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: 'Managing Environments',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: 'Faster Build with Software Mirrors',link:'/envs/mirror' },
         { text: 'Per-user Config', link:'/envs/config'},
@@ -26,7 +26,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: 'envd for Your Teams',
-      collapsible: true,
+      collapsed: true,
       items:[
         { text: 'Overview', link: '/teams/overview'},
         { text: 'envd on Kubernetes (Experimental)', link: '/teams/kubernetes'},
@@ -37,7 +37,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: 'Languages',
-      collapsible: true,
+      collapsed: true,
       items:[
         { text: 'Python', link: '/lang/python' },
         { text: 'Julia', link: '/lang/julia' },
@@ -46,7 +46,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: 'Community',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: 'Join envd Community', link: '/community/community' },
         { text: 'Contributing to envd', link: '/community/contributing' },
@@ -56,7 +56,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: 'for Developers',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: 'Development Tutorial', link: '/developers/development' },
         { text: 'envd-server', link: '/developers/kubernetes' },
@@ -64,7 +64,7 @@ export const mainSidebar: DefaultTheme.Sidebar = {
     },
     {
       text: 'FAQs',
-      collapsible: true,
+      collapsed: true,
       items:[
         { text: 'Why Use envd?', link: '/faq/why' },
         { text: 'envd vs. Others', link: '/faq/comparison' }
