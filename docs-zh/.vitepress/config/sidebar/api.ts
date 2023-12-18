@@ -5,7 +5,7 @@ export const apiSidebar: DefaultTheme.Sidebar = {
   '/api/': [
     {
       text: 'envd CLI',
-      collapsible: true,
+      collapsed: true,
       items: [
         { text: 'CLI references', link: '/api/cli/cli' },
       ]
