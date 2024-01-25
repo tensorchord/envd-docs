@@ -283,7 +283,7 @@ Build and run the envd environment
 
 **--from, -f**="": Function to execute, format `file:func` (default: build.envd:build)
 
-**--gpus**="": Number of GPUs used in this environment (default: 0)
+**--gpus**="": Number of GPUs used in this environment, this will override the `config.gpu()` (default: 0)
 
 **--host**="": Assign the host address for the environment SSH access server listening (default: 127.0.0.1)
 
