@@ -17,7 +17,7 @@ v1 is experimental and may change in the future. Make sure to freeze the envd ve
 ## python
 
 ```python
-def python(version: str = "3.9")
+def python(version: str = "3.11")
 ```
 
 Install python.
@@ -60,84 +60,84 @@ Install Julia.
 ## apt\_packages
 
 ```python
-def apt_packages(name: List[str] = [])
+def apt_packages(name: Sequence[str] = ())
 ```
 
 Install package using the system package manager (apt on Ubuntu).
 
 **Arguments**:
 
-- `name` _List[str]_ - apt package name list
+- `name` _Sequence[str]_ - apt package name list
 
 ## python\_packages
 
 ```python
-def python_packages(name: List[str] = [],
+def python_packages(name: Sequence[str] = (),
                     requirements: str = "",
-                    local_wheels: List[str] = [])
+                    local_wheels: Sequence[str] = ())
 ```
 
 Install python package by pip.
 
 **Arguments**:
 
-- `name` _List[str]_ - package name list
+- `name` _Sequence[str]_ - package name list
 - `requirements` _str_ - requirements file path
-- `local_wheels` _List[str]_ - local wheels
+- `local_wheels` _Sequence[str]_ - local wheels
   (wheel files should be placed under the current directory)
 
 ## conda\_packages
 
 ```python
-def conda_packages(name: List[str] = [],
-                   channel: List[str] = [],
-                   env_file: str = "")
+def conda_packages(
+        name: Sequence[str] = (),
+        channel: Sequence[str] = (), env_file: str = "")
 ```
 
 Install python package by Conda
 
 **Arguments**:
 
-- `name` _List[str]_ - List of package names with optional version assignment,
+- `name` _Sequence[str]_ - List of package names with optional version assignment,
   such as ['pytorch', 'tensorflow==1.13.0']
-- `channel` _List[str]_ - additional channels
+- `channel` _Sequence[str]_ - additional channels
 - `env_file` _str_ - conda env file path
 
 ## r\_packages
 
 ```python
-def r_packages(name: List[str])
+def r_packages(name: Sequence[str])
 ```
 
 Install R packages by R package manager.
 
 **Arguments**:
 
-- `name` _List[str]_ - package name list
+- `name` _Sequence[str]_ - package name list
 
 ## julia\_packages
 
 ```python
-def julia_packages(name: List[str])
+def julia_packages(name: Sequence[str])
 ```
 
 Install Julia packages.
 
 **Arguments**:
 
-- `name` _List[str]_ - List of Julia packages
+- `name` _Sequence[str]_ - List of Julia packages
 
 ## vscode\_extensions
 
 ```python
-def vscode_extensions(name: List[str])
+def vscode_extensions(name: Sequence[str])
 ```
 
 Install VS Code extensions
 
 **Arguments**:
 
-- `name` _List[str]_ - extension names, such as ['ms-python.python']
+- `name` _Sequence[str]_ - extension names, such as ['ms-python.python']
 
 ## cuda
 
@@ -149,7 +149,7 @@ Replace the base image with a `nvidia/cuda` image.
 
 This will replace the default base image to an `nvidia/cuda` image. You can
 also use a CUDA base image directly like
-`base(image="nvidia/cuda:12.2.0-devel-ubuntu20.04", dev=True)`.
+`base(image="nvidia/cuda:12.2.0-devel-ubuntu22.04", dev=True)`.
 
 **Arguments**:
 

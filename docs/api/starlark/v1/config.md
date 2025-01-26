@@ -183,7 +183,7 @@ Since Julia 1.5, https://pkg.julialang.org is the default pkg server.
 def rstudio_server()
 ```
 
-Enable the RStudio Server (only work for `base(os="ubuntu20.04", language="r")`)
+Enable the RStudio Server (only work for `base(os="ubuntu22.04", language="r")`)
 
 ## repo
 
