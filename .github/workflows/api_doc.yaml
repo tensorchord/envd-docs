@@ -11,19 +11,17 @@ jobs:
   sync_file:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-      - uses: actions/setup-go@v3
-        with:
-          go-version: '1.19'
+      - uses: actions/setup-go@v5
       - name: Checkout Envd-docs
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           path: envd-docs
       - name: Checkout Envd
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'tensorchord/envd'
           fetch-depth: 1
@@ -32,7 +30,7 @@ jobs:
           mkdir -p envd-docs/hack/api/
           cp -r envd/envd/api/* envd-docs/hack/api/
       - name: Checkout Envd lib
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'tensorchord/envdlib'
           fetch-depth: 1
@@ -63,7 +61,7 @@ jobs:
           make generate-cli-ref
           popd
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v7
         with:
           path: envd-docs
           add-paths: |

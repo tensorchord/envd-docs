@@ -24,7 +24,7 @@
     - [实现 `envd` 的语言服务器](https://github.com/tensorchord/envd/issues/358)
 - **运行时**
     - 在 dockerd 22.06-beta 中支持 buildkitd moby worker: [Support buildkitd moby worker in dockerd 22.06-beta](https://github.com/tensorchord/envd/issues/51)。这是一项重大的改进，可以加速构建过程。我们在 docker 22.06 中使用 moby worker，并在 docker 20.10 中回退到 docker worker。
-    - 收集GPU/CPU 的指标，通过 Web UI 展示： [Add agent to collect metrics in the container (or in the host)](https://github.com/tensorchord/envd/issues/218)
+    - 收集 GPU/CPU 的指标，通过 Web UI 展示： [Add agent to collect metrics in the container (or in the host)](https://github.com/tensorchord/envd/issues/218)
 - **生态系统**
     - `envd` 的 vscode 扩展：[Contribute the vscode-envd extension](https://github.com/tensorchord/vscode-envd)
     - 设计拓展机制加载用户自定义函数：[Design the extension mechanism to reuse user-defined build funcs](https://github.com/tensorchord/envd/issues/91)。用户可以运行 `load(<custom-package>)` 来加载自定义函数。

@@ -7,7 +7,7 @@ VERSION=$1
 DOWNLOAD_NAME=$(mktemp -u --suffix .envd)
 
 get_github_latest_release() {
-    curl -sSf "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+    curl -sSf "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub API
     grep '"tag_name":' |                                          # Get tag line
     sed -E 's/.*"v?([^"]+)".*/\1/'                                # Pluck JSON value
 }
