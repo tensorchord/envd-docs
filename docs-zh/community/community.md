@@ -13,6 +13,6 @@
 
 我们的社区会议安排在每隔一个星期三，太平洋标准时间晚上 8 点（北京时间星期四，中午 12 点）。请查看[日历](https://calendar.google.com/calendar/u/0?cid=Y2VkMjVmMzYwM2RkYmM1ZThhMDI0ODM1NWNhYjc3MGEzZjhlZjU4MTBmY2JlZGI4ODZlODI5YmZhNDc5ZWQ5M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)以了解时间，并在你的日历上标记日期！
 
-如果你有什么要讨论的，请查看[🫂 `envd`社区会议记录](https://docs.google.com/document/d/1rnqV56mGGX14TXTgFQhME1lE7FhDROX-1Nx8cY7sSoY/edit?usp=sharing)。这是一个很好的方式，它可以让你随时了解社区的任何最新情况。
+如果你有什么要讨论的，请查看[🫂 `envd` 社区会议记录](https://docs.google.com/document/d/1rnqV56mGGX14TXTgFQhME1lE7FhDROX-1Nx8cY7sSoY/edit?usp=sharing)。这是一个很好的方式，它可以让你随时了解社区的任何最新情况。
 
 <div class="video-container"><iframe src="https://docs.google.com/document/d/e/2PACX-1vS44-rc7W3E8eLqcmc58_zmy2-DAW8SvgOtGVHPaXL5rEQy3O4vSMRPLmYRkkkuL1jzSr-Sm3oPcLBD/pub?embedded=true"></iframe></div>
