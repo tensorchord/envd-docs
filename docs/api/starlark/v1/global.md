@@ -18,7 +18,7 @@ v1 is experimental and may change in the future. Make sure to freeze the envd ve
 ## base
 
 ```python
-def base(image: str = "ubuntu:20.04", dev: bool = False)
+def base(image: str = "ubuntu:22.04", dev: bool = False)
 ```
 
 Set up the base env.
@@ -39,7 +39,7 @@ Interactive shell
 
 **Arguments**:
 
-- `name` _str_ - shell name (i.e. `zsh`, `bash`)
+- `name` _str_ - shell name (i.e. `zsh`, `bash`, `fish`)
 
 ## run
 
@@ -103,7 +103,7 @@ contains all the variables/functions defined (except the ones with `_` prefix).
 envd = include("https://github.com/tensorchord/envdlib")
 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(os="ubuntu22.04", language="python")
     envd.tensorboard(host_port=8000)
 ```
 

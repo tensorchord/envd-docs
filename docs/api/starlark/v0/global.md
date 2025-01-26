@@ -18,9 +18,9 @@ Set base image
 
 **Arguments**:
 
-- `os` _str_ - The operating system (i.e. `ubuntu20.04`)
+- `os` _str_ - The operating system (i.e. `ubuntu22.04`)
 - `language` _str_ - The programming language dependency (i.e. `python3.8`)
-- `image` _Optional[str]_ - Custom image (i.e. `python:3.9-slim`)
+- `image` _Optional[str]_ - Custom image (i.e. `python:3.11-slim`)
 
 ## shell
 
@@ -96,7 +96,7 @@ contains all the variables/functions defined (except the ones with `_` prefix).
 envd = include("https://github.com/tensorchord/envdlib")
 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(os="ubuntu22.04", language="python")
     envd.tensorboard(8000)
 ```
 
