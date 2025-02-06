@@ -10,7 +10,8 @@
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
 ```
 
 </custom-title>
@@ -23,7 +24,8 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
     install.julia_packages(name = [
         "Example",
     ])
@@ -38,7 +40,8 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
     config.julia_pkg_server(url="https://mirrors.tuna.tsinghua.edu.cn/julia")
     install.julia_packages(name = [
         "Example",
@@ -55,7 +58,8 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
     shell("zsh")
 ```
 
@@ -70,7 +74,8 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
     install.vscode_extensions(["julialang.language-julia"])
 ```
 

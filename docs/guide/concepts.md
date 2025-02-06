@@ -36,6 +36,9 @@ Code below is for conceptual demonstration purposes only. Some features are not 
 # build.envd
 # The function `build` will be evaluated by default.
 def build():
+    base(dev=True)
+    install.conda()
+    install.python()
     version = "2.9.1"
     dev_env(version, "zsh")
 

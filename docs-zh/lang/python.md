@@ -13,18 +13,22 @@
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
 ```
 
 </custom-title>
 
-`envd` 中 Python 的默认版本是 3.9（最新的修订号可以参考[这里](https://anaconda.org/anaconda/python/files)）。如果你需要使用特定版本，只需要用类似 `pythonX.Y.Z` 的字符串来填充 `language` 项：
+`envd` 中 Python 的默认版本是 3.9（最新的修订号可以参考[这里](https://anaconda.org/anaconda/python/files)）。如果你需要使用特定版本，只需要用类似 `X.Y.Z` 的字符串来填充 `version` 项：
 
 <custom-title title="build.envd">
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3.11")
+    base(dev=True)
+    install.conda()
+    install.python(version="3.12")
 ```
 
 </custom-title>
@@ -41,7 +45,9 @@ Python2 不被 `envd` 所支持。
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.conda_packages(name = [
         "numpy",
         "scipy",
@@ -57,7 +63,9 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "scikit-learn",
         "matplotlib",
@@ -74,7 +82,9 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.conda_packages(name = [
         "numpy",
         "scipy",
@@ -97,7 +107,9 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     shell("zsh")
 ```
 </custom-title>
@@ -110,7 +122,9 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.vscode_extensions(["ms-python.python"])
 ```
 </custom-title>
@@ -125,7 +139,9 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     # Use `config.jupyter()` 
     # if you do not need to set up password.
     config.jupyter(token="password")

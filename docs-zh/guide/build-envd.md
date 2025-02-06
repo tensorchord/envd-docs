@@ -37,7 +37,9 @@ $ envd build --path examples/mnist
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -57,7 +59,9 @@ def build():
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
 ```
 
 </custom-title>
@@ -76,7 +80,7 @@ $ envd up
  => => exporting manifest sha256:7ef2e8571485ce51d966b4cf5fe83232520f  0.0s
  => => exporting config sha256:abec960de30fce69dc19126577c7aaae3f9b62  0.0s
  => => sending tarball                                                 0.4s
-envd@588f26349c61 $
+⬢ [envd]❯
 ```
 
 </custom-title>
@@ -84,9 +88,9 @@ envd@588f26349c61 $
 3. 重新进入您的环境，如果您退出了当前 `shell`，使用 `ssh <project-directory-name>.envd` 命令将重新进入环境。
 
 ```bash
-envd@588f26349c61 $ exit
+⬢ [envd]❯ exit
 $ ssh demo.envd
-envd@588f26349c61 $ # 欢迎回来！
+⬢ [envd]❯ # 欢迎回来！
 ```
 
 4. 删除环境，如果您不再使用它，请不要忘记使用 `envd destroy` 命令来删除环境。使用 `-p` 参数指定要删除的环境的路径。
@@ -108,7 +112,9 @@ INFO[2022-06-10T19:09:49+08:00] <project-directory-name> is destroyed
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
 ```
 
 </custom-title>
@@ -131,7 +137,9 @@ def build():
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -153,9 +161,8 @@ def build():
 
 ```
 $ envd up
-envd@2c14bff847f8:$ python3
-Python 3.8.10 (default, Mar 15 2022, 12:22:08)
-[GCC 9.4.0] on linux
+⬢ [envd]❯ python3
+Python 3.11.11 (main, Dec 11 2024, 16:28:39) [GCC 11.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import numpy as np
 >>> a = np.array([2, 3, 4])
@@ -171,7 +178,9 @@ array([2, 3, 4])
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -195,7 +204,9 @@ Jupyter Notebook 是使用 Python 进行数据分析的互动计算环境。`env
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -225,7 +236,9 @@ envd-quick-start        http://localhost:48484   envd-quick-start.envd   /home/g
 ```python
 def build():
     config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -256,7 +269,9 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
     install.vscode_extensions([
         "ms-python.python",
     ])
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])

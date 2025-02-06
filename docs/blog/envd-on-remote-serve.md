@@ -56,7 +56,9 @@ Verify the installation:
 Here is a example for you:
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])

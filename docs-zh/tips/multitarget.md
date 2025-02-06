@@ -16,7 +16,9 @@ For example, you can declare multiple functions in one `envd` file, following py
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.vscode_extensions([
         "ms-python.python",
     ])

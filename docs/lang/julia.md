@@ -10,7 +10,8 @@ First, you can specify to use the Julia language in the `base` function.
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
 ```
 </custom-title>
 
@@ -22,7 +23,8 @@ You can install Julia packages with `install.julia_packages` function. The follo
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
     install.julia_packages(name = [
         "Example",
     ])
@@ -38,7 +40,8 @@ By default, the Julia package server `"pkg.julialang.org"` is used when download
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
     config.julia_pkg_server(url="https://mirrors.tuna.tsinghua.edu.cn/julia")
     install.julia_packages(name = [
         "Example",
@@ -54,7 +57,8 @@ You can specify shell program used in the environment with `shell` function. The
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
     shell("zsh")
 ```
 
@@ -68,7 +72,8 @@ You can specify VSCode extensions with `install.vscode_extensions` function. The
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="julia")
+    base(dev=True)
+    install.julia()
     install.vscode_extensions(["julialang.language-julia"])
 ```
 </custom-title>
