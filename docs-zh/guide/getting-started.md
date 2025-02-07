@@ -26,7 +26,9 @@ envd（`ɪnˈvdɪ`）是一个命令行工具，可以帮助你为 AI/ML 创建�
 envdlib = include("https://github.com/tensorchord/envdlib")
 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     envdlib.tensorboard(8888)
 ```
 
@@ -92,7 +94,12 @@ def tensorboard(envd_port=6006, envd_dir="/home/envd/logs",
 ```bash [pip]
 # envd 也可以用 pip 来安装。
 
-pip3 install --upgrade envd
+pip install --upgrade envd
+```
+
+```bash [uv]
+# if you are using `uv`
+uv tool install envd
 ```
 
 ```bash [Homebrew]
@@ -135,7 +142,7 @@ envd bootstrap --dockerhub-mirror https://docker.mirrors.sjtug.sjtu.edu.cn
 
 先克隆仓库[`envd-quick-start`](https://github.com/tensorchord/envd-quick-start):
 
-```
+```bash
 git clone https://github.com/tensorchord/envd-quick-start.git
 ```
 
@@ -144,13 +151,15 @@ git clone https://github.com/tensorchord/envd-quick-start.git
 ```python title=build.envd
 def build():
     config.repo(url="https://github.com/tensorchord/envd", description="envd quick start example")
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     # Configure pip index if needed.
     # config.pip_index(url = "https://pypi.tuna.tsinghua.edu.cn/simple")
     install.python_packages(name = [
         "numpy",
     ])
-    shell("zsh")
+    shell("fish")
 ```
 
 :::tip
@@ -159,35 +168,40 @@ def build():
 
 然后可以运行下面的命令来建立一个新的环境：
 
-```
+```bash
 cd envd-quick-start && envd up
 ```
 
-```
+```bash
 $ cd envd-quick-start && envd up
-[+] ⌚ parse build.envd and download/cache dependencies 2.8s ✅ (finished)
- => download oh-my-zsh                                                    2.8s
-[+] 🐋 build envd environment 18.3s (25/25) ✅ (finished)
- => create apt source dir                                                 0.0s
- => local://cache-dir                                                     0.1s
- => => transferring cache-dir: 5.12MB                                     0.1s
-...
- => pip install numpy                                                    13.0s
- => copy /oh-my-zsh /home/envd/.oh-my-zsh                                 0.1s
- => mkfile /home/envd/install.sh                                          0.0s
- => install oh-my-zsh                                                     0.1s
- => mkfile /home/envd/.zshrc                                              0.0s
- => install shell                                                         0.0s
- => install PyPI packages                                                 0.0s
- => merging all components into one                                       0.3s
- => => merging                                                            0.3s
- => mkfile /home/envd/.gitconfig                                          0.0s
- => exporting to oci image format                                         2.4s
- => => exporting layers                                                   2.0s
- => => exporting manifest sha256:7dbe9494d2a7a39af16d514b997a5a8f08b637f  0.0s
- => => exporting config sha256:1da06b907d53cf8a7312c138c3221e590dedc2717  0.0s
- => => sending tarball                                                    0.4s
-envd-quick-start via Py v3.9.13 via 🅒 envd
+[+] ⌚ parse build.envd and download/cache dependencies 6.2s ✅ (finished) 
+[+] build envd environment 19.0s (47/47) FINISHED                                                 
+ => CACHED [internal] setting pip cache mount permissions                                     0.0s
+ => docker-image://docker.io/tensorchord/envd-sshd-from-scratch:v0.4.3                        2.3s
+ => => resolve docker.io/tensorchord/envd-sshd-from-scratch:v0.4.3                            2.3s
+ => docker-image://docker.io/library/ubuntu:22.04                                             0.0s
+......
+ => [internal] pip install numpy                                                              2.5s
+ => CACHED [internal] download fish shell                                                     0.0s
+ => [internal] configure user permissions for /opt/conda                                      1.0s
+ => [internal] create dir for ssh key                                                         0.5s
+ => [internal] install ssh keys                                                               0.2s
+ => [internal] copy fish shell from the builder image                                         0.2s
+ => [internal] install fish shell                                                             0.5s
+......
+ => [internal] create work dir: /home/envd/envd-quick-start                                   0.2s
+ => exporting to image                                                                        7.7s
+ => => exporting layers                                                                       7.7s
+ => => writing image sha256:464a0c12759d3d1732404f217d5c6e06d0ee4890cccd66391a608daf2bd314e4  0.0s
+ => => naming to docker.io/library/envd-quick-start:dev                                       0.0s
+------
+ > importing cache manifest from docker.io/tensorchord/python-cache:envd-v0.4.3:
+------
+⣽ [5/5] attach the environment  [2s]            
+Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+
+envd-quick-start on git master [!] via Py v3.11.11 via 🅒 envd as sudo 
 ⬢ [envd]❯ # You are in the container-based environment!
 ```
 
@@ -198,7 +212,9 @@ envd-quick-start via Py v3.9.13 via 🅒 envd
 ```python title=build.envd
 def build():
     config.repo(url="https://github.com/tensorchord/envd", description="envd quick start example")
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     # Configure pip index if needed.
     # config.pip_index(url = "https://pypi.tuna.tsinghua.edu.cn/simple")
     install.python_packages(name = [

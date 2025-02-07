@@ -27,7 +27,9 @@ def serve():
 
 ```py
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.vscode_extensions([
         "ms-python.python",
     ])
@@ -39,7 +41,9 @@ def build():
     shell("zsh")
 
 def serve():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=False)
+    install.conda()
+    install.python()
     configure_streamlit(8501)
     configure_mnist()
 

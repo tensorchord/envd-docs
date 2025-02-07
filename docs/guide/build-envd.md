@@ -34,11 +34,13 @@ Here is an example of `build.envd`:
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
-    shell("zsh")
+    shell("fish")
     config.jupyter()
 ```
 
@@ -55,7 +57,9 @@ You can create a file `build.envd` in your project directory with these lines:
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
 ```
 
 </custom-title>
@@ -74,7 +78,7 @@ $ envd up
  => => exporting manifest sha256:7ef2e8571485ce51d966b4cf5fe83232520f  0.0s
  => => exporting config sha256:abec960de30fce69dc19126577c7aaae3f9b62  0.0s
  => => sending tarball                                                 0.4s
-envd@588f26349c61 $ 
+⬢ [envd]❯ 
 ```
 
 </custom-title>
@@ -84,9 +88,9 @@ You can use `ssh <project-directory-name>.envd` to attach to the environment if 
 <custom-title title="connect the environment via ssh">
 
 ```bash 
-envd@588f26349c61 $ exit
+⬢ [envd]❯ exit
 $ ssh demo.envd
-envd@588f26349c61 $ # You are in the environment again!
+⬢ [envd]❯ # You are in the environment again!
 ```
 
 </custom-title>
@@ -110,7 +114,9 @@ Let's have a look at `build.envd`.
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
 ```
 
 </custom-title>
@@ -133,7 +139,9 @@ The [`envd` install API](../api/starlark/v0/install) function `install.python_pa
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -155,9 +163,8 @@ Feel free to ask us in [Discord](https://discord.gg/KqswhpVgdU) if you get probl
 
 ```
 $ envd up
-envd@2c14bff847f8:$ python3
-Python 3.8.10 (default, Mar 15 2022, 12:22:08) 
-[GCC 9.4.0] on linux
+⬢ [envd]❯ python3
+Python 3.11.11 (main, Dec 11 2024, 16:28:39) [GCC 11.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import numpy as np
 >>> a = np.array([2, 3, 4])
@@ -173,7 +180,9 @@ The [`envd` API](../api/starlark/v0/global) function `shell` configures shell pr
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -196,7 +205,9 @@ $ envd up
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -228,7 +239,9 @@ You can use the `envd` API function `config.pip_index` to set the PyPI index mir
 ```python 
 def build():
     config.pip_index(url="https://pypi.tuna.tsinghua.edu.cn/simple")
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])
@@ -259,7 +272,9 @@ deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe mu
     install.vscode_extensions([
         "ms-python.python",
     ])
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "numpy",
     ])

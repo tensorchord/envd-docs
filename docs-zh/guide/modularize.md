@@ -34,7 +34,9 @@ envdlib = include("https://github.com/tensorchord/envdlib")
 
 # use it in your build function
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     envdlib.tensorboard(host_port=8888)
 ```
 

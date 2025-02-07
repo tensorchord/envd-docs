@@ -43,7 +43,9 @@ touch build.envd
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     #config.pip_index(url = "https://pypi.tuna.tsinghua.edu.cn/simple")
     install.python_packages([
         "torch",

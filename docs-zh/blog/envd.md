@@ -20,7 +20,9 @@ introduction: 'Ce Gao 是 envd 的维护者之一。与此之外，他还是机�
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.cuda(version="11.2.2", cudnn="8")
     install.python_packages(name=[
         "tensorflow-gpu"
@@ -76,7 +78,9 @@ def build():
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.vscode_extensions([
         "ms-python.python",
     ])
@@ -144,7 +148,9 @@ envd 不只是面向个人使用者设计的，它更是要解决算法团队在
 envdlib = include("https://github.com/tensorchord/envdlib")
 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     envdlib.tensorboard(8888)
 ```
 

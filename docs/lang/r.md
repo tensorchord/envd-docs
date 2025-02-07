@@ -11,7 +11,8 @@ First, you can specify to use the R language in the `base` function.
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
 ```
 
 </custom-title>
@@ -24,7 +25,8 @@ You can install R packages with `install.r_packages` function. The following exa
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
     install.r_packages([
             "remotes",
             "rlang",
@@ -40,7 +42,8 @@ By default, the RStudio CRAN mirror `"https://cran.rstudio.com"` is used when do
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
     config.cran_mirror(url="https://cloud.r-project.org/")
     install.r_packages([
             "remotes",
@@ -57,7 +60,8 @@ You can specify shell program used in the environment with `shell` function. The
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
     shell("zsh")
 ```
 
@@ -71,7 +75,8 @@ You can specify VSCode extensions with `install.vscode_extensions` function. The
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
     install.vscode_extensions(["REditorSupport.r-lsp"])
 ```
 </custom-title>

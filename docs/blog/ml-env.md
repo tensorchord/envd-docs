@@ -49,7 +49,9 @@ The syntax looks like this:
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.cuda(version="11.2.2", cudnn="8")
     install.python_packages(name=[
         "torch"

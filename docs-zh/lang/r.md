@@ -10,7 +10,8 @@
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
 ```
 
 </custom-title>
@@ -23,7 +24,8 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
     install.r_packages([
             "remotes",
             "rlang",
@@ -39,7 +41,8 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
     config.cran_mirror(url="https://cloud.r-project.org/")
     install.r_packages([
             "remotes",
@@ -56,7 +59,8 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
     shell("zsh")
 ```
 
@@ -70,7 +74,8 @@ def build():
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="r")
+    base(dev=True)
+    install.r_lang()
     install.vscode_extensions(["REditorSupport.r-lsp"])
 ```
 </custom-title>

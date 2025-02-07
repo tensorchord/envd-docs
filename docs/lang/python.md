@@ -12,24 +12,28 @@ The default language in `envd` is Python, thus there is no need to specify langu
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
 ```
 
 </custom-title>
 
-The default version of python in `envd` is 3.9 (the latest patch version can be referred [here](https://anaconda.org/anaconda/python/files)). If you need to specify a particular version, just assign `language` to a string like `pythonX.Y.Z`:
+The default version of python in `envd` is 3.11 (the latest patch version can be referred [here](https://anaconda.org/anaconda/python/files)). If you need to specify a particular version, just assign `version` to a string like `X.Y.Z`:
 
 <custom-title title="build.envd">
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3.11")
+    base(dev=True)
+    install.conda()
+    install.python(version="3.12")
 ```
 
 </custom-title>
 
 :::warning
-Python2 is not supported in `envd`.
+Python2 environment is not supported in `envd`.
 :::
 
 ## Conda packages
@@ -40,7 +44,9 @@ You can install conda packages with `install.conda_packages` function. The follo
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.conda_packages(name = [
         "numpy",
         "scipy",
@@ -56,7 +62,9 @@ You can install Python packages from PyPI with `install.python_packages` functio
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name = [
         "scikit-learn",
         "matplotlib",
@@ -73,7 +81,9 @@ If conda is enabled, you can also install Python packages from PyPI with `instal
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.conda_packages(name = [
         "numpy",
         "scipy",
@@ -96,7 +106,9 @@ You can specify shell program used in the environment with `shell` function. The
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     shell("zsh")
 ```
 </custom-title>
@@ -109,7 +121,9 @@ You can specify VSCode extensions with `install.vscode_extensions` function. The
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.vscode_extensions(["ms-python.python"])
 ```
 </custom-title>
@@ -124,7 +138,9 @@ You can set up the Jupyter notebook with `config.jupyter` function. The followin
 
 ```python 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     # Use `config.jupyter()` 
     # if you do not need to set up password.
     config.jupyter(token="password")

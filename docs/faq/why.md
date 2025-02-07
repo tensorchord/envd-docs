@@ -115,7 +115,9 @@ The same logic in `envd` looks like this:
 
 ```python
 def build():
-    base(os="ubuntu20.04", language="python3")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.vscode_extensions([
         "ms-python.python",
     ])

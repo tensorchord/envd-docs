@@ -16,7 +16,9 @@ def tensorboard(port):
 
 
 def build():
-    base(os="ubuntu20.04", language="python")
+    base(dev=True)
+    install.conda()
+    install.python()
     install.python_packages(name=["tensorboard"])
     tensorboard(8888)
 ```

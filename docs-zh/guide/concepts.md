@@ -39,6 +39,9 @@ def build():
 # build.envd
 # 默认调用 `build` 函数。
 def build():
+    base(dev=True)
+    install.conda()
+    install.python()
     version = "2.9.1"
     dev_env(version, "zsh")
 
