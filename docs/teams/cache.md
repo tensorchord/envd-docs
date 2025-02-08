@@ -1,5 +1,13 @@
 # Remote Cache
 
+::: warning
+Start from `envd v1`, the default builder is `moby-builder`. But it doesn't support cache backend unless you have [enabled the `containerd` image store](https://docs.docker.com/engine/storage/containerd/) for your local `docker` engine.
+
+Alternatively, you can create another [context](context) that use any remote buildkit builder to enable the cache feature.
+
+The simplest one is to use the `buildkit` container: `envd context create --name docker --builder docker-container --use`.
+:::
+
 You can use remote cache to accelerate the build process. `envd` build cache[^1] can be uploaded to the image registry, local directories or other places. There are five types supported:
 
 - `registry`: push the image and the cache separately to a image registry.

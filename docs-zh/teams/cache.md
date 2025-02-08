@@ -1,5 +1,13 @@
 # 远程缓存
 
+::: warning
+从 `envd v1` 开始，默认 builder 是 `moby-builder`。但除非你已经[启用了 `containerd` image store](https://docs.docker.com/engine/storage/containerd/)，否则它不支持 cache backend。
+
+或者，你可以创建另一个 [context](context)，使用任意远程 buildkit builder 来启用 cache 功能。
+
+最简单的方法是使用 `buildkit` container： `envd context create --name docker --builder docker-container --use`。
+:::
+
 你可以使用远程缓存来加速构建过程。`envd` 构建缓存[^1]可以被上传到镜像仓库、目的目录或其他地方。目前支持以下五种：
 
 - `registry`: 分别推送镜像和缓存到镜像仓库。
