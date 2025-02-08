@@ -46,7 +46,7 @@ Bootstrap the envd installation
 
 **--dockerhub-mirror, -m**="": DockerHub mirror to use
 
-**--registry, -r**="": Specify the registry to pull the image from (default: docker.io)
+**--registry, -r**="": Specify the registry to pull the image from (default: "docker.io")
 
 **--registry-ca-keypair, --ca**="": Specify the ca/key/cert file path for the private registry (format: 'ca=/etc/config/ca.pem,key=/etc/config/key.pem,cert=/etc/config/cert.pem')
 
@@ -68,7 +68,7 @@ Run the envd environment from the existing image
 
 **--gpu**="": Request GPU resources (number of gpus), such as 1, 2
 
-**--host**="": Assign the host address for the environment SSH access server listening (default: 127.0.0.1)
+**--host**="": Assign the host address for the environment SSH access server listening (default: "127.0.0.1")
 
 **--image**="": image name (default: PROJECT:dev)
 
@@ -76,13 +76,13 @@ Run the envd environment from the existing image
 
 **--name**="": environment name
 
-**--path, -p**="": Working directory path to be used as project root (default: .)
+**--path, -p**="": Working directory path to be used as project root (default: ".")
 
-**--shm-size**="": Configure the shared memory size (megabyte) (default: 0)
+**--shm-size**="": Configure the shared memory size (megabyte) (default: 2048)
 
 **--sync**: Sync the local directory with the remote container
 
-**--timeout**="": Timeout of container creation (default: 0s)
+**--timeout**="": Timeout of container creation (default: 30m0s)
 
 **--volume, -v**="": Mount host directory into container
 
@@ -102,13 +102,13 @@ Manage envd contexts
 
 Create envd context
 
-**--builder**="": Builder to use (docker-container, kube-pod, tcp, unix, moby-worker, nerdctl-container) (default: docker-container)
+**--builder**="": Builder to use (docker-container, kube-pod, tcp, unix, moby-worker, nerdctl-container) (default: "docker-container")
 
-**--builder-address**="": Builder address (default: envd_buildkitd)
+**--builder-address**="": Builder address (default: "envd_buildkitd")
 
 **--name**="": Name of the context
 
-**--runner**="": Runner to use(docker, envd-server) (default: docker)
+**--runner**="": Runner to use(docker, envd-server) (default: "docker")
 
 **--runner-address**="": Runner address
 
@@ -118,7 +118,7 @@ Create envd context
 
 List envd contexts
 
-**--format, -f**="": Format of output, could be "json" or "table" (default: table)
+**--format, -f**="": Format of output, could be "json" or "table" (default: "table")
 
 ### rm
 
@@ -136,17 +136,17 @@ Use the specified envd context
 
 Build the envd environment
 
-**--export-cache, --ec**="": Export the cache (e.g. `type=registry,ref=<image>`)
+**--export-cache, --ec**="": Export the cache (e.g. `type=registry,ref=<image>`). The default `moby-worker` builder doesn't support this unless the docker-ce has enabled the `containerd` image store. You can run `envd context create --name docker --builder docker-container --use` to use this feature.
 
 **--force**: Force rebuild the image
 
-**--from, -f**="": Function to execute, format `file:func` (default: build.envd:build)
+**--from, -f**="": Function to execute, format `file:func` (default: "build.envd:build")
 
 **--import-cache, --ic**="": Import the cache (e.g. `type=registry,ref=<image>`)
 
 **--output, -o**="": Output destination (e.g. `type=tar,dest=path,push=true`)
 
-**--path, -p**="": Path to the directory containing the build.envd (default: .)
+**--path, -p**="": Path to the directory containing the build.envd (default: ".")
 
 **--platform**="": Specify the target platforms for the build output (for example, "windows/amd64" or "linux/amd64,darwin/arm64").
 Build images with same tags could cause image overwriting, platform suffixes will be added to differentiate the images. (default: linux/amd64)
@@ -171,15 +171,15 @@ Manage envd environments
 
 Show details about environments, including dependencies and port binding
 
-**--env, -e**="": Specify the envd environment to use (default: envd-docs)
+**--env, -e**="": Specify the envd environment to use (default: "envd-docs")
 
-**--format, -f**="": Format of output, could be "json" or "table" (default: table)
+**--format, -f**="": Format of output, could be "json" or "table" (default: "table")
 
 ### list, ls, l
 
 List envd environments
 
-**--format, -f**="": Format of output, could be "json" or "table" (default: table)
+**--format, -f**="": Format of output, could be "json" or "table" (default: "table")
 
 ## images, image
 
@@ -189,7 +189,7 @@ Manage envd images
 
 Show details about image, including dependencies
 
-**--format, -f**="": Format of output, could be "json" or "table" (default: table)
+**--format, -f**="": Format of output, could be "json" or "table" (default: "table")
 
 **--image, -i**="": Specify the image to use
 
@@ -197,7 +197,7 @@ Show details about image, including dependencies
 
 List envd images
 
-**--format, -f**="": Format of output, could be "json" or "table" (default: table)
+**--format, -f**="": Format of output, could be "json" or "table" (default: "table")
 
 ### prune
 
@@ -219,7 +219,7 @@ Automatically generate the build.envd
 
 **--lang, -l**="": language usage. Support Python, R, Julia
 
-**--path, -p**="": Path to the directory containing the build.envd (default: .)
+**--path, -p**="": Path to the directory containing the build.envd (default: ".")
 
 ## login
 
@@ -253,11 +253,11 @@ Spawns a command installed into the environment.
 
 **--command, -c**="": Command defined in build.envd to execute
 
-**--from, -f**="": Function to execute, format `file:func` (default: build.envd:build)
+**--from, -f**="": Function to execute, format `file:func` (default: "build.envd:build")
 
 **--name, -n**="": Name of the environment
 
-**--path, -p**="": Path to the directory containing the build.envd (default: .)
+**--path, -p**="": Path to the directory containing the build.envd (default: ".")
 
 **--raw, -r**="": Raw command to execute
 
@@ -277,17 +277,17 @@ Build and run the envd environment
 
 **--detach**: Detach from the container
 
-**--export-cache, --ec**="": Export the cache (e.g. `type=registry,ref=<image>`)
+**--export-cache, --ec**="": Export the cache (e.g. `type=registry,ref=<image>`). The default `moby-worker` builder doesn't support this unless the docker-ce has enabled the `containerd` image store. You can run `envd context create --name docker --builder docker-container --use` to use this feature.
 
 **--force**: Force rebuild and run the container although the previous container is running
 
-**--from, -f**="": Function to execute, format `file:func` (default: build.envd:build)
+**--from, -f**="": Function to execute, format `file:func` (default: "build.envd:build")
 
 **--gpu-set**="": GPU devices used in this environment, such as `all`, `'"device=1,3"'`, `count=2`(all to pass all GPUs). This will override the `--gpus`
 
 **--gpus**="": Number of GPUs used in this environment, this will override the `config.gpu()` (default: 0)
 
-**--host**="": Assign the host address for the environment SSH access server listening (default: 127.0.0.1)
+**--host**="": Assign the host address for the environment SSH access server listening (default: "127.0.0.1")
 
 **--import-cache, --ic**="": Import the cache (e.g. `type=registry,ref=<image>`)
 
@@ -297,21 +297,21 @@ Build and run the envd environment
 
 **--no-gpu**: Launch the CPU container even if it's a GPU image
 
-**--path, -p**="": Path to the directory containing the build.envd (default: .)
+**--path, -p**="": Path to the directory containing the build.envd (default: ".")
 
 **--platform**="": Specify the target platform for the build output, (for example, windows/amd64, linux/amd64, or darwin/arm64) (default: linux/amd64)
 
-**--shm-size**="": Configure the shared memory size (megabyte) (default: 0)
+**--shm-size**="": Configure the shared memory size (megabyte) (default: 2048)
 
 **--tag, -t**="": Name and optionally a tag in the 'name:tag' format (default: PROJECT:dev)
 
-**--timeout**="": Timeout of container creation (default: 0s)
+**--timeout**="": Timeout of container creation (default: 30s)
 
 **--use-proxy, --proxy**: Use HTTPS_PROXY/HTTP_PROXY/NO_PROXY in the build process
 
 **--volume, -v**="": Mount host directory into container
 
-## debug, b
+## debug
 
 Debug commands
 
@@ -321,9 +321,9 @@ dump buildkit LLB in human-readable format.
 
 **--dot**: Output dot format
 
-**--from, -f**="": Function to execute, format `file:func` (default: build.envd:build)
+**--from, -f**="": Function to execute, format `file:func` (default: "build.envd:build")
 
-**--path, -p**="": Path to the directory containing the build.envd (default: .)
+**--path, -p**="": Path to the directory containing the build.envd (default: ".")
 
 ## version, v
 
@@ -331,7 +331,7 @@ Print envd version information
 
 **--detail, -d**: Print details about the envd environment
 
-**--format, -f**="": Format of output, could be "json" or "table" (default: table)
+**--format, -f**="": Format of output, could be "json" or "table" (default: "table")
 
 **--short, -s**: Only print the version number
 
