@@ -350,3 +350,13 @@ Print envd reference documentation
 ### help, h
 
 Shows a list of commands or help for one command
+
+## new, n
+
+Create a new `build.envd` file from pre-defined templates
+
+**--force, -f**: Overwrite the build.envd if existed
+
+**--path, -p**="": Path to the directory of the build.envd (default: ".")
+
+**--template, -t**="": Template name to use (`envd bootstrap` will add [uv, conda, torch])
