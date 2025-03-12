@@ -359,4 +359,4 @@ Create a new `build.envd` file from pre-defined templates
 
 **--path, -p**="": Path to the directory of the build.envd (default: ".")
 
-**--template, -t**="": Template name to use (`envd bootstrap` will add [uv, conda, torch])
+**--template, -t**="": Template name to use (`envd bootstrap` will add some default templates to '$HOME/.config/envd/templates')
