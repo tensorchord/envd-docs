@@ -35,6 +35,26 @@ Install MiniConda or MicroMamba.
 
 - `use_mamba` _bool_ - use mamba instead of conda
 
+## pixi
+
+```python
+def pixi(use_pixi_mirror: bool = False, pypi_index: Optional[str] = None)
+```
+
+Install Pixi (https://github.com/prefix-dev/pixi).
+
+`pixi` is an alternative to `conda` that is written in Rust and provides faster
+dependency resolution and installation. It also simplify the project management.
+
+This doesn't support installing Python packages through `install.python_packages`
+because that part should be managed by `pixi`. You can run `pixi shell` in the
+`envd` environment to sync all the dependencies.
+
+**Arguments**:
+
+- `use_pixi_mirror` _bool_ - use pixi mirror
+- `pypi_index` _Optional[str]_ - customize pypi index url
+
 ## uv
 
 ```python
