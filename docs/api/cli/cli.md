@@ -66,7 +66,9 @@ Run the envd environment from the existing image
 
 **--detach**: Detach from the container
 
-**--gpu**="": Request GPU resources (number of gpus), such as 1, 2
+**--gpu-set**="": GPU devices used in this environment, such as `all`, `'"device=1,3"'`, `count=2`(all to pass all GPUs). This will override the `--gpus`
+
+**--gpus**="": Request GPU resources (number of gpus), such as 1, 2 (default: 0)
 
 **--host**="": Assign the host address for the environment SSH access server listening (default: "127.0.0.1")
 
@@ -80,7 +82,7 @@ Run the envd environment from the existing image
 
 **--shm-size**="": Configure the shared memory size (megabyte) (default: 2048)
 
-**--sync**: Sync the local directory with the remote container
+**--sync**: Sync the local directory with the remote container (only supported in envd-server runner currently)
 
 **--timeout**="": Timeout of container creation (default: 30m0s)
 

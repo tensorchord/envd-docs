@@ -90,6 +90,31 @@ def julia()
 
 Install Julia.
 
+## rust
+
+```python
+def rust(version: Optional[str] = None)
+```
+
+Install Rust programming language.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - Rust version, such as '1.72.0'.
+  If not specified, the latest stable version will be installed.
+
+## go
+
+```python
+def go(version: Optional[str] = "1.25.3")
+```
+
+Install Go programming language.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - Go version, such as '1.25.3'.
+
 ## apt\_packages
 
 ```python
