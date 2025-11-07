@@ -90,7 +90,7 @@ $ envd up
 ```bash
 ⬢ [envd]❯ exit
 # 列出当前可用的 envd 环境
-$ envd env ls
+$ envd envs ls
 # 重新连接到该环境
 $ ssh <project-directory-name>.envd
 ⬢ [envd]❯ # 欢迎回来！
