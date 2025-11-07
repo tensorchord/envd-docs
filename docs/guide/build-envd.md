@@ -4,7 +4,7 @@
 
 ## Usage
 
-The `envd build` command builds an image from a `build.envd`. `envd up` command builds an image and runs immediately. Traditionally, the `build.envd` and located in the root of the context.  You use the `--path` or `-p` flag with `envd build`/`envd up` to point to a directory anywhere in your file system which contains a `build.envd`.
+The `envd build` command builds an image from a `build.envd`. `envd up` command builds an image and runs immediately. Traditionally, the `build.envd` and located in the root of the context. You use the `--path` or `-p` flag with `envd build`/`envd up` to point to a directory anywhere in your file system which contains a `build.envd`.
 
 ```bash
 $ ls
@@ -83,13 +83,16 @@ $ envd up
 
 </custom-title>
 
-You can use `ssh <project-directory-name>.envd` to attach to the environment if you exit from the shell.
+You can use `ssh <project-directory-name>.envd` to attach to the environment if you exit from the shell. This name can also be customized via `envd up --name <custom-name>`.
 
 <custom-title title="connect the environment via ssh">
 
 ```bash 
 ⬢ [envd]❯ exit
-$ ssh demo.envd
+# to list the current available envd environments
+$ envd envs ls
+# to re-connect to the environment
+$ ssh <project-directory-name>.envd
 ⬢ [envd]❯ # You are in the environment again!
 ```
 

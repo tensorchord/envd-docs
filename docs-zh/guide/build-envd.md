@@ -85,11 +85,14 @@ $ envd up
 
 </custom-title>
 
-3. 重新进入您的环境，如果您退出了当前 `shell`，使用 `ssh <project-directory-name>.envd` 命令将重新进入环境。
+3. 重新进入您的环境，如果您退出了当前 `shell`，使用 `ssh <project-directory-name>.envd` 命令将重新进入环境。环境名称也可以通过 `envd up --name <custom-name>` 自定义。
 
 ```bash
 ⬢ [envd]❯ exit
-$ ssh demo.envd
+# 列出当前可用的 envd 环境
+$ envd envs ls
+# 重新连接到该环境
+$ ssh <project-directory-name>.envd
 ⬢ [envd]❯ # 欢迎回来！
 ```
 
