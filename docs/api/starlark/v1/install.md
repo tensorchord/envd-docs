@@ -115,6 +115,18 @@ Install Go programming language.
 
 - `version` _Optional[str]_ - Go version, such as '1.25.3'.
 
+## codex
+
+```python
+def codex(version: Optional[str] = "0.55.0")
+```
+
+Install Codex agent.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - Codex version, such as '0.55.0'.
+
 ## apt\_packages
 
 ```python
