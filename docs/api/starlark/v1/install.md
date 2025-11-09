@@ -115,6 +115,18 @@ Install Go programming language.
 
 - `version` _Optional[str]_ - Go version, such as '1.25.3'.
 
+## nodejs
+
+```python
+def nodejs(version: Optional[str] = "25.1.0")
+```
+
+Install NodeJS programming language.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - NodeJS version, such as '25.1.0'.
+
 ## codex
 
 ```python
