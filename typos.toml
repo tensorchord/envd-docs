@@ -1,0 +1,7 @@
+[files]
+extend-exclude = ["*.svg"]
+
+[default.extend-words]
+loca = "loca"
+Jod = "Jod"
+Iif = "Iif"

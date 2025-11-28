@@ -28,7 +28,6 @@ There are a lot of files here! Here's a brief overview. It can be confusing, but
     - [📁 builder/](https://github.com/tensorchord/envd/tree/main/pkg/builder) contains the buildkit builder, which is one of the most important parts. The builder compiles starlark to [buildkit LLB](https://github.com/moby/buildkit#exploring-llb), then builds the image.
     - [📁 buildkitd/](https://github.com/tensorchord/envd/tree/main/pkg/buildkitd) contains the client code to connect to the buildkitd container.
     - [📁 config/](https://github.com/tensorchord/envd/tree/main/pkg/config) contains the `envd` configuration.
-    - [📁 docker/](https://github.com/tensorchord/envd/tree/main/pkg/docker) contains the client code to docker daemon.
     - [📁 editor/](https://github.com/tensorchord/envd/tree/main/pkg/editor) contains vscode or jupyter related implementation.
     - [📁 envd/](https://github.com/tensorchord/envd/tree/main/pkg/envd) contains the `envd` engine, which is the abstraction to manage `envd` environments.
     - [📁 flag/](https://github.com/tensorchord/envd/tree/main/pkg/flag) contains the information of [viper](https://github.com/spf13/viper) flags.

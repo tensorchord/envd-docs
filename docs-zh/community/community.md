@@ -5,7 +5,7 @@
 我们期待着你的加入！
 
 
-- <a href="https://discord.gg/KqswhpVgdU"><img alt="discord invitation link" src="https://dcbadge.vercel.app/api/server/KqswhpVgdU?style=flat"></a> 加入我们的 Discord 服务器！我们的社区充满了友好的成员，他们随时准备帮助回答你的任何问题。
+- <a href="https://discord.gg/KqswhpVgdU"><img alt="discord invitation link" src="https://img.shields.io/discord/974584200327991326?style=flat&logo=discord&cacheSeconds=60"></a> 加入我们的 Discord 服务器！我们的社区充满了友好的成员，他们随时准备帮助回答你的任何问题。
 - <a href="https://twitter.com/TensorChord"><img src="https://img.shields.io/twitter/follow/tensorchord?style=social" alt="trackgit-views" /></a> 关注 twitter [@TensorChord](https://twitter.com/TensorChord) 并保持与最新更新的联系。
 - <a href="https://www.youtube.com/channel/UCCA7u-PLO1fP8j1X7Pgut1Q"><img src="https://img.shields.io/youtube/channel/subscribers/UCCA7u-PLO1fP8j1X7Pgut1Q?style=social"></a> 考虑在 YouTube 上订阅 [@TensorChord](https://www.youtube.com/channel/UCCA7u-PLO1fP8j1X7Pgut1Q)，以确保你不会错过我们的任何新视频。
 

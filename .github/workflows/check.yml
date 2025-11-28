@@ -1,0 +1,25 @@
+name: lint and check
+
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  auto-correct:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check source code
+        uses: actions/checkout@v5
+
+      - name: AutoCorrect
+        uses: huacnlee/autocorrect-action@main
+
+      - name: Spell Check Repo
+        uses: crate-ci/typos@v1
+
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: false

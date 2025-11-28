@@ -1,0 +1,15 @@
+scheme = ["https", "http"]
+fallback_extensions = ["md"]
+accept = [
+    "200..=204",
+    "403",  # HuggingFace
+    "500..=599"
+]
+exclude = [
+    "^https://docker.mirrors.sjtug.sjtu.edu.cn",
+    "^https://hub-mirror.c.163.com",
+    "^https://segment.com",
+    "^https://github.com/aseaday$",  # 404
+    "^https://www.github.com/aseaday.png$",  # 404
+    "^https://tensorchord.feishu.cn/docx/",  # too many redirects
+]

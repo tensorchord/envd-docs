@@ -25,7 +25,6 @@
     - [📁 builder/](https://github.com/tensorchord/envd/tree/main/pkg/builder) 包含 buildkit 的建造器，它是项目中非常重要的一个部分。建造器会将 starlark 编译成 [buildkit LLB](https://github.com/moby/buildkit#exploring-llb)，然后再构造镜像。
     - [📁 buildkitd/](https://github.com/tensorchord/envd/tree/main/pkg/buildkitd) 包含连接 buildkitd 容器的客户端代码。
     - [📁 config/](https://github.com/tensorchord/envd/tree/main/pkg/config) 包含 `envd` 的配置文件。
-    - [📁 docker/](https://github.com/tensorchord/envd/tree/main/pkg/docker) 包含使用 docker 进程的客户端代码。
     - [📁 editor/](https://github.com/tensorchord/envd/tree/main/pkg/editor) 包含 vscode 和 jupyter 相关的代码实现。
     - [📁 envd/](https://github.com/tensorchord/envd/tree/main/pkg/envd) 包含 `envd` 引擎代码，它是一个用来管理 `envd` 环境的抽象层。
     - [📁 flag/](https://github.com/tensorchord/envd/tree/main/pkg/flag) 包含[viper](https://github.com/spf13/viper)的 `flags` 信息。
