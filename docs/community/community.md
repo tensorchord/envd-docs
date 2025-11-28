@@ -4,7 +4,7 @@ envd is an open-source project that strives for continual improvement and would 
 
 We look forward to having you on board!
 
-- <a href="https://discord.gg/KqswhpVgdU"><img alt="discord invitation link" src="https://dcbadge.vercel.app/api/server/KqswhpVgdU?style=flat"></a> Join our discord server! Our community is full of friendly members who are ready to help answer any questions you may have.
+- <a href="https://discord.gg/KqswhpVgdU"><img alt="discord invitation link" src="https://img.shields.io/discord/974584200327991326?style=flat&logo=discord&cacheSeconds=60"></a> Join our discord server! Our community is full of friendly members who are ready to help answer any questions you may have.
 - <a href="https://twitter.com/TensorChord"><img src="https://img.shields.io/twitter/follow/tensorchord?style=social" alt="trackgit-views" /></a> Follow the twitter [@TensorChord](https://twitter.com/TensorChord) and stay connected with the latest updates.
 - <a href="https://www.youtube.com/channel/UCCA7u-PLO1fP8j1X7Pgut1Q"><img src="https://img.shields.io/youtube/channel/subscribers/UCCA7u-PLO1fP8j1X7Pgut1Q?style=social"></a> Consider subscribing to [@TensorChord](https://www.youtube.com/channel/UCCA7u-PLO1fP8j1X7Pgut1Q) on YouTube to ensure you don't miss any of our new videos.
 

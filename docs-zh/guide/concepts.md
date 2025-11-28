@@ -6,7 +6,7 @@
 
 ## 核心设计
 
-`envd` 的核心抽象是 **环境** 和 **镜像**。镜像由 `build.envd` 构建，并且遵循 [docker 镜像规范 v1.2](https://github.com/moby/moby/blob/master/image/spec/v1.2.md)。因此，您可以将 `envd` 构建的镜像使用 Docker 来运行。
+`envd` 的核心抽象是 **环境** 和 **镜像**。镜像由 `build.envd` 构建，并且遵循 [docker 镜像规范](https://github.com/moby/docker-image-spec/blob/main/spec.md)。因此，您可以将 `envd` 构建的镜像使用 Docker 来运行。
 
 环境是由 docker、Kubernetes 或其他一些与 OCI([Open Container Initiative](https://github.com/opencontainers/runtime-spec)) 规范兼容的运行时（如 runc、crun、containerd）运行的容器。
 

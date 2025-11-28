@@ -6,7 +6,7 @@ This doc describes concepts in the `envd`. The name `envd` is inspired by system
 
 ## Concepts
 
-The core abstractions in `envd` are **environments** and **images**. Images are built from the given `build.envd`s and follow [docker image spec v1.2](https://github.com/moby/moby/blob/master/image/spec/v1.2.md). Thus you can use the images built by `envd` with Docker directly.
+The core abstractions in `envd` are **environments** and **images**. Images are built from the given `build.envd`s and follow [docker image spec](https://github.com/moby/docker-image-spec/blob/main/spec.md). Thus you can use the images built by `envd` with Docker directly.
 
 Environments are containers run by docker, Kubernetes, or some other OCI runtime spec-compatible runtimes (e.g. runc, crun, containerd).
 
