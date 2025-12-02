@@ -6,7 +6,7 @@ on:
     - main
 
 jobs:
-  auto-correct:
+  lint-and-check:
     runs-on: ubuntu-latest
     steps:
       - name: Check source code
