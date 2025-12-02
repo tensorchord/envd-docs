@@ -7,13 +7,13 @@ introduction: 'Keming is one of the envd maintainers. He is working on the machi
 
 # Why the code agents should run inside the containers
 
-The rapid rise of AI code agents unlocks an entirely new way of building software. They can generate code, execute scripts, install dependencies, run tests, and orchestrate multi-step development workflows—all autonomously. But with this power comes a fundamental truth:
+The rapid rise of AI code agents unlocks an entirely new way of building software. They can generate code, execute scripts, install dependencies, run tests, and orchestrate multi-step development workflows autonomously. But with this power comes a fundamental truth:
 
 > **Any system that lets an agent execute code must be isolated inside a secure container.**
 
-It’s a baseline safety requirement because agents execute arbitrary code.
+It's a baseline safety requirement because agents execute arbitrary code.
 
-A code agent’s superpower is also its biggest risk: it executes arbitrary instructions based on the user’s goal. Not the _user’s exact words_, not the _literal command_, but the agent’s _interpretation_ of the goal.
+A code agent's superpower is also its biggest risk: it executes arbitrary instructions based on the user's goal. Not the _user's exact words_, not the _literal command_, but the agent's _interpretation_ of the goal.
 
 This means the runtime must assume:
 
@@ -23,7 +23,7 @@ This means the runtime must assume:
 - The agent might misunderstand intent.
 - The agent might invoke tools aggressively or destructively.
 
-A “safe” agent is not one that never makes mistakes—it’s one that makes mistakes in a sandbox where they can’t cause real damage.
+A "safe" agent is not one that never makes mistakes, it's one that makes mistakes in a sandbox where they can't cause real damage.
 
 ## Installing unexpected packages could be dangerous
 
@@ -31,7 +31,7 @@ We already know that importing packages can execute arbitrary code, while instal
 
 - the package can only be installed from the git repository
 - the package only provides source distribution on PyPI
-- the package wheel doesn’t match the host environment and falls back to using the source distribution
+- the package wheel doesn't match the host environment and falls back to using the source distribution
 
 Even though [PEP 517](https://peps.python.org/pep-0517/) requires creating an isolated environment for each build by default, this isolated environment is only for Python standard library and required build dependencies, meaning that it can still read the local secrets, send them through the network.
 
@@ -76,9 +76,9 @@ Examples of sensitive data an agent could leak:
 - Kubernetes certificates.
 - Browser-stored OAuth tokens.
 
-Accessing these files doesn’t require any privilege. Even though the code agent can run in the mode that requires approval for each commands, users are unlikely to carefully review every commands, especially when the agent is working on complex tasks that require plenty of commands to be approved.
+Accessing these files doesn't require any privilege. Even though the code agent can run in the mode that requires approval for each commands, users are unlikely to carefully review every commands, especially when the agent is working on complex tasks that require plenty of commands to be approved.
 
-You may wonder why the agents are trying to steal those secrets while your prompt doesn’t ask for. Here is a real case:
+You may wonder why the agents are trying to steal those secrets while your prompt doesn't ask for. Here is a real case:
 
 - [Google Antigravity Exfiltrates Data](https://www.promptarmor.com/resources/google-antigravity-exfiltrates-data)
 
@@ -123,7 +123,7 @@ Running the agent inside a container changes the threat model:
 
 ## **Agents Can Break Your Local Environment**
 
-Even if an agent isn’t malicious, it can still be “creatively destructive.”
+Even if an agent isn't malicious, it can still be "creatively destructive".
 
 Typical failure modes:
 
@@ -131,9 +131,9 @@ Typical failure modes:
 - Modifying `/etc/*` configuration on Unix systems.
 - Messing with global package managers.
 - Killing local processes.
-- Running cleanup commands that don’t discriminate.
+- Running cleanup commands that don't discriminate.
 
-A stray `rm -rf .` isn’t theoretical—it happens in the wild when agents attempt to “clean up” a workspace. Here is an example from Reddit:
+A stray `rm -rf .` isn't theoretical, it happens in the wild when agents attempt to "clean up" a workspace. Here is an example from Reddit:
 
 - [Google Antigravity just deleted the contents of my whole drive](https://old.reddit.com/r/google_antigravity/comments/1p82or6/google_antigravity_just_deleted_the_contents_of/)
 
@@ -146,7 +146,7 @@ In a container:
 - The damage is contained.
 - Rebuilding the environment is a single command.
 
-The difference between “oops” and “disaster” is the presence of isolation.
+The difference between "oops" and "disaster" is the presence of isolation.
 
 ## **Agents Misinterpret Prompts**
 
@@ -154,16 +154,16 @@ LLMs are probabilistic systems, not deterministic interpreters.
 
 Common misbehavior patterns:
 
-- **Over-action**: taking steps you didn’t explicitly ask for.
+- **Over-action**: taking steps you didn't explicitly ask for.
 - **Hallucinated commands**: fabricating CLI tools, URLs, or configs.
-- **Overgeneralization**: interpreting “clean this up” too broadly.
+- **Overgeneralization**: interpreting "clean this up" too broadly.
 - **Misunderstanding safety constraints**.
 
 Examples seen in the wild:
 
-- “Remove some unnecessary files” → deletes the entire working directory.
-- “Optimize this config” → rewrites the global environment.
-- “Fix networking issues” → modifies system DNS settings.
+- "Remove some unnecessary files" → deletes the entire working directory.
+- "Optimize this config" → rewrites the global environment.
+- "Fix networking issues" → modifies system DNS settings.
 
 An example would be like:
 
