@@ -116,6 +116,13 @@ export default defineConfig({
       })
   },
 
+  transformPageData: (pageData) => {
+    return {
+      ...pageData,
+      description: '`envd` (ɪnˈvdɪ) is a command-line tool that helps you create the container-based development environment for code agents.'
+    }
+  },
+
   buildEnd: async ({ outDir }) => {
     const sitemap = new SitemapStream({
       hostname: siteHostName
