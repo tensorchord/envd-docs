@@ -118,7 +118,8 @@ export default defineConfig({
 
   transformPageData: (pageData) => {
     return {
-      description: 'envd | run code agent in the containers'
+      ...pageData,
+      description: '`envd` (ɪnˈvdɪ) is a command-line tool that helps you create the container-based development environment for code agents.'
     }
   },
 
