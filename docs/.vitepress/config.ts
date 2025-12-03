@@ -116,6 +116,12 @@ export default defineConfig({
       })
   },
 
+  transformPageData: (pageData) => {
+    return {
+      description: 'envd | run code agent in the containers'
+    }
+  },
+
   buildEnd: async ({ outDir }) => {
     const sitemap = new SitemapStream({
       hostname: siteHostName
