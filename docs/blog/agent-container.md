@@ -167,7 +167,7 @@ Examples seen in the wild:
 
 An example would be like:
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1764121371583/820fd425-cee3-4287-939b-947189a328b0.png)
+![llm-wipe-out](./assets/llm_wipe_out.png)
 
 Prompts are not precise instructions like the code, it's inevitable for the agents to misinterpret what the user really means.
 
