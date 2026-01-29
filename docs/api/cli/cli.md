@@ -273,6 +273,8 @@ Resume the envd environment
 
 Build and run the envd environment
 
+**--cap**="": Add capabilities to the environment (e.g. `SYS_PTRACE`)
+
 **--cpu-set**="": Limit the specific CPUs or cores the environment can use, such as `0-3`, `1,3`
 
 **--cpus**="": Request CPU resources (number of cores), such as 0.5, 1, 2
