@@ -7,34 +7,40 @@ on:
   schedule:
     - cron: '0 2 * * *'
 
+permissions:
+  contents: read
+
 jobs:
   sync_file:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.9'
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
       - name: Checkout Envd-docs
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           path: envd-docs
+          persist-credentials: false
       - name: Checkout Envd
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: 'tensorchord/envd'
           fetch-depth: 1
           path: envd
+          persist-credentials: false
       - run: |
           mkdir -p envd-docs/hack/api/
           cp -r envd/envd/api/* envd-docs/hack/api/
       - name: Checkout Envd lib
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: 'tensorchord/envdlib'
           fetch-depth: 1
           path: envdlib
+          persist-credentials: false
       - run: |
           mkdir -p envd-docs/hack/api/lib/
           cp -r envdlib/src/* envd-docs/hack/api/lib/
@@ -62,7 +68,7 @@ jobs:
           make generate-cli-ref
           popd
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           path: envd-docs
           add-paths: |
