@@ -1,0 +1,88 @@
+{
+  "text": "API Reference",
+  "type": "category",
+  "items": [
+    {
+      "text": "v0",
+      "type": "category",
+      "items": [
+        {
+          "text": "config",
+          "link": "/zh/api/starlark/v0/config"
+        },
+        {
+          "text": "global",
+          "link": "/zh/api/starlark/v0/global"
+        },
+        {
+          "text": "install",
+          "link": "/zh/api/starlark/v0/install"
+        },
+        {
+          "text": "io",
+          "link": "/zh/api/starlark/v0/io"
+        },
+        {
+          "text": "runtime",
+          "link": "/zh/api/starlark/v0/runtime"
+        }
+      ]
+    },
+    {
+      "text": "v1",
+      "type": "category",
+      "items": [
+        {
+          "text": "config",
+          "link": "/zh/api/starlark/v1/config"
+        },
+        {
+          "text": "global",
+          "link": "/zh/api/starlark/v1/global"
+        },
+        {
+          "text": "install",
+          "link": "/zh/api/starlark/v1/install"
+        },
+        {
+          "text": "io",
+          "link": "/zh/api/starlark/v1/io"
+        },
+        {
+          "text": "runtime",
+          "link": "/zh/api/starlark/v1/runtime"
+        }
+      ]
+    },
+    {
+      "text": "lib",
+      "type": "category",
+      "items": [
+        {
+          "text": "cv",
+          "link": "/zh/api/starlark/lib/cv"
+        },
+        {
+          "text": "lang",
+          "link": "/zh/api/starlark/lib/lang"
+        },
+        {
+          "text": "mirror",
+          "link": "/zh/api/starlark/lib/mirror"
+        },
+        {
+          "text": "monitoring",
+          "link": "/zh/api/starlark/lib/monitoring"
+        },
+        {
+          "text": "notebook",
+          "link": "/zh/api/starlark/lib/notebook"
+        },
+        {
+          "text": "tensorrt",
+          "link": "/zh/api/starlark/lib/tensorrt"
+        }
+      ]
+    }
+  ]
+}

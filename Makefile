@@ -32,7 +32,7 @@ BUILD_DIR := ./build
 #
 
 # All targets.
-.PHONY: generate-cli-ref build dev
+.PHONY: generate-cli-ref build dev preview
 
 init:
 	@npm i -g pnpm
@@ -47,14 +47,11 @@ generate-api-ref:
 build:
 	@pnpm build
 
-build-zh:
-	@pnpm build:zh
-
 dev:
 	@pnpm dev
 
-dev-zh:
-	@pnpm dev:zh
+preview:
+	@pnpm preview
 
 lintmd:
 	@pnpm prettier --check "**/*.md"

@@ -18,7 +18,7 @@ Hacktoberfest 是为期一个月的，由 DigitalOcean 运行的开源软件庆�
 
 今年 10 月，envd 也参与了 Hacktoberfest。我们为第一次接触开源项目的贡献者准备了一些对社区非常有价值，但是并不紧急的 [first contributor friendly issues](https://github.com/tensorchord/envd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%E2%9D%A4%EF%B8%8F%22)。这些 issue 的难度并不高，是非常好的接触开源项目独特且充满魅力的协作方式的机会。同时 Hacktoberfest 也会为完成了 4 个 PR 的贡献者提供 Hacktoberfest 限量 T 恤。
 
-为了帮助大家更好地参与社区，熟悉 envd 的设计与实现，我们也准备好了[开源贡献指南](https://zh.envd.tensorchord.ai/community/contributing.html)和 [envd 开发指南文档](https://zh.envd.tensorchord.ai/developers/development.html)。
+为了帮助大家更好地参与社区，熟悉 envd 的设计与实现，我们也准备好了[开源贡献指南](/zh/community/contributing.html)和 [envd 开发指南文档](/zh/developers/development.html)。
 
 当你遇到问题时，可以通过 [discord](https://discord.gg/KqswhpVgdU) 与我们联系，与其他贡献者交流来帮助你解决疑惑。
 

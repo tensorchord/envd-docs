@@ -53,7 +53,8 @@ jobs:
       - name: Copy API docs to zh docs
         run: |
           pushd envd-docs
-          cp -r docs/api docs-zh/ 
+          rm -rf docs/zh/api
+          cp -r docs/api docs/zh/
           popd
       - name: Generate CLI docs
         run: |

@@ -1,6 +1,6 @@
 # 创建一个 R 环境
 
-这份指南包含如何通过 `envd` 配置 R 环境。如果你还没有用过 `envd`，请先阅读我们的 [教程](/guide/getting-started) 和 [搭建配置指南](/guide/build-envd)。
+这份指南包含如何通过 `envd` 配置 R 环境。如果你还没有用过 `envd`，请先阅读我们的 [教程](/zh/guide/getting-started) 和 [搭建配置指南](/zh/guide/build-envd)。
 
 ## 指定 R
 

@@ -14,7 +14,7 @@ Kubernetes 已经是容器编排方面无可争议的实施标准了。通常在
 
 如果你是集群的管理员，你可能需要了解同事在集群中的资源使用情况。现在你可以通过 `envd` dashboard 来查看详情。如果你的团队已经在使用 RBAC 和资源控制等 Kubernetes 的特性，同样可以无缝接入。你可以设置 [ResourceQuota](https://kubernetes.io/docs/concepts/policy/resource-quotas/) 来确保资源的合理使用。
 
-`envd` server 的具体部署和使用方式可以查看我们的 [在 Kubernetes 上 使用 `envd`](/teams/kubernetes.html) 文档。我们还提供了 Helm Chart 帮助用户一键设置好所有必须的组件。你也可以查看并修改 [values.yaml](https://github.com/tensorchord/envd-server/blob/main/manifests/values.yaml) 文件来客制化安装及相应配置。
+`envd` server 的具体部署和使用方式可以查看我们的 [在 Kubernetes 上 使用 `envd`](/zh/teams/kubernetes.html) 文档。我们还提供了 Helm Chart 帮助用户一键设置好所有必须的组件。你也可以查看并修改 [values.yaml](https://github.com/tensorchord/envd-server/blob/main/manifests/values.yaml) 文件来客制化安装及相应配置。
 
 未来，我们还会支持更多的认证方式，审查日志，文件同步功能等。期待大家的反馈！
 

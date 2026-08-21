@@ -111,6 +111,25 @@ def main():
     with open(sidebar_path, "w") as f:
         json.dump(sidebar, f, indent=2)
 
+    # Write a locale-prefixed copy for the Chinese site under /zh/api/.
+    zh_sidebar_path = (
+        repo_root / "docs" / ".vitepress" / "config" / "sidebar" / "apiSidebar.zh.json"
+    )
+
+    def prefix_links(node):
+        if isinstance(node, list):
+            for item in node:
+                prefix_links(item)
+        elif isinstance(node, dict):
+            if "link" in node:
+                node["link"] = "/zh/" + node["link"]
+            if "items" in node:
+                prefix_links(node["items"])
+        return node
+
+    with open(zh_sidebar_path, "w") as f:
+        json.dump(prefix_links(json.loads(json.dumps(sidebar))), f, indent=2)
+
 
 if __name__ == "__main__":
     main()

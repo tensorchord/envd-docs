@@ -26,6 +26,7 @@ pnpm-debug.log*
 lib-cov
 coverage
 node_modules
+.pnpm-store
 .env
 .cache
 dist
@@ -44,4 +45,3 @@ __pycache__
 hack/api/
 
 docs/.vitepress/cache
-docs-zh/.vitepress/cache

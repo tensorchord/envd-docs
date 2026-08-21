@@ -1,6 +1,6 @@
 # 创建一个 Python 环境
 
-这份指南包含如何通过 `envd` 配置 Python 环境。如果你还没有用过 `envd`，请先阅读我们的 [教程](/guide/getting-started) 和 [搭建配置指南](/guide/build-envd)。
+这份指南包含如何通过 `envd` 配置 Python 环境。如果你还没有用过 `envd`，请先阅读我们的 [教程](/zh/guide/getting-started) 和 [搭建配置指南](/zh/guide/build-envd)。
 
 
 让我们开始 🐍 吧！
@@ -149,7 +149,7 @@ def build():
 
 </custom-title>
 
-![jupyter](/guide/assets/jupyter.png)
+![jupyter](/zh/guide/assets/jupyter.png)
 
 ## 设定 PyPI 索引镜像
 

@@ -19,7 +19,7 @@
 
 ### ⚽ `envd` 的简易开始
 
-遵照 [开始](/guide/getting-started) 文档。一切是否如预期般顺利？如果不是，我们一直在寻求改进。在 [💬 Discord](https://discord.gg/KqswhpVgdU) 上联系我们，或者在 GitHub 上提出 [issue](https://github.com/tensorchord/envd/issues/new/choose)。
+遵照 [开始](/zh/guide/getting-started) 文档。一切是否如预期般顺利？如果不是，我们一直在寻求改进。在 [💬 Discord](https://discord.gg/KqswhpVgdU) 上联系我们，或者在 GitHub 上提出 [issue](https://github.com/tensorchord/envd/issues/new/choose)。
 
 ### 🙋 Issue 和 Pull Requests 的分类
 
@@ -34,7 +34,7 @@
 
 ### 👨‍💻 向 `envd` 贡献
 
-如果你想要修复一个 issue，那么请开启一个 pull request。请阅读 [开发指南](/developers/development) 来作为贡献的起点。
+如果你想要修复一个 issue，那么请开启一个 pull request。请阅读 [开发指南](/zh/developers/development) 来作为贡献的起点。
 
 ### 👉 改进文档
 
