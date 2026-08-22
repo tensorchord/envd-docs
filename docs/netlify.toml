@@ -1,11 +1,11 @@
 [build.environment]
 NPM_FLAGS = "--version"
-NODE_VERSION = "20"
+NODE_VERSION = "24"
 
 [build]
 base = "docs/"
 publish = ".vitepress/dist"
-command = "npx pnpm i --store=node_modules/.pnpm-store && npm run build"
+command = "SITE_URL=https://envd.tensorchord.ai/ make build"
 
 [[redirects]]
 from = "/*"
