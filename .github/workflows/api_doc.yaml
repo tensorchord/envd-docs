@@ -1,6 +1,12 @@
 name: sync doc file with envd
 
 on: 
+  push:
+    paths:
+      - '.github/workflows/api_doc.yaml'
+  pull_request:
+    paths:
+      - '.github/workflows/api_doc.yaml'
   repository_dispatch:
     types: [on-demand-test]
   workflow_dispatch:
@@ -18,6 +24,8 @@ jobs:
         with:
           python-version: '3.9'
       - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: 'stable'
       - name: Checkout Envd-docs
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
