@@ -8,6 +8,12 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
+::: warning
+v0 syntax is no longer supported from `envd>=v1.0`. Check the [upgrade guide](https://envd.tensorchord.ai/guide/v1.html).
+
+If you want to use v0 syntax, try `pip install 'envd<1'`.
+:::
+
 ## command
 
 ```python
@@ -21,7 +27,7 @@ Execute commands during runtime
 - `commands` _Dict[str, str]_ - map name to command, similar to Makefile
   
   Example usage:
-```
+```python
 runtime.command(commands={
     "train": "python train.py --epoch 20 --notify me@tensorchord.ai",
     "run": "python server.py --batch 1 --host 0.0.0.0 --port 8000",
@@ -33,7 +39,7 @@ runtime.command(commands={
 ## expose
 
 ```python
-def expose(envd_port: str, host_port: Optional[str], service: Optional[str],
+def expose(envd_port: int, host_port: Optional[int], service: Optional[str],
            listen_addr: Optional[str])
 ```
 
@@ -42,8 +48,8 @@ Proposal: https://github.com/tensorchord/envd/pull/780
 
 **Arguments**:
 
-- `envd_port` _str_ - port in `envd` container
-- `host_port` _Optional[str]_ - port in the host, if not provided or
+- `envd_port` _int_ - port in `envd` container
+- `host_port` _Optional[int]_ - port in the host, if not provided or
   `host_port=0`, `envd` will randomly choose a free port
 - `service` _Optional[str]_ - service name
 - `listen_addr` _Optional[str]_ - address to listen on
@@ -57,14 +63,17 @@ def daemon(commands: List[List[str]])
 Run daemon processes in the container
 Proposal: https://github.com/tensorchord/envd/pull/769
 
-It's better to redirect the logs to local files for debug purposes.
+It's better to redirect the logs to local files for debugging purposes.
+
+You can find the generated horust config files under `/etc/horust/services`
+and log files under `/var/log/horust` in the container.
 
 **Arguments**:
 
 - `commands` _List[List[str]]_ - run multiple commands in the background
   
   Example usage:
-```
+```python
 runtime.daemon(commands=[
     ["jupyter-lab", "--port", "8080"],
     ["python3", "serving.py", ">>serving.log", "2>&1"],
@@ -85,7 +94,7 @@ Add runtime environments
 - `extra_path` _List[str]_ - additional PATH
   
   Example usage:
-```
+```python
 runtime.environ(env={"ENVD_MODE": "DEV"}, extra_path=["/usr/bin/go/bin"])
 ```
 
@@ -109,6 +118,9 @@ def init(commands: List[str])
 ```
 
 Commands to be executed when start the container
+
+You can find the generated horust config files under `/etc/horust/services`
+and log files under `/var/log/horust` in the container.
 
 **Arguments**:
 

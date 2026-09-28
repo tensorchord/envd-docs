@@ -38,7 +38,8 @@ Install python package by pip
 **Arguments**:
 
 - `name` _List[str]_ - package name list
-- `requirements` _str_ - requirements file path
+- `requirements` _str_ - requirements file path, which must be
+  located inside the build context directory
 - `local_wheels` _List[str]_ - local wheels
   (wheel files should be placed under the current directory)
 
