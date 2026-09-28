@@ -8,12 +8,6 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
-::: warning
-Enable v1 by adding `# syntax=v1` to the 1st line of your envd file.
-
-v1 is experimental and may change in the future. Make sure to freeze the envd version for online CI/CD.
-:::
-
 ## apt\_source
 
 ```python
@@ -24,17 +18,17 @@ Configure apt sources
 
 Example usage:
 
-```
+```python
 apt_source(source='''
-    deb https://mirror.sjtu.edu.cn/ubuntu focal main restricted
-    deb https://mirror.sjtu.edu.cn/ubuntu focal-updates main restricted
-    deb https://mirror.sjtu.edu.cn/ubuntu focal universe
-    deb https://mirror.sjtu.edu.cn/ubuntu focal-updates universe
-    deb https://mirror.sjtu.edu.cn/ubuntu focal multiverse
-    deb https://mirror.sjtu.edu.cn/ubuntu focal-updates multiverse
-    deb https://mirror.sjtu.edu.cn/ubuntu focal-backports main restricted universe multiverse
-    deb http://archive.canonical.com/ubuntu focal partner
-    deb https://mirror.sjtu.edu.cn/ubuntu focal-security main restricted universe multiverse
+    deb https://mirror.sjtu.edu.cn/ubuntu jammy main restricted
+    deb https://mirror.sjtu.edu.cn/ubuntu jammy-updates main restricted
+    deb https://mirror.sjtu.edu.cn/ubuntu jammy universe
+    deb https://mirror.sjtu.edu.cn/ubuntu jammy-updates universe
+    deb https://mirror.sjtu.edu.cn/ubuntu jammy multiverse
+    deb https://mirror.sjtu.edu.cn/ubuntu jammy-updates multiverse
+    deb https://mirror.sjtu.edu.cn/ubuntu jammy-backports main restricted universe multiverse
+    deb http://archive.canonical.com/ubuntu jammy partner
+    deb https://mirror.sjtu.edu.cn/ubuntu jammy-security main restricted universe multiverse
 ''')
 ```
 
@@ -58,7 +52,7 @@ Configure jupyter notebook configuration
 ## pip\_index
 
 ```python
-def pip_index(url: str, extra_url: str)
+def pip_index(url: str, extra_url: str = "", trust: bool = False)
 ```
 
 Configure pypi index mirror
@@ -68,6 +62,7 @@ Configure pypi index mirror
 - `url` _str_ - PyPI index URL (i.e. https://mirror.sjtu.edu.cn/pypi/web/simple)
 - `extra_url` _str_ - PyPI extra index URL. `url` and `extra_url` will be
   treated equally, see https://github.com/pypa/pip/issues/8606
+- `trust` _bool_ - trust the provided index
 
 ## conda\_channel
 
@@ -79,7 +74,7 @@ Configure conda channel mirror
 
 Example usage:
 
-```
+```python
 config.conda_channel(channel='''
 channels:
     - defaults
@@ -107,7 +102,7 @@ Configure entrypoint for custom base image
 
 Example usage:
 
-```
+```python
 config.entrypoint(["date", "-u"])
 ```
 
@@ -125,13 +120,31 @@ Configure the number of GPUs required
 
 Example usage:
 
-```
+```python
 config.gpu(count=2)
 ```
 
 **Arguments**:
 
 - `count` _int_ - number of GPUs
+
+## shm\_size
+
+```python
+def shm_size(size: int)
+```
+
+Configure the shared memory size (megabyte) of docker containers
+
+Example usage:
+
+```python
+config.shm_size(size=1024)
+```
+
+**Arguments**:
+
+- `size` _int_ - the shared memory size (megabyte) of docker containers
 
 ## cran\_mirror
 
@@ -164,7 +177,7 @@ Since Julia 1.5, https://pkg.julialang.org is the default pkg server.
 def rstudio_server()
 ```
 
-Enable the RStudio Server (only work for `base(os="ubuntu20.04", language="r")`)
+Enable the RStudio Server (only work for `base(os="ubuntu22.04", language="r")`)
 
 ## repo
 
@@ -178,4 +191,19 @@ Setup repo related information. Will save to the image labels.
 
 - `url` _str_ - repo URL
 - `description` _str_ - repo description
+
+## owner
+
+```python
+def owner(uid: int, gid: int)
+```
+
+Configure uid:gid as the environment owner.
+This can also be achieved by using flag `envd --owner uid:gid build` or environment
+variable `ENVD_BUILD_OWNER=uid:gid envd build`
+
+**Arguments**:
+
+- `uid` _int_ - UID
+- `gid` _int_ - GID
 

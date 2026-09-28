@@ -12,3 +12,11 @@ Install Golang.
 
 - `version` _Optional[str]_ - golang version
 
+## rust
+
+```python
+def rust()
+```
+
+Install Rust.
+

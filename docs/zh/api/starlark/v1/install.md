@@ -8,16 +8,10 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
-::: warning
-Enable v1 by adding `# syntax=v1` to the 1st line of your envd file.
-
-v1 is experimental and may change in the future. Make sure to freeze the envd version for online CI/CD.
-:::
-
 ## python
 
 ```python
-def python(version: str = "3.9")
+def python(version: str = "3.11")
 ```
 
 Install python.
@@ -41,6 +35,45 @@ Install MiniConda or MicroMamba.
 
 - `use_mamba` _bool_ - use mamba instead of conda
 
+## pixi
+
+```python
+def pixi(use_pixi_mirror: bool = False, pypi_index: Optional[str] = None)
+```
+
+Install Pixi (https://github.com/prefix-dev/pixi).
+
+`pixi` is an alternative to `conda` that is written in Rust and provides faster
+dependency resolution and installation. It also simplify the project management.
+
+This doesn't support installing Python packages through `install.python_packages`
+because that part should be managed by `pixi`. You can run `pixi shell` in the
+`envd` environment to sync all the dependencies.
+
+**Arguments**:
+
+- `use_pixi_mirror` _bool_ - use pixi mirror
+- `pypi_index` _Optional[str]_ - customize pypi index url
+
+## uv
+
+```python
+def uv(python_version: str = "3.11")
+```
+
+Install UV (an extremely fast Python package and project manager).
+
+`uv` is much faster than `conda`. Choose this one instead of `conda` if you don't
+need any machine learning packages.
+
+This doesn't support installing Python packages through `install.python_packages`
+because that part should be managed by `uv`. You can run `uv sync` in the `envd`
+environment to install all the dependencies.
+
+**Arguments**:
+
+- `python_version` _str_ - install this Python version through UV
+
 ## r\_lang
 
 ```python
@@ -48,8 +81,6 @@ def r_lang()
 ```
 
 Install R Lang.
-
-Not implemented yet. Please use v0 if you need R.
 
 ## julia
 
@@ -59,93 +90,140 @@ def julia()
 
 Install Julia.
 
-Not implemented yet. Please use v0 if you need Julia.
+## rust
+
+```python
+def rust(version: Optional[str] = None)
+```
+
+Install Rust programming language.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - Rust version, such as '1.72.0'.
+  If not specified, the latest stable version will be installed.
+
+## go
+
+```python
+def go(version: Optional[str] = None)
+```
+
+Install Go programming language.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - Go version, such as '1.25.3'.
+
+## nodejs
+
+```python
+def nodejs(version: Optional[str] = None)
+```
+
+Install NodeJS programming language.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - NodeJS version, such as '25.1.0'.
+
+## codex
+
+```python
+def codex(version: Optional[str] = None)
+```
+
+Install Codex agent.
+
+**Arguments**:
+
+- `version` _Optional[str]_ - Codex GitHub release tag, such as 'rust-v0.98.0'.
+  If None is provided, envd will attempt to use the latest tag.
+  If the latest tag cannot be resolved (due to network or rate limit),
+  a built-in default version will be used.
 
 ## apt\_packages
 
 ```python
-def apt_packages(name: List[str] = [])
+def apt_packages(name: Sequence[str] = ())
 ```
 
-Install package by system-level package manager (apt on Ubuntu).
+Install package using the system package manager (apt on Ubuntu).
 
 **Arguments**:
 
-- `name` _str_ - apt package name list
+- `name` _Sequence[str]_ - apt package name list
 
 ## python\_packages
 
 ```python
-def python_packages(name: List[str] = [],
+def python_packages(name: Sequence[str] = (),
                     requirements: str = "",
-                    local_wheels: List[str] = [])
+                    local_wheels: Sequence[str] = ())
 ```
 
 Install python package by pip.
 
 **Arguments**:
 
-- `name` _List[str]_ - package name list
-- `requirements` _str_ - requirements file path
-- `local_wheels` _List[str]_ - local wheels
+- `name` _Sequence[str]_ - package name list
+- `requirements` _str_ - requirements file path, which must be
+  located inside the build context directory
+- `local_wheels` _Sequence[str]_ - local wheels
   (wheel files should be placed under the current directory)
 
 ## conda\_packages
 
 ```python
-def conda_packages(name: List[str] = [],
-                   channel: List[str] = [],
-                   env_file: str = "")
+def conda_packages(
+        name: Sequence[str] = (),
+        channel: Sequence[str] = (), env_file: str = "")
 ```
 
 Install python package by Conda
 
 **Arguments**:
 
-- `name` _List[str]_ - List of package names with optional version assignment,
+- `name` _Sequence[str]_ - List of package names with optional version assignment,
   such as ['pytorch', 'tensorflow==1.13.0']
-- `channel` _List[str]_ - additional channels
+- `channel` _Sequence[str]_ - additional channels
 - `env_file` _str_ - conda env file path
 
 ## r\_packages
 
 ```python
-def r_packages(name: List[str])
+def r_packages(name: Sequence[str])
 ```
 
 Install R packages by R package manager.
 
-Not implemented yet. Please use v0 if you need R.
-
 **Arguments**:
 
-- `name` _List[str]_ - package name list
+- `name` _Sequence[str]_ - package name list
 
 ## julia\_packages
 
 ```python
-def julia_packages(name: List[str])
+def julia_packages(name: Sequence[str])
 ```
 
 Install Julia packages.
 
-Not implemented yet. Please use v0 if you need Julia.
-
 **Arguments**:
 
-  name (List(str)): List of Julia packages
+- `name` _Sequence[str]_ - List of Julia packages
 
 ## vscode\_extensions
 
 ```python
-def vscode_extensions(name: List[str])
+def vscode_extensions(name: Sequence[str])
 ```
 
 Install VS Code extensions
 
 **Arguments**:
 
-- `name` _List[str]_ - extension names, such as ['ms-python.python']
+- `name` _Sequence[str]_ - extension names, such as ['ms-python.python']
 
 ## cuda
 
@@ -153,10 +231,19 @@ Install VS Code extensions
 def cuda(version: str, cudnn: Optional[str] = "8")
 ```
 
-Install CUDA dependency
+Replace the base image with a `nvidia/cuda` image.
+
+This will replace the default base image to an `nvidia/cuda` image. You can
+also use a CUDA base image directly like
+`base(image="nvidia/cuda:12.2.0-devel-ubuntu22.04", dev=True)`.
 
 **Arguments**:
 
 - `version` _str_ - CUDA version, such as '11.6.2'
 - `cudnn` _optional, str_ - CUDNN version, such as '8'
+  
+  Example usage:
+```python
+install.cuda(version="11.6.2", cudnn="8")
+```
 

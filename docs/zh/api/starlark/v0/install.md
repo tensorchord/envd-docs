@@ -8,17 +8,23 @@ in [tensorchord/envd](https://github.com/tensorchord/envd/tree/main/envd/api) re
 Please update the python file there instead of directly editing file inside envd-docs repo.
 :::
 
+::: warning
+v0 syntax is no longer supported from `envd>=v1.0`. Check the [upgrade guide](https://envd.tensorchord.ai/guide/v1.html).
+
+If you want to use v0 syntax, try `pip install 'envd<1'`.
+:::
+
 ## apt\_packages
 
 ```python
 def apt_packages(name: List[str])
 ```
 
-Install package by system-level package manager (apt on Ubuntu)
+Install package using the system package manager (apt on Ubuntu)
 
 **Arguments**:
 
-- `name` _str_ - apt package name list
+- `name` _List[str]_ - apt package name list
 
 ## python\_packages
 
@@ -32,7 +38,8 @@ Install python package by pip
 **Arguments**:
 
 - `name` _List[str]_ - package name list
-- `requirements` _str_ - requirements file path
+- `requirements` _str_ - requirements file path, which must be
+  located inside the build context directory
 - `local_wheels` _List[str]_ - local wheels
   (wheel files should be placed under the current directory)
 
